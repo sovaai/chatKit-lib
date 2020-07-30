@@ -5,10 +5,10 @@ import Sender from '../Sender'
 
 describe('Sender tests', () => {
   let component: ShallowWrapper
-  let instance: Sender
+  let instance: any
   beforeEach(() => {
     component = shallow(<Sender />)
-    instance = component.instance() as Sender
+    instance = component.instance() as any
   })
   it('rendering with no error', () => {
     expect(component.exists()).toEqual(true)

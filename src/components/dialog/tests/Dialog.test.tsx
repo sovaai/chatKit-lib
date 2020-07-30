@@ -10,6 +10,7 @@ describe('Sender tests', () => {
     text: 'test message',
     sender: 'user',
     date: new Date(),
+    showRate: false
   }
   store.dispatch('addMessage', message)
   const component = mount(
