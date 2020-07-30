@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    "**/.git": false
+  },
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "Crosstab",
+    "coverage",
+    "crosstabs",
+    "js",
+    "lcov",
+    "persistor",
+    "remotedev",
+    "report",
+    "svgr",
+    "wessberg"
+  ]
+}

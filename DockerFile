@@ -1,0 +1,11 @@
+FROM node:lts-alpine
+RUN mkdir /opt/storybook
+WORKDIR /opt/storybook
+
+RUN npm install -g serve
+
+COPY ./storybook-static /opt/storybook/
+
+EXPOSE 5000
+
+CMD [ "serve" ]

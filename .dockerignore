@@ -1,0 +1,13 @@
+.garden
+node_modules
+.vscode
+deploy
+gif2mp4
+lib
+license
+schneider_electric
+src
+templates
+webpack
+dl
+lib
