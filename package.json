@@ -1,5 +1,5 @@
 {
-  "name": "chat-kit",
+  "name": "@sova/chat-kit",
   "version": "0.6.2",
   "description": "SOVA dialog widget open soucre React lib",
   "homepage": "https://sova.ai",
