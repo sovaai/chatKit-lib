@@ -1,5 +1,5 @@
 {
-  "name": "sova-chat-kit",
+  "name": "sova-chatkit",
   "version": "0.6.2",
   "description": "SOVA dialog widget open soucre React lib",
   "homepage": "https://sova.ai",
@@ -31,7 +31,7 @@
     "SOVA",
     "chat-kit"
   ],
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "peerDependencies": {
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
