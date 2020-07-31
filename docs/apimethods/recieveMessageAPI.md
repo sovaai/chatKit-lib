@@ -1,28 +1,18 @@
 # recieveMessageAPI
-(Add a text messages to STORE)
+## Description
+Add a text messages to STORE в ключе messages
 
-# Quick start
-Чтобы внести какие-либо изменения, необходимо импортировать метод **recieveMessageAPI**:  
-Для этого in your App.js file:
-```
-import {ckAPIMethods} from 'Sova-Chat-Kit'
- ...
- <ckAPIMethods.recieveMessageAPI />
- ...
- ```
- 
- # Usage
+## Usage
  Чтобы внести какие-либо изменения необходимо:  
-* Вызвать метод `ckAPIMethods.recieveMessageAPI` 
-* Указать имя ивента (cм. Description oof method)  
-* Передать data с необходимыми изменениями.  
+* Вызвать метод `ckAPIMethods.recieveMessage` 
+* Передать data с необходимыми ключами.  
 
-# Description of method
-Event: **addMessage**  
-Description: Сохранение сообщения в Store в ключе messages  
-Params:
-| Params   | Type    | Requires |
-|----------|---------|----------|
-| text     | string  | +        |
-| sender   | string  | +        |
-| showRate | boolean | +        |
+## Data:
+| Params   | Type    | Requires | Description                            |
+|----------|---------|----------|----------------------------------------|
+| text     | string  | +        | Текст сообщения                        |
+| sender   | string  | +        | Роль отправителя                       |
+| showRate | boolean | +        | Отображение в бабле сообщения оценки   |
+
+## Пример использования:
+ckAPIMethods.recieveMessage({text: 'Hi, dude', sender: 'user', showRate: false})
