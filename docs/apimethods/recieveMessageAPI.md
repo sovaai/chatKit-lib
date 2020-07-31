@@ -15,4 +15,7 @@ Add a text messages to STORE в ключе messages
 | showRate | boolean | +        | Отображение в бабле сообщения оценки   |
 
 ## Пример использования:
+```
+import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.recieveMessage({text: 'Hi, dude', sender: 'user', showRate: false})
+```
