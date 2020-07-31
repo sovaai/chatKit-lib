@@ -8,9 +8,9 @@ Send messages to the module to call request
 * Передать data с необходимыми ключами.  
 
 # Data
-| Params   | Type    | Requires |
-|----------|---------|----------|
-| text     | string  | +        |
+| Params   | Type    | Requires | Description     |
+|----------|---------|----------|-----------------|
+| text     | string  | +        | Текст сообщения |
 
 ## Пример использования
 ```
