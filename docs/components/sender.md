@@ -189,7 +189,6 @@ Props from Settings:
 Writing css properties in kebab-case like regular css, you write them in camelCase
 
 ## Styles
- <a name="abcd">бла бла бла</a>
 Props from Styles:
 ```
 {
