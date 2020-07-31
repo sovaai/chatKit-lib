@@ -3,10 +3,10 @@
 Edit the widget theme or individual component
 
 ## Usage
-Чтобы внести какие-либо изменения необходимо:  
-* Вызвать метод `ckAPIMethods.style` 
-* Указать имя ивента (см. List of events)
-* Передать *data* с необходимыми изменениями.  
+To make any changes you need: 
+* Call a method `ckAPIMethods.style`;  
+* Enter the *event name*;  
+* Transfer *data* with changing.  
 
 ## List of events
 1) **switchTheme** (переключение темы);  
@@ -21,148 +21,396 @@ Edit the widget theme or individual component
 10) **changeSender** (изменение стилевого пакета компонента Sender в выбранной теме);  
 11) **changeBadge** (изменение стилевого пакета компонента Badge в выбранной теме).  
 
-
-### Description of events and data  
-#### 1) Event **switchTheme**  
-Description: переключение темы на указанную в дате тему   
-Params:  
+## Description of events and data  
+### 1) Event **switchTheme**  
+**Description:**  
+переключение темы на указанную в дате тему   
+**Params:**  
 | Params        | Type    | Requires | Description   |  
 |---------------|---------|----------|---------------|  
-| themeName     | string  | +        | Название темы |  
+| themeName     | string  | +        | Theme name    |  
 
-For example:  
+**For example:**  
 ```
 import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.styles('switchTheme', 'darkSova')
 ```
 
-#### 2) Event **initTheme**  
-Description: инициализация новой темы   
-Params:  
+### 2) Event **initTheme**  
+**Description:**   
+инициализация новой темы  
+**Params:**  
+| Params        | Type    | Requires | Description     |  
+|---------------|---------|----------|-----------------|  
+| themeName     | string  | +        |   1             |  
+| data          | any     | +        |   1             |  
+
+[Текст ссылки](#abcd)
+
+Описание data:
+Sender:
+ mainContainer - 
+ mainContainerSearch - 
+ searchCountContainer - 
+ searchButtonContainer - 
+ addFileButton - 
+ sendMessageButton - 
+ shareButton - 
+ stickersButton - 
+ textArea - 
+ voiceButton - 
+
+ChatIt:
+ mainContainer - 
+ chatContainer - 
+
+Dialog:
+ mainContainer - 
+ panel - 
+ rateButton - 
+ searchButton - 
+ messagesContainer - 
+ 
+UserMessage:
+ mainContainer - 
+ groupTypeMessagesNext - 
+ groupTypeMessagesPrev - 
+ groupTypeMessagesInter - 
+ textContainer - 
+ avatarContainer - 
+ image - 
+ positiveRateMessageButton - 
+ negativeRateMessageButton - 
+ audioMessageButton - 
+ dataContainer - 
+ bubbleContainer - 
+ buttonsContainer - 
+
+ResponseMessage:
+ mainContainer - 
+ groupTypeMessagesNext - 
+ groupTypeMessagesPrev - 
+ groupTypeMessagesInter - 
+ textContainer - 
+ avatarContainer - 
+ image - 
+ positiveRateMessageButton - 
+ negativeRateMessageButton - 
+ audioMessageButton - 
+ dataContainer - 
+ bubbleContainer - 
+ buttonsContainer - 
+
+MessageLoader: {
+ mainContainer: {},
+ elementOne: {},
+ elementTwo: {},
+ elementThree: {},
+},
+Divider: {
+ dividerMainContainer: {},
+},
+Header: {
+ mainContainer: {},
+ avatarContainer: {},
+ image: {},
+ titleContainer: {},
+ resetButton: {},
+ closeButton: {},
+ settingsButton: {},
+ headerSearchContainer: {},
+ headerSearchInput: {},
+ searchButton: {},
+},
+Badge: {
+ mainContainer: {},
+ avatarContainer: {},
+ image: {},
+ titleContainer: {},
+ svg: {},
+},
+Rate: {
+ mainContainer: {},
+ titleContainer: {},
+ negativeRateButton: {},
+ positiveRateButton: {},
+ ratingElement: {},
+ ratingListContainer: {},
+},
+Close: {
+ mainContainer: {},
+},
+Settings: {
+ mainContainer: {},
+ header: {},
+ titleContainer: {},
+ closeSettingsButton: {},
+ fieldcontainer: {},
+ heading: {},
+ languages: {},
+ themes: {},
+ languagesCheckboxContainer: {},
+ themesCheckboxContainer: {},
+ boxTitle: {},
+ checkbox: {},
+ switcher: {},
+},
+ToggleSlider: {
+ toggleContainer: {},
+ toggleHeading: {},
+ toggleLabel: {},
+ toggleInput: {},
+ toggleSlider: {},
+}
+
+**For example:**  
+```
+import { ckAPIMethods } from "sova-chatkit";
+const data = {
+ themeName: 'Your awesome theme',
+ data: {
+ example: {}, 
+ Sender: {
+ mainContainer: {},
+ mainContainerSearch: {},
+ searchCountContainer: {},
+ searchButtonContainer: {},
+ addFileButton: {},
+ sendMessageButton: {},
+ shareButton: {},
+ stickersButton: {},
+ textArea: {},
+ voiceButton: {},
+ },
+ ChatIt: {
+ mainContainer: {},
+ chatContainer: {}, 
+ },
+ Dialog: {
+ mainContainer: {},
+ panel: {},
+ rateButton: {},
+ searchButton: {},
+ messagesContainer: {},
+ },
+ UserMessage: {
+ mainContainer: {},
+ groupTypeMessagesNext: {},
+ groupTypeMessagesPrev: {},
+ groupTypeMessagesInter: {},
+ textContainer: {},
+ avatarContainer: {},
+ image: {},
+ positiveRateMessageButton: {},
+ negativeRateMessageButton: {},
+ audioMessageButton: {},
+ dataContainer: {},
+ bubbleContainer: {},
+ buttonsContainer: {},
+ },
+ ResponseMessage: {
+ mainContainer: {},
+ groupTypeMessagesNext: {},
+ groupTypeMessagesPrev: {},
+ groupTypeMessagesInter: {},
+ textContainer: {},
+ avatarContainer: {},
+ image: {},
+ positiveRateMessageButton: {},
+ negativeRateMessageButton: {},
+ audioMessageButton: {},
+ dataContainer: {},
+ bubbleContainer: {},
+ buttonsContainer: {},
+ },
+ MessageLoader: {
+ mainContainer: {},
+ elementOne: {},
+ elementTwo: {},
+ elementThree: {},
+ },
+ Divider: {
+ dividerMainContainer: {},
+ },
+ Header: {
+ mainContainer: {},
+ avatarContainer: {},
+ image: {},
+ titleContainer: {},
+ resetButton: {},
+ closeButton: {},
+ settingsButton: {},
+ headerSearchContainer: {},
+ headerSearchInput: {},
+ searchButton: {},
+ },
+ Badge: {
+ mainContainer: {},
+ avatarContainer: {},
+ image: {},
+ titleContainer: {},
+ svg: {},
+ },
+ Rate: {
+ mainContainer: {},
+ titleContainer: {},
+ negativeRateButton: {},
+ positiveRateButton: {},
+ ratingElement: {},
+ ratingListContainer: {},
+ },
+ Close: {
+ mainContainer: {},
+ },
+ Settings: {
+ mainContainer: {},
+ header: {},
+ titleContainer: {},
+ closeSettingsButton: {},
+ fieldcontainer: {},
+ heading: {},
+ languages: {},
+ themes: {},
+ languagesCheckboxContainer: {},
+ themesCheckboxContainer: {},
+ boxTitle: {},
+ checkbox: {},
+ switcher: {},
+ },
+ ToggleSlider: {
+ toggleContainer: {},
+ toggleHeading: {},
+ toggleLabel: {},
+ toggleInput: {},
+ toggleSlider: {},
+ },
+ },
+};
+ckAPIMethods.styles('initTheme', data)
+```
+
+### 3) Event **changeStyles**  
+**Description:**  
+изменение полного пакета существующей темы  
+**Params:**  
 | Params        | Type    | Requires | Description     |  
 |---------------|---------|----------|-----------------|  
 | themeName     | string  | +        |  1              |  
-| data          | any     | +        |   1             |  
-
-For example:  
-```
-import { ckAPIMethods } from "sova-chatkit"
-
-```
-
-#### 3) Event **changeStyles**  
-Description: изменения стилевых настроек в теме   
-Params:  
-| Params        | Type    | Requires | Description     |  
-|---------------|---------|----------|-----------------|  
-| themeName     | string  | +        |  1              |  
 | data          | any     | +        |  1              |  
 
-For example:  
+**For example:**  
 ```
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
 
-#### 4) Event **changeChatIt** 
-Description: изменение стилевых настроек компонента ChatIt в определенной теме   
-Params:  
+### 4) Event **changeChatIt** 
+**Description:**  
+изменение стилевого пакета компонента ChatIt в выбранной теме   
+**Params:**  
 | Params        | Type    | Requires | Description     |  
 |---------------|---------|----------|-----------------|  
 | data          | any     | +        |  1              |  
 
-For example: 
+**For example:** 
 ```
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
 
-#### 5) Event **changeHeader**  
-Description: изменение стилевых настроек компонента Header в определенной теме   
-Params:  
+### 5) Event **changeHeader**  
+**Description:**  
+изменение стилевого пакета компонента Header в выбранной теме  
+**Params:**   
 | Params        | Type    | Requires | Description     |  
 |---------------|---------|----------|-----------------|  
 | data          | any     | +        |  1              | 
 
-For example: 
+**For example:** 
 ```
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
 
-#### 6) Event **changeDialog**  
-Description: изменение стилевых настроек компонента Dialog в определенной теме   
-Params:  
+### 6) Event **changeDialog**  
+**Description:**  
+изменение стилевого пакета компонента Dialog в выбранной теме   
+**Params:**  
 | Params        | Type    | Requires | Description     |  
 |---------------|---------|----------|-----------------|  
 | data          | any     | +        |  1              | 
 
-For example: 
+**For example:** 
 ```
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
 
-#### 7) Event **changeRate**  
-Description: изменение стилевых настроек компонента Rate в определенной теме   
-Params:  
+### 7) Event **changeRate**  
+**Description:**  
+изменение стилевого пакета компонента Rate в выбранной теме    
+**Params:**  
 | Params        | Type    | Requires | Description     |  
 |---------------|---------|----------|-----------------|  
 | data          | any     | +        |   1             |  
 
-For example: 
+**For example:** 
 ```
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
 
-#### 8) Event **changeUserMessage**  
-Description: изменение стилевых настроек компонента (user) Message в определенной теме   
-Params:  
+### 8) Event **changeUserMessage**  
+**Description:**  
+изменение стилевого пакета компонента UserMessage в выбранной теме   
+**Params:**  
 | Params        | Type    | Requires | Description     |  
 |---------------|---------|----------|-----------------|  
 | data          | any     | +        |  1              | 
 
-For example: 
+**For example:** 
 ```
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
 
-#### 9) Event **changeResponseMessage**  
-Description: изменение стилевых настроек компонента (response) Message в определенной теме   
-Params:  
+### 9) Event **changeResponseMessage**  
+**Description:**  
+изменение стилевого пакета компонента ResponseMessage в выбранной теме   
+**Params:**  
 | Params        | Type    | Requires | Description     |  
 |---------------|---------|----------|-----------------|  
 | data          | any     | +        |  1              |  
 
-For example: 
+**For example:** 
 ```
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
 
-#### 10) Event **changeSender**  
-Description: изменение стилевых настроек компонента Sender в определенной теме   
-Params:  
+### 10) Event **changeSender**  
+**Description:**  
+изменение стилевого пакета компонента Sender в выбранной теме 
+**Params:**  
 | Params        | Type    | Requires | Description     |  
 |---------------|---------|----------|-----------------|  
 | data          | any     | +        |  1              | 
 
-For example: 
+**For example:** 
 ```
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
 
-#### 11) Event **changeBadge**  
-Description: изменение стилевых настроек компонента Badge в определенной теме   
-Params:  
+### 11) Event **changeBadge**  
+**Description:**  
+изменение стилевого пакета компонента Badge в выбранной теме   
+**Params:**  
 | Params        | Type    | Requires | Description     |  
 |---------------|---------|----------|-----------------|  
 | data          | any     | +        |  1              |  
 
-For example: 
+**For example:** 
 ```
 import { ckAPIMethods } from "sova-chatkit"
 
