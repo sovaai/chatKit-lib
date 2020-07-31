@@ -3,40 +3,44 @@
 * **ckAPIMethods** - методы, влияющие на поведение UI или взаимодействие UI;
 * **CkComponents** - UI составляющие виджета, представляющие собой реакт-компоненты;
 * **ckStore** - управление контентом.
-Подробное описание библиотеки представлено на станице ниже.
+Подробное описание библиотеки представлено ниже.
 
 # Install
 Для установки библиотеки небходимо ввести в терминал следующую команду:
 ```
-$ npm i --save Sova-Chat-Kit
+npm i sova-chatkit
 ```
 
 # Quick start
-Для быстростого старта и возможности вносить изменения в какой-либо компонент библиотеки, введите в терминал следующую команду:
-In your App.js file:  
+Для быстростого старта и возможности вносить изменения в какой-либо компонент библиотеки, введите in your **App.jsx** file next comand: 
 ```
-import {CkComponents} from 'Sova-Chat-Kit'
-...
-<CkComponents.ChatIt />
-...
+import React from "react"
+import { CkComponents } from "sova-chatkit"
+ 
+function App() {
+ return (
+ <div className="App">
+ <CkComponents.ChatIt ckStore={true} />
+ </div>
+ )
+}
+ 
+export default App
 ```
-Команда импортирует на ПК дефолтный виджет со всеми компонентами. 
  
- 
- # Описание библиотеки
- ## ckAPIMethods
+# Описание библиотеки
+## ckAPIMethods
 * [recieveMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/recieveMessageAPI.md "Read more") (Add a text messages to STORE)
 * [sendMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/sendMessageAPI.md "Read more") (Send messages to the module to call request)
 * [notificationsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/notificationsAPI.md "Read more") (Меняет сеттинги компонентов в STORE)
 * [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "Read more") (Edit the widget theme or individual component)
 * [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "Read more") (меняет сеттинги компонентов в STORE)
 * [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "Read more") (меняет картинки в виджете)
-* [modulesAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/modulesAPI.md "Read more") (подключение модулей)
+* [modulesAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/modulesAPI.md "Read more") (подключение диалоговых модулей)
 * [languageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI%20.md "Read more") (настройки языковых пакетов)
  
- 
- ## CkComponents
- В виджете используются следующие react-компоненты:
+## CkComponents
+В виджете используются следующие react-компоненты:
 * [Badge](https://github.com/sovaai/chatKit/blob/master/docs/components/badge.md "Read more")
 * [Message](https://github.com/sovaai/chatKit/blob/master/docs/components/message.md "Read more")
 * [Dialog](https://github.com/sovaai/chatKit/blob/master/docs/components/dialog.md "Read more")
@@ -44,7 +48,7 @@ import {CkComponents} from 'Sova-Chat-Kit'
 * [Rate](https://github.com/sovaai/chatKit/blob/master/docs/components/rate.md "Read more")
 * [Sender](https://github.com/sovaai/chatKit/blob/master/docs/components/sender.md "Read more")
  
- ## ckStore
+## ckStore
 1. **messages**  (ключ, под которым хранится история сообщений как пользователя, так и приходящие ответы)
 * history (массив всех сообщений, которые отображаются в dialog)
 * announcements (доступные анонсы)
@@ -59,7 +63,6 @@ import {CkComponents} from 'Sova-Chat-Kit'
 * media
    * avatar (путь до картинки)
    * icons (настройка иконок)
-   * steakers
    
 4 **language** (настройка языковых пакетов)
 * active (активный языковой пакет; пакет, который используется в dialog)
@@ -69,18 +72,10 @@ import {CkComponents} from 'Sova-Chat-Kit'
 * active (активная тема)
 * stack (хранилище всех тем, доступных для использования)
 
-6. **notifications** (ключ, под которым хранятся нотификации)
-* settings
-* revision
-* timer1
-* timer2
-* disablePeriod
-* messages (перечень всхе сообщений, которые будут отображаться в виджете в порядке очередности)
+6. **clientConfig** (ключ, под которым хранятся верхнеуровневые настройки виджета)
+* info (информация о client user)
 
-7. **clientConfig** (ключ, под которым хранятся верхнеуровневые настройки виджета)
-* info
-
-8. **managment** (ключ, под которым хранятся настройки виджета)
+7. **managment** (ключ, под которым хранятся настройки виджета)
 * common (общие настройки)
 * chatIsOpen (состояние виджета (раскрыт/находится в режиме бейджа))
 * showNotification (показывать/не показывать нотификации)
