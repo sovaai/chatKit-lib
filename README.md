@@ -1,5 +1,5 @@
 # :rainbow: Why?
-Library of react components that allows you to quickly deploy a dialog interface that interacts with a third-party service that provides the ability to interact with chat.
+Library of react components that allows you to create dialog interface that interacts with a third-party service that provides the ability to interact with chat.
 
 # :space_invader: Install
 For install library you need enter next comand:
@@ -26,8 +26,8 @@ export default App
 
 # :crown: Table of contents
 The library consists of the next components:  
-:wrench:   **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
 :unicorn:   **[CkComponents](#2)** - UI components of widget (react-components);  
+:wrench:   **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
 :blue_book:   **[ckStore](#3)** - management of content.  
 
 Detailed description of the library is given below.
