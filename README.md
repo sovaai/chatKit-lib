@@ -57,7 +57,7 @@ All methods affect information stored `ckStore` and can change widget behavior a
 #### Import
 `import { CkComponents } from "sova-chatkit"`  
 
-Widget uses next react components:
+Widget uses next react components:  
 | Component                                                                                                   |                                                     | 
 |-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------| 
 | [Badge](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/badge.md "Read about badge")      | widget expand button                                |
@@ -73,13 +73,14 @@ Each component accepts props from `ckStore` with value `true` or `false` denotin
 ## ckStore<a name="3"></a>
 #### Import
 `import { ckStore } from "sova-chatkit"`  
+`ckStore` stores content information with global keys:  
 
-| Component                                                                                          |                                                     | 
-|----------------------------------------------------------------------------------------------------|-----------------------------------------------------| 
-| [message](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/message.md "Read more")   | key for storage user message history and incoming answers      |
-| [modules](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/modules.md "Read more")   | key for storage of information of dialog modules    | 
-| [settings](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/settings.md "Read more") | key for storage dialog settings and its states                   |
-| [language](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/language.md "Read more") | settings language packs                                        | 
+| Key                                                                                                |                                                                        | 
+|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------| 
+| [message](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/message.md "Read more")   | key for storage user message history and incoming answers              |
+| [modules](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/modules.md "Read more")   | key for storage of information of dialog modules                       | 
+| [settings](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/settings.md "Read more") | key for storage dialog settings and its states                         |
+| [language](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/language.md "Read more") | settings language packs                                                | 
 | [styles](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/styles.md "Read more")     | key for storage style settings of the dialog and individual components | 
-| [clientConfig](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/clientConfig.md "Read more") |  key for storing top-level widget settings                | 
-| [managment](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/managment.md "Read more")       |  key for storing widget settings                | 
+| [clientConfig](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/clientConfig.md "Read more") |  key for storing top-level widget settings                     | 
+| [managment](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/managment.md "Read more")       |  key for storing widget settings                               | 
