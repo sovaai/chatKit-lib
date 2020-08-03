@@ -35,7 +35,7 @@ Detailed description of the library is given below.
  
 # :memo: Library Description
 ## ckAPIMethods <a name="1"></a>
-### Import 
+#### Import 
 `import { ckAPIMethods } from "sova-chatkit"`
 
 | API method                                                                                                                            |                     | 
@@ -47,6 +47,8 @@ Detailed description of the library is given below.
 | [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "Read about this method")              | change pictures in widget     | 
 | [modulesAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/modulesAPI.md "Read about this method")                | connection of dialog modules   |
 | [languageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI%20.md "Read about this method")           | settings language packs    |
+
+All methods affect information stored ckStore and can change widget behavior and display.
 
  
 ## CkComponents <a name="2"></a>
@@ -65,7 +67,8 @@ Widget uses next react components:
 
 
 ## ckStore<a name="3"></a>
-Import: `import { ckStore } from "sova-chatkit"`  
+#### Import
+`import { ckStore } from "sova-chatkit"`  
 ### **messages**  
 messages - key for storage user message history and incoming answers. It includes:  
 * **history** - all messages that appear in dialog;  
