@@ -27,8 +27,8 @@ export default App
 # :crown: Table of contents
 The library consists of the next components:  
 :wrench: **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
-:hankey: **[CkComponents](#2)** - UI components of widget (react-components);  
-:hankey: **[ckStore](#3)** - management of content.  
+:computer: **[CkComponents](#2)** - UI components of widget (react-components);  
+:blue_book: **[ckStore](#3)** - management of content.  
 
 Detailed description of the library is given below.
  
