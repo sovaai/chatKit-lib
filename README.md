@@ -72,8 +72,9 @@ Each component accepts props from `ckStore` with value `true` or `false` denotin
 
 ## ckStore<a name="3"></a>
 #### Import
-`import { ckStore } from "sova-chatkit"`  
-`ckStore` stores content information with global keys:  
+`import { ckStore } from "sova-chatkit"`
+
+`ckStore` stores content information in global keys:  
 
 | Key                                                                                                |                                                                        | 
 |----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------| 
