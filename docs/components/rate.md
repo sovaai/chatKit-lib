@@ -1,8 +1,4 @@
-text
-
-# Description
-text
-
+# Description of rate
 # Install
 `$ npm i --save Sova-Chat-Kit`
 
