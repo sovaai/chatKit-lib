@@ -1,10 +1,7 @@
-text
-
-# Description
-text
+# Description of sender
 
 # Install
-`$ npm i --save Sova-Chat-Kit`
+`npm i --save Sova-Chat-Kit`
 
 # Quick start
 In your App.js file:  
