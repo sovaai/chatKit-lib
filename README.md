@@ -3,9 +3,9 @@ Library of react components that allows you to quickly deploy a dialog interface
 
 # Table of contents
 The library consists of the next components::
-* **ckAPIMethods** - methods that affect behavior of UI or interaction with UI;  
-* **CkComponents** - UI components of widget (react-comonents);  
-* **ckStore** - management of content.  
+* **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
+* **[CkComponents](#2)** - UI components of widget (react-comonents);  
+* **[ckStore](#3)** - management of content.  
 
 Detailed description of the library is given below.
 
@@ -33,7 +33,7 @@ export default App
 ```
  
 # Library Description
-## ckAPIMethods
+## ckAPIMethods <a name="1"></a>
 * [recieveMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/recieveMessageAPI.md "Read about this method") - add a text messages to STORE;  
 * [sendMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/sendMessageAPI.md "Read about this method") - send messages to the module to call request;  
 * [notificationsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/notificationsAPI.md "Read about this method") - change parameters of notifications in STORE;  
@@ -43,7 +43,7 @@ export default App
 * [modulesAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/modulesAPI.md "Read about this method") - connection of dialog modules;  
 * [languageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI%20.md "Read about this method") - settings language packs.  
  
-## CkComponents
+## CkComponents <a name="2"></a>
 Widget uses next react-components:
 * [Badge](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/badge.md "Read about badge");  
 * [Message](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/message.md "Read about message");  
@@ -52,7 +52,7 @@ Widget uses next react-components:
 * [Rate](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/rate.md "Read about rate");  
 * [Sender](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/sender.md "Read about sender").
  
-## ckStore
+## ckStore<a name="3"></a>
 ### **messages**  
 messages - key for storage user message history and incoming answers. It includes:  
 * **history** - all messages that appear in dialog;  
