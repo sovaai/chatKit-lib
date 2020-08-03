@@ -1,3 +1,6 @@
+# Why?
+Library of react components that allows you to quickly deploy a dialog interface that interacts with a third-party service that provides the ability to interact with chat.
+
 # Table of contents
 The library consists of the next components::
 * **ckAPIMethods** - methods that affect behavior of UI or interaction with UI;  
