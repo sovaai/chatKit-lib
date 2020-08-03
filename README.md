@@ -37,7 +37,6 @@ Detailed description of the library is given below.
 # :memo: Library Description
 
 ## CkComponents <a name="2"></a>
-#### Import
 ```javascript
 import { CkComponents } from "sova-chatkit"
 ```  
@@ -57,7 +56,6 @@ Each component accepts props from `ckStore` with value `true` or `false` denotin
 
 
 ## ckAPIMethods <a name="1"></a>
-#### Import 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 ```
@@ -77,21 +75,20 @@ All methods affect information stored `ckStore` and can change widget behavior a
  
 
 ## ckStore<a name="3"></a>
-#### Import
 ```javascript
 import { ckStore } from "sova-chatkit"
 ```
 
 `ckStore` stores content information in global keys:  
 
-| Key                                                                                                |                                                                        | 
-|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------| 
-| [message](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/message.md "Read more")   | key for storage user message history and incoming answers              |
-| [modules](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/modules.md "Read more")   | key for storage of information of dialog modules                       | 
-| [settings](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/settings.md "Read more") | key for storage dialog settings and its states                         |
-| [language](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/language.md "Read more") | settings language packs                                                | 
-| [styles](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/styles.md "Read more")     | key for storage style settings of the dialog and individual components | 
-| [clientConfig](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/clientConfig.md "Read more") |  key for storing top-level widget settings                     | 
-| [managment](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/managment.md "Read more")       |  key for storing widget settings                               | 
+| Key                                                                                                        |                                                        | 
+|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------| 
+| [message](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/message.md "Read more")           | user message history and incoming answers              |
+| [modules](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/modules.md "Read more")           | information of dialog modules                          | 
+| [settings](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/settings.md "Read more")         | dialog settings and its states                         |
+| [language](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/language.md "Read more")         | settings language packs                                | 
+| [styles](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/styles.md "Read more")             | style settings of the dialog and individual components | 
+| [clientConfig](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/clientConfig.md "Read more") | top-level widget settings                              | 
+| [managment](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/managment.md "Read more")       | widget settings                                        | 
 
 Implemented with [Storeon](https://github.com/storeon/storeon). You can see all content information in [react dev tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
