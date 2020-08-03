@@ -91,4 +91,4 @@ import { ckStore } from "sova-chatkit"
 | [clientConfig](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/clientConfig.md "Read more") | top-level widget settings                              | 
 | [managment](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/managment.md "Read more")       | widget settings                                        | 
 
-Implemented with [Storeon](https://github.com/storeon/storeon). You can see all content information in [react dev tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+Implemented with [Storeon](https://github.com/storeon/storeon). You can see all content information in [react dev tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi).
