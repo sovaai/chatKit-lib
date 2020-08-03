@@ -27,7 +27,7 @@ export default App
 # Table of contents
 The library consists of the next components::
 * **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
-* **[CkComponents](#2)** - UI components of widget (react-comonents);  
+* **[CkComponents](#2)** - UI components of widget (react-components);  
 * **[ckStore](#3)** - management of content.  
 
 Detailed description of the library is given below.
