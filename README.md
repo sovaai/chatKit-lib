@@ -16,7 +16,7 @@ import { CkComponents } from "sova-chatkit"
 function App() {
  return (
  <div className="App">
- <CkComponents.ChatIt ckStore={true} />
+   <CkComponents.ChatIt ckStore={true} />
  </div>
  )
 }
