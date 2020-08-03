@@ -59,7 +59,7 @@ Each component accepts props from `ckStore` with value `true` or `false` denotin
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 ```
-ckAPIMethods stores a list of methods:
+`ckAPIMethods` stores a list of methods:
 | API method                                                                                                                            |                     | 
 |---------------------------------------------------------------------------------------------------------------------------------------|---------------------| 
 | [recieveMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/recieveMessageAPI.md "Read about this method")  | add a text messages to STORE  |
