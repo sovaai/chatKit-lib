@@ -33,8 +33,9 @@ The library consists of the next components:
 Detailed description of the library is given below.
  
  
+ 
 # :memo: Library Description
-## :star: ckAPIMethods <a name="1"></a>
+## ckAPIMethods <a name="1"></a>
 #### Import 
 `import { ckAPIMethods } from "sova-chatkit"`
 
@@ -51,7 +52,8 @@ Detailed description of the library is given below.
 All methods affect information stored ckStore and can change widget behavior and display.
 
  
-## :star: CkComponents <a name="2"></a>
+ 
+## CkComponents <a name="2"></a>
 #### Import
 `import { CkComponents } from "sova-chatkit"`  
 
@@ -66,7 +68,8 @@ Widget uses next react components:
 | [Sender](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/sender.md "Read about sender")   | message input and sending component                 | 
 
 
-## :star: ckStore<a name="3"></a>
+
+## ckStore<a name="3"></a>
 #### Import
 `import { ckStore } from "sova-chatkit"`  
 ### **messages**  
