@@ -3,13 +3,13 @@ Library of react components that allows you to quickly deploy a dialog interface
 
 # :space_invader: Install
 For install library you need enter next comand:
-```
+```javascript
 npm i sova-chatkit
 ```
 
 # :rocket: Quick start
 For quick start and make changes to a library component, enter in your **App.jsx** file next comand: 
-```
+```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
  
@@ -26,9 +26,9 @@ export default App
 
 # :crown: Table of contents
 The library consists of the next components:  
-:wrench: **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
-:unicorn: **[CkComponents](#2)** - UI components of widget (react-components);  
-:blue_book: **[ckStore](#3)** - management of content.  
+:wrench:   **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
+:unicorn:   **[CkComponents](#2)** - UI components of widget (react-components);  
+:blue_book:   **[ckStore](#3)** - management of content.  
 
 Detailed description of the library is given below.
  
@@ -37,7 +37,9 @@ Detailed description of the library is given below.
 # :memo: Library Description
 ## ckAPIMethods <a name="1"></a>
 #### Import 
-`import { ckAPIMethods } from "sova-chatkit"`
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+```
 
 | API method                                                                                                                            |                     | 
 |---------------------------------------------------------------------------------------------------------------------------------------|---------------------| 
@@ -55,7 +57,9 @@ All methods affect information stored `ckStore` and can change widget behavior a
  
 ## CkComponents <a name="2"></a>
 #### Import
-`import { CkComponents } from "sova-chatkit"`  
+```javascript
+import { CkComponents } from "sova-chatkit"
+```  
 
 Widget uses next react components:  
 | Component                                                                                                   |                                                     | 
@@ -72,7 +76,9 @@ Each component accepts props from `ckStore` with value `true` or `false` denotin
 
 ## ckStore<a name="3"></a>
 #### Import
-`import { ckStore } from "sova-chatkit"`
+```javascript
+import { ckStore } from "sova-chatkit"
+```
 
 `ckStore` stores content information in global keys:  
 
