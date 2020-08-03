@@ -49,7 +49,7 @@ Import: `import { ckAPIMethods } from "sova-chatkit"`
 
  
 ## CkComponents <a name="2"></a>
-Import: `import { CkComponents } from "sova-chatkit"`
+Import: `import { CkComponents } from "sova-chatkit"`  
 Widget uses next react components:
 | Component                                                                                                   |                                                     | 
 |-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------| 
@@ -62,7 +62,7 @@ Widget uses next react components:
 
 
 ## ckStore<a name="3"></a>
-Import: `import { ckStore } from "sova-chatkit"`
+Import: `import { ckStore } from "sova-chatkit"`  
 ### **messages**  
 messages - key for storage user message history and incoming answers. It includes:  
 * **history** - all messages that appear in dialog;  
