@@ -1,7 +1,7 @@
-# Why?
+# :rainbow: Why?
 Library of react components that allows you to quickly deploy a dialog interface that interacts with a third-party service that provides the ability to interact with chat.
 
-# Install
+# :space_invader: Install
 For install library you need enter next comand:
 ```
 npm i sova-chatkit
@@ -33,7 +33,7 @@ The library consists of the next components:
 Detailed description of the library is given below.
  
  
-# Library Description
+# :memo: Library Description
 ## ckAPIMethods <a name="1"></a>
 | API method                                                                                                                            |                     | 
 |---------------------------------------------------------------------------------------------------------------------------------------|---------------------| 
