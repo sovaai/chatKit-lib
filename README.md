@@ -1,14 +1,6 @@
 # Why?
 Library of react components that allows you to quickly deploy a dialog interface that interacts with a third-party service that provides the ability to interact with chat.
 
-# Table of contents
-The library consists of the next components::
-* **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
-* **[CkComponents](#2)** - UI components of widget (react-comonents);  
-* **[ckStore](#3)** - management of content.  
-
-Detailed description of the library is given below.
-
 # Install
 For install library you need enter next comand:
 ```
@@ -31,6 +23,14 @@ function App() {
  
 export default App
 ```
+
+# Table of contents
+The library consists of the next components::
+* **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
+* **[CkComponents](#2)** - UI components of widget (react-comonents);  
+* **[ckStore](#3)** - management of content.  
+
+Detailed description of the library is given below.
  
 # Library Description
 ## ckAPIMethods <a name="1"></a>
