@@ -49,7 +49,9 @@ Import: `import { ckAPIMethods } from "sova-chatkit"`
 
  
 ## CkComponents <a name="2"></a>
-Import: `import { CkComponents } from "sova-chatkit"`  
+#### Import
+`import { CkComponents } from "sova-chatkit"`  
+
 Widget uses next react components:
 | Component                                                                                                   |                                                     | 
 |-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------| 
