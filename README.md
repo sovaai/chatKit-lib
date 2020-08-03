@@ -45,13 +45,16 @@ Detailed description of the library is given below.
 | [languageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI%20.md "Read about this method")           | settings language packs    |
  
 ## CkComponents <a name="2"></a>
-Widget uses next react-components:
-* [Badge](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/badge.md "Read about badge");  
-* [Message](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/message.md "Read about message");  
-* [Dialog](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/dialog.md "Read about dialog");  
-* [Header](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/header.md "Read about header");  
-* [Rate](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/rate.md "Read about rate");  
-* [Sender](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/sender.md "Read about sender").
+Widget uses next react components:
+| Component                                                                                                   |                                                     | 
+|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------| 
+| [Badge](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/badge.md "Read about badge")      | widget expand button                                |
+| [Message](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/message.md "Read about message")| bubble of text message with information about it    | 
+| [Dialog](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/dialog.md "Read about dialog")   | displaying a set of text messages                   |
+| [Header](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/header.md "Read about header")   | widget title                                        | 
+| [Rate](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/rate.md "Read about rate")         | component of rate the message                       | 
+| [Sender](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/sender.md "Read about sender")   | message input and sending component                 | 
+
  
 ## ckStore<a name="3"></a>
 ### **messages**  
