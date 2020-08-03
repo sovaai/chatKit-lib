@@ -25,16 +25,17 @@ export default App
 ```
 
 # Table of contents
-The library consists of the next components::
-* **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
-* **[CkComponents](#2)** - UI components of widget (react-components);  
-* **[ckStore](#3)** - management of content.  
+The library consists of the next components:  
+:hankey: **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
+:hankey: **[CkComponents](#2)** - UI components of widget (react-components);  
+:hankey: **[ckStore](#3)** - management of content.  
 
 Detailed description of the library is given below.
  
+ 
 # Library Description
 ## ckAPIMethods <a name="1"></a>
-| API method                                                                                                                            |     | 
+| API method                                                                                                                            |                     | 
 |---------------------------------------------------------------------------------------------------------------------------------------|---------------------| 
 | [recieveMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/recieveMessageAPI.md "Read about this method")  | add a text messages to STORE  |
 | [sendMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/sendMessageAPI.md "Read about this method")        | send messages to the module to call request     | 
@@ -43,6 +44,7 @@ Detailed description of the library is given below.
 | [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "Read about this method")              | change pictures in widget     | 
 | [modulesAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/modulesAPI.md "Read about this method")                | connection of dialog modules   |
 | [languageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI%20.md "Read about this method")           | settings language packs    |
+ 
  
 ## CkComponents <a name="2"></a>
 Widget uses next react components:
@@ -55,7 +57,7 @@ Widget uses next react components:
 | [Rate](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/rate.md "Read about rate")         | component of rate the message                       | 
 | [Sender](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/sender.md "Read about sender")   | message input and sending component                 | 
 
- 
+
 ## ckStore<a name="3"></a>
 ### **messages**  
 messages - key for storage user message history and incoming answers. It includes:  
@@ -63,6 +65,7 @@ messages - key for storage user message history and incoming answers. It include
 * **announcements** - available announcements;  
 * **lastResponseMessage** - last message from back;  
 * **lastUserMessage** - last message from user.  
+
 
 ### **modules**  
 modules - key for storage of information of dialog modules. It includes:  
