@@ -35,7 +35,8 @@ Detailed description of the library is given below.
  
 # :memo: Library Description
 ## ckAPIMethods <a name="1"></a>
-Import: `import { ckAPIMethods } from "sova-chatkit"`
+### Import 
+`import { ckAPIMethods } from "sova-chatkit"`
 
 | API method                                                                                                                            |                     | 
 |---------------------------------------------------------------------------------------------------------------------------------------|---------------------| 
