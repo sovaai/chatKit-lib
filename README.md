@@ -36,7 +36,6 @@ Detailed description of the library is given below.
 ## ckAPIMethods <a name="1"></a>
 * [recieveMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/recieveMessageAPI.md "Read about this method") - add a text messages to STORE;  
 * [sendMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/sendMessageAPI.md "Read about this method") - send messages to the module to call request;  
-* [notificationsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/notificationsAPI.md "Read about this method") - change parameters of notifications in STORE;  
 * [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "Read about this method") - edit the widget theme or individual component;  
 * [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "Read about this method") - change settings of components in STORE;
 * [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "Read about this method") - change pictures in widget;  
