@@ -49,7 +49,7 @@ Detailed description of the library is given below.
 | [modulesAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/modulesAPI.md "Read about this method")                | connection of dialog modules   |
 | [languageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI%20.md "Read about this method")           | settings language packs    |
 
-All methods affect information stored ckStore and can change widget behavior and display.
+All methods affect information stored `ckStore` and can change widget behavior and display.
 
  
  
@@ -67,6 +67,7 @@ Widget uses next react components:
 | [Rate](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/rate.md "Read about rate")         | component of rate the message                       | 
 | [Sender](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/sender.md "Read about sender")   | message input and sending component                 | 
 
+Each component accepts props from `ckStore` with value "true" or "false" denoting whether the component should cling information from the base `ckStore` or not.
 
 
 ## ckStore<a name="3"></a>
