@@ -35,26 +35,7 @@ Detailed description of the library is given below.
  
  
 # :memo: Library Description
-## ckAPIMethods <a name="1"></a>
-#### Import 
-```javascript
-import { ckAPIMethods } from "sova-chatkit"
-```
 
-| API method                                                                                                                            |                     | 
-|---------------------------------------------------------------------------------------------------------------------------------------|---------------------| 
-| [recieveMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/recieveMessageAPI.md "Read about this method")  | add a text messages to STORE  |
-| [sendMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/sendMessageAPI.md "Read about this method")        | send messages to the module to call request     | 
-| [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "Read about this method")                    | edit the widget theme or individual component     | 
-| [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "Read about this method")        | change settings of components in STORE     |
-| [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "Read about this method")              | change pictures in widget     | 
-| [modulesAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/modulesAPI.md "Read about this method")                | connection of dialog modules   |
-| [languageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI%20.md "Read about this method")           | settings language packs    |
-
-All methods affect information stored `ckStore` and can change widget behavior and display.
-
- 
- 
 ## CkComponents <a name="2"></a>
 #### Import
 ```javascript
@@ -74,6 +55,27 @@ Widget uses next react components:
 Each component accepts props from `ckStore` with value `true` or `false` denoting whether the component should cling information from the base `ckStore` or not.
 
 
+
+## ckAPIMethods <a name="1"></a>
+#### Import 
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+```
+
+| API method                                                                                                                            |                     | 
+|---------------------------------------------------------------------------------------------------------------------------------------|---------------------| 
+| [recieveMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/recieveMessageAPI.md "Read about this method")  | add a text messages to STORE  |
+| [sendMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/sendMessageAPI.md "Read about this method")        | send messages to the module to call request     | 
+| [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "Read about this method")                    | edit the widget theme or individual component     | 
+| [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "Read about this method")        | change settings of components in STORE     |
+| [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "Read about this method")              | change pictures in widget     | 
+| [modulesAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/modulesAPI.md "Read about this method")                | connection of dialog modules   |
+| [languageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI%20.md "Read about this method")           | settings language packs    |
+
+All methods affect information stored `ckStore` and can change widget behavior and display.
+
+ 
+
 ## ckStore<a name="3"></a>
 #### Import
 ```javascript
@@ -92,4 +94,4 @@ import { ckStore } from "sova-chatkit"
 | [clientConfig](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/clientConfig.md "Read more") |  key for storing top-level widget settings                     | 
 | [managment](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/managment.md "Read more")       |  key for storing widget settings                               | 
 
-Implemented with [Storeon](https://github.com/storeon/storeon).
+Implemented with [Storeon](https://github.com/storeon/storeon). You can see all content information in [react dev tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
