@@ -73,44 +73,13 @@ Each component accepts props from `ckStore` with value `true` or `false` denotin
 ## ckStore<a name="3"></a>
 #### Import
 `import { ckStore } from "sova-chatkit"`  
-### **messages**  
-messages - key for storage user message history and incoming answers. It includes:  
-* **history** - all messages that appear in dialog;  
-* **announcements** - available announcements;  
-* **lastResponseMessage** - last message from back;  
-* **lastUserMessage** - last message from user.  
 
-
-### **modules**  
-modules - key for storage of information of dialog modules. It includes:  
-* **active** - dialog module that is currently in use;  
-* **stack** - storage of all registered dialog modules.  
-
-### **settings** 
-settings - key for storage dialog settings and its states. It includes:  
-* **media:**
-   * **avatar** - path to picture;  
-   * **icons** - icons settings.  
-   
-### **language** 
-language - settings language packs. It includes:  
-* **active** - active language pack;  
-* **stack** - storage of all registered language packs.  
-
-### **styles** 
-styles - key for storage style settings of the dialog and individual components. It includes:  
-* **active** - active theme;  
-* **stack** - storage of all topics available for use.  
-
-### **clientConfig** 
-clientConfig - key for storing top-level widget settings. It includes:  
-* **info** - information about client user.  
-
-### **managment** 
-managment - key for storing widget settings. It includes:  
-* **common** - general settings;  
-* **chatIsOpen** - widget state (open or contract to badge);  
-* **showNotification** - show notification or not;  
-* **showMsLoad** - show or not show slider of message loading;  
-* **showRate** - show message raiting or not;  
-* **components** - list of all components.  
+| Component                                                                                          |                                                     | 
+|----------------------------------------------------------------------------------------------------|-----------------------------------------------------| 
+| [message](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/message.md "Read more")   | key for storage user message history and incoming answers      |
+| [modules](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/modules.md "Read more")   | key for storage of information of dialog modules    | 
+| [settings](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/settings.md "Read more") | key for storage dialog settings and its states                   |
+| [language](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/language.md "Read more") | settings language packs                                        | 
+| [styles](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/styles.md "Read more")     | key for storage style settings of the dialog and individual components | 
+| [clientConfig](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/clientConfig.md "Read more") |  key for storing top-level widget settings                | 
+| [managment](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/managment.md "Read more")       |  key for storing widget settings                | 
