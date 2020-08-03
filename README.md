@@ -7,7 +7,7 @@ For install library you need enter next comand:
 npm i sova-chatkit
 ```
 
-# Quick start
+# :rocket: Quick start
 For quick start and make changes to a library component, enter in your **App.jsx** file next comand: 
 ```
 import React from "react"
@@ -24,9 +24,9 @@ function App() {
 export default App
 ```
 
-# Table of contents
+# :crown: Table of contents
 The library consists of the next components:  
-:hankey: **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
+:wrench: **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
 :hankey: **[CkComponents](#2)** - UI components of widget (react-components);  
 :hankey: **[ckStore](#3)** - management of content.  
 
