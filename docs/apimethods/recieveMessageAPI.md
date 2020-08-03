@@ -5,7 +5,7 @@ Add a text messages to STORE в ключе messages
 ## Usage
 To make any changes you need:
 * call method `ckAPIMethods.recieveMessage` 
-* send data with the required keys. 
+* send data with the required keys  
 
 ## Data:
 | Params   | Type    | Requires | Description                            |
