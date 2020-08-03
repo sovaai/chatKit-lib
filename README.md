@@ -85,3 +85,5 @@ Each component accepts props from `ckStore` with value `true` or `false` denotin
 | [styles](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/styles.md "Read more")     | key for storage style settings of the dialog and individual components | 
 | [clientConfig](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/clientConfig.md "Read more") |  key for storing top-level widget settings                     | 
 | [managment](https://github.com/sovaai/chatKit-lib/blob/master/docs/ckStore/managment.md "Read more")       |  key for storing widget settings                               | 
+
+Implemented with [Storeon](https://github.com/storeon/storeon).
