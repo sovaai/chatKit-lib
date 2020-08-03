@@ -1,10 +1,6 @@
-text
-
-# Description
-text
-
+# Description of dialog
 # Install
-`$ npm i --save Sova-Chat-Kit`
+`npm i --save Sova-Chat-Kit`
 
 # Quick start
 In your App.js file:  
