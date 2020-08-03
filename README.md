@@ -6,13 +6,13 @@
 Подробное описание библиотеки представлено ниже.
 
 # Install
-Для установки библиотеки небходимо ввести в терминал следующую команду:
+For install library you need enter next comand:
 ```
 npm i sova-chatkit
 ```
 
 # Quick start
-Для быстростого старта и возможности вносить изменения в какой-либо компонент библиотеки, введите in your **App.jsx** file next comand: 
+For quick start and make changes to a library component, enter in your **App.jsx** file next comand: 
 ```
 import React from "react"
 import { CkComponents } from "sova-chatkit"
@@ -28,7 +28,7 @@ function App() {
 export default App
 ```
  
-# Описание библиотеки
+# Library Description
 ## ckAPIMethods
 * [recieveMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/recieveMessageAPI.md "Read more") (Add a text messages to STORE)
 * [sendMessageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/sendMessageAPI.md "Read more") (Send messages to the module to call request)
@@ -40,42 +40,49 @@ export default App
 * [languageAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI%20.md "Read more") (настройки языковых пакетов)
  
 ## CkComponents
-В виджете используются следующие react-компоненты:
-* [Badge](https://github.com/sovaai/chatKit/blob/master/docs/components/badge.md "Read more")
-* [Message](https://github.com/sovaai/chatKit/blob/master/docs/components/message.md "Read more")
-* [Dialog](https://github.com/sovaai/chatKit/blob/master/docs/components/dialog.md "Read more")
-* [Header](https://github.com/sovaai/chatKit/blob/master/docs/components/header.md "Read more")
-* [Rate](https://github.com/sovaai/chatKit/blob/master/docs/components/rate.md "Read more")
-* [Sender](https://github.com/sovaai/chatKit/blob/master/docs/components/sender.md "Read more")
+Widget uses next react-components:
+* [Badge](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/badge.md "Read more")
+* [Message](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/message.md "Read more")
+* [Dialog](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/dialog.md "Read more")
+* [Header](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/header.md "Read more")
+* [Rate](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/rate.md "Read more")
+* [Sender](https://github.com/sovaai/chatKit-lib/blob/master/docs/components/sender.md "Read more")
  
 ## ckStore
-1. **messages**  (ключ, под которым хранится история сообщений как пользователя, так и приходящие ответы)
+### **messages**  
+messages - ключ, под которым хранится история сообщений как пользователя, так и приходящие ответы  
 * history (массив всех сообщений, которые отображаются в dialog)
 * announcements (доступные анонсы)
 * lastResponseMessage (последнее сообщение, которое пришло с бэка)
 * lastUserMessage (последнее сообщение от пользователя)
 
-2. **modules**  (ключ, под которым хранится информация, связанная с подключенными модулями)
+### **modules**  
+modules - ключ, под которым хранится информация, связанная с подключенными модулями  
 * active (ck module, который используется в данный момент)
 * stack (хранилище всех зарегистрированных модулей)
 
-3. **settings** (ключ, под которым хранится информация о выбранных настройках диалогового окна, его состояние)
+### **settings** 
+settings - ключ, под которым хранится информация о выбранных настройках диалогового окна, его состояние  
 * media
    * avatar (путь до картинки)
    * icons (настройка иконок)
    
-4 **language** (настройка языковых пакетов)
+### **language** 
+language - настройка языковых пакетов
 * active (активный языковой пакет; пакет, который используется в dialog)
 * stack (хранилище всех зарегистрированных языковых пакетов) 
 
-5. **styles** (ключ, под которым хранятся стилевые настройки диалогового окна и отдельных компонентов)
+### **styles** 
+styles - ключ, под которым хранятся стилевые настройки диалогового окна и отдельных компонентов
 * active (активная тема)
 * stack (хранилище всех тем, доступных для использования)
 
-6. **clientConfig** (ключ, под которым хранятся верхнеуровневые настройки виджета)
+### **clientConfig** 
+clientConfig - ключ, под которым хранятся верхнеуровневые настройки виджета
 * info (информация о client user)
 
-7. **managment** (ключ, под которым хранятся настройки виджета)
+### **managment** 
+managment - ключ, под которым хранятся настройки виджета
 * common (общие настройки)
 * chatIsOpen (состояние виджета (раскрыт/находится в режиме бейджа))
 * showNotification (показывать/не показывать нотификации)
