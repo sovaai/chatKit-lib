@@ -1,3 +1,19 @@
+<table>
+    <tr>
+        <td colspan="2">component</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>border</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>color</td>
+    </tr>
+</table>
+
+
+
 # Badge
 Widget expand button
 
