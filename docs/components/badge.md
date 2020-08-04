@@ -102,7 +102,7 @@ Props from languages:
 
 
 ## Customization <a name="Customization"></a>
-To custom Badge component, you should use ckAPIMethods, which will allow you to change values in ckStore
+To custom `Badge` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.
 
 
 ### UIManagment
