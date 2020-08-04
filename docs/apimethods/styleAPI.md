@@ -1,9 +1,7 @@
 <table>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
         <td></td>
         <td></td>
         <td></td>
