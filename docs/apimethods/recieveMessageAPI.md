@@ -1,6 +1,5 @@
 # recieveMessageAPI
-## Description
-Add a text messages to STORE в ключе messages
+This method add a text messages to STORE в ключе messages
 
 ## Usage
 To make any changes you need:
