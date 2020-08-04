@@ -67,20 +67,20 @@ Props from styles:
 {
  mainContainer: { // Styles for main container
    margin: "1px",
-   },
+ },
  avatarContainer: { // Styles for avatar container
    maxWidth: "200px",
-   },
+ },
  image: { // Styles for tag <img/>
    maxWidth: "200px",
-   },
+ },
  titleContainer: { // Styles for title container
    textAlign: "4px",
-   },
+ },
  svg: { // Styles for SVG file
    color: "green",
-   },
  },
+}
 
 ```
 You must write css properties in camelCase, using objects style syntax.  
