@@ -1,6 +1,6 @@
-# Description of badge
+# Badge
 # Usage
-```
+```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
  
