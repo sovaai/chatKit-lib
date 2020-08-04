@@ -38,12 +38,12 @@ export default App
 
 ## Configuration <a name="configuration"></a>
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
-| Key                        |                                            |
-|----------------------------|--------------------------------------------|
-| [managment](#config1)      | information to control UI                  |
-| [settings](#config2)       | information to control media info          |
-| [styles](#config3)         | information to control styles packets      |
-| [languages](#config4)      | information to control Languages packets   |
+| Key                               |                                            |
+|-----------------------------------|--------------------------------------------|
+| [managment](#conf_managment)      | information to control UI                  |
+| [settings](#conf_settings)        | information to control media info          |
+| [styles](#conf_styles)            | information to control styles packets      |
+| [languages](#conf_languages)      | information to control Languages packets   |
 
 
 
