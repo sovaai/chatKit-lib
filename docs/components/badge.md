@@ -18,9 +18,9 @@ export default App
 ```
 
 ## Component props
-| Prop       | Type    |  Description                                            |
-|------------|---------|---------------------------------------------------------|
-| `ckStore`  | boolean |should cling information from the base `ckStore` or not  |
+| Prop       | Type    |  Description                                                                                      |
+|------------|---------|---------------------------------------------------------------------------------------------------|
+| `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
 
