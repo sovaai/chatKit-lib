@@ -1,5 +1,4 @@
 # styleAPI
-## Description
 Edit the widget theme or individual component
 
 ## Usage
