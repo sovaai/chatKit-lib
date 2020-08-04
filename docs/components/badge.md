@@ -17,21 +17,17 @@ function App() {
 export default App
 ```
 
+## Component props
+| Prop     | Type    |  Description                                          |
+|----------|---------|-------------------------------------------------------|
+| ckStore  | boolean |should cling information from the base ckStore or not  |
 
 
 
 
-# COMPONENT PROPS
-```
-{  /**
-  * Should component use ckStore as storage
-  @default true
-  * /
-  ckStore?: boolean
-}
-```
 
-# CONFIGURATION
+
+## CONFIGURATION
 Component get configuration info from storage. Badge touch 4 global keys from store:  
 * **UIManagment** - control UI;  
 * **Settings** - control media info;  
