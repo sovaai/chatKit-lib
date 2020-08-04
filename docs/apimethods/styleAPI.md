@@ -3,27 +3,27 @@ Edit the widget theme or individual component
 
 ## Usage
 To make any changes you need: 
-* Call a method `ckAPIMethods.style`;  
-* Enter the *event name*;  
-* Transfer *data* with changing.  
+* call a method `ckAPIMethods.style`  
+* enter name of event  
+* send data with the required keys  
 
 ## List of events
-| Event name            |                                                                              |
-|-----------------------|------------------------------------------------------------------------------|
-| switchTheme           | switching between themes                                                     |
-| initTheme             | initialization, addition a new theme                                         |
-| changeStyles          | modifying a complete package of existing theme                               |
-| changeChatIt          | changing the style package of component `ChatIt` in selected theme           |
-| changeHeader          | changing the style package of component `Header` in selected theme           |
-| changeDialog          | changing the style package of component `Dialog` in selected theme           |
-| changeRate            | changing the style package of component `Rate` in selected theme             |
-| changeUserMessage     | changing the style package of component `UserMessage` in selected theme      |
-| changeResponseMessage | changing the style package of component `ResponseMessage` in selected theme  |
-| changeSender          | changing the style package of component `Sender` in selected theme           |
-| changeBadge           | changing the style package of component `Badge` in selected theme            |
+| Event name                  |                                                                              |
+|-----------------------------|------------------------------------------------------------------------------|
+| [switchTheme](#1)           | switching between themes                                                     |
+| [initTheme](#2)             | initialization, addition a new theme                                         |
+| [changeStylesn](#3)         | modifying a complete package of existing theme                               |
+| [changeChatIt](#4)          | changing the style package of component `ChatIt` in selected theme           |
+| [changeHeader](#5)          | changing the style package of component `Header` in selected theme           |
+| [changeDialog](#6)          | changing the style package of component `Dialog` in selected theme           |
+| [changeRate](#7)            | changing the style package of component `Rate` in selected theme             |
+| [changeUserMessage](#8)     | changing the style package of component `UserMessage` in selected theme      |
+| [changeResponseMessage](#9) | changing the style package of component `ResponseMessage` in selected theme  |
+| [changeSender](#10)         | changing the style package of component `Sender` in selected theme           |
+| [changeBadge](#11)          | changing the style package of component `Badge` in selected theme            |
 
 ## Description of events and data  
-### 1) Event **switchTheme**  
+### 1) Event **switchTheme**  <a name="1"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -41,7 +41,7 @@ ckAPIMethods.styles('switchTheme', 'darkSova')
 ```
 </details>
 
-### 2) Event **initTheme**  
+### 2) Event **initTheme**  <a name="2"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -295,7 +295,7 @@ ckAPIMethods.styles('initTheme', data)
 ```
 </details>
 
-### 3) Event **changeStyles**  
+### 3) Event **changeStyles**  <a name="3"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -314,7 +314,7 @@ import { ckAPIMethods } from "sova-chatkit"
 ```
 </details>
 
-### 4) Event **changeChatIt** 
+### 4) Event **changeChatIt** <a name="4"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -332,7 +332,7 @@ import { ckAPIMethods } from "sova-chatkit"
 ```
 </details>
 
-### 5) Event **changeHeader**  
+### 5) Event **changeHeader**  <a name="5"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -350,7 +350,7 @@ import { ckAPIMethods } from "sova-chatkit"
 ```
 </details>
 
-### 6) Event **changeDialog** 
+### 6) Event **changeDialog** <a name="6"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -368,7 +368,7 @@ import { ckAPIMethods } from "sova-chatkit"
 ```
 </details>
 
-### 7) Event **changeRate**  
+### 7) Event **changeRate**  <a name="7"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -386,7 +386,7 @@ import { ckAPIMethods } from "sova-chatkit"
 ```
 </details>
 
-### 8) Event **changeUserMessage**  
+### 8) Event **changeUserMessage**  <a name="8"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -404,7 +404,7 @@ import { ckAPIMethods } from "sova-chatkit"
 ```
 </details>
 
-### 9) Event **changeResponseMessage** 
+### 9) Event **changeResponseMessage** <a name="9"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -422,7 +422,7 @@ import { ckAPIMethods } from "sova-chatkit"
 ```
 </details>
 
-### 10) Event **changeSender**  
+### 10) Event **changeSender**  <a name="10"></a>
 <details>
  <summary>read about event</summary>  
  
@@ -440,7 +440,7 @@ import { ckAPIMethods } from "sova-chatkit"
 ```
 </details>
 
-### 11) Event **changeBadge**  
+### 11) Event **changeBadge**  <a name="11"></a>
 <details>
  <summary>read about event</summary>  
  
