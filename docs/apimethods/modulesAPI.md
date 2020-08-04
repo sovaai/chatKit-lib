@@ -1,5 +1,5 @@
 # modulesAPI 
-(подключение модулей)
+This method is responsible for connecting modules
 
  # Usage
 To make any changes you need:  
