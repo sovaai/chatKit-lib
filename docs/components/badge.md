@@ -124,7 +124,7 @@ Options data:
 
 
 ### Settings
-To call the uiManagmentAPI (ссылка) with event `changeAvatar`, it's allows you to choose and overwrite path to choosen avatar in settings (якорь на верхний сеттингс)
+To call the uiManagmentAPI (ссылка) with event `changeAvatar`, it's allows you to overwrite path to choosen avatar in settings (якорь на верхний сеттингс).
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
