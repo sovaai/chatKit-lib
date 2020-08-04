@@ -141,8 +141,6 @@ Options data:
 
 
 
-
-
 ### Styles
 To call the stylesAPI (ссылка) with event `changeBadge`, it's allows you to choose and overwrite style values in choosen theme and choosen container in Styles (якорь на верхний стайл), on which component `Badge` is based. 
 ```javascript
@@ -157,6 +155,18 @@ ckAPIMethods.styles("changeBadge", {
  },
 })
 ```
+
+Optional theme name - name of choosen theme with syles you want to change. 
+Options data:
+| Key             |   Type     |  Description                                   |
+|-----------------|------------|------------------------------------------------|
+| mainContainer    |     |     | Styles for main container
+| avatarContainer       |      | Styles for avatar container   |
+| image     |     | Styles for tag <img/>     |
+| titleContainer     |     | Styles for title container     |
+| svg     |     | Styles for SVG file     |
+
+ 
 
 ### Languages
 ```javascript
