@@ -159,7 +159,10 @@ ckAPIMethods.styles("changeBadge", {
 })
 ```
 
-Optional theme name - name of choosen theme with syles you want to change.   
+Options themeName:  
+
+name of choosen theme with syles you want to change.   
+
 Options data:
 | Key                |   Type          |  Description                  |
 |--------------------|-----------------|-------------------------------|
@@ -184,11 +187,11 @@ ckAPIMethods.languages('changeBadge', {
  }
 })
 ```
-Optional language:    
+Options language:    
 
 name of choosen language packet which values you want to change.
 
-Optinal data:    
+Options data:    
 | Key                |   Type          |  Description                  |
 |--------------------|-----------------|-------------------------------|
 | title      | string   | text in title     |
