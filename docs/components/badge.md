@@ -31,10 +31,13 @@ export default App
 
 ## Configuration
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
-* **UIManagment** - control UI;  
-* **Settings** - control media info;  
-* **Styles** - control styles packets;  
-* **Languages** - controls Languages packets.  
+| Key          |                            |
+|--------------|----------------------------|
+| UIManagment  | control UI                 |
+| Settings     | control media info         |
+| Styles       | control styles packets     |
+| Languages    | controls Languages packets |
+
 
 ## UIManagment
 Props from UIManagment:  
