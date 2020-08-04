@@ -51,10 +51,9 @@ Props from Managment:
  showSVG: true,
 }
 ```
-, where:  
-`showTitle` - show title or not   
-`showAvatar` -   
-`showSVG` -   
+Key `showTitle` is responsible for displaying title or not;   
+Key `showAvatar` is responsible for displaying avatar or not;   
+Key `showSVG` is responsible for displaying SVF file or not. 
 
 ### Settings <a name="Settings"></a>
 Props from Settings:  
