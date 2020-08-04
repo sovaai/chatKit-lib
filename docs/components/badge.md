@@ -98,14 +98,14 @@ Props from languages:
 
 
 
-
-
-
 ## Customization <a name="Customization"></a>
 To custom `Badge` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.
 
 
 ### UIManagment
+To change information about the component `Badge` with key `managenent` from ckStore, you need use CK API method UImanagement with event `setUpBadge`. it allows you to overwrite the value related to management.
+
+
 ```
 ckAPIMethods.uiManagment('setUpBadge', {
   showAvatar: [value],
