@@ -9,17 +9,19 @@ To make any changes you need:
 * Transfer *data* with changing.  
 
 ## List of events
-1) **switchTheme** (переключение темы);  
-2) **initTheme** (инициализация, добвление новой темы);  
-3) **hangeStyles** (изменение полного пакета существующей темы);  
-4) **changeChatIt** (изменение стилевого пакета компонента ChatIt в выбранной теме);  
-5) **changeHeader** (изменение стилевого пакета компонента Header в выбранной теме);  
-6) **changeDialog** (изменение стилевого пакета компонента Dialog в выбранной теме);  
-7) **changeRate** (изменение стилевого пакета компонента Rate в выбранной теме);  
-8) **changeUserMessage** (изменение стилевого пакета компонента UserMessage в выбранной теме);  
-9) **changeResponseMessage** (изменение стилевого пакета компонента ResponseMessage в выбранной теме);
-10) **changeSender** (изменение стилевого пакета компонента Sender в выбранной теме);  
-11) **changeBadge** (изменение стилевого пакета компонента Badge в выбранной теме).  
+| Event name            |                                                                              |
+|-----------------------|------------------------------------------------------------------------------|
+| switchTheme           | switching between themes                                                     |
+| initTheme             | initialization, addition a new theme                                         |
+| changeStyles          | modifying a complete package of existing theme                               |
+| changeChatIt          | changing the style package of component `ChatIt` in selected theme           |
+| changeHeader          | changing the style package of component `Header` in selected theme           |
+| changeDialog          | changing the style package of component `Dialog` in selected theme           |
+| changeRate            | changing the style package of component `Rate` in selected theme             |
+| changeUserMessage     | changing the style package of component `UserMessage` in selected theme      |
+| changeResponseMessage | changing the style package of component `ResponseMessage` in selected theme  |
+| changeSender          | changing the style package of component `Sender` in selected theme           |
+| changeBadge           | changing the style package of component `Badge` in selected theme            |
 
 ## Description of events and data  
 ### 1) Event **switchTheme**  
