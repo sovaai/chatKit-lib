@@ -111,6 +111,7 @@ ckAPIMethods.uiManagment('setUpBadge', {
 })
 ```
 
+Options data: 
 | Key             |   Type     |  Description                                   |
 |-----------------|------------|------------------------------------------------|
 | `showAvatar`    | boolean    | is responsible for displaying avatar or not    |
