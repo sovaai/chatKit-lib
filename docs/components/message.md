@@ -1,33 +1,37 @@
-# Description of message
-# Install
-`npm i --save Sova-Chat-Kit`
+# Message
+Bubble of text message with information about it
 
-# Quick start
-In your App.js file:  
-```
-import {CkComponents} from 'Sova-Chat-Kit'
-...
- <CkComponents.Message />
-...
-```
 
-# COMPONENT PROPS
-```
-{
-  /**
-  * Should component use ckStore as storage
-  @default true
-  * /
-  ckStore?: boolean
+## Usage
+```javascript
+import React from "react"
+import { CkComponents } from "sova-chatkit"
+ 
+function App() {
+ return (
+ <div className="App">
+   <CkComponents.Message ckStore={true} />
+ </div>
+ )
 }
+ 
+export default App
 ```
 
-# CONFIGURATION
+
+## Component props
+| Prop       | Type    |  Description                                                                                      |
+|------------|---------|---------------------------------------------------------------------------------------------------|
+| `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
+
+
+## Configuration
 Component get configuration info from storage. Badge touch 4 global keys from store:  
 * **UIManagment** - control UI;  
 * **Settings** - control media info;  
 * **Styles** - control styles packets;  
 * **Languages** - controls Languages packets.  
+
 
 ## UIManagment
 Props from UIManagment:  
