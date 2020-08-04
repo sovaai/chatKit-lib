@@ -29,18 +29,17 @@ export default App
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
-## Configuration 
+## Configuration  (якоря)
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
 | Key          |                                            |
 |--------------|--------------------------------------------|
-| UIManagment  | information to control UI                 |
-| Settings     | information to control media info         |
-| Styles       | information to control styles packets     |
-| Languages    | information to control Languages packets |
+| UIManagment  | information to control UI                  |
+| Settings     | information to control media info          |
+| Styles       | information to control styles packets      |
+| Languages    | information to control Languages packets   |
 
 
-
-## UIManagment
+### UIManagment
 Props from UIManagment:  
 ```
 {
@@ -57,7 +56,7 @@ Props from UIManagment:
 }
 ```
 
-## Settings
+### Settings
 Props from Settings:  
 ```
 {
@@ -70,7 +69,7 @@ Props from Settings:
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase  
 
-## Styles
+### Styles
 Props from Styles:  
 ```
 {
@@ -114,7 +113,7 @@ Props from Styles:
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase
 
-## Languages
+### Languages
 Props from Languages:  
 ```
 {
@@ -125,6 +124,8 @@ Props from Languages:
   "title": string
 }
 ```
+
+
 
 # CUSTOMIZATION
 To custom Badge component, you should use ckAPIMethods, which will allow you to change values in ckStore
