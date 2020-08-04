@@ -1,14 +1,18 @@
 # Description of badge
-# Install
-`npm i --save Sova-Chat-Kit`
-
-# Quick start
-In your App.js file:  
+# Usage
 ```
-import {CkComponents} from 'Sova-Chat-Kit'
-...
-<CkComponents.Badge />
-...
+import React from "react"
+import { CkComponents } from "sova-chatkit"
+ 
+function App() {
+ return (
+ <div className="App">
+   <CkComponents.Badge ckStore={true} />
+ </div>
+ )
+}
+ 
+export default App
 ```
 
 # COMPONENT PROPS
