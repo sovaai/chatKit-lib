@@ -2,11 +2,13 @@
 Widget expand button
 
 
+
 ## Table of content
 * [Usage](#Usage) 
 * [Component props](#Component_props)   
 * [Configuration](#Configuration)   
 * [Customization](#Customization)   
+
 
 
 ## Usage <a name="Usage"></a>
@@ -26,10 +28,12 @@ export default App
 ```
 
 
+
 ## Component props <a name="Component_props"></a>
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
+
 
 
 ## Configuration <a name="Configuration"></a>
@@ -40,6 +44,7 @@ Component expects configuration info from storage. Badge touch 4 global keys fro
 | [settings](#Settings)      | information to control media info          |
 | [styles](#Styles)          | information to control styles packets      |
 | [languages](#Languages)    | information to control Languages packets   |
+
 
 
 ### Managment <a name="Managment"></a>
@@ -54,6 +59,7 @@ Props from managment:
 You can change these values using APImethod (ссылка на UIManagment которая находится в кастомизации)
 
 
+
 ### Settings <a name="Settings"></a>
 Props from settings:  
 ```javascript
@@ -62,6 +68,7 @@ Props from settings:
 }
 ```
 You can change these values using APImethod (ссылка на сеттинг которая находится в кастомизации)
+
 
 
 ### Styles <a name="Styles"></a>
@@ -102,8 +109,10 @@ Props from languages:
 You can change these values using APImethod (ссылка на лангуаге которая находится в кастомизации)
 
 
+
 ## Customization <a name="Customization"></a>
 To custom `Badge` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.
+
 
 
 ### UIManagment
@@ -140,7 +149,6 @@ Options data:
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `path`          | string     | path to picture    |
-
 
 
 
@@ -194,4 +202,4 @@ name of choosen language packet which values you want to change.
 Options data:    
 | Key                |   Type          |  Description                  |
 |--------------------|-----------------|-------------------------------|
-| title      | string   | text in title     |
+| title              | string          | text in title                 |
