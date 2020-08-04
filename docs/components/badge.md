@@ -185,6 +185,7 @@ ckAPIMethods.languages('changeBadge', {
 })
 ```
 Optional language:    
+
 name of choosen language packet which values you want to change.
 
 Optinal data:    
