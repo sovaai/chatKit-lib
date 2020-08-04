@@ -133,16 +133,18 @@ ckAPIMethods.uiManagment('changeAvatar', {
  path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
 })
 ```
-
-
 Options data: 
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `path`          | string     | path to picture    |
 
 
-### Styles
 
+
+
+
+### Styles
+To call the stylesAPI (ссылка) with event `changeBadge`, it's allows you to choose and overwrite style values in choosen container in Styles (якорь на верхний стайл), on which component `Badge` is based.
 ```
 ckAPIMethods.styles('changeBadge', {
   themeName: [theme name, wich styles you want to change],
