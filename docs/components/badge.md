@@ -111,11 +111,11 @@ ckAPIMethods.uiManagment('setUpBadge', {
 })
 ```
 
-| Key           |   Type     |  Description                                   |
-|---------------|------------|------------------------------------------------|
-| showAvatar    | boolean    | is responsible for displaying avatar or not    |
-| showSVG       | boolean    | is responsible for displaying SVF file or no   |
-| showTitle     | bollean    | is responsible for displaying title or not     |
+| Key             |   Type     |  Description                                   |
+|-----------------|------------|------------------------------------------------|
+| `showAvatar`    | boolean    | is responsible for displaying avatar or not    |
+| `showSVG`       | boolean    | is responsible for displaying SVF file or no   |
+| `showTitle`     | boleean    | is responsible for displaying title or not     |
 
 
 
