@@ -58,7 +58,7 @@ Props from settings:
  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' //Path to the image which will be shown as avatar 
 }
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase  
+You can change these values using APImethod (ссылка на сеттинг которая находится в кастомизации)
 
 
 ### Styles <a name="Styles"></a>
@@ -85,6 +85,8 @@ Props from styles:
 ```
 You must write css properties in camelCase, using objects style syntax.  
 Reed more: https://emotion.sh/docs/object-styles 
+You can change these values using APImethod (ссылка на стайлз которая находится в кастомизации)
+
 
 
 ### Languages <a name="Languages"></a>
@@ -94,6 +96,7 @@ Props from languages:
  title: 'Chat Kit' // Text in Title 
 }
 ```
+You can change these values using APImethod (ссылка на лангуаге которая находится в кастомизации)
 
 
 ## Customization <a name="Customization"></a>
@@ -122,6 +125,7 @@ Options data:
 
 ### Settings
 интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")  
+
 `
 ckAPIMethods.settings('changeAvatar', [path])
 `
