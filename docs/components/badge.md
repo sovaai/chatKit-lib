@@ -29,17 +29,17 @@ export default App
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
-## Configuration  (якоря)
+## Configuration
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
-| Key          |                                            |
-|--------------|--------------------------------------------|
-| UIManagment  | information to control UI                  |
-| Settings     | information to control media info          |
-| Styles       | information to control styles packets      |
-| Languages    | information to control Languages packets   |
+| Key                |                                            |
+|--------------------|--------------------------------------------|
+| [UIManagment](#UIManagment)  | information to control UI                  |
+| [Settings](#2)     | information to control media info          |
+| [Styles](#3)       | information to control styles packets      |
+| [Languages](#4)    | information to control Languages packets   |
 
 
-### UIManagment
+### UIManagment <a name="UIManagment"></a>
 Props from UIManagment:  
 ```
 {
@@ -56,7 +56,7 @@ Props from UIManagment:
 }
 ```
 
-### Settings
+### Settings <a name="2"></a>
 Props from Settings:  
 ```
 {
@@ -69,7 +69,7 @@ Props from Settings:
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase  
 
-### Styles
+### Styles <a name="3"></a>
 Props from Styles:  
 ```
 {
@@ -113,7 +113,7 @@ Props from Styles:
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase
 
-### Languages
+### Languages <a name="4"></a>
 Props from Languages:  
 ```
 {
