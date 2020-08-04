@@ -1,5 +1,11 @@
 # Badge
-widget expand button
+Widget expand button
+
+## Table of content
+* Usage  
+* Component props  
+* Configuration  
+* Customization  
 
 ## Usage
 ```javascript
@@ -23,11 +29,7 @@ export default App
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
-
-
-
-
-## CONFIGURATION
+## Configuration
 Component get configuration info from storage. Badge touch 4 global keys from store:  
 * **UIManagment** - control UI;  
 * **Settings** - control media info;  
