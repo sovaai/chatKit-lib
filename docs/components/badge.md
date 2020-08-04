@@ -96,21 +96,32 @@ Props from languages:
 ```
 
 
-
-
 ## Customization <a name="Customization"></a>
 To custom `Badge` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.
 
 
 ### UIManagment
-To call the uiManagmentAPI (ссылка) with event `setUpBadge`, it's allows you to overwrite the values related to managment (якорь наверх), on which component `Badge` is based.
-
-```
+To call the uiManagmentAPI (ссылка) with event `setUpBadge`, it's allows you to choose and overwrite the values related to managment (якорь наверх), on which component `Badge` is based.
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.uiManagment('setUpBadge', {
-  showAvatar: [value],
-  showTitle: [value]
+ showAvatar: true,
+ showSVG: false,
 })
 ```
+
+
+| Key                        |                                            |
+|----------------------------|--------------------------------------------|
+|     |                   |
+|       |           |
+|           |       |
+|     |    |
+
+
+
+
+
 
 ### Settings
 интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")  
