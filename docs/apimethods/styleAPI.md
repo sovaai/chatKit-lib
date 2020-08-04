@@ -23,7 +23,9 @@ To make any changes you need:
 
 ## Description of events and data  
 ### 1) Event **switchTheme**  
-[spoiler]
+<details>
+ <summary>read description</summary>  
+ 
 **Description:**  
 переключение темы на указанную в дате тему   
 **Params:**  
@@ -36,7 +38,7 @@ To make any changes you need:
 import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.styles('switchTheme', 'darkSova')
 ```
-[/spoiler]
+</details>
 
 ### 2) Event **initTheme**  
 **Description:**   
