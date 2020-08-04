@@ -37,7 +37,7 @@ To make any changes you need:
 **For example:**  
 ```
 import { ckAPIMethods } from "sova-chatkit"
-ckAPIMethods.styles('switchTheme', 'darkSova')
+ckAPIMethods.styles('switchTheme', 'sovaDark')
 ```
 </details>
 
