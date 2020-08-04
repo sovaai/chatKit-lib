@@ -145,15 +145,16 @@ Options data:
 
 ### Styles
 To call the stylesAPI (ссылка) with event `changeBadge`, it's allows you to choose and overwrite style values in choosen theme and choosen container in Styles (якорь на верхний стайл), on which component `Badge` is based. 
-```
-ckAPIMethods.styles('changeBadge', {
-  themeName: [theme name, wich styles you want to change],
-  data: {
-    [mainContainer styles],
-    [avatarContainer styles],
-    [image styles],
-    [titleContainer styles]
-  },
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
+ckAPIMethods.styles("changeBadge", {
+ themeName: "sovaDark",
+ data: {
+   mainContainer: {
+   width: "100%",
+ },
+},
 })
 ```
 
