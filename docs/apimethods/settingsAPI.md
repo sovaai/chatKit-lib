@@ -1,34 +1,38 @@
 # settingsAPI
-(меняет картинки в виджете)
-
-# Quick start
-Чтобы внести какие-либо изменения, необходимо импортировать метод **settingsAPI**:  
-Для этого in your App.js file:
-```
-import {ckAPIMethods} from 'Sova-Chat-Kit'
- ...
- <ckAPIMethods.settingsAPI />
- ...
- ```
+This method changes pictures (avatar, icons, etc.) in the widget
  
- # Usage
- Чтобы внести какие-либо изменения необходимо:  
-* Вызвать метод `ckAPIMethods.settingsAPI` 
-* Указать имя ивента (cм. Description oof method)  
-* Передать data с необходимыми изменениями.  
+# Usage
+To make any changes you need:  
+* call method `ckAPIMethods.settingsAPI`  
+* enter name of event  
+* send data with the required keys  
 
-# Description of method
-1 Event: **changeIcon**  
-Description: смена определенной иконки   
+# List of events
+| Event name            |                          |
+|-----------------------|--------------------------|
+| [changeIcon](#1)      | changing a specific icon |
+| [changeAvatar](#2)    | changing the avatar      |
+
+
+
+# Description
+### Event: **changeIcon**  <a name="1"></a>
+Description: changing a specific icon   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | iconName      | string  | +        |
 | iconData      | any     | +        |
 
-2 Event: **changeAvatar**  
-Description: изменение аватара   
+### Event: **changeAvatar**  <a name="2"></a>
+Description: changing the avatar   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | avatar        | string  | +        |
+
+# Use case
+```
+import { ckAPIMethods } from "sova-chatkit"
+
+```
