@@ -104,22 +104,18 @@ To custom `Badge` component, you should use `ckAPIMethods`, which will allow you
 To call the uiManagmentAPI (ссылка) with event `setUpBadge`, it's allows you to choose and overwrite the values related to managment (якорь наверх), on which component `Badge` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
+
 ckAPIMethods.uiManagment('setUpBadge', {
  showAvatar: true,
  showSVG: false,
 })
 ```
 
-
-| Key                        |                                            |
-|----------------------------|--------------------------------------------|
-|     |                   |
-|       |           |
-|           |       |
-|     |    |
-
-
-
+| Key           |   Type     |  Description                                   |
+|---------------|------------|------------------------------------------------|
+| showAvatar    | boolean    | is responsible for displaying avatar or not    |
+| showSVG       | boolean    | is responsible for displaying SVF file or no   |
+| showTitle     | bollean    | is responsible for displaying title or not     |
 
 
 
