@@ -103,9 +103,7 @@ To custom `Badge` component, you should use `ckAPIMethods`, which will allow you
 
 
 ### UIManagment
-To change information about the component `Badge` with key `managenent` from ckStore, you need use uiManagmentAPI (ссылка) with event `setUpBadge`. It allows you to overwrite the value related to management, on which the component is based.
-
-To call the uiManagmentAPI with event `setUpBadge`, it's allows you to overwrite the value related to management, on which the component is based
+To call the uiManagmentAPI (ссылка) with event `setUpBadge`, it's allows you to overwrite the values related to managment (якорь наверх), on which component `Badge` is based.
 
 ```
 ckAPIMethods.uiManagment('setUpBadge', {
