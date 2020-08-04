@@ -1,21 +1,11 @@
 # modulesAPI 
 (подключение модулей)
 
-# Quick start
-Чтобы внести какие-либо изменения, необходимо импортировать метод **modulesAPI**:  
-Для этого in your App.js file:
-```
-import {ckAPIMethods} from 'Sova-Chat-Kit'
- ...
- <ckAPIMethods.modulesAPI />
- ...
- ```
- 
  # Usage
- Чтобы внести какие-либо изменения необходимо:  
-* Вызвать метод `ckAPIMethods.modulesAPI` 
-* Указать имя ивента (cм. Description oof method)  
-* Передать data с необходимыми изменениями.  
+To make any changes you need:  
+* call method `ckAPIMethods.modulesAPI` 
+* enter name of event  
+* send data with the required keys  
 
 # Description of method
 1 Event: **initModule**  
