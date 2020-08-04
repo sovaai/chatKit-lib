@@ -56,7 +56,7 @@ Props from managment:
  showSVG: true, // is responsible for displaying SVF file or not
 }
 ```
-You can change these values using [APImethod](#custom_managment).
+You can change these values using [APImethod](#custom_managment "description of method").
 
 
 
@@ -67,7 +67,7 @@ Props from settings:
  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' //Path to the image which will be shown as avatar 
 }
 ```
-You can change these values using [APImethod](#custom_settings).
+You can change these values using [APImethod](#custom_settings "description of method").
 
 
 
@@ -94,7 +94,7 @@ Props from styles:
 
 ```
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
-You can change these values using [APImethod](#custom_styles).
+You can change these values using [APImethod](#custom_styles "description of method").
 
 
 
@@ -105,7 +105,7 @@ Props from languages:
  title: 'Chat Kit' // Text in Title 
 }
 ```
-You can change these values using [APImethod](#custom_language).
+You can change these values using [APImethod](#custom_language "description of method").
 
 
 
