@@ -4,14 +4,14 @@ Widget expand button
 
 
 ## Table of content
-* [Usage](#Usage) 
-* [Component props](#Component_props)   
-* [Configuration](#Configuration)   
-* [Customization](#Customization)   
+* [Usage](#usage) 
+* [Component props](#component_props)   
+* [Configuration](#configuration)   
+* [Customization](#customization)   
 
 
 
-## Usage <a name="Usage"></a>
+## Usage <a name="usage"></a>
 ```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
@@ -29,25 +29,25 @@ export default App
 
 
 
-## Component props <a name="Component_props"></a>
+## Component props <a name="component_props"></a>
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
 
-## Configuration <a name="Configuration"></a>
+## Configuration <a name="configuration"></a>
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
 | Key                        |                                            |
 |----------------------------|--------------------------------------------|
-| [managment](#Managment)    | information to control UI                  |
-| [settings](#Settings)      | information to control media info          |
-| [styles](#Styles)          | information to control styles packets      |
-| [languages](#Languages)    | information to control Languages packets   |
+| [managment](#config1)      | information to control UI                  |
+| [settings](#config2)       | information to control media info          |
+| [styles](#config3)         | information to control styles packets      |
+| [languages](#config4)      | information to control Languages packets   |
 
 
 
-### Managment <a name="Managment"></a>
+### Managment <a name="conf_managment"></a>
 Props from managment:  
 ```javascript
 {
@@ -56,22 +56,22 @@ Props from managment:
  showSVG: true, // is responsible for displaying SVF file or not
 }
 ```
-You can change these values using APImethod (ссылка на UIManagment которая находится в кастомизации)
+You can change these values using [APImethod](#custom_managment).
 
 
 
-### Settings <a name="Settings"></a>
+### Settings <a name="conf_settings"></a>
 Props from settings:  
 ```javascript
 {
  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' //Path to the image which will be shown as avatar 
 }
 ```
-You can change these values using APImethod (ссылка на сеттинг которая находится в кастомизации)
+You can change these values using [APImethod](#custom_settings).
 
 
 
-### Styles <a name="Styles"></a>
+### Styles <a name="conf_styles"></a>
 Props from styles:  
 ```javascript
 {
@@ -95,27 +95,31 @@ Props from styles:
 ```
 You must write css properties in camelCase, using objects style syntax.  
 Reed more: https://emotion.sh/docs/object-styles 
-You can change these values using APImethod (ссылка на стайлз которая находится в кастомизации)
+You can change these values using [APImethod](#custom_styles).
 
 
 
-### Languages <a name="Languages"></a>
+### Languages <a name="conf_languages"></a>
 Props from languages:  
 ```javascript
 {
  title: 'Chat Kit' // Text in Title 
 }
 ```
-You can change these values using APImethod (ссылка на лангуаге которая находится в кастомизации)
+You can change these values using [APImethod](#custom_language).
 
 
 
-## Customization <a name="Customization"></a>
+## Customization <a name="customization"></a>
 To custom `Badge` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.
+Customization includes:
+* [UIManahement](#custom1)
+* [Settings](#custom2)
+* [Styles](#custom3)
+* [Languages](#custom4)
 
 
-
-### UIManagment
+### UIManagment <a name="custom_managment"></a>
 To call the uiManagmentAPI (ссылка) with event `setUpBadge`, it's allows you to choose and overwrite the values related to managment (якорь наверх), on which component `Badge` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -135,8 +139,8 @@ Options data:
 
 
 
-### Settings
-To call the settingsAPI (ссылка) with event `changeAvatar`, it's allows you to overwrite path to choosen avatar in settings (якорь на верхний сеттингс).
+### Settings <a name="custom_settings"></a> 
+To call the settingsAPI (ссылка) with event `changeAvatar`, it's allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -152,8 +156,8 @@ Options data:
 
 
 
-### Styles
-To call the stylesAPI (ссылка) with event `changeBadge`, it's allows you to choose and overwrite style values in choosen theme and choosen container in Styles (якорь на верхний стайл), on which component `Badge` is based. 
+### Styles <a name="custom_styles"></a>
+To call the stylesAPI (ссылка) with event `changeBadge`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Badge` is based. 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -169,7 +173,7 @@ ckAPIMethods.styles("changeBadge", {
 
 Options themeName:  
 
-name of choosen theme which styles you want to change.   
+name of chosen theme which styles you want to change.   
 
 Options data:
 | Key                |   Type          |  Description                  |
@@ -182,8 +186,8 @@ Options data:
 
  
 
-### Languages
-To call the langeagesAPI (ссылка) with event `changeBadge` it's allows yo to shoose and overwrite values in choosen language packet and choosen key in languages (якорь на верхний лангуаге), on which component `Badge` is based. 
+### Languages <a name="custom_languages"></a>
+To call the langugesAPI (ссылка) with event `changeBadge` it's allows yuo to shoose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Badge` is based. 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -197,7 +201,7 @@ ckAPIMethods.languages('changeBadge', {
 ```
 Options language:    
 
-name of choosen language packet which values you want to change.
+name of chosen language packet which values you want to change.
 
 Options data:    
 | Key                |   Type          |  Description                  |
