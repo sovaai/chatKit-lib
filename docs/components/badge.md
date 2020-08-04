@@ -61,10 +61,6 @@ Props from settings:
 Writing css properties in kebab-case like regular css, you write them in camelCase  
 
 
-
-
-
-
 ### Styles <a name="Styles"></a>
 Props from styles:  
 ```javascript
@@ -72,7 +68,7 @@ Props from styles:
  mainContainer: { // Styles for main container
  margin: "1px",
  },
- avatarContainer: { // Styles for avatar container container
+ avatarContainer: { // Styles for avatar container
  maxWidth: "200px",
  },
  image: { // Styles for tag <img/>
@@ -87,7 +83,9 @@ Props from styles:
  },
 
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase
+You must write css properties in camelCase, using objects style syntax.  
+Reed more: https://emotion.sh/docs/object-styles 
+
 
 ### Languages <a name="Languages"></a>
 Props from languages:  
