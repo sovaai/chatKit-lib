@@ -172,7 +172,7 @@ Options data:
  
 
 ### Languages
-To call the langeagesAPI (ссылка) with event `changeBadge` it's allows yo to shoose and overwrite values in choosen language packat and choosen key in languages (якорь на верхний лангуаге), on which component `Badge` is based. 
+To call the langeagesAPI (ссылка) with event `changeBadge` it's allows yo to shoose and overwrite values in choosen language packet and choosen key in languages (якорь на верхний лангуаге), on which component `Badge` is based. 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -184,9 +184,9 @@ ckAPIMethods.languages('changeBadge', {
  }
 })
 ```
-Optional language:  
-name of choosen language packet which values you want to change.  
-Optinal data:  
+Optional language:    
+name of choosen language packet which values you want to change.    
+Optinal data:    
 | Key                |   Type          |  Description                  |
 |--------------------|-----------------|-------------------------------|
 | title      | string   | text in title     |
