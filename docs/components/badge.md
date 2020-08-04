@@ -63,13 +63,12 @@ Props from Managment:
 ```javascript
 {
  showTitle: false, //is responsible for displaying title or not
- showAvatar: false,
- showSVG: true,
+ showAvatar: false, //is responsible for displaying avatar or not
+ showSVG: true, // is responsible for displaying SVF file or not
 }
 ```
-Key `showTitle` is responsible for displaying title or not;   
-Key `showAvatar` is responsible for displaying avatar or not;   
-Key `showSVG` is responsible for displaying SVF file or not. 
+
+
 
 ### Settings <a name="Settings"></a>
 Props from Settings:  
