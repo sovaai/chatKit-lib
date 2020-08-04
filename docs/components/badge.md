@@ -33,10 +33,10 @@ export default App
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
 | Key          |                                            |
 |--------------|--------------------------------------------|
-| UIManagment  | informations to control UI                 |
-| Settings     | informations to control media info         |
-| Styles       | informations to control styles packets     |
-| Languages    | informations to controls Languages packets |
+| UIManagment  | information to control UI                 |
+| Settings     | information to control media info         |
+| Styles       | information to control styles packets     |
+| Languages    | information to control Languages packets |
 
 
 
