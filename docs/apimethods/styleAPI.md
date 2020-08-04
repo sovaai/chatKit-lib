@@ -23,6 +23,7 @@ To make any changes you need:
 
 ## Description of events and data  
 ### 1) Event **switchTheme**  
+[spoiler]
 **Description:**  
 переключение темы на указанную в дате тему   
 **Params:**  
@@ -35,6 +36,7 @@ To make any changes you need:
 import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.styles('switchTheme', 'darkSova')
 ```
+[/spoiler]
 
 ### 2) Event **initTheme**  
 **Description:**   
@@ -47,72 +49,72 @@ ckAPIMethods.styles('switchTheme', 'darkSova')
 
 [Текст ссылки](#abcd)
 
-Описание data:
-Sender:
- mainContainer - 
- mainContainerSearch - 
- searchCountContainer - 
- searchButtonContainer - 
- addFileButton - 
- sendMessageButton - 
- shareButton - 
- stickersButton - 
- textArea - 
- voiceButton - 
+Описание data:  
+Sender:  
+ mainContainer -   
+ mainContainerSearch -   
+ searchCountContainer -   
+ searchButtonContainer -   
+ addFileButton -   
+ sendMessageButton -   
+ shareButton -   
+ stickersButton -   
+ textArea -   
+ voiceButton -   
 
-ChatIt:
- mainContainer - 
- chatContainer - 
+ChatIt:  
+ mainContainer -   
+ chatContainer -   
 
-Dialog:
- mainContainer - 
- panel - 
- rateButton - 
- searchButton - 
- messagesContainer - 
+Dialog:  
+ mainContainer -   
+ panel -   
+ rateButton -   
+ searchButton -   
+ messagesContainer -   
  
-UserMessage:
- mainContainer - 
- groupTypeMessagesNext - 
- groupTypeMessagesPrev - 
- groupTypeMessagesInter - 
- textContainer - 
- avatarContainer - 
- image - 
- positiveRateMessageButton - 
- negativeRateMessageButton - 
- audioMessageButton - 
- dataContainer - 
- bubbleContainer - 
- buttonsContainer - 
+UserMessage:  
+ mainContainer -   
+ groupTypeMessagesNext -   
+ groupTypeMessagesPrev -   
+ groupTypeMessagesInter -   
+ textContainer -   
+ avatarContainer -   
+ image -   
+ positiveRateMessageButton -   
+ negativeRateMessageButton -   
+ audioMessageButton -   
+ dataContainer -   
+ bubbleContainer -   
+ buttonsContainer -   
 
-ResponseMessage:
- mainContainer - 
- groupTypeMessagesNext - 
- groupTypeMessagesPrev - 
- groupTypeMessagesInter - 
- textContainer - 
- avatarContainer - 
- image - 
- positiveRateMessageButton - 
- negativeRateMessageButton - 
- audioMessageButton - 
- dataContainer - 
- bubbleContainer - 
- buttonsContainer - 
+ResponseMessage:  
+ mainContainer -   
+ groupTypeMessagesNext -   
+ groupTypeMessagesPrev -   
+ groupTypeMessagesInter -   
+ textContainer -   
+ avatarContainer -   
+ image -   
+ positiveRateMessageButton -   
+ negativeRateMessageButton -   
+ audioMessageButton -   
+ dataContainer -   
+ bubbleContainer -   
+ buttonsContainer -   
 
-MessageLoader: {
- mainContainer: {},
- elementOne: {},
- elementTwo: {},
- elementThree: {},
-},
-Divider: {
- dividerMainContainer: {},
-},
-Header: {
- mainContainer: {},
- avatarContainer: {},
+MessageLoader -  
+ mainContainer-   
+ elementOne -   
+ elementTwo -  
+ elementThree -  
+
+Divider -  
+ dividerMainContainer -  
+ 
+Header -  
+ mainContainer -  
+ avatarContainer -  
  image: {},
  titleContainer: {},
  resetButton: {},
