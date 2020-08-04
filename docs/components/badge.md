@@ -29,14 +29,15 @@ export default App
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
-## Configuration
+## Configuration 
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
-| Key          |                            |
-|--------------|----------------------------|
-| UIManagment  | control UI                 |
-| Settings     | control media info         |
-| Styles       | control styles packets     |
-| Languages    | controls Languages packets |
+| Key          |                                            |
+|--------------|--------------------------------------------|
+| UIManagment  | informations to control UI                 |
+| Settings     | informations to control media info         |
+| Styles       | informations to control styles packets     |
+| Languages    | informations to controls Languages packets |
+
 
 
 ## UIManagment
