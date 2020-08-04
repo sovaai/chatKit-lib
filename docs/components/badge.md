@@ -1,11 +1,13 @@
 # Badge
 Widget expand button
 
+
 ## Table of content
 * [Usage](#Usage) 
 * [Component props](#Component_props)   
 * [Configuration](#Configuration)   
 * [Customization](#Customization)   
+
 
 ## Usage <a name="Usage"></a>
 ```javascript
@@ -22,6 +24,7 @@ function App() {
  
 export default App
 ```
+
 
 ## Component props <a name="Component_props"></a>
 | Prop       | Type    |  Description                                                                                      |
@@ -156,24 +159,34 @@ ckAPIMethods.styles("changeBadge", {
 })
 ```
 
-Optional theme name - name of choosen theme with syles you want to change. 
+Optional theme name - name of choosen theme with syles you want to change.   
 Options data:
-| Key             |   Type     |  Description                                   |
-|-----------------|------------|------------------------------------------------|
-| mainContainer   | object styles         | styles for main container |
-| avatarContainer       | object styles     | styles for avatar container   |
-| image     | object styles   | styles for tag <img/>     |
-| titleContainer     |  object styles   | styles for title container     |
-| svg     |   object styles  | styles for SVG file     |
+| Key                |   Type          |  Description                  |
+|--------------------|-----------------|-------------------------------|
+| mainContainer      | object styles   | styles for main container     |
+| avatarContainer    | object styles   | styles for avatar container   |
+| image              | object styles   | styles for tag <img/>         |
+| titleContainer     | object styles   | styles for title container    |
+| svg                | object styles   | styles for SVG file           |
 
  
 
 ### Languages
+To call the langeagesAPI (ссылка) with event `changeBadge` it's allows yo to shoose and overwrite values in choosen language packat and choosen key in languages (якорь на верхний лангуаге), on which component `Badge` is based. 
+
 ```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
 ckAPIMethods.languages('changeBadge', {
-  language: [language name, wich packet you want to change],
-  data: {
-    [text title]
-  }
+ language: 'English',
+ data: {
+   title: 'Help?'
+ }
 })
 ```
+Optional language:  
+name of choosen language packet which values you want to change.  
+Optinal data:  
+| Key                |   Type          |  Description                  |
+|--------------------|-----------------|-------------------------------|
+| title      | string   | text in title     |
