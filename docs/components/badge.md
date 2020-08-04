@@ -67,8 +67,6 @@ Props from Managment:
 You can change these values using APImethod (ссылка на UIManagment которая находится в кастомизации)
 
 
-
-
 ### Settings <a name="Settings"></a>
 Props from Settings:  
 ```javascript
@@ -77,6 +75,9 @@ Props from Settings:
 }
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase  
+
+
+
 
 
 
@@ -126,15 +127,15 @@ Writing css properties in kebab-case like regular css, you write them in camelCa
 
 ### Languages <a name="Languages"></a>
 Props from Languages:  
-```
+```javascript
 {
-  /**
-  * Text in Title
-  @default Chat Kit
-  * /
-  "title": string
+ title: 'Chat Kit' // Text in Title 
 }
 ```
+
+
+
+
 
 
 
