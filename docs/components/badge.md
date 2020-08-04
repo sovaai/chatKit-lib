@@ -152,9 +152,9 @@ ckAPIMethods.styles("changeBadge", {
  themeName: "sovaDark",
  data: {
    mainContainer: {
-   width: "100%",
+     width: "100%",
+   },
  },
-},
 })
 ```
 
