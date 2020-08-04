@@ -1,7 +1,7 @@
 # uiManagmentAPI
 (меняет сеттинги компонентов в STORE)
 
-# Quick start
+## Quick start
 Чтобы внести какие-либо изменения, необходимо импортировать метод **uiManagmentAPI**:  
 Для этого in your App.js file:
 ```
@@ -11,113 +11,132 @@ import {ckAPIMethods} from 'Sova-Chat-Kit'
  ...
  ```
  
- # Usage
+## Usage
  Чтобы внести какие-либо изменения необходимо:  
 * Вызвать метод `ckAPIMethods.uiManagmentAPI` 
 * Указать имя ивента (cм. Description oof method)  
 * Передать data с необходимыми изменениями.  
 
-# Description of method
-1 Event: **setUpSender**   
-Description: настройка сендера   
+## List of events
+| Event name                  |                                          |
+|-----------------------------|------------------------------------------|
+| [setUpSender](#1)           | setting the component `Sender`           |
+| [setUpHeader](#2)           | setting the component `Header`           |
+| [setUpBadge](#3)            | setting the component `Badge`            |
+| [setUpMessage](#4)          | setting the component `Message`          |
+| [setUpDialog](#5)           | setting the component `Dialog`           |
+| [blockSender](#6)           | block sending messages                   |
+| [dialogLoading](#7)         | spinner display                          |
+| [setUpChatIt](#8)           | setting the component `ChatIt`           |
+| [setUpRate](#9)             | setting the component `Rate`             |
+| [setUpCommon](#10)          | general settings                         |
+| [showRate](#11)             | show the component `Rate`                |
+| [showNotification](#12)     | show the component `Notification`        |
+| [openChat](#13)             | open the chat                            |
+| [showSettings](#14)         | show the component `Settings`            |
+| [reset](#15)                | reset session                            |
+
+## Description of method
+### **setUpSender**<a name="1"></a>   
+Description: setting the component `Sender`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-2 Event: **setUpHeader**   
-Description: настройка хэдера   
+### **setUpHeader**<a name="2"></a>   
+Description: setting the component `Header`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-3 Event: **setUpBadge**   
-Description: настройка бейджа   
+### **setUpBadge**<a name="3"></a>   
+Description: setting the component `Badge`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-4 Event: **setUpMessage**   
-Description: настройка сообщения   
+### **setUpMessage**<a name="4"></a>   
+Description: setting the component `Message`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-5 Event: **setUpDialog**   
-Description: настройка диалога   
+### **setUpDialog**<a name="5"></a>   
+Description: setting the component `Dialog`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-6 Event: **blockSender**   
-Description: заблокировать отправку сообщений   
+### **blockSender**<a name="6"></a>   
+Description: block sending messages   
 Params:   
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-7 Event: **dialogLoading**   
-Description: спиннер   
+### **dialogLoading**<a name="7"></a>   
+Description: spinner display   
 Params:   
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-8 Event: **setUpChatIt**   
-Description: настройка компонента ChatIt	  
+### **setUpChatIt**<a name="8"></a>   
+Description: setting the component `ChatIt`	  
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-9 Event: **setUpRate**   
-Description: настройка компонента Rate   
+### **setUpRate**<a name="9"></a>   
+Description: setting the component `Rate`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-10 Event: **setUpCommon**   
-Description: общие настройки   
+### **setUpCommon**<a name="10"></a>   
+Description: general settings  
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-11 Event: **showRate**   
-Description: показать компонент Rate   
+### **showRate**<a name="11"></a>   
+Description: show the component `Rate`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-12 Event: **showNotification**   
-Description: показать компонент Notification   
+### **showNotification**<a name="12"></a>   
+Description: show the component `Notification`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-13 Event: **openChat**   
-Description: раскрыть чат полностью   
+### **openChat**<a name="13"></a>   
+Description: open the chat   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-14 Event: **showSettings**   
-Description: показать компонент Settings   
+### **showSettings**<a name="14"></a>   
+Description: show the component `Settings`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | null          | null    | +        |
 
-15 Event: **reset**   
-Description: сбросить сессию   
+### **reset**<a name="15"></a>   
+Description: reset session   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
