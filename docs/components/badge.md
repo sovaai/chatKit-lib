@@ -114,7 +114,7 @@ ckAPIMethods.uiManagment('setUpBadge', {
 })
 ```
 
-Options data: 
+Options data:   
 | Key             |   Type     |  Description                                   |
 |-----------------|------------|------------------------------------------------|
 | `showAvatar`    | boolean    | is responsible for displaying avatar or not    |
@@ -160,11 +160,11 @@ Optional theme name - name of choosen theme with syles you want to change.
 Options data:
 | Key             |   Type     |  Description                                   |
 |-----------------|------------|------------------------------------------------|
-| mainContainer    |     |     | Styles for main container
-| avatarContainer       |      | Styles for avatar container   |
-| image     |     | Styles for tag <img/>     |
-| titleContainer     |     | Styles for title container     |
-| svg     |     | Styles for SVG file     |
+| mainContainer   | object styles         | styles for main container |
+| avatarContainer       | object styles     | styles for avatar container   |
+| image     | object styles   | styles for tag <img/>     |
+| titleContainer     |  object styles   | styles for title container     |
+| svg     |   object styles  | styles for SVG file     |
 
  
 
