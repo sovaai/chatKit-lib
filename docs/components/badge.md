@@ -3,7 +3,7 @@ Widget expand button
 
 ## Table of content
 * [Usage](#Usage) 
-* [Component props](#Component props)   
+* [Component props](#Component_props)   
 * [Configuration](#Configuration)   
 * [Customization](#Customization)   
 
@@ -23,7 +23,7 @@ function App() {
 export default App
 ```
 
-## Component props <a name="Component props"></a>
+## Component props <a name="Component_props"></a>
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
@@ -51,7 +51,10 @@ Props from Managment:
  showSVG: true,
 }
 ```
-
+, where:  
+`showTitle` - show title or not   
+`showAvatar` -   
+`showSVG` -   
 
 ### Settings <a name="Settings"></a>
 Props from Settings:  
