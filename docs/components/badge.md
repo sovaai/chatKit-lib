@@ -73,7 +73,7 @@ You can change these values using APImethod (ссылка на UIManagment ко�
 Props from Settings:  
 ```javascript
 {
- avatar: `https://avatars2.githubusercontent.com/u/59205514?s=200&v=4` //Path to the image which will be shown as avatar 
+ avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' //Path to the image which will be shown as avatar 
 }
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase  
