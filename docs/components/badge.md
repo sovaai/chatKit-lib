@@ -1,4 +1,6 @@
 # Badge
+widget expand button
+
 ## Usage
 ```javascript
 import React from "react"
