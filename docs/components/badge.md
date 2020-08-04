@@ -67,45 +67,25 @@ Writing css properties in kebab-case like regular css, you write them in camelCa
 
 ### Styles <a name="Styles"></a>
 Props from styles:  
-```
+```javascript
 {
-  /**
-  * The chosen theme
-  @default sovaLight
-  * /
-  "theme": string,
-  /**
-  * Styles for main container
-  @default {}
-  * /
-  "mainContainer": object,
-  /**
-  * Styles for avatar container container
-  @default {}
-  * /
-  "avatarContainer": object,
-  /**
-  * Styles for tag <img/>
-  @default  {
-    "width": "70px",
-    "height": "70px"
-  }
-  * /
-  "image": object,
-  /**
-  * Styles for title container
-  @default {
-    "padding": "10px",
-    "width": "100px",
-    "borderRadius": "10px",
-    "fontSize": "24px",
-    "backgroundColor": "#4a76a8",
-    "color": "white",
-    "textAlign": "center"
-  }
-  * /
-  "titleContainer": object
-}
+ mainContainer: { // Styles for main container
+ margin: "1px",
+ },
+ avatarContainer: { // Styles for avatar container container
+ maxWidth: "200px",
+ },
+ image: { // Styles for tag <img/>
+ maxWidth: "200px",
+ },
+ titleContainer: { // Styles for title container
+ textAlign: "4px",
+ },
+ svg: { // Styles for SVG file
+ color: "green",
+ },
+ },
+
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase
 
