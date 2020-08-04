@@ -124,22 +124,21 @@ Options data:
 
 
 ### Settings
-интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")  
+To call the uiManagmentAPI (ссылка) with event `changeAvatar`, it's allows you to choose and overwrite path to choosen avatar in settings (якорь на верхний сеттингс)
+
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
-ckAPIMethods.uiManagment('setUpBadge', {
+ckAPIMethods.uiManagment('changeAvatar', {
  path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
 })
 ```
 
 
-
-
 Options data: 
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
-| `changeAvatar`  | string     | path to picture    |
+| `path`          | string     | path to picture    |
 
 
 ### Styles
