@@ -24,7 +24,7 @@ To make any changes you need:
 ## Description of events and data  
 ### 1) Event **switchTheme**  
 <details>
- <summary>read description</summary>  
+ <summary>read about event</summary>  
  
 **Description:**  
 переключение темы на указанную в дате тему   
@@ -41,6 +41,9 @@ ckAPIMethods.styles('switchTheme', 'darkSova')
 </details>
 
 ### 2) Event **initTheme**  
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**   
 инициализация новой темы  
 **Params:**  
@@ -48,8 +51,6 @@ ckAPIMethods.styles('switchTheme', 'darkSova')
 |---------------|---------|----------|-----------------|  
 | themeName     | string  | +        |   1             |  
 | data          | any     | +        |   1             |  
-
-[Текст ссылки](#abcd)
 
 Описание data:  
 Sender:  
@@ -117,55 +118,54 @@ Divider -
 Header -  
  mainContainer -  
  avatarContainer -  
- image: {},
- titleContainer: {},
- resetButton: {},
- closeButton: {},
- settingsButton: {},
- headerSearchContainer: {},
- headerSearchInput: {},
- searchButton: {},
-},
-Badge: {
- mainContainer: {},
- avatarContainer: {},
- image: {},
- titleContainer: {},
- svg: {},
-},
-Rate: {
- mainContainer: {},
- titleContainer: {},
- negativeRateButton: {},
- positiveRateButton: {},
- ratingElement: {},
- ratingListContainer: {},
-},
-Close: {
- mainContainer: {},
-},
-Settings: {
- mainContainer: {},
- header: {},
- titleContainer: {},
- closeSettingsButton: {},
- fieldcontainer: {},
- heading: {},
- languages: {},
- themes: {},
- languagesCheckboxContainer: {},
- themesCheckboxContainer: {},
- boxTitle: {},
- checkbox: {},
- switcher: {},
-},
-ToggleSlider: {
- toggleContainer: {},
- toggleHeading: {},
- toggleLabel: {},
- toggleInput: {},
- toggleSlider: {},
-}
+ image -  
+ titleContainer -  
+ resetButton -  
+ closeButton -  
+ settingsButton -  
+ headerSearchContainer -  
+ headerSearchInput -  
+ searchButton -  
+
+Badge -  
+ mainContainer -  
+ avatarContainer -  
+ image -  
+ titleContainer -  
+ svg -  
+
+Rate -  
+ mainContainer -  
+ titleContainer -  
+ negativeRateButton -  
+ positiveRateButton -  
+ ratingElement -  
+ ratingListContainer -  
+
+Close -  
+ mainContainer -  
+ 
+Settings -  
+ mainContainer -  
+ header -  
+ titleContainer -  
+ closeSettingsButton -  
+ fieldcontainer -  
+ heading -  
+ languages -  
+ themes -  
+ languagesCheckboxContainer -  
+ themesCheckboxContainer -  
+ boxTitle -  
+ checkbox -  
+ switcher -  
+
+ToggleSlider -  
+ toggleContainer -  
+ toggleHeading -  
+ toggleLabel -  
+ toggleInput -  
+ toggleSlider -   
 
 **For example:**  
 ```
@@ -292,8 +292,12 @@ const data = {
 };
 ckAPIMethods.styles('initTheme', data)
 ```
+</details>
 
 ### 3) Event **changeStyles**  
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**  
 изменение полного пакета существующей темы  
 **Params:**  
@@ -307,8 +311,12 @@ ckAPIMethods.styles('initTheme', data)
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
+</details>
 
 ### 4) Event **changeChatIt** 
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**  
 изменение стилевого пакета компонента ChatIt в выбранной теме   
 **Params:**  
@@ -321,8 +329,12 @@ import { ckAPIMethods } from "sova-chatkit"
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
+</details>
 
 ### 5) Event **changeHeader**  
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**  
 изменение стилевого пакета компонента Header в выбранной теме  
 **Params:**   
@@ -335,8 +347,12 @@ import { ckAPIMethods } from "sova-chatkit"
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
+</details>
 
-### 6) Event **changeDialog**  
+### 6) Event **changeDialog** 
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**  
 изменение стилевого пакета компонента Dialog в выбранной теме   
 **Params:**  
@@ -349,8 +365,12 @@ import { ckAPIMethods } from "sova-chatkit"
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
+</details>
 
 ### 7) Event **changeRate**  
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**  
 изменение стилевого пакета компонента Rate в выбранной теме    
 **Params:**  
@@ -363,8 +383,12 @@ import { ckAPIMethods } from "sova-chatkit"
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
+</details>
 
 ### 8) Event **changeUserMessage**  
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**  
 изменение стилевого пакета компонента UserMessage в выбранной теме   
 **Params:**  
@@ -377,8 +401,12 @@ import { ckAPIMethods } from "sova-chatkit"
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
+</details>
 
-### 9) Event **changeResponseMessage**  
+### 9) Event **changeResponseMessage** 
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**  
 изменение стилевого пакета компонента ResponseMessage в выбранной теме   
 **Params:**  
@@ -391,8 +419,12 @@ import { ckAPIMethods } from "sova-chatkit"
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
+</details>
 
 ### 10) Event **changeSender**  
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**  
 изменение стилевого пакета компонента Sender в выбранной теме 
 **Params:**  
@@ -405,8 +437,12 @@ import { ckAPIMethods } from "sova-chatkit"
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
+</details>
 
 ### 11) Event **changeBadge**  
+<details>
+ <summary>read about event</summary>  
+ 
 **Description:**  
 изменение стилевого пакета компонента Badge в выбранной теме   
 **Params:**  
@@ -419,3 +455,4 @@ import { ckAPIMethods } from "sova-chatkit"
 import { ckAPIMethods } from "sova-chatkit"
 
 ```
+</details>
