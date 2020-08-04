@@ -1,13 +1,13 @@
 # Badge
 Widget expand button
 
-## Table of content (добавить якори)
-* Usage  
-* Component props  
-* Configuration  
-* Customization  
+## Table of content
+* [Usage](#Usage) 
+* [Component props](#Component props)   
+* [Configuration](#Configuration)   
+* [Customization](#Customization)   
 
-## Usage
+## Usage <a name="Usage"></a>
 ```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
@@ -23,40 +23,37 @@ function App() {
 export default App
 ```
 
-## Component props
+## Component props <a name="Component props"></a>
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
-## Configuration
+## Configuration <a name="Configuration"></a>
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
-| Key                |                                            |
-|--------------------|--------------------------------------------|
-| [UIManagment](#UIManagment)  | information to control UI                  |
-| [Settings](#2)     | information to control media info          |
-| [Styles](#3)       | information to control styles packets      |
-| [Languages](#4)    | information to control Languages packets   |
+| Key                        |                                            |
+|----------------------------|--------------------------------------------|
+| [Managment](#Managment)    | information to control UI                  |
+| [Settings](#Settings)      | information to control media info          |
+| [Styles](#Styles)          | information to control styles packets      |
+| [Languages](#Languages)    | information to control Languages packets   |
 
 
-### UIManagment <a name="UIManagment"></a>
-Props from UIManagment:  
-```
+
+
+
+### Managment <a name="Managment"></a>
+Props from Managment:  
+```javascript
 {
-  /**
-  * Should component show title
-  @default true
-  * /
-  "showTitle": boolean,
-  /**
-  * Should component show avatar
-  @default false
-  * /
-  "showAvatar": boolean
+ showTitle: false,
+ showAvatar: false,
+ showSVG: true,
 }
 ```
 
-### Settings <a name="2"></a>
+
+### Settings <a name="Settings"></a>
 Props from Settings:  
 ```
 {
@@ -69,7 +66,7 @@ Props from Settings:
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase  
 
-### Styles <a name="3"></a>
+### Styles <a name="Styles"></a>
 Props from Styles:  
 ```
 {
@@ -113,7 +110,7 @@ Props from Styles:
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase
 
-### Languages <a name="4"></a>
+### Languages <a name="Languages"></a>
 Props from Languages:  
 ```
 {
@@ -127,10 +124,11 @@ Props from Languages:
 
 
 
-# CUSTOMIZATION
+## Customization <a name="Customization"></a>
 To custom Badge component, you should use ckAPIMethods, which will allow you to change values in ckStore
 
-## UIManagment
+
+### UIManagment
 ```
 ckAPIMethods.uiManagment('setUpBadge', {
   showAvatar: [value],
@@ -138,13 +136,13 @@ ckAPIMethods.uiManagment('setUpBadge', {
 })
 ```
 
-## Settings
+### Settings
 интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")  
 `
 ckAPIMethods.settings('changeAvatar', [path])
 `
 
-## Styles
+### Styles
 ```
 ckAPIMethods.styles('changeBadge', {
   themeName: [theme name, wich styles you want to change],
@@ -157,7 +155,7 @@ ckAPIMethods.styles('changeBadge', {
 })
 ```
 
-## Languages
+### Languages
 ```
 ckAPIMethods.languages('changeBadge', {
   language: [language name, wich packet you want to change],
