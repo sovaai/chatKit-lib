@@ -1,19 +1,3 @@
-<table>
-    <tr>
-        <td colspan="2">component</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>border</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>color</td>
-    </tr>
-</table>
-
-
-
 # Badge
 Widget expand button
 
@@ -49,14 +33,14 @@ export default App
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
 | Key                        |                                            |
 |----------------------------|--------------------------------------------|
-| [Managment](#Managment)    | information to control UI                  |
-| [Settings](#Settings)      | information to control media info          |
-| [Styles](#Styles)          | information to control styles packets      |
-| [Languages](#Languages)    | information to control Languages packets   |
+| [managment](#Managment)    | information to control UI                  |
+| [settings](#Settings)      | information to control media info          |
+| [styles](#Styles)          | information to control styles packets      |
+| [languages](#Languages)    | information to control Languages packets   |
 
 
 ### Managment <a name="Managment"></a>
-Props from Managment:  
+Props from managment:  
 ```javascript
 {
  showTitle: false, //is responsible for displaying title or not
@@ -68,7 +52,7 @@ You can change these values using APImethod (ссылка на UIManagment ко�
 
 
 ### Settings <a name="Settings"></a>
-Props from Settings:  
+Props from settings:  
 ```javascript
 {
  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' //Path to the image which will be shown as avatar 
@@ -82,7 +66,7 @@ Writing css properties in kebab-case like regular css, you write them in camelCa
 
 
 ### Styles <a name="Styles"></a>
-Props from Styles:  
+Props from styles:  
 ```
 {
   /**
@@ -126,7 +110,7 @@ Props from Styles:
 Writing css properties in kebab-case like regular css, you write them in camelCase
 
 ### Languages <a name="Languages"></a>
-Props from Languages:  
+Props from languages:  
 ```javascript
 {
  title: 'Chat Kit' // Text in Title 
