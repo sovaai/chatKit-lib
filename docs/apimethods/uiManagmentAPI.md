@@ -34,105 +34,105 @@ import { ckAPIMethods } from "sova-chatkit"
 
 
 ## Description of method
-### :star:**setUpSender**<a name="1"></a>   
+### • **setUpSender**<a name="1"></a>   
 Description: setting the component `Sender`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-### :star:**setUpHeader**<a name="2"></a>   
+### • **setUpHeader**<a name="2"></a>   
 Description: setting the component `Header`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-### :star:**setUpBadge**<a name="3"></a>   
+### • **setUpBadge**<a name="3"></a>   
 Description: setting the component `Badge`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-### :star:**setUpMessage**<a name="4"></a>   
+### • **setUpMessage**<a name="4"></a>   
 Description: setting the component `Message`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-### :star:**setUpDialog**<a name="5"></a>   
+### • **setUpDialog**<a name="5"></a>   
 Description: setting the component `Dialog`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-### :star:**blockSender**<a name="6"></a>   
+### • **blockSender**<a name="6"></a>   
 Description: block sending messages   
 Params:   
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-### :star:**dialogLoading**<a name="7"></a>   
+### • **dialogLoading**<a name="7"></a>   
 Description: spinner display   
 Params:   
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-### :star:**setUpChatIt**<a name="8"></a>   
+### • **setUpChatIt**<a name="8"></a>   
 Description: setting the component `ChatIt`	  
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-### :star:**setUpRate**<a name="9"></a>   
+### • **setUpRate**<a name="9"></a>   
 Description: setting the component `Rate`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-### :star:**setUpCommon**<a name="10"></a>   
+### • **setUpCommon**<a name="10"></a>   
 Description: general settings  
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | data          | any     | +        |
 
-### :star:**showRate**<a name="11"></a>   
+### • **showRate**<a name="11"></a>   
 Description: show the component `Rate`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-### :star:**showNotification**<a name="12"></a>   
+### • **showNotification**<a name="12"></a>   
 Description: show the component `Notification`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-### :star:**openChat**<a name="13"></a>   
+### • **openChat**<a name="13"></a>   
 Description: open the chat   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | status        | boolean | +        |
 
-### :star:**showSettings**<a name="14"></a>   
+### • **showSettings**<a name="14"></a>   
 Description: show the component `Settings`   
 Params:  
 | Params        | Type    | Requires |
 |---------------|---------|----------|
 | null          | null    | +        |
 
-### :star:**reset**<a name="15"></a>   
+### • **reset**<a name="15"></a>   
 Description: reset session   
 Params:  
 | Params        | Type    | Requires |
