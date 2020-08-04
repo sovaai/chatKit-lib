@@ -1,6 +1,5 @@
 # sendMessageAPI
-## Description
-Send messages to the module to call request
+This method send messages to the module to call request
 
 # Usage
 To make any changes you need:  
