@@ -62,7 +62,7 @@ Component expects configuration info from storage. Badge touch 4 global keys fro
 Props from Managment:  
 ```javascript
 {
- showTitle: false,
+ showTitle: false, //is responsible for displaying title or not
  showAvatar: false,
  showSVG: true,
 }
