@@ -1,5 +1,5 @@
 # Badge
-# Usage
+## Usage
 ```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
@@ -14,6 +14,10 @@ function App() {
  
 export default App
 ```
+
+
+
+
 
 # COMPONENT PROPS
 ```
