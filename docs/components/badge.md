@@ -55,9 +55,6 @@ Component expects configuration info from storage. Badge touch 4 global keys fro
 | [Languages](#Languages)    | information to control Languages packets   |
 
 
-
-
-
 ### Managment <a name="Managment"></a>
 Props from Managment:  
 ```javascript
@@ -67,21 +64,21 @@ Props from Managment:
  showSVG: true, // is responsible for displaying SVF file or not
 }
 ```
+You can change these values using APImethod (ссылка на UIManagment которая находится в кастомизации)
+
 
 
 
 ### Settings <a name="Settings"></a>
 Props from Settings:  
-```
+```javascript
 {
-  /**
-  * Path to the image which will be shown as avatar
-  @default ''
-  * /
-  "avatar": string
+ avatar: `https://avatars2.githubusercontent.com/u/59205514?s=200&v=4` //Path to the image which will be shown as avatar 
 }
 ```
 Writing css properties in kebab-case like regular css, you write them in camelCase  
+
+
 
 ### Styles <a name="Styles"></a>
 Props from Styles:  
