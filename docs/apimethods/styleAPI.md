@@ -1,5 +1,5 @@
 # styleAPI
-Edit the widget theme or individual component
+This method edit the widget theme or individual component
 
 ## Usage
 To make any changes you need: 
