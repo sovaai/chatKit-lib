@@ -3,7 +3,7 @@ This method edit the widget theme or individual component
 
 ## Usage
 To make any changes you need: 
-* call a method `ckAPIMethods.style`  
+* call method `ckAPIMethods.style`  
 * enter name of event  
 * send data with the required keys  
 
