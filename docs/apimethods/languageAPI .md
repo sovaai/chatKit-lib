@@ -1,21 +1,11 @@
 # languageAPI 
-(настройки языковых пакетов)
+This method changes language pack settings
 
-# Quick start
-Чтобы внести какие-либо изменения, необходимо импортировать метод **languageAPI**:  
-Для этого in your App.js file:
-```
-import {ckAPIMethods} from 'Sova-Chat-Kit'
- ...
- <ckAPIMethods.languageAPI />
- ...
- ```
- 
  # Usage
- Чтобы внести какие-либо изменения необходимо:  
-* Вызвать метод `ckAPIMethods.languageAPI` 
-* Указать имя ивента (cм. Description oof method)  
-* Передать data с необходимыми изменениями.  
+ To make any changes you need: 
+* call method `ckAPIMethods.languageAPI` 
+* enter name of event
+* send data with the required keys
 
 # Description of method
 1 Event: **initLanguage**  
