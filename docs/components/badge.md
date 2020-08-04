@@ -124,7 +124,7 @@ Options data:
 
 
 ### Settings
-To call the uiManagmentAPI (ссылка) with event `changeAvatar`, it's allows you to overwrite path to choosen avatar in settings (якорь на верхний сеттингс).
+To call the settingsAPI (ссылка) with event `changeAvatar`, it's allows you to overwrite path to choosen avatar in settings (якорь на верхний сеттингс).
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -142,6 +142,7 @@ Options data:
 
 
 ### Styles
+
 ```
 ckAPIMethods.styles('changeBadge', {
   themeName: [theme name, wich styles you want to change],
