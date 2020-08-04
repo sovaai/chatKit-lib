@@ -1,7 +1,7 @@
 # Badge
 Widget expand button
 
-## Table of content
+## Table of content (добавить якори)
 * Usage  
 * Component props  
 * Configuration  
@@ -30,7 +30,7 @@ export default App
 
 
 ## Configuration
-Component get configuration info from storage. Badge touch 4 global keys from store:  
+Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
 * **UIManagment** - control UI;  
 * **Settings** - control media info;  
 * **Styles** - control styles packets;  
