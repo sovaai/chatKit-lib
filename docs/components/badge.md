@@ -144,7 +144,7 @@ Options data:
 
 
 ### Styles
-To call the stylesAPI (ссылка) with event `changeBadge`, it's allows you to choose and overwrite style values in choosen container in Styles (якорь на верхний стайл), on which component `Badge` is based.
+To call the stylesAPI (ссылка) with event `changeBadge`, it's allows you to choose and overwrite style values in choosen theme and choosen container in Styles (якорь на верхний стайл), on which component `Badge` is based. 
 ```
 ckAPIMethods.styles('changeBadge', {
   themeName: [theme name, wich styles you want to change],
