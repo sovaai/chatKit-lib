@@ -125,10 +125,14 @@ Options data:
 
 ### Settings
 интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")  
-
 `
 ckAPIMethods.settings('changeAvatar', [path])
 `
+Options data: 
+| Key             |   Type     |  Description       |
+|-----------------|------------|--------------------|
+| `changeAvatar`  | string     | path to picture    |
+
 
 ### Styles
 ```
