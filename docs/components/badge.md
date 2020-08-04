@@ -161,7 +161,7 @@ ckAPIMethods.styles("changeBadge", {
 
 Options themeName:  
 
-name of choosen theme with syles you want to change.   
+name of choosen theme which styles you want to change.   
 
 Options data:
 | Key                |   Type          |  Description                  |
