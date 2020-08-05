@@ -141,13 +141,13 @@ import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.uiManagment('setUpHeader', {
   resetButton: {
     enabled: true,
-    show withTitle: false,
-    show withIcon: true
+    withTitle: false,
+    withIcon: true
   },
   settingsButton: {
     enabled: true,
-    show withTitle: true,
-    show withIcon: true
+    withTitle: true,
+    withIcon: true
   },
   showAvatar: false,
   showTitle: true,
@@ -273,7 +273,7 @@ Options data:
 | buttonsContainer   | object styles   | list of styles for buttons    |
 | resetButton        | object styles   | styles for reset button       |
 | settingsButton     | object styles   | styles for settings button    |
-| image              | object styles   | styles for tag <img/>         |
+| image              | object styles   | styles for tag `img`         |
 
  
 
@@ -284,7 +284,7 @@ To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.languages('changeHeader', {
-  language: 'English',  // name of chosen language packet which values you want to change.
+  language: 'English',  // name of chosen language packet which values you want to change
   data: {
     title: 'Help?',
     settingsButtonTitle: 'settings',
