@@ -17,11 +17,11 @@ import React from "react"
 import { CkComponents } from "sova-chatkit"
  
 function App() {
- return (
- <div className="App">
-   <CkComponents.Badge ckStore={true} />
- </div>
- )
+  return (
+  <div className="App">
+    <CkComponents.Badge ckStore={true} />
+  </div>
+  )
 }
  
 export default App
@@ -51,9 +51,9 @@ Component expects configuration info from storage. Badge touch 4 global keys fro
 Props from managment:  
 ```javascript
 {
- showTitle: false, //is responsible for displaying title or not
- showAvatar: false, //is responsible for displaying avatar or not
- showSVG: true, // is responsible for displaying SVF file or not
+  showTitle: false,  // is responsible for displaying title or not
+  showAvatar: false,  // is responsible for displaying avatar or not
+  showSVG: true,  // is responsible for displaying SVF file or not
 }
 ```
 You can change these values using [APImethod](#custom_managment "description of method").
@@ -64,7 +64,7 @@ You can change these values using [APImethod](#custom_managment "description of 
 Props from settings:  
 ```javascript
 {
- avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' //Path to the image which will be shown as avatar 
+  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' // path to the image which will be shown as avatar 
 }
 ```
 You can change these values using [APImethod](#custom_settings "description of method").
@@ -75,21 +75,21 @@ You can change these values using [APImethod](#custom_settings "description of m
 Props from styles:  
 ```javascript
 {
- mainContainer: { // Styles for main container
-   margin: "1px",
- },
- avatarContainer: { // Styles for avatar container
-   maxWidth: "200px",
- },
- image: { // Styles for tag <img/>
-   maxWidth: "200px",
- },
- titleContainer: { // Styles for title container
-   textAlign: "4px",
- },
- svg: { // Styles for SVG file
-   color: "green",
- },
+  mainContainer: {  // styles for main container
+    margin: "1px",
+  },
+  avatarContainer: {  // styles for avatar container
+    maxWidth: "200px",
+  },
+  image: {  // styles for tag <img/>
+    maxWidth: "200px",
+  },
+  titleContainer: {  // styles for title container
+    textAlign: "4px",
+  },
+  svg: {  // styles for SVG file
+    color: "green",
+  },
 }
 
 ```
@@ -102,7 +102,7 @@ You can change these values using [APImethod](#custom_styles "description of met
 Props from languages:  
 ```javascript
 {
- title: 'Chat Kit' // Text in Title 
+  title: 'Chat Kit'  // text in Title 
 }
 ```
 You can change these values using [APImethod](#custom_languages "description of method").
@@ -125,8 +125,8 @@ To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/d
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.uiManagment('setUpBadge', {
- showAvatar: true,
- showSVG: false,
+  showAvatar: true,
+  showSVG: false,
 })
 ```
 
@@ -146,7 +146,7 @@ To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.uiManagment('changeAvatar', {
- path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
+  path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
 })
 ```
 Options data: 
@@ -162,12 +162,12 @@ To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/ap
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.styles("changeBadge", {
- themeName: "sovaDark",
- data: {
-   mainContainer: {
-     width: "100%",
-   },
- },
+  themeName: "sovaDark",
+  data: {
+    mainContainer: {
+      width: "100%",
+    },
+  },
 })
 ```
 
@@ -193,10 +193,10 @@ To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.languages('changeBadge', {
- language: 'English',
- data: {
-   title: 'Help?'
- }
+  language: 'English',
+  data: {
+    title: 'Help?'
+  }
 })
 ```
 Options language:    
