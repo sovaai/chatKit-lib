@@ -209,38 +209,71 @@ Options data:
 
 
 
+### Settings <a name="custom_settings"></a> (NEED HELP)
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
 
-
-
-
-
-## Settings
-интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")  
+ckAPIMethods.uiManagment('changeIcon', {
+  iconName: ??,
+  iconData: ??
+})
 ```
-ckAPIMethods.settings('rateIcon', [data])
-ckAPIMethods.settings('searchIcon', [data])
-```
+Options data: 
+| Key             |   Type     |  Description       |
+|-----------------|------------|--------------------|
+| `iconName`      | string     |  ??                |
+| `iconData`      |  ??        |  ??                |
 
-## Styles
-```
-ckAPIMethods.styles('changeDialog', {
-  themeName: [theme name, wich styles you want to change],
+
+
+### Styles <a name="custom_styles"></a>
+To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeDialog`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Dialog` is based. 
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
+ckAPIMethods.styles("changeDialog", {
+  themeName: "sovaDark",  // theme name, in which styles you want to change anything 
   data: {
-    [mainContainer styles],
-    [panel styles],
-    [rateButton styles],
-    [searchButton styles],
-    [messagesContainer styles]
+    mainContainer: {},
+    panel: {},
+    rateButton: {},
+    searchButton: {},
+    messagesContainer: {}
   },
 })
 ```
 
-## Languages
-```
+Options data:
+| Key                |   Type          |  Description                  |
+|--------------------|-----------------|-------------------------------|
+| mainContainer      | object styles   | styles for main container     |
+| panel              | object styles   | styles for avatar container   |
+| rateButton         | object styles   | styles for tag <img/>         |
+| search button      | object styles   | styles for title container    |
+| messagesContainer  | object styles   | styles for SVG file           |
+
+ 
+
+### Languages <a name="custom_languages"></a>
+To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeDialog` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Dialog` is based. 
+
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
 ckAPIMethods.languages('changeDialog', {
-  language: [language name, wich packet you want to change],
+  language: 'English',  // name of chosen language packet which values you want to change
   data: {
-    [text title]
+    searchButtonTitle: 'Search',
+    rateButtonTitle: 'Rate',
+    loading: 'typing...'
   }
 })
 ```
+
+Options data:    
+| Key                |   Type          |  Description                  |
+|--------------------|-----------------|-------------------------------|
+| searchButtonTitle  | string          | text in search button title   |
+| rateButtonTitle    | string          | text in rate button title     |
+| loading            | string          | text in loading               |
