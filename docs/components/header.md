@@ -87,7 +87,7 @@ You can change these values using [APImethod](#custom_settings "description of m
 Props from styles:  
 ```javascript
 {
-  main container: { // styles for main container
+  mainContainer: { // styles for main container
     margin: "1px",
   },
   avatarContainer: { // styles for avatar container
