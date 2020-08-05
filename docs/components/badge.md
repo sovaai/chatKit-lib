@@ -187,7 +187,7 @@ Options data:
  
 
 ### Languages <a name="custom_languages"></a>
-To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeBadge` it's allows yuo to shoose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Badge` is based. 
+To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeBadge` it's allows you to shoose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Badge` is based. 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
