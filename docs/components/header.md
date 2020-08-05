@@ -250,7 +250,7 @@ To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/ap
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.styles("changeHeader", {
-  themeName: "sovaDark",
+  themeName: "sovaDark",  // theme name, in which styles you want to change anything
   data: {
     mainContainer: {},
     avatarContainer: {},
@@ -263,10 +263,6 @@ ckAPIMethods.styles("changeHeader", {
   },
 })
 ```
-
-Options themeName:  
-
-name of chosen theme which styles you want to change.   
 
 Options data:
 | Key                |   Type          |  Description                  |
@@ -288,17 +284,19 @@ To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.languages('changeHeader', {
-  language: 'English',
+  language: 'English',  // name of chosen language packet which values you want to change.
   data: {
     title: 'Help?'
+    settingsButtonTitle: 'settings'
+    resetButtonTitle: 'reset'
   }
 })
 ```
-Options language:    
-
-name of chosen language packet which values you want to change.
 
 Options data:    
-| Key                |   Type          |  Description                  |
-|--------------------|-----------------|-------------------------------|
-| title              | string          | text in title                 |
+| Key                  |   Type          |  Description                    |
+|----------------------|-----------------|---------------------------------|
+| title                | string          | text in title                   |
+| settingsButtonTitle  | string          | text in settings button title   |
+| resetButtonTitle     | string          | text in reset button title      |
+
