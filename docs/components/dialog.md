@@ -2,105 +2,85 @@
 Displaying a set of text messages
 
 
-## Usage
+
+## Table of content
+* [Usage](#usage) 
+* [Component props](#component_props)   
+* [Configuration](#configuration)   
+* [Customization](#customization)   
+
+
+
+## Usage <a name="usage"></a>
 ```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
  
 function App() {
- return (
- <div className="App">
-   <CkComponents.Dialog ckStore={true} />
- </div>
- )
+  return (
+  <div className="App">
+    <CkComponents.Dialog ckStore={true} />
+  </div>
+  )
 }
  
 export default App
 ```
 
 
-## Component props
+
+## Component props <a name="component_props"></a>
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
-## Configuration
-Component get configuration info from storage. Badge touch 4 global keys from store:  
-* **UIManagment** - control UI;  
-* **Settings** - control media info;  
-* **Styles** - control styles packets;  
-* **Languages** - controls Languages packets.  
 
-## UIManagment
-Props from UIManagment:  
-```
+## Configuration <a name="configuration"></a>
+Component expects configuration info from storage. Dialog touch 4 global keys from STORE:  
+| Key                               |                                            |
+|-----------------------------------|--------------------------------------------|
+| [managment](#conf_managment)      | information to control UI                  |
+| [settings](#conf_settings)        | information to control media info          |
+| [styles](#conf_styles)            | information to control styles packets      |
+| [languages](#conf_languages)      | information to control Languages packets   |
+
+
+
+### Managment <a name="conf_managment"></a>
+Props from managment:  
+```javascript
 {
-  /**
-  * Should component show rate
-  * /
-  "rate": {
-    /**
-    * Should component display on widget
-    @default false
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default true
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
-  },
-  /**
-  * Should component show search
-  * /
-  "search": {
-    /**
-    * Should component display on widget
-    @default false
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default true
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
-  },
-  /**
-  * Should component show divider
-  @default true
-  * /
-  "dividerEnabled": boolean
+  rate: {
+      enabled: true,  // should component display on widge
+      withTitle: false,  // should component show title
+      withIcon: true,  // should component show icon
+      },
+  search: { 
+      enabled: true,  // should component display on widget
+      withTitle: false,  // should component show title
+      withIcon: true,  // should component show icon
+      },
+  dividerEnabled: true,  // should component show divider
+},
+```
+You can change these values using [APImethod](#custom_managment "description of method").
+
+
+
+### Settings <a name="conf_settings"></a>
+Props from settings:  
+```javascript
+{
+  rateIcon: 'fas thumbs-up'  // choice of image which will be shown as rate icon
+  searchIcon: 'far search'  // choice of image which will be shown as search icon
 }
 ```
+You can change these values using [APImethod](#custom_settings "description of method").
 
-## Settings
-Props from Settings:  
-```
-{
-  /**
-  * Choice of image which will be shown as rate icon
-  @default fas thumbs-up
-  * /
-  "rateIcon": string,
-  /**
-  * Choice of image which will be shown as search icon
-  @default far search
-  * /
-  "searchIcon": string
-}
-```
-Writing css properties in kebab-case like regular css, you write them in camelCase
+
+
+
 
 ## Styles
 Props from Styles:  
