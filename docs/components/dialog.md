@@ -43,7 +43,7 @@ Component expects configuration info from storage. Dialog touch 4 global keys fr
 | [managment](#conf_managment)      | information to control UI                  |
 | [settings](#conf_settings)        | information to control media info          |
 | [styles](#conf_styles)            | information to control styles packets      |
-| [languages](#conf_languages)      | information to control Languages packets   |
+| [languages](#conf_languages)      | information to control languages packets   |
 
 
 
@@ -52,7 +52,7 @@ Props from managment:
 ```javascript
 {
   rate: {
-      enabled: true,  // should component display on widge
+      enabled: true,  // should component display on widget
       withTitle: false,  // should component show title
       withIcon: true,  // should component show icon
       },
@@ -62,7 +62,7 @@ Props from managment:
       withIcon: true,  // should component show icon
       },
   dividerEnabled: true,  // should component show divider
-},
+}
 ```
 You can change these values using [APImethod](#custom_managment "description of method").
 
@@ -118,7 +118,7 @@ You can change these values using [APImethod](#custom_languages "description of 
 
 
 ## Customization <a name="customization"></a>
-To custom `Dialog` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
+To custom component `Dialog`, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
 * [UIManagment](#custom_managment)
 * [Settings](#custom_settings)
