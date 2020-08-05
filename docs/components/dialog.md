@@ -248,10 +248,10 @@ Options data:
 | Key                |   Type          |  Description                  |
 |--------------------|-----------------|-------------------------------|
 | mainContainer      | object styles   | styles for main container     |
-| panel              | object styles   | styles for avatar container   |
-| rateButton         | object styles   | styles for tag <img/>         |
-| search button      | object styles   | styles for title container    |
-| messagesContainer  | object styles   | styles for SVG file           |
+| panel              | object styles   | styles for panel              |
+| rateButton         | object styles   | styles for rate button        |
+| search button      | object styles   | styles for search button      |
+| messagesContainer  | object styles   | styles for messages container |
 
  
 
