@@ -239,8 +239,8 @@ Options data:
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `path`          | string     | path to picture    |
-| `iconName`          | string     |  ??  |
-| `iconData`          |  ??   |   ?? |
+| `iconName`      | string     |  ??                |
+| `iconData`      |  ??        |  ??                |
 
 
 
