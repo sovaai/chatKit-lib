@@ -252,14 +252,14 @@ import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.styles("changeHeader", {
   themeName: "sovaDark",
   data: {
-    mainContainer: {  },
-    avatarContainer: {  },
-    titleContainer: {  },
+    mainContainer: {},
+    avatarContainer: {},
+    titleContainer: {},
     buttonsContainer: {  
-      resetButton: {  },
-      settingsButton: {  }
+      resetButton: {},
+      settingsButton: {}
    },
-    image: {  },
+    image: {},
   },
 })
 ```
