@@ -135,13 +135,13 @@ import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.uiManagment('setUpDialog', {
   rateButton: {
     enabled: true,
-    show withTitle: true,
-    show withIcon: true
+    withTitle: true,
+    withIcon: true
   },
   searchButton: {
     enabled: true,
-    show withTitle: false,
-    show withIcon: true
+    withTitle: false,
+    withIcon: true
   },
 showMsgLoad: true
 })
