@@ -47,112 +47,49 @@ Component expects configuration info from storage. Message touch 4 global keys f
  
  
  
-
-
-## UIManagment
-Props from UIManagment:  
-```
-{   
-  /**
-  * Should component show date
-  @default true
-  * /
-  "showDate": boolean,
-  /**
-  * Should component show avatar
-  @default false
-  * /
-  "showAvatar": boolean,
-  /**
-  * Should component show positive rate for message
-  * /
-  positiveRateMessage": {
-    /**
-    * Should component display on widget
-    @default true
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default false
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
-    },
-  /**
-  * Should component show negative rate for message
-  * /
-  negativeRateMessage": {
-    /**
-    * Should component display on widget
-    @default true
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default false
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
-    },
-  /**
-  * Should component show audio message
-  * /
-  audioMessage": {
-    /**
-    * Should component display on widget
-    @default false
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default true
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
-  }
-}
-```
-
-## Settings
-Props from Settings:  
-```
+### Managment <a name="conf_managment"></a>
+Props from managment:  
+```javascript
 {
-  /**
-  * Path to the image which will be shown as avatar
-  @default ''
-  * /
-  "avatar": string,
-  /**
-  * Choice of image which will be shown as positive rate icon
-  @default fas thumbs-up
-  * /
-  "positiveRateIcon": string,
-  /**
-  * Choice of image which will be shown as negative rate icon
-  @default far thumbs-down
-  * /
-  "negativeRateIcon": string,
-  /**
-  * Choice of image which will be shown as audio message icon
-  @default fas play
-  * /
-  "audioMessageIcon": string
+  showDate: false,  // should component show date
+  showAvatar: false,  // should component show avatar
+  positiveRateMessage: {  // should component show positive rate for message
+      enabled: false,  // should component display on widget
+      withTitle: false,  // should component show title
+      withIcon: true,  // should component show icon
+  },
+  negativeRateMessage: {  // should component show negative rate for message
+      enabled: false,  // should component display on widget
+      withTitle: false,  // should component show title
+      withIcon: true,  // should component show icon
+  },
+  audioMessage: {  // should component show audio message
+      enabled: false,  // should component display on widget
+      withTitle: false,  // should component show title
+      withIcon: true,  // should component show icon
+  },
+},
+
+```
+You can change these values using [APImethod](#custom_managment "description of method").
+
+
+
+### Settings <a name="conf_settings"></a>
+Props from settings:  
+```javascript
+{
+  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' // path to the image which will be shown as avatar ,
+  positiveRateIcon: 'fas thumbs-up'  // choice of image which will be shown as positive rate icon,
+  negativeRateIcon 'fas thumbs-down'  // choice of image which will be shown as negative rate icon,
+  audioMessageIcon: 'fas play' // choice of image which will be shown as audio message icon
 }
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase  
+You can change these values using [APImethod](#custom_settings "description of method").
+
+
+
+
 
 ## Styles
 ### For user message
