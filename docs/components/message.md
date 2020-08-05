@@ -88,105 +88,62 @@ Props from settings:
 You can change these values using [APImethod](#custom_settings "description of method").
 
 
-
-
-
-## Styles
-### For user message
-Props from Styles:  
-```
+### Styles <a name="conf_styles"></a>
+Props from styles: 
+<details>
+ <summary>For user message</summary>
+ ```javascript
 {
-  /**
-  * The chosen theme
-  @default sovaLight
-  * /
-  "theme": string,
-  /**
-  * Styles for user message
-  @default user
-  * /
-  "sender": user,
-  {
-    /**
-    * Styles for main container
-    @default {}
-    * /
-    "mainContainer": object,
-    /**
-    * Styles for positive rate message button
-    @default {
-      "display": "none"
-    }
-    * /
-    "positiveRateMessageButton": object,
-    /**
-    * Styles for negative rate message button
-    @default {
-      "display": "none"
-    }
-    * /
-    "negativeRateMessageButton": object,
-    /**
-    * Styles for avatar container container
-    @default {}
-    * /
-     "avatarContainer": object,
-    /**
-    * Styles for audio message button
-    @default {}
-    * /
-    "audioMessageButton": object,
-    /**
-    * Styles for image
-    @default {}
-    * /
-    "image": object,
-    /**
-    * Styles for data container
-    @default {
-    "width": "100%",
-    "textAlign": "right",
-    "fontFamily": "Roboto",
-    "fontSize": "12px",
-    "marginTop": "2px",
-    "color": "#0F1F48"
-    }
-    * /
-    "dataContainer": object,
-    /**
-    * Styles for text Container
-    @default {
-      "padding": "16px",
-      "fontSize": "14px",
-      "color": "#FFFFFF",
-      "background": "#386FFE",
-      "textAlign": "left",
-      "width": "100%",
-      "fontFamily": "Helvetica",
-      "borderRadius": "17px 17px 0 17px",
-      "wordBreak": "break-all",
-      "lineHeight": "18px"
-    }
-    * /
-    "textContainer": object,
-    /**
-    * Styles for bubble container
-    @default {
-      "display": "flex",
-      "flexWrap": "wrap"
-    }
-    * /
-    "bubbleContainer": object,
-    /**
-    * Styles for buttons container
-    @default {}
-    * /
-    "buttonsContainer": object
+  mainContainer: {  // styles for main container
+  margin: "1px",
+  },
+  positiveRateMessageButton: {  // styles for positive rate message button
+  display": "none,
+  },
+  negativeRateMessageButton: {  // styles for negative rate message button
+  display": "none,
+  },
+  avatarContainer: {  // styles for avatar container
+  margin: "1px",
+  },
+  audioMessageButton: {  // styles for audio message button
+    margin: "1px",
+  },
+  image: {  // styles for tag ‘img’
+    maxWidth: "200px",
+  },
+  dataContainer: {  // styles for data container
+    width: "100%",
+    textAlign: "right",
+    fontFamily: "Roboto",
+    fontSize: "12px",
+    marginTop: "2px",
+    color: "#0F1F48"
+  },
+  textContainer: {  // styles for text container
+    padding: "16px",
+    fontSize: "14px",
+    color: "#FFFFFF",
+    background: "#386FFE",
+    textAlign: "left",
+    width: "100%",
+    fontFamily: "Helvetica",
+    borderRadius: "17px 17px 0 17px",
+    wordBreak: "break-all",
+    lineHeight: "18px"
+  },
+  bubbleContainer: {  // styles for bubble container
+    display: "flex",
+    flexWrap: "wrap"
+  },
+  buttonsContainer: {  // styles for buttons container
+  }
 }
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase
-### For response message
-Props from Styles:  
+</details>
+ 
+<details>
+ <summary>For response message</summary>
 ```
 {
   /**
@@ -317,7 +274,13 @@ Props from Styles:
   "buttonsContainer": object
 }
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase
+ </details>
+ 
+You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
+You can change these values using [APImethod](#custom_styles "description of method").
+
+
+
 
 ## Languages
 Props from Languages:
