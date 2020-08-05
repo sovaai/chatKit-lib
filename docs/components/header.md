@@ -17,11 +17,11 @@ import React from "react"
 import { CkComponents } from "sova-chatkit"
  
 function App() {
- return (
- <div className="App">
-   <CkComponents.Header ckStore={true} />
- </div>
- )
+  return (
+  <div className="App">
+  <CkComponents.Header ckStore={true} />
+  </div>
+  )
 }
  
 export default App
@@ -73,10 +73,10 @@ You can change these values using [APImethod](#custom_managment "description of 
 Props from settings:  
 ```javascript
 {
-avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4'  // path to the image which will be shown as avatar
-resetIcon: fas redo-alt  // choice of image which will be shown as reset icon
-settingsIcon: fas ellipsis-v  // choice of image which will be shown as settings icon
-closeSettingsIcon": fas arrow-down  // choice of image which will be shown as close settings icon
+  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4'  // path to the image which will be shown as avatar
+  resetIcon: fas redo-alt  // choice of image which will be shown as reset icon
+  settingsIcon: fas ellipsis-v  // choice of image which will be shown as settings icon
+  closeSettingsIcon": fas arrow-down  // choice of image which will be shown as close settings icon
 }
 ```
 You can change these values using [APImethod](#custom_settings "description of method").
@@ -87,22 +87,22 @@ You can change these values using [APImethod](#custom_settings "description of m
 Props from styles:  
 ```javascript
 {
-    main container: { // styles for main container
-        margin: "1px",
-    },
-    avatarContainer: { // styles for avatar container
-        maxWidth: "200px",
-    },
-    titleContainer: { // styles for title container
-        textAlign: "4px",
-    },
-    buttonsContainer: { // styles for buttons
-        resetButton: { },  // styles for reset Button
-        settingsButton: { } // styles for settings Button
-    },
-    image: { // styles for tag <img/>
-        maxWidth: "200px",
-    },
+  main container: { // styles for main container
+    margin: "1px",
+  },
+  avatarContainer: { // styles for avatar container
+    maxWidth: "200px",
+  },
+  titleContainer: { // styles for title container
+    textAlign: "4px",
+  },
+  buttonsContainer: { // styles for buttons
+    resetButton: {},  // styles for reset Button
+    settingsButton: {} // styles for settings Button
+  },
+  image: { // styles for tag <img/>
+    maxWidth: "200px",
+  },
 }
 ```
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
@@ -114,9 +114,9 @@ You can change these values using [APImethod](#custom_styles "description of met
 Props from languages:  
 ```javascript
 {
- title: 'SOVA Chat Kit'  // text in Title 
-settingsButtonTitle: 'settings'  // text in settings button title
-resetButtonTitle: 'reset'  // text in reset button title
+  title: 'SOVA Chat Kit'  // text in Title 
+  settingsButtonTitle: 'settings'  // text in settings button title
+  resetButtonTitle: 'reset'  // text in reset button title
 }
 ```
 You can change these values using [APImethod](#custom_languages "description of method").
@@ -139,7 +139,7 @@ To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/d
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.uiManagment('setUpHeader', {
- resetButton: {
+  resetButton: {
     enabled: true,
     show withTitle: false,
     show withIcon: true
@@ -149,90 +149,90 @@ ckAPIMethods.uiManagment('setUpHeader', {
     show withTitle: true,
     show withIcon: true
   },
-showAvatar: false,
-showTitle: true,
+  showAvatar: false,
+  showTitle: true,
 })
 ```
 
 Options data:   
 <table>
-    <tr>
-        <td colspan="2" align=center><b>Key</b></td>
-        <td align=center><b>Type</b></td>
-        <td align=center><b>Description</b></td>
-    </tr>
-    <tr>
-        <td colspan="2">resetButton</td>
-        <td>object</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>enabled</td>
-        <td>boolean</td>
-        <td>is responsible for displaying reset button or not </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>show withTitle</td>
-        <td><boolean/td>
-        <td>is responsible for displaying button with title or not </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>show withIcon</td>
-        <td>boolean</td>
-        <td>is responsible for displaying button with icon or not</td>
-    </tr>
-    <tr>
-        <td colspan="2">settingsButton</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>enabled</td>
-        <td>boolean</td>
-        <td>is responsible for displaying settings button or not</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>show withTitle</td>
-        <td>boolean</td>
-        <td>is responsible for displaying button with title or not</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>show withIcon</td>
-        <td>boolean</td>
-        <td>is responsible for displaying button with icon or not</td>
-    </tr>
-    <tr>
-        <td colspan="2">showAvatar</td>
-        <td>boolean</td>
-        <td>is responsible for displaying avatar or not </td>
-    </tr>
-    <tr>
-        <td colspan="2">showTitle</td>
-        <td>boolean</td>
-        <td>is responsible for displaying title or not </td>
-    </tr>
+  <tr>
+      <td colspan="2" align=center><b>Key</b></td>
+      <td align=center><b>Type</b></td>
+      <td align=center><b>Description</b></td>
+  </tr>
+  <tr>
+      <td colspan="2">resetButton</td>
+      <td>object</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>enabled</td>
+      <td>boolean</td>
+      <td>is responsible for displaying reset button or not </td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>show withTitle</td>
+      <td>boolean</td>
+      <td>is responsible for displaying button with title or not </td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>show withIcon</td>
+      <td>boolean</td>
+      <td>is responsible for displaying button with icon or not</td>
+  </tr>
+  <tr>
+      <td colspan="2">settingsButton</td>
+      <td>object</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>enabled</td>
+      <td>boolean</td>
+      <td>is responsible for displaying settings button or not</td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>show withTitle</td>
+      <td>boolean</td>
+      <td>is responsible for displaying button with title or not</td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>show withIcon</td>
+      <td>boolean</td>
+      <td>is responsible for displaying button with icon or not</td>
+  </tr>
+  <tr>
+      <td colspan="2">showAvatar</td>
+      <td>boolean</td>
+      <td>is responsible for displaying avatar or not </td>
+  </tr>
+  <tr>
+      <td colspan="2">showTitle</td>
+      <td>boolean</td>
+      <td>is responsible for displaying title or not </td>
+  </tr>
 </table>
 
 
 
-### Settings <a name="custom_settings"></a> 
+### Settings <a name="custom_settings"></a> (NEED HELP)
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`/ `changeIcon`, it's allows you to overwrite path to chosen avatar / ?? in [Settings](#conf_settings). 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.uiManagment('changeAvatar', {
- path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
+  path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
 
 ckAPIMethods.uiManagment('changeIcon', {
- iconName: ??,
- iconData: ??
+  iconName: ??,
+  iconData: ??
 })
 ```
 Options data: 
@@ -250,17 +250,17 @@ To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/ap
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.styles("changeHeader", {
- themeName: "sovaDark",
- data: {
-   mainContainer: {  },
-   avatarContainer: {  },
-   titleContainer: {  },
-   buttonsContainer: {  
-     resetButton: {  },
-     settingsButton: {  }
+  themeName: "sovaDark",
+  data: {
+    mainContainer: {  },
+    avatarContainer: {  },
+    titleContainer: {  },
+    buttonsContainer: {  
+      resetButton: {  },
+      settingsButton: {  }
+   },
+    image: {  },
   },
-   image: {  },
- },
 })
 ```
 
@@ -288,10 +288,10 @@ To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.languages('changeHeader', {
- language: 'English',
- data: {
-   title: 'Help?'
- }
+  language: 'English',
+  data: {
+    title: 'Help?'
+  }
 })
 ```
 Options language:    
