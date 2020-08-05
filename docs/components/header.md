@@ -286,8 +286,8 @@ import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.languages('changeHeader', {
   language: 'English',  // name of chosen language packet which values you want to change.
   data: {
-    title: 'Help?'
-    settingsButtonTitle: 'settings'
+    title: 'Help?',
+    settingsButtonTitle: 'settings',
     resetButtonTitle: 'reset'
   }
 })
