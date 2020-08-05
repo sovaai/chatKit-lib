@@ -80,74 +80,55 @@ You can change these values using [APImethod](#custom_settings "description of m
 
 
 
-
-
-## Styles
-Props from Styles:  
-```
+### Styles <a name="conf_styles"></a>
+Props from styles:  
+```javascript
 {
-  /**
-  * The chosen theme
-  @default sovaLight
-  * /
-  "theme": string,
-  /**
-  * Styles for main container
-  @default {}
-  * /
-  "mainContainer": object,
-  /**
-  * Styles for panel
-  @default {}
-  * /
-  "panel": object,
-  /**
-  * Styles for rate button
-  @default {}
-  * /
-  "rateButton": object,
-  /**
-  * Styles for search button
-  @default {}
-  * /
-  "searchButton": object,
-  /**
-  * Styles for messages container
-  @default {
-    "maxHeight": "100%",
-    "display": "flex",
-    "flexDirection": "column"
-  }
-  * /
-  "messagesContainer": object
+  mainContainer: {  // styles for main container
+    margin: "1px",
+  },
+ panel: {  // styles for panel
+    maxWidth: "300px",
+  },
+ rateButton: {  // styles for rate button
+    maxWidth: "10px",
+  },
+ searchButton: {  // styles for search button
+    maxWidth: "4px",
+  },
+ messagesContainer: { },  // styles for messages container
 }
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase
+You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
+You can change these values using [APImethod](#custom_styles "description of method").
 
-## Languages
-Props from Languages
-```
+
+
+### Languages <a name="conf_languages"></a>
+Props from languages:  
+```javascript
 {
-  /**
-  * Text in search button title
-  @default Search
-  * /
-  "searchButtonTitle": string,
-  /**
-  * Text in rate button title
-  @default Rate
-  * /
-  "rateButtonTitle": string,
-  /**
-  * Text in loading
-  @default typing...
-  * /
-  "loading": string
+  searchButtonTitle: 'Search'  // text in search button title
+  rateButtonTitle: 'Rate'  // text in rate button title
+  loading: 'typing...'  // text in loading
 }
 ```
+You can change these values using [APImethod](#custom_languages "description of method").
 
-# CUSTOMIZATION
-To custom Badge component, you should use ckAPIMethods, which will allow you to change values in ckStore
+
+
+## Customization <a name="customization"></a>
+To custom `Dialog` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
+Customization includes:  
+* [UIManagment](#custom_managment)
+* [Settings](#custom_settings)
+* [Styles](#custom_styles)
+* [Languages](#custom_languages)
+
+
+
+
+
 
 ## UIManagment
 ```
