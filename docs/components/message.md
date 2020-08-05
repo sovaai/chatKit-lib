@@ -92,6 +92,8 @@ You can change these values using [APImethod](#custom_settings "description of m
 Props from styles: 
 <details>
  <summary>For user message</summary>
+ 
+ 
  ```javascript
 {
   mainContainer: {  // styles for main container
@@ -140,10 +142,12 @@ Props from styles:
   }
 }
 ```
+
 </details>
  
 <details>
- <summary>For response message</summary>
+<summary>For response message</summary>
+ 
 ```
 {
   /**
@@ -274,7 +278,8 @@ Props from styles:
   "buttonsContainer": object
 }
 ```
- </details>
+ 
+</details>
  
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
 You can change these values using [APImethod](#custom_styles "description of method").
