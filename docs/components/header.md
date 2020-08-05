@@ -74,9 +74,9 @@ Props from settings:
 ```javascript
 {
   avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4'  // path to the image which will be shown as avatar
-  resetIcon: fas redo-alt  // choice of image which will be shown as reset icon
-  settingsIcon: fas ellipsis-v  // choice of image which will be shown as settings icon
-  closeSettingsIcon": fas arrow-down  // choice of image which will be shown as close settings icon
+  resetIcon: 'fas redo-alt'  // choice of image which will be shown as reset icon
+  settingsIcon: 'fas ellipsis-v'  // choice of image which will be shown as settings icon
+  closeSettingsIcon": 'fas arrow-down'  // choice of image which will be shown as close settings icon
 }
 ```
 You can change these values using [APImethod](#custom_settings "description of method").
