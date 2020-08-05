@@ -19,7 +19,7 @@ import { CkComponents } from "sova-chatkit"
 function App() {
   return (
   <div className="App">
-    <CkComponents.Badge ckStore={true} />
+    <CkComponents.Message ckStore={true} />
   </div>
   )
 }
