@@ -238,30 +238,124 @@ Customization includes:
 
 
 
+### UIManagment <a name="custom_managment"></a>
+To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpMessage`, it's allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Message` is based.
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
 
-
-## UIManagment
-```
 ckAPIMethods.uiManagment('setUpMessage', {
-  audioMessageButton?: {
-    enabled?: boolean,
-    show withTitle?: boolean,
-    show withIcon?: boolean
+  audioMessageButton: {
+    enabled: true,
+    withTitle: false,
+    withIcon: true
   },
-  positiveRateMessage?: {
-    enabled?: boolean,
-    show withTitle?: boolean,
-    show withIcon?: boolean
+  positiveRateMessage: {
+    enabled: true,
+    withTitle: false,
+    withIcon: true
   },
-  negativeRateRateMessage?: {
-    enabled?: boolean,
-    show withTitle?: boolean,
-    show withIcon?: boolean
+  negativeRateRateMessage: {
+    enabled: true,
+    withTitle: false,
+    withIcon: true
   },
-showAvatar?: boolean,
-showTitle?: boolean
+showAvatar: false,
+showTitle: true
 })
 ```
+
+Options data:   
+<table>
+  <tr>
+    <td colspan="2" align=center><b>Key</b></td>
+    <td align=center><b>Type</b></td>
+    <td align=center><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">audioMessageButtonn</td>
+    <td>object</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>enabled</td>
+    <td>boolean</td>
+    <td>is responsible for displaying reset button or not </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withTitle</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with title or not </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withIcon</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with icon or not</td>
+  </tr>
+  <tr>
+    <td colspan="2">positiveRateMessage</td>
+    <td>object</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>enabled</td>
+    <td>boolean</td>
+    <td>is responsible for displaying settings button or not</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withTitle</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with title or not</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withIcon</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with icon or not</td>
+  </tr>
+  <tr>
+    <td colspan="2">negativeRateRateMessage</td>
+    <td>object</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>enabled</td>
+    <td>boolean</td>
+    <td>is responsible for displaying reset button or not </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withTitle</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with title or not </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withIcon</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with icon or not</td>
+  </tr>
+  <tr>
+    <td colspan="2">showAvatar</td>
+    <td>boolean</td>
+    <td>is responsible for displaying avatar or not </td>
+  </tr>
+  <tr>
+    <td colspan="2">showTitle</td>
+    <td>boolean</td>
+    <td>is responsible for displaying title or not </td>
+  </tr>
+</table>
+
+
+
+
+
 
 ## Settings
 интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")  
