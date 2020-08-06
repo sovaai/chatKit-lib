@@ -142,7 +142,7 @@ Props from styles:
       opacity: "0.75",
       color: "#FC2D81"
     }
-  }
+  },
   shareButton: { },  // styles for share button
   stickersButton: { },  // styles for stickers button
   textArea: { },  // styles for text area
