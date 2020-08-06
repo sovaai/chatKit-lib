@@ -154,54 +154,38 @@ You can change these values using [APImethod](#custom_styles "description of met
 
 
 
-
-
-
-
-
-
-
-
-
-## Languages
-Props from Languages:
-```
+### Languages <a name="conf_languages"></a>
+Props from languages:  
+```javascript
 {
-  /**
-  * Text in file button title
-  @default File
-  * /
-  "fileButtonTitle": string,
-  /**
-  * Text in placeholder
-  @default Write message
-  * /
-  "placeholder": string,
-  /**
-  * Text in send button title
-  @default Send
-  * /
-  "sendButtonTitle": string,
-  /**
-  * Text in share button title
-  @default Share
-  * /
-  "shareButtonTitle": string,
-  /**
-  * Text in sticker button title
-  @default Sticker
-  * /
-  "stickerButtonTitle": string,
-  /**
-  * Text in voice button title
-  @default Voice
-  * /
-  "voiceButtonTitle": string
+  fileButtonTitle: 'File'  // text in file button title
+  placeholder: 'Write message'  // text in placeholder
+  sendButtonTitle: 'Send'  // text in send button title
+  shareButtonTitle: 'Share'  // text in share button title
+  stickerButtonTitle: 'Sticker'  // text in sticker button title
+  voiceButtonTitle: 'Voice'  // text in voice button title
 }
 ```
+You can change these values using [APImethod](#custom_languages "description of method").
 
-# CUSTOMIZATION
-To custom Badge component, you should use ckAPIMethods, which will allow you to change values in ckStore
+
+
+## Customization <a name="customization"></a>
+To custom `Sender` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
+Customization includes:  
+* [UIManagment](#custom_managment)
+* [Settings](#custom_settings)
+* [Styles](#custom_styles)
+* [Languages](#custom_languages)
+
+
+
+
+
+
+
+
+
 
 ## UIManagment
 ```
