@@ -56,19 +56,19 @@ Props from managment:
   positiveRateMessage: {  // should component show positive rate for message
       enabled: false,  // should component display on widget
       withTitle: false,  // should component show title
-      withIcon: true,  // should component show icon
+      withIcon: true  // should component show icon
   },
   negativeRateMessage: {  // should component show negative rate for message
       enabled: false,  // should component display on widget
       withTitle: false,  // should component show title
-      withIcon: true,  // should component show icon
+      withIcon: true  // should component show icon
   },
   audioMessage: {  // should component show audio message
       enabled: false,  // should component display on widget
       withTitle: false,  // should component show title
-      withIcon: true,  // should component show icon
-  },
-},
+      withIcon: true  // should component show icon
+  }
+}
 
 ```
 You can change these values using [APImethod](#custom_managment "description of method").
@@ -79,9 +79,9 @@ You can change these values using [APImethod](#custom_managment "description of 
 Props from settings:  
 ```javascript
 {
-  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' // path to the image which will be shown as avatar ,
-  positiveRateIcon: 'fas thumbs-up'  // choice of image which will be shown as positive rate icon,
-  negativeRateIcon 'fas thumbs-down'  // choice of image which will be shown as negative rate icon,
+  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4', // path to the image which will be shown as avatar ,
+  positiveRateIcon: 'fas thumbs-up',  // choice of image which will be shown as positive rate icon,
+  negativeRateIcon 'fas thumbs-down',  // choice of image which will be shown as negative rate icon,
   audioMessageIcon: 'fas play' // choice of image which will be shown as audio message icon
 }
 ```
@@ -97,22 +97,22 @@ Props from styles:
  ```javascript
 {
   mainContainer: {  // styles for main container
-  margin: "1px",
+  margin: "1px"
   },
   positiveRateMessageButton: {  // styles for positive rate message button
-  display": "none,
+  display": "none
   },
   negativeRateMessageButton: {  // styles for negative rate message button
-  display": "none,
+  display": "none
   },
   avatarContainer: {  // styles for avatar container
-  margin: "1px",
+  margin: "1px"
   },
   audioMessageButton: {  // styles for audio message button
-    margin: "1px",
+    margin: "1px"
   },
   image: {  // styles for tag ‘img’
-    maxWidth: "200px",
+    maxWidth: "200px"
   },
   dataContainer: {  // styles for data container
     width: "100%",
@@ -148,134 +148,64 @@ Props from styles:
 <details>
 <summary>For response message</summary>
  
-```
+```javascript
 {
-  /**
-  * The chosen theme
-  @default sovaLight
-  * /
-  "theme": string,
-  /**
-  * Styles for response message
-  @default user
-  * /
-  "sender": response,
-  {
-    /**
-    * Styles for main container
-    @default {}
-    * /
-    "mainContainer": object,
-    /**
-    * Styles for positive rate message button
-    @default {
-     "padding": 0,
-     "alignSelf": "flex-end",
-     "marginLeft": "4%",
-     "fontSize": "14px",
-     "display": "flex",
-     "alignItems": "flex-end",
-     "border": "none",
-     "outline": "none",
-     "color": "#0F1F48",
-     "background": "none",
-     "cursor": "pointer",
-     "& :hover": {
-       "opacity": "0.75"
-     },
-     "& :active": {
-     "opacity": "1"
-     }
-  }
-  * /
-  "positiveRateMessageButton": object,
-  /**
-  * Styles for negative rate message button
-  @default {
-    "padding": 0,
-    "alignSelf": "flex-end",
-    "marginLeft": "4%",
-    "fontSize": "14px",
-    "display": "flex",
-    "border": "none",
-    "outline": "none",
-    "color": "#0F1F48",
-    "background": "none",
-    "cursor": "pointer",
-    "& :hover": {
-      "opacity": "0.75"
-    },
-    "& :active": {
-      "opacity": "1"
+ mainContainer: {  // styles for main container
+ margin: "1px"
+ },
+ positiveRateMessageButton: {  // styles for positive rate message button
+ padding: 0,
+ alignSelf: "flex-end",
+ marginLeft: "4%"
+ },
+ negativeRateMessageButton: {  // styles for negative rate message button
+ padding: 0,
+ alignSelf: "flex-end",
+ marginLeft: "4%"
+ },
+ avatarContainer: {  // styles for avatar container
+ margin: "1px"
+ },
+ audioMessageButton: {  // styles for audio message button
+   margin: "1px"
+ },
+ image: {  // styles for tag ‘img’
+   maxWidth: "200px"
+ },
+ dataContainer: {  // styles for data container
+   textAlign: "left",
+   fontFamily: "Roboto",
+   fontSize: "12px",
+   marginTop: "2px",
+   color: "#0F1F48"
+ },
+ textContainer: {  // styles for text container
+   padding: "16px",
+   fontSize: "14px",
+   color: "#0F1F48",
+   background: "#F3F3F3",
+   width: "100%",
+   textAlign: "left",
+   fontFamily: "Helvetica",
+   lineHeight: "18px",
+   borderRadius: "17px 17px 17px 0",
+   & a: {
+     color: "#386FFE",
+     transition: "color ease-in-out 0.3s"
+   },
+   & a:hover: {
+     color: "#FC2D81"
+   },
+   & a:active: {
+     color: "#FC2D81"
     }
-  }
-  * /
-  "negativeRateMessageButton": object,
-  /**
-  * Styles for avatar container container
-  @default {}
-  * /
-  "avatarContainer": object,
-  /**
-  * Styles for audio message button
-  @default {}
-  * /
-  "audioMessageButton": object,
-  /**
-  * Styles for image
-  @default {}
-  * /
-  "image": object,
-  /**
-  * Styles for data container
-  @default {
-    "width": "100%",
-    "textAlign": "left",
-    "fontFamily": "Roboto",
-    "fontSize": "12px",
-    "marginTop": "2px",
-    "color": "#0F1F48"
-  }
-  * /
-  "dataContainer": object,
-  /**
-  * Styles for text Container
-  @default {
-    "padding": "16px",
-    "fontSize": "14px",
-    "color": "#0F1F48",
-    "background": "#F3F3F3",
-    "width": "100%",
-    "textAlign": "left",
-    "fontFamily": "Helvetica",
-    "lineHeight": "18px",
-    "borderRadius": "17px 17px 17px 0",
-    "& a": {
-      "color": "#386FFE",
-      "transition": "color ease-in-out 0.3s"
-    },
-    "& a:hover": {
-      "color": "#FC2D81"
-    },
-    "& a:active": {
-      "color": "#FC2D81"
-    }
-  }
-  * /
-  "textContainer": object,
-  /**
-  * Styles for bubble container
-  @default {
-    "display": "flex",
-    "flexWrap": "wrap"
-  }
-  * /
-  "bubbleContainer": object,
-  /**
-  * Styles for buttons container
-  @default {}
-  * /
-  "buttonsContainer": object
+ },
+ bubbleContainer: {  // styles for bubble container
+   display: "flex",
+   flexWrap: "wrap"
+ },
+ buttonsContainer: {  // styles for buttons container
+ }
 }
 ```
  
