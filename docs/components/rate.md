@@ -2,35 +2,56 @@
 Component of rate the message
 
 
-## Usage
+
+## Table of content
+* [Usage](#usage) 
+* [Component props](#component_props)   
+* [Configuration](#configuration)   
+* [Customization](#customization)   
+
+
+
+## Usage <a name="usage"></a>
 ```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
  
 function App() {
- return (
- <div className="App">
-   <CkComponents.Rate ckStore={true} />
- </div>
- )
+  return (
+  <div className="App">
+    <CkComponents.Rate ckStore={true} />
+  </div>
+  )
 }
  
 export default App
 ```
 
 
-## Component props
+
+## Component props <a name="component_props"></a>
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
-## Configuration
-Component get configuration info from storage. Badge touch 4 global keys from store:  
-* **UIManagment** - control UI;  
-* **Settings** - control media info;  
-* **Styles** - control styles packets;  
-* **Languages** - controls Languages packets.  
+
+## Configuration <a name="configuration"></a>
+Component expects configuration info from storage. Rate touch 4 global keys from STORE:  
+| Key                               |                                            |
+|-----------------------------------|--------------------------------------------|
+| [managment](#conf_managment)      | information to control UI                  |
+| [settings](#conf_settings)        | information to control media info          |
+| [styles](#conf_styles)            | information to control styles packets      |
+| [languages](#conf_languages)      | information to control languages packets   |
+
+
+
+
+
+
+
+
 
 ## UIManagment
 Props from UIManagment:
