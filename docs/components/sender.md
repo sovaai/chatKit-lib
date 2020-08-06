@@ -406,7 +406,7 @@ Options data:
 
 
 ### Languages <a name="custom_languages"></a>
-To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeSender` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Header` is based. 
+To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeSender` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Sender` is based. 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -427,9 +427,9 @@ ckAPIMethods.languages('changeSender', {
 Options data:    
 | Key                  |   Type          |  Description                    |
 |----------------------|-----------------|---------------------------------|
-| fileButtonTitle      | string          | text in file button title     |
-| placeholder          | string          | text in placeholder     |
-| sendButtonTitle      | string          | text in send button title      |
+| fileButtonTitle      | string          | text in file button title       |
+| placeholder          | string          | text in placeholder             |
+| sendButtonTitle      | string          | text in send button title       |
 | shareButtonTitle     | string          | text in share button title      |
-| stickerButtonTitle   | string          | text in sticker button title      |
+| stickerButtonTitle   | string          | text in sticker button title    |
 | voiceButtonTitle     | string          | text in voice button title      |
