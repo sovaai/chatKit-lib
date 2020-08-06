@@ -354,17 +354,34 @@ Options data:
 
 
 
-
-
-
 ## Settings
-интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")  
+## Settings
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`/ `changeIcon`, it's allows you to overwrite path to chosen avatar / ?? in [Settings](#conf_settings). 
+
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
+ckAPIMethods.uiManagment('changeAvatar', {
+  path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
+
+ckAPIMethods.uiManagment('changeIcon', {
+  iconName: ??,
+  iconData: ??
+})
 ```
-ckAPIMethods.settings('changeAvatar', [path])
-ckAPIMethods.settings('positiveRateIcon', [data])
-ckAPIMethods.settings('negativeRateIcon', [data])
-ckAPIMethods.settings('audioMessageIcon', [data])
-```
+Options data: 
+| Key             |   Type     |  Description       |
+|-----------------|------------|--------------------|
+| `path`          | string     | path to picture    |
+| `iconName`      | string     |  ??                |
+
+
+
+
+
+
+
+
 
 ## Styles
 ### For user message
