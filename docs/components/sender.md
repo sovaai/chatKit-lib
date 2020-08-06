@@ -47,131 +47,50 @@ Component expects configuration info from storage. Header touch 4 global keys fr
 
 
 
-
-
-
-
-## UIManagment
-Props from UIManagment:  
-```
+### Managment <a name="conf_managment"></a>
+Props from managment:  
+```javascript
 {
-  /**
-  * Should component stay in focus
-  @default false
-  * /
-  "inFocus": boolean,
-  /**
-  * Should component block input
-  @default false
-  * /
-  "blockInput": boolean,
-  /**
-  * Should component block submit
-  @default false
-  * /
-  "blockSubmit": boolean,
-  /**
-  * Should component show audio message
-  * /
-  "audioMessage": {
-    /**
-    * Should component display on widget
-    @default false
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default true
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
+  inFocus: false,  // should component show title
+  blockInput: false,  // should component block input
+  blockSubmit: false,  // should component block submit
+  audioMessage: {  // should component show audio message
+    enabled: true,  // should component display on widget
+    withTitle: false,  // should component show title
+    withIcon: true,  // should component show icon
   },
-  /**
-  * Should component add stickers
-  * /
-  "addStickers": {
-    /**
-    * Should component display on widget
-    @default false
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default true
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
+  addStickers: {  // should component add stickers
+    enabled: true,  // should component display on widget
+    withTitle: false,  // should component show title
+    withIcon: true,  // should component show icon
   },
-  /**
-  * Should component share
-  * /
-  "share": {
-    /**
-    * Should component display on widget
-    @default false
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default false
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
+  share: {  // should component share
+    enabled: true,  // should component display on widget
+    withTitle: false,  // should component show title
+    withIcon: true,  // should component show icon
   },
-  /**
-  * Should component add files
-  * /
-  "addFile": {
-    /**
-    * Should component display on widget
-    @default true
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default false
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
+  addFile: {  // should component add files
+    enabled: true,  // should component display on widget
+    withTitle: false,  // should component show title
+    withIcon: true,  // should component show icon
   },
-  /**
-  * Should component send
-  * /
-  "send": {
-    /**
-    * Should component display on widget
-    @default true
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default false
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default true
-    * /
-    "withIcon": boolean
-  }
+  send: {  // should component send
+    enabled: true,  // should component display on widget
+    withTitle: false,  // should component show title
+    withIcon: true,  // should component show icon
+  },
 }
 ```
+You can change these values using [APImethod](#custom_managment "description of method").
+
+
+
+
+
+
+
+
+
 
 ## Settings
 Props from Settings:
