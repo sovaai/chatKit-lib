@@ -371,33 +371,65 @@ Options data:
 
 
 
+### Styles <a name="custom_styles"></a>
+To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeSender`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Sender` is based. 
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
 
-
-
-
-## Styles
-```
-ckAPIMethods.styles('changeSender', {
-  themeName: [theme name, wich styles you want to change],
+ckAPIMethods.styles("changeSender", {
+  themeName: "sovaDark",  // theme name, in which styles you want to change anything
   data: {
-    [mainContainer styles],
-    [addFileButton styles],
-    [form styles],
-    [sendMessageButton styles],
-    [shareButton styles],
-    [stickersButton styles],
-    [textArea styles],
-    [voiceButton styles]
+    mainContainer: {},
+    addFileButton: {},
+    form: {},
+    sendMessageButton: {},
+    shareButton: {},
+    stickersButton: {},
+    textArea: {},
+    voiceButton: {}
   }
 })
 ```
 
-## Languages
-```
+Options data:
+| Key                |   Type          |  Description                    |
+|--------------------|-----------------|---------------------------------|
+| mainContainer      | object styles   | styles for main container       |
+| addFileButton      | object styles   | styles for add file button      |
+| form               | object styles   | styles for form                 |
+| sendMessageButton  | object styles   | styles for send message button  |
+| shareButton        | object styles   | styles for share button         |
+| stickersButton     | object styles   | styles for stickers button      |
+| textArea           | object styles   | styles for text area            |
+| voiceButton        | object styles   | styles for voice button         |
+
+
+
+### Languages <a name="custom_languages"></a>
+To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeSender` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Header` is based. 
+
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
 ckAPIMethods.languages('changeSender', {
-  language: [language name, wich packet you want to change],
+  language: 'English',  // name of chosen language packet which values you want to change
   data: {
-    [text title]
+    fileButtonTitle: 'File',
+    placeholder: 'Write message',
+    sendButtonTitle: 'Send',
+    shareButtonTitle: 'Share',
+    stickerButtonTitle: 'Sticker',
+    voiceButtonTitle: 'Voice'
   }
 })
 ```
+
+Options data:    
+| Key                  |   Type          |  Description                    |
+|----------------------|-----------------|---------------------------------|
+| fileButtonTitle      | string          | text in file button title     |
+| placeholder          | string          | text in placeholder     |
+| sendButtonTitle      | string          | text in send button title      |
+| shareButtonTitle     | string          | text in share button title      |
+| stickerButtonTitle   | string          | text in sticker button title      |
+| voiceButtonTitle     | string          | text in voice button title      |
