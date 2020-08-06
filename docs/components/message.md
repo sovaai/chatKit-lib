@@ -376,57 +376,91 @@ Options data:
 
 
 
+### Styles <a name="custom_styles"></a>
+To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeUserMessage` (for user messages) or `changeResponseMessage` (for response messages), it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Message` (user or response) is based. 
 
+<details>
+ <summary>For user message</summary>
 
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
 
-
-
-
-## Styles
-### For user message
-```
 ckAPIMethods.styles('changeUserMessage', {
-  themeName: [theme name, wich styles you want to change],
+  themeName: "sovaDark",  // theme name, in which styles you want to change anything,
   data: {
-    [mainContainer styles],
-    [positiveRateMessageButton styles],
-    [negativeRateMessageButton styles],
-    [avatarContainer styles],
-    [audioMessageButton styles],
-    [image styles],
-    [dataContainer styles],
-    [textContainer styles],
-    [bubbleContainer styles],
-    [buttonsContainer styles]
-  },
-})
-```
-### For response message
-```
-ckAPIMethods.styles('changeResponseMessage', {
-  themeName: [theme name, wich styles you want to change],
-  data: {
-    [mainContainer styles],
-    [positiveRateMessageButton styles],
-    [negativeRateMessageButton styles],
-    [avatarContainer styles],
-    [audioMessageButton styles],
-    [image styles],
-    [dataContainer styles],
-    [textContainer styles],
-    [bubbleContainer styles],
-    [buttonsContainer styles]
-  },
-})
-```
-
-## Languages
-```
-ckAPIMethods.languages('changeMessage', {
-  language: [language name, wich packet you want to change],
-  data: {
-    [text title]
+    mainContainer {},
+    positiveRateMessageButton {},
+    negativeRateMessageButton {},
+    avatarContainer {},
+    audioMessageButton {},
+    image styles] {},
+    dataContainer {},
+    textContainer {},
+    bubbleContainer {},
+    buttonsContainer {}
   }
 })
 ```
 
+</details>
+ 
+<details>
+<summary>For response message</summary>
+ 
+ ```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
+ckAPIMethods.styles('changeResponseMessage', {
+  themeName: "sovaDark",  // theme name, in which styles you want to change anything,
+  data: {
+    mainContainer {},
+    positiveRateMessageButton {},
+    negativeRateMessageButton {},
+    avatarContainer {},
+    audioMessageButton {},
+    image styles] {},
+    dataContainer {},
+    textContainer {},
+    bubbleContainer {},
+    buttonsContainer {}
+  }
+})
+```
+</details>
+
+Options data:
+| Key                          |   Type          |  Description                              |
+|------------------------------|-----------------|-------------------------------------------|
+| mainContainer                | object styles   | styles for main container                 |
+| positiveRateMessageButton    | object styles   | styles for positive rate message button   |
+| negativeRateMessageButton    | object styles   | styles for negative rate message button   |
+| avatarContainer              | object styles   | styles for avatar container               |
+| audioMessageButton           | object styles   | styles for audio message button           |
+| image styles                 | object styles   | styles for tag `img`                      |
+| dataContainer                | object styles   | styles for data container                 |
+| textContainer                | object styles   | styles for text container                 |
+| bubbleContainer              | object styles   | styles for bubble container               | 
+| buttonsContainer             | object styles   | styles for buttons container              |
+
+
+
+### Languages <a name="custom_languages"></a>
+To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeMessage` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Message` is based. 
+
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
+ckAPIMethods.languages('changeMessage', {
+  language: 'English',  // name of chosen language packet which values you want to change
+  data: {
+    rateButtonTitle: 'Rate',
+    audioMessageButtonTitle: 'Audio message'
+  }
+})
+```
+
+Options data:    
+| Key                        |   Type          |  Description                        |
+|----------------------------|-----------------|-------------------------------------|
+| rateButtonTitle            | string          | text in rate button title           |
+| audioMessageButtonTitle    | string          | text in audio message button title  |
