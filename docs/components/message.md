@@ -216,26 +216,29 @@ You can change these values using [APImethod](#custom_styles "description of met
 
 
 
-
-## Languages
-Props from Languages:
-```
+### Languages <a name="conf_languages"></a>
+Props from languages:  
+```javascript
 {
-  /**
-  * Text in rate button title
-  @default Rate
-  * /
-  "rateButtonTitle": string,
-  /**
-  * Text in audio message button title
-  @default AudioMessage
-  * /
-  "audioMessageButtonTitle": string
+  rateButtonTitle: 'Rate'  // text in rate button title,
+  audioMessageButtonTitle: 'Audio message'  // text in audio message button title 
 }
 ```
+You can change these values using [APImethod](#custom_languages "description of method").
 
-# CUSTOMIZATION
-To custom Badge component, you should use ckAPIMethods, which will allow you to change values in ckStore
+
+
+## Customization <a name="customization"></a>
+To custom `Message` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
+Customization includes:  
+* [UIManagment](#custom_managment)
+* [Settings](#custom_settings)
+* [Styles](#custom_styles)
+* [Languages](#custom_languages)
+
+
+
+
 
 ## UIManagment
 ```
