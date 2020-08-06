@@ -100,97 +100,68 @@ You can change these values using [APImethod](#custom_settings "description of m
 
 
 
-
-
-
-
-
-
-## Styles
-Props from Styles:
-```
+### Styles <a name="conf_styles"></a>
+Props from styles:  
+```javascript
 {
-  /**
-  * The chosen theme
-  @default sovaLight
-  * /
-  "theme": string,
-  /**
-  * Styles for main container
-  @default {}
-  * /
-  "mainContainer": object,
-  /**
-  * Styles for add file button
-  @default {
-    "border": "none",
-    "fontSize": "18px",
-    "background": "#FFFFFF",
-    "outline": "none",
-    "padding": "0",
-    "color": "#FC2D81",
-    "transition": "transform ease-in-out 0.3s, color ease-in-out 0.3s",   
-    "cursor": "pointer",
-    "&:hover": {
-      "color": "#386FFE"
+  mainContainer: { // styles for main container
+    margin: "1px",
+  },
+  addFileButton: { // styles for add file button
+    border: "none",
+    fontSize: "18px",
+    background: "#FFFFFF",
+    outline: "none",
+    padding: "0",
+    color: "#FC2D81",
+    transition: "transform ease-in-out 0.3s, color ease-in-out 0.3s",   
+    cursor: "pointer",
+    &:hover: {
+      color: "#386FFE"
     },
-    "&:active": {
-      "opacity": "0.75",
-      "color": "#386FFE"
+    &:active: {
+      opacity: "0.75",
+      color: "#386FFE"
+    }
+  },
+  form: { },  // styles for form
+  sendMessageButton: { // for send message button
+    border: "none",
+    fontSize: "18px",
+    background: "#FFFFFF",
+    outline: "none",
+    padding: "3px",
+    color: "#386FFE",
+    cursor: "pointer",
+    transition: "transform ease-in-out 0.3s, color ease-in-out 0.3s",
+    &:hover: {
+      transform: "translateY(-5px)",
+      color: "#FC2D81"
+    },
+    &:active: {
+      opacity: "0.75",
+      color: "#FC2D81"
     }
   }
-  * /
-  "addFileButton": object,
-  /**
-  * Styles for form
-  @default {}
-  * /
-  "form": object,
-  /**
-  * Styles for send message button
-  @default {
-    "border": "none",
-    "fontSize": "18px",
-    "background": "#FFFFFF",
-    "outline": "none",
-    "padding": "3px",
-    "color": "#386FFE",
-    "cursor": "pointer",
-    "transition": "transform ease-in-out 0.3s, color ease-in-out 0.3s",
-    "&:hover": {
-      "transform": "translateY(-5px)",
-      "color": "#FC2D81"
-    },
-    "&:active": {
-      "opacity": "0.75",
-      "color": "#FC2D81"
-    }
-  }
-  * /
-  "sendMessageButton": object,
-  /**
-  * Styles for share button
-  @default {}
-  * /
-  "shareButton": object,
-  /**
-  * Styles for stickers button
-  @default {}
-  * /
-  "stickersButton": object,
-  /**
-  * Styles for text area
-  @default {}
-  * /
-  "textArea": object,
-  /**
-  * Styles for voice button
-  @default {}
-  * /
-  "voiceButton": object
+  shareButton: { },  // styles for share button
+  stickersButton: { },  // styles for stickers button
+  textArea: { },  // styles for text area
+  voiceButton: { }  // styles for voice button
 }
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase
+You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
+You can change these values using [APImethod](#custom_styles "description of method").
+
+
+
+
+
+
+
+
+
+
+
 
 ## Languages
 Props from Languages:
