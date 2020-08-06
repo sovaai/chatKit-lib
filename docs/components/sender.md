@@ -180,11 +180,6 @@ Customization includes:
 
 
 
-
-
-
-
-
 ### UIManagment <a name="custom_managment"></a>
 To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpSender`, it's allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Sender` is based.
 ```javascript
@@ -358,19 +353,27 @@ Options data:
 
 
 
+### Settings <a name="custom_settings"></a> (NEED HELP)
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
 
-
-
-
-## Settings
-интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")
+ckAPIMethods.uiManagment('changeIcon', {
+  iconName: ??,
+  iconData: ??
+})
 ```
-ckAPIMethods.settings('addFileIcon', [data])
-ckAPIMethods.settings('addStickersIcon', [data])
-ckAPIMethods.settings('audioMessageIcon', [data])
-ckAPIMethods.settings('sendIcon', [data])
-ckAPIMethods.settings('shareIcon', [data])
-```
+Options data: 
+| Key             |   Type     |  Description       |
+|-----------------|------------|--------------------|
+| `iconName`      | string     |  icon name         |
+| `iconData`      |  ??        |  ??                |
+
+
+
+
+
+
 
 ## Styles
 ```
