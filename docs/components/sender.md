@@ -85,45 +85,26 @@ You can change these values using [APImethod](#custom_managment "description of 
 
 
 
-
-
-
-
-
-
-
-## Settings
-Props from Settings:
-```
+### Settings <a name="conf_settings"></a>
+Props from settings:  
+```javascript
 {
-  /**
-  * Choice of image which will be shown as add file icon
-  @default fas plus
-  * /
-  "addFileIcon": string,
-  /**
-  * Choice of image which will be shown as add stickers icon
-  @default fas sticky-note
-  * /
-  "addStickersIcon": string,
-  /**
-  * Choice of image which will be shown as audio message icon
-  @default fas microphone
-  * /
-  "audioMessageIcon": string,
-  /**
-  * Choice of image which will be shown as send icon
-  @default fas arrow-up
-  * /
-  "sendIcon": string,
-  /**
-  * Choice of image which will be shown as share icon
-  @default fas share-alt
-  * /
-  "shareIcon": string
+  addFileIcon: 'fas plus'  // choice of image which will be shown as add file icon
+  addStickersIcon: 'fas sticky-note'  // choice of image which will be shown as add stickers icon
+  audioMessageIcon: 'fas microphone'  // choice of image which will be shown as audio message icon
+  sendIcon": 'fas arrow-up'  // choice of image which will be shown as send icon
+  shareIcon": 'fas share-alt'  // choice of image which will be shown as share icon
 }
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase
+You can change these values using [APImethod](#custom_settings "description of method").
+
+
+
+
+
+
+
+
 
 ## Styles
 Props from Styles:
