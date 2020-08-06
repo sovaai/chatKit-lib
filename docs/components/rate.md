@@ -47,58 +47,28 @@ Component expects configuration info from storage. Rate touch 4 global keys from
 
 
 
-
-
-
-
-
-
-## UIManagment
-Props from UIManagment:
-```
+### Managment <a name="conf_managment"></a>
+Props from managment:  
+```javascript
 {
-  /**
-  * Should component improve rate
-  * /
-  "positiveRate": {
-    /**
-    * Should component display on widget
-    @default true
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default true
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default false
-    * /
-    "withIcon": boolean
+  positiveRate: {  // should component improve rate
+    enabled: true,  // should component display on widget
+    withTitle: false,  // should component show title
+    withIcon: true,  // should component show icon
   },
-  /**
-  * Should component lower rate
-  * /
-  "negativeRate": {
-    /**
-    * Should component display on widget
-    @default true
-    * /
-    "enabled": boolean,
-    /**
-    * Should component show title
-    @default true
-    * /
-    "withTitle": boolean,
-    /**
-    * Should component show icon
-    @default false
-    * /
-    "withIcon": boolean
+  negativeRate: {  // should component lower rate
+    enabled: true,  // should component display on widget
+    withTitle: false,  // should component show title
+    withIcon: true,  // should component show icon
   }
 }
 ```
+You can change these values using [APImethod](#custom_managment "description of method").
+
+
+
+
+
 
 ## Settings
 Props from Settings:
