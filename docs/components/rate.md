@@ -121,56 +121,36 @@ You can change these values using [APImethod](#custom_styles "description of met
 
 
 
-
-
-
-## Languages
-Props from Languages:
-```
+### Languages <a name="conf_languages"></a>
+Props from languages:  
+```javascript
 {
-  /**
-  * Text in title
-  @default Is it helpfull?
-  * /
-  "title": string,
-  /**
-  * Text in title of negative
-  @default No
-  * /
-  "negative": string,
-  /**
-  * Text in title of positive
-  @default Yes
-  * /
-  "positive": string,
-  /**
-  * Text in comment to rate
-  * /
-  "ratingList": [{
-    /**
-    * Text in "3"
-    @default  {
-      "rating": 3,
-      "text": "I had other question"
+  title: 'Is it helpfull?'  // text in title
+  negative: 'No'  // text in title of negative
+  positive: 'typing...'  // text in title of positive
+  ratingList: {  // text in comment to rate
+    {
+      rating: 3,  // text in "3"
+      text: "I had other question"
     },
-    * /
-    /**
-    * Text in "2"
-    @default  {
-      "rating": 2,
-      "text": "Not understand the answer"
+    {
+      rating: 2,  // text in "2"
+      text: "Not understand the answer"
     },
-    * /
-    /**
-    * Text in "1"
-    @default  {
-      "rating": 1,
-      "text": "Not resolve my problem"
+    {
+      rating: 1,  // text in "1"
+      text: "Not resolve my problem"
     }
-    * /
-    }]
+  }
 }
 ```
+You can change these values using [APImethod](#custom_languages "description of method").
+
+
+
+
+
+
 
 # CUSTOMIZATION
 To custom Badge component, you should use ckAPIMethods, which will allow you to change values in ckStore
