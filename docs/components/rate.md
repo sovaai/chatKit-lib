@@ -79,75 +79,50 @@ You can change these values using [APImethod](#custom_settings "description of m
 
 
 
-
-
-
-
-## Styles
-Props from Styles:
-```
+### Styles <a name="conf_styles"></a>
+Props from styles:  
+```javascript
 {
-  /**
-  * The chosen theme
-  @default sovaLight
-  * /
-  "theme": string,
-  /**
-  * Styles for main container
-  @default {}
-  * /
-  "mainContainer": object,
-  /**
-  * Styles for title container
-  @default {
-    "width": "100%",
-    "textAlign": "center",
-    "color": "#0F1F48",
-    "marginBottom": "16px"
-  }
-  * /
-  "titleContainer": object,
-  /**
-  * Styles for negative rate button
-  @default {}
-  * /
-  "negativeRateButton": object,
-  /**
-  * Styles for positive rate button
-  @default {}
-  * /
-  "positiveRateButton": object,
-  /**
-  * Styles for rating element
-  @default {
-    "marginTop": "5px",
-    "width": "60%",
-    "color": "#0F1F48",
-    "listStyleType": "none",
-    "cursor": "pointer",
-    "transition": "color ease-in-out 0.3s",
-    "&:hover": {
-      "color": "#FC2D81"
-    }
-  }
-  * /
-  "ratingElement": object,
-  /**
-  * Styles for rating list container
-  @default {
-    "display": "flex",
-    "marginTop": "20px",
-    "marginBottom": "20px",
-    "flexDirection": "column",
-    "alignItems": "flex-start",
-    "width": "100%",
-    "marginLeft": "1rem"
-  }
-  * /
-  "rating list container": object
+  mainContainer: {  // styles for main container
+  margin: "1px",
+  },
+  titleContainer: {  // styles for title container
+    width: "100%",
+    textAlign: "center",
+    color: "#0F1F48",
+    marginBottom: "16px"
+  },
+ negativeRateButton: { },  // styles for negative rate button
+ positiveRateButton: { },  // styles for positive rate button
+ ratingElement: {  // styles for rating element
+   marginTop: "5px",
+   width: "60%",
+   color: "#0F1F48",
+   listStyleType: "none",
+   cursor: "pointer",
+   transition: "color ease-in-out 0.3s",
+   &:hover: {
+     color: "#FC2D81"
+   }
+ },
+ ratingListContainer: {  // styles for rating list container
+   display: "flex",
+   marginTop: "20px",
+   marginBottom: "20px",
+   flexDirection: "column",
+   alignItems: "flex-start",
+   width: "100%",
+   marginLeft: "1rem"
+ }
 }
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase
+You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
+You can change these values using [APImethod](#custom_styles "description of method").
+
+
+
+
+
 
 ## Languages
 Props from Languages:
