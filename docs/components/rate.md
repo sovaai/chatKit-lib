@@ -67,26 +67,21 @@ You can change these values using [APImethod](#custom_managment "description of 
 
 
 
-
-
-
-## Settings
-Props from Settings:
-```
+### Settings <a name="conf_settings"></a>
+Props from settings:  
+```javascript
 {
-  /**
-   * Path to the image which will be shown as negative rate icon
-  @default far thumbs-down
-  * /
-  "negativeRateIcon": string,
-  /**
-  * Choice of image which will be shown as positive rate icon
-  @default far thumbs-up
-  * /
-  "positiveRateIcon": string
+  negativeRateIcon: 'far thumbs-down',  // choice of image which will be shown as negative rate icon
+  positiveRateIcon: 'far thumbs-up'  // choice of image which will be shown as positive rate icon
 }
 ```
-Writing css properties in kebab-case like regular css, you write them in camelCase
+You can change these values using [APImethod](#custom_settings "description of method").
+
+
+
+
+
+
 
 ## Styles
 Props from Styles:
