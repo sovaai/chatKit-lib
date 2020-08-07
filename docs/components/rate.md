@@ -149,7 +149,7 @@ You can change these values using [APImethod](#custom_languages "description of 
 
 
 ## Customization <a name="customization"></a>
-To custom component `Dialog`, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
+To custom component `Rate`, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
 * [UIManagment](#custom_managment)
 * [Settings](#custom_settings)
