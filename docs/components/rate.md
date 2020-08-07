@@ -148,12 +148,20 @@ You can change these values using [APImethod](#custom_languages "description of 
 
 
 
+## Customization <a name="customization"></a>
+To custom component `Dialog`, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
+Customization includes:  
+* [UIManagment](#custom_managment)
+* [Settings](#custom_settings)
+* [Styles](#custom_styles)
+* [Languages](#custom_languages)
 
 
 
 
-# CUSTOMIZATION
-To custom Badge component, you should use ckAPIMethods, which will allow you to change values in ckStore
+
+
+
 
 ## UIManagment
 ```
