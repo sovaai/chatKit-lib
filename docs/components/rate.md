@@ -125,9 +125,9 @@ You can change these values using [APImethod](#custom_styles "description of met
 Props from languages:  
 ```javascript
 {
-  title: 'Is it helpfull?'  // text in title
-  negative: 'No'  // text in title of negative
-  positive: 'typing...'  // text in title of positive
+  title: 'Is it helpfull?',  // text in title
+  negative: 'No',  // text in title of negative
+  positive: 'typing...',  // text in title of positive
   ratingList: {  // text in comment to rate
     {
       rating: 3,  // text in "3"
