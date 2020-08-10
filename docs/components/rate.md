@@ -127,7 +127,7 @@ Props from languages:
 {
   title: 'Is it helpfull?',  // text in title
   negative: 'No',  // text in title of negative
-  positive: 'typing...',  // text in title of positive
+  positive: 'Yes',  // text in title of positive
   ratingList: {  // text in comment to rate
     {
       rating: 3,  // text in "3"
@@ -254,27 +254,99 @@ Options data:
 
 
 
-## Styles
-```
+### Styles <a name="custom_styles"></a>
+To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeRate`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Rate` is based. 
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
 ckAPIMethods.styles('changeRate', {
-themeName: [theme name, wich styles you want to change],
-data: {
-    [mainContainer styles],
-    [titleContainer styles],
-    [negativeRateButton styles],
-    [positiveRateButton styles],
-    [ratingElement styles],
-    [ratingListContainer styles]
-  },
+  themeName: [theme name, wich styles you want to change],
+  data: {
+    mainContainer styles: {},
+    titleContainer styles: {},
+    negativeRateButton styles: {},
+    positiveRateButton styles: {},
+    ratingElement styles: {},
+    ratingListContainer styles: {}
+  }
 })
 ```
 
-## Languages
+Options data:
+| Key                  |   Type          |  Description                  |
+|----------------------|-----------------|-------------------------------|
+| mainContainer        | object styles   | styles for main container     |
+|  titleContainer      | object styles   | styles for panel              |
+|  negativeRateButton  | object styles   | styles for rate button        |
+|  positiveRateButton  | object styles   | styles for search button      |
+|  ratingElement       | object styles   | styles for messages container |
+|  ratingListContainer | object styles   | styles for messages container |
+
+
+
+### Languages <a name="custom_languages"></a>
+To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeRate` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Rate` is based. 
+
+```javascript
+{
+  title: 'Is it helpfull?',  // text in title
+  negative: 'No',  // text in title of negative
+  positive: 'Yes',  // text in title of positive
+  ratingList: {  // text in comment to rate
+    {
+      rating: 3,  // text in "3"
+      text: "I had other question"
+    },
+    {
+      rating: 2,  // text in "2"
+      text: "Not understand the answer"
+    },
+    {
+      rating: 1,  // text in "1"
+      text: "Not resolve my problem"
+    }
+  }
+}
 ```
-ckAPIMethods.languages('changeRate', {
-  language: [language name, wich packet you want to change],
-  data: {
-    [text title]
-  },
-})
-```
+
+Options data:    
+<table>
+  <tr>
+    <td colspan="2" align=center><b>Key</b></td>
+    <td align=center><b>Type</b></td>
+    <td align=center><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">title</td>
+    <td>string</td>
+    <td>text in title</td>
+  </tr>
+  <tr>
+    <td colspan="2">negative</td>
+    <td>string</td>
+    <td>text in title of negative</td>
+  </tr>
+  <tr>
+    <td colspan="2">positive</td>
+    <td>string</td>
+    <td>text in title of positive</td>
+  </tr>
+  <tr>
+  <td colspan="2">ratingList</td>
+  <td>object</td>
+  <td></td>
+</tr>
+  <tr>
+    <td></td>
+    <td>rating</td>
+    <td>string</td>
+    <td>number of rate</td>
+  </tr>
+  
+  <tr>
+    <td></td>
+    <td>text</td>
+    <td>string</td>
+    <td>text in comment to rate</td>
+  </tr>
+</table>
