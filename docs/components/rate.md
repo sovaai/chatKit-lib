@@ -158,26 +158,87 @@ Customization includes:
 
 
 
+### UIManagment <a name="custom_managment"></a>
+To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpRate`, it's allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Rate` is based.
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
 
-
-
-
-
-## UIManagment
-```
 ckAPIMethods.uiManagment('setUpRate', {
-  negativeRateButton?: {
-    enabled?: boolean,
-    show withTitle?: boolean,
-    show withIcon?: boolean
+  negativeRateButton: {
+    enabled: true,
+    withTitle: true,
+    withIcon: true
   },
-  positiveRateButton?: {
-    enabled?: boolean,
-    show withTitle?: boolean,
-    show withIcon?: boolean
+  positiveRateButton: {
+    enabled: true,
+    withTitle: true,
+    withIcon: true
   }
 })
 ```
+
+Options data:   
+<table>
+  <tr>
+    <td colspan="2" align=center><b>Key</b></td>
+    <td align=center><b>Type</b></td>
+    <td align=center><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">negativeRateButton</td>
+    <td>object</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>enabled</td>
+    <td>boolean</td>
+    <td>is responsible for displaying negative rate button or not </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withTitle</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with title or not </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withIcon</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with icon or not</td>
+  </tr>
+  <tr>
+    <td colspan="2">positiveRateButton</td>
+    <td>object</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>enabled</td>
+    <td>boolean</td>
+    <td>is responsible for displaying positive rate button or not</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withTitle</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with title or not</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>show withIcon</td>
+    <td>boolean</td>
+    <td>is responsible for displaying button with icon or not</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
 
 ## Settings
 интеграция происходит через библиотеку [fontawesome](https://github.com/FortAwesome/react-fontawesome "fontawesome")  
