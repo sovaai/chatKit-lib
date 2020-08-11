@@ -39,7 +39,7 @@ export default App
 
 
 ## Configuration <a name="configuration"></a>
-Component expects configuration info from storage. `Message` touch **4** global keys from STORE:  
+Component expects configuration info from storage. `Message` touch 4 global keys from STORE:  
 
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
@@ -75,7 +75,7 @@ Props from `managment`:
 }
 
 ```
-You can change these values using [APImethod](#custom_managment "description of method").
+You can change these values using relevant [APImethod](#custom_managment "description of method").
 
 
 
@@ -102,8 +102,8 @@ Props from `settings`:
   }
 }
 ```
-To see information about icons, visit https://www.npmjs.com/package/@fortawesome/react-fontawesome.  
-You can change these values using [APImethod](#custom_settings "description of method").
+To see information about icons, visit [react-fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome "react-fontawesome").
+You can change these values using relevant [APImethod](#custom_settings "description of method").
 
 
 
@@ -223,7 +223,7 @@ For response message:
 }
 ```
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
-You can change these values using [APImethod](#custom_styles "description of method").
+You can change these values using relevant [APImethod](#custom_styles "description of method").
 
 
 
@@ -236,7 +236,7 @@ Props from `languages`:
   audioMessageButtonTitle: 'Audio message'  // text in audio message button title 
 }
 ```
-You can change these values using [APImethod](#custom_languages "description of method").
+You can change these values using relevant [APImethod](#custom_languages "description of method").
 
 
 
@@ -280,6 +280,7 @@ showTitle: true
 ```
 
 Options data:   
+
 <table>
   <tr>
     <td colspan="2" align=center><b>Key</b></td>
