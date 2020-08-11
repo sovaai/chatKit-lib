@@ -102,11 +102,9 @@ You can change these values using [APImethod](#custom_settings "description of m
 
 
 ### Styles <a name="conf_styles"></a>
-Props from styles: 
-<details>
- <summary>For user message</summary>
- 
- 
+Props from styles:  
+For user message:
+  
  ```javascript
 {
   mainContainer: {  // styles for main container
@@ -156,12 +154,8 @@ Props from styles:
 }
 ```
 
-</details>
- 
-<details>
-<summary>For response message</summary>
- 
-```javascript
+For response message:
+ ```javascript
 {
  mainContainer: {  // styles for main container
  margin: "1px"
@@ -221,9 +215,6 @@ Props from styles:
  }
 }
 ```
- 
-</details>
- 
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
 You can change these values using [APImethod](#custom_styles "description of method").
 
@@ -368,12 +359,8 @@ Options data:
 
 
 ## Settings
-<details>
-<summary>For avatar</summary>
-
+For avatar:
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`, that allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
-
-
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -391,12 +378,7 @@ Options data:
 |-----------------|------------|--------------------|
 | `path`          | string     | path to picture    |
 
-</details>
-
-
-<details>
-<summary>For icons</summary>
- 
+For icons:
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen icons in [Settings](#conf_settings). 
 
 
@@ -417,17 +399,11 @@ Options data:
 | `iconName`      | string     |  ??                |
  
  
- </details>
-
-
-
-
 
 ### Styles <a name="custom_styles"></a>
 To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeUserMessage` (for user messages) or `changeResponseMessage` (for response messages), it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Message` (user or response) is based. 
 
-<details>
- <summary>For user message</summary>
+For user message:
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -448,12 +424,21 @@ ckAPIMethods.styles('changeUserMessage', {
   }
 })
 ```
+Options data:
+| Key                          |   Type          |  Description                              |
+|------------------------------|-----------------|-------------------------------------------|
+| mainContainer                | object styles   | styles for main container                 |
+| positiveRateMessageButton    | object styles   | styles for positive rate message button   |
+| negativeRateMessageButton    | object styles   | styles for negative rate message button   |
+| avatarContainer              | object styles   | styles for avatar container               |
+| audioMessageButton           | object styles   | styles for audio message button           |
+| image styles                 | object styles   | styles for tag `img`                      |
+| dataContainer                | object styles   | styles for data container                 |
+| textContainer                | object styles   | styles for text container                 |
+| bubbleContainer              | object styles   | styles for bubble container               | 
+| buttonsContainer             | object styles   | styles for buttons container              |
 
-</details>
- 
-<details>
-<summary>For response message</summary>
- 
+For response message: 
  ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -473,7 +458,6 @@ ckAPIMethods.styles('changeResponseMessage', {
   }
 })
 ```
-</details>
 
 Options data:
 | Key                          |   Type          |  Description                              |
