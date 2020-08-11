@@ -359,7 +359,13 @@ Options data:
 
 
 ## Settings
-For avatar:
+On call [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") you must enter event name. Depending on the event name something will be changed.
+
+List of event names:  
+* `changeAvatar`  
+* `changeIcon`  
+
+
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`, that allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
 
 ```javascript
@@ -378,7 +384,7 @@ Options data:
 |-----------------|------------|--------------------|
 | `path`          | string     | path to picture    |
 
-For icons:
+For icons:  
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen icons in [Settings](#conf_settings). 
 
 
