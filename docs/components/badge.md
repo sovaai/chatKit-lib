@@ -146,7 +146,7 @@ To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
-ckAPIMethods.uiManagment('changeAvatar', {
+ckAPIMethods.settings('changeAvatar', {
   path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
 })
 ```
