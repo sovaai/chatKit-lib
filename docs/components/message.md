@@ -79,9 +79,9 @@ You can change these values using [APImethod](#custom_managment "description of 
 Props from settings:  
 ```javascript
 {
-  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4', // path to the image which will be shown as avatar ,
-  positiveRateIcon: 'fas thumbs-up',  // choice of image which will be shown as positive rate icon,
-  negativeRateIcon 'fas thumbs-down',  // choice of image which will be shown as negative rate icon,
+  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4', // path to the image which will be shown as avatar  
+  positiveRateIcon: 'fas thumbs-up',  // choice of image which will be shown as positive rate icon  
+  negativeRateIcon: 'fas thumbs-down',  // choice of image which will be shown as negative rate icon  
   audioMessageIcon: 'fas play' // choice of image which will be shown as audio message icon
 }
 ```
