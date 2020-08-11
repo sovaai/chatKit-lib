@@ -97,6 +97,7 @@ Props from settings:
   }
 }
 ```
+To see information about icons, visit https://www.npmjs.com/package/@fortawesome/react-fontawesome.  
 You can change these values using [APImethod](#custom_settings "description of method").
 
 
