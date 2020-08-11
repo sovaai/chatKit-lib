@@ -2,13 +2,11 @@
 Widget expand button
 
 
-
 ## Table of content
 * [Usage](#usage) 
 * [Component props](#component_props)   
 * [Configuration](#configuration)   
 * [Customization](#customization)   
-
 
 
 ## Usage <a name="usage"></a>
@@ -38,6 +36,7 @@ export default App
 
 ## Configuration <a name="configuration"></a>
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
+
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
 | [managment](#conf_managment)      | information to control UI                  |
@@ -48,7 +47,7 @@ Component expects configuration info from storage. Badge touch 4 global keys fro
 
 
 ### Managment <a name="conf_managment"></a>
-Props from managment:  
+Props from `managment`:  
 ```javascript
 {
   showTitle: false,  // is responsible for displaying title or not
@@ -56,23 +55,23 @@ Props from managment:
   showSVG: true,  // is responsible for displaying SVF file or not
 }
 ```
-You can change these values using [APImethod](#custom_managment "description of method").
+You can change these values using relevant [APImethod](#custom_managment "description of method").
 
 
 
 ### Settings <a name="conf_settings"></a>
-Props from settings:  
+Props from `settings`:  
 ```javascript
 {
   avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' // path to the image which will be shown as avatar 
 }
 ```
-You can change these values using [APImethod](#custom_settings "description of method").
+You can change these values using relevant [APImethod](#custom_settings "description of method").
 
 
 
 ### Styles <a name="conf_styles"></a>
-Props from styles:  
+Props from `styles`:  
 ```javascript
 {
   mainContainer: {  // styles for main container
@@ -94,24 +93,25 @@ Props from styles:
 
 ```
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
-You can change these values using [APImethod](#custom_styles "description of method").
+You can change these values using relevant [APImethod](#custom_styles "description of method").
 
 
 
 ### Languages <a name="conf_languages"></a>
-Props from languages:  
+Props from `languages`:  
 ```javascript
 {
   title: 'Chat Kit'  // text in Title 
 }
 ```
-You can change these values using [APImethod](#custom_languages "description of method").
+You can change these values using relevant [APImethod](#custom_languages "description of method").
 
 
 
 ## Customization <a name="customization"></a>
 To custom `Badge` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
+
 * [UIManagment](#custom_managment)
 * [Settings](#custom_settings)
 * [Styles](#custom_styles)
@@ -131,6 +131,7 @@ ckAPIMethods.uiManagment('setUpBadge', {
 ```
 
 Options data:   
+
 | Key             |   Type     |  Description                                   |
 |-----------------|------------|------------------------------------------------|
 | `showAvatar`    | boolean    | is responsible for displaying avatar or not    |
@@ -150,6 +151,7 @@ ckAPIMethods.uiManagment('changeAvatar', {
 })
 ```
 Options data: 
+
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `path`          | string     | path to picture    |
@@ -172,6 +174,7 @@ ckAPIMethods.styles("changeBadge", {
 ```
 
 Options data:
+
 | Key                |   Type          |  Description                  |
 |--------------------|-----------------|-------------------------------|
 | mainContainer      | object styles   | styles for main container     |
@@ -197,6 +200,7 @@ ckAPIMethods.languages('changeBadge', {
 ```
 
 Options data:    
+
 | Key                |   Type          |  Description                  |
 |--------------------|-----------------|-------------------------------|
 | title              | string          | text in title                 |
