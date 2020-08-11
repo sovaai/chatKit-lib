@@ -30,14 +30,17 @@ export default App
 
 
 ## Component props <a name="component_props"></a>
+
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
 
+
 ## Configuration <a name="configuration"></a>
-Component expects configuration info from storage. Message touch 4 global keys from STORE:  
+Component expects configuration info from storage. `Message` touch **4** global keys from STORE:  
+
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
 | [managment](#conf_managment)      | information to control UI                  |
@@ -47,8 +50,9 @@ Component expects configuration info from storage. Message touch 4 global keys f
  
  
  
+ 
 ### Managment <a name="conf_managment"></a>
-Props from managment:  
+Props from `managment`:  
 ```javascript
 {
   showDate: false,  // should component show date
@@ -75,8 +79,9 @@ You can change these values using [APImethod](#custom_managment "description of 
 
 
 
+
 ### Settings <a name="conf_settings"></a>
-Props from settings:  
+Props from `settings`:  
 ```javascript
 {
   avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4', // path to the image which will be shown as avatar  
@@ -101,8 +106,10 @@ To see information about icons, visit https://www.npmjs.com/package/@fortawesome
 You can change these values using [APImethod](#custom_settings "description of method").
 
 
+
+
 ### Styles <a name="conf_styles"></a>
-Props from styles:  
+Props from `styles`:  
 For user message:
   
  ```javascript
@@ -220,8 +227,9 @@ You can change these values using [APImethod](#custom_styles "description of met
 
 
 
+
 ### Languages <a name="conf_languages"></a>
-Props from languages:  
+Props from `languages`:  
 ```javascript
 {
   rateButtonTitle: 'Rate'  // text in rate button title,
@@ -232,13 +240,16 @@ You can change these values using [APImethod](#custom_languages "description of 
 
 
 
+
 ## Customization <a name="customization"></a>
 To custom `Message` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
-Customization includes:  
+Customization includes: 
+
 * [UIManagment](#custom_managment)
 * [Settings](#custom_settings)
 * [Styles](#custom_styles)
 * [Languages](#custom_languages)
+
 
 
 
@@ -358,6 +369,7 @@ Options data:
 
 
 
+
 ## Settings
 On call [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") you must enter event name. Depending on the event name something will be changed.
 
@@ -365,24 +377,21 @@ List of event names:
 * `changeAvatar`  
 * `changeIcon`  
 
-
+For avatar:
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`, that allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
-ckAPIMethods.uiManagment('changeAvatar', {
+ckAPIMethods.settings('changeAvatar', {
   path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
-
-ckAPIMethods.uiManagment('changeIcon', {
-  iconName: ??,
-  iconData: ??
-})
 ```
 Options data: 
+
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `path`          | string     | path to picture    |
+
 
 For icons:  
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen icons in [Settings](#conf_settings). 
@@ -391,20 +400,19 @@ To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
-ckAPIMethods.uiManagment('changeAvatar', {
-  path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
-
-ckAPIMethods.uiManagment('changeIcon', {
+ckAPIMethods.settings('changeIcon', {
   iconName: ??,
   iconData: ??
 })
 ```
 Options data: 
+
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `iconName`      | string     |  ??                |
  
  
+
 
 ### Styles <a name="custom_styles"></a>
 To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeUserMessage` (for user messages) or `changeResponseMessage` (for response messages), it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Message` (user or response) is based. 
@@ -431,6 +439,7 @@ ckAPIMethods.styles('changeUserMessage', {
 })
 ```
 Options data:
+
 | Key                          |   Type          |  Description                              |
 |------------------------------|-----------------|-------------------------------------------|
 | mainContainer                | object styles   | styles for main container                 |
@@ -466,6 +475,7 @@ ckAPIMethods.styles('changeResponseMessage', {
 ```
 
 Options data:
+
 | Key                          |   Type          |  Description                              |
 |------------------------------|-----------------|-------------------------------------------|
 | mainContainer                | object styles   | styles for main container                 |
@@ -478,6 +488,7 @@ Options data:
 | textContainer                | object styles   | styles for text container                 |
 | bubbleContainer              | object styles   | styles for bubble container               | 
 | buttonsContainer             | object styles   | styles for buttons container              |
+
 
 
 
