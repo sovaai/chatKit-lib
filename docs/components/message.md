@@ -80,9 +80,21 @@ Props from settings:
 ```javascript
 {
   avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4', // path to the image which will be shown as avatar  
-  positiveRateIcon: 'fas thumbs-up',  // choice of image which will be shown as positive rate icon  
-  negativeRateIcon: 'fas thumbs-down',  // choice of image which will be shown as negative rate icon  
-  audioMessageIcon: 'fas play' // choice of image which will be shown as audio message icon
+  positiveRateIcon: {  // choice of icon which will be shown as positive rate icon from https://fontawesome.com/
+    icon: ['fas', 'thumbs-up'],
+    className: '',
+    props: {},
+  },
+  negativeRateIcon: {  // choice of icon which will be shown as negative rate icon from https://fontawesome.com/
+    icon: ['far', 'thumbs-down'],
+    className: '',
+    props: {},
+  },
+  playMessageIcon: { // choice of icon which will be shown as audio message icon from https://fontawesome.com/
+    icon: ['fas', 'play'],
+    className: '',
+    props: {},
+  }
 }
 ```
 You can change these values using [APImethod](#custom_settings "description of method").
