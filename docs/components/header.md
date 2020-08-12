@@ -75,7 +75,7 @@ You can change these values using [APImethod](#custom_managment "description of 
 Props from `settings`:  
 ```javascript
 {
-  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4'  // path to the image which will be shown as avatar
+  avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',  // path to the image which will be shown as avatar
   resetIcon: {  // choice of image which will be shown as reset icon from https://fontawesome.com/
     icon: ['fas', 'redo-alt'],
     className: '',
