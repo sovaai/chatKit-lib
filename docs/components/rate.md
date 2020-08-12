@@ -73,8 +73,16 @@ You can change these values using [APImethod](#custom_managment "description of 
 Props from `settings`:  
 ```javascript
 {
-  negativeRateIcon: 'far thumbs-down',  // choice of image which will be shown as negative rate icon
-  positiveRateIcon: 'far thumbs-up'  // choice of image which will be shown as positive rate icon
+  negativeRateIcon: {  // choice of image which will be shown as negative rate icon from https://fontawesome.com/
+    icon: ['fas', 'thumbs-down'],
+    className: '',
+    props: {}
+  },
+  positiveRateIcon: {  // choice of image which will be shown as positive rate icon from https://fontawesome.com/
+    icon: ['fas', 'thumbs-up'],
+    className: '',
+    props: {}
+  }
 }
 ```
 You can change these values using [APImethod](#custom_settings "description of method").
