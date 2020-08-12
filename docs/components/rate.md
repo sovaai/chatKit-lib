@@ -30,6 +30,7 @@ export default App
 
 
 ## Component props <a name="component_props"></a>
+
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
@@ -37,6 +38,7 @@ export default App
 
 
 ## Configuration <a name="configuration"></a>
+
 Component expects configuration info from storage. Rate touch 4 global keys from STORE:  
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
@@ -48,7 +50,7 @@ Component expects configuration info from storage. Rate touch 4 global keys from
 
 
 ### Managment <a name="conf_managment"></a>
-Props from managment:  
+Props from `managment`:  
 ```javascript
 {
   positiveRate: {  // should component improve rate
@@ -68,7 +70,7 @@ You can change these values using [APImethod](#custom_managment "description of 
 
 
 ### Settings <a name="conf_settings"></a>
-Props from settings:  
+Props from `settings`:  
 ```javascript
 {
   negativeRateIcon: 'far thumbs-down',  // choice of image which will be shown as negative rate icon
@@ -80,7 +82,7 @@ You can change these values using [APImethod](#custom_settings "description of m
 
 
 ### Styles <a name="conf_styles"></a>
-Props from styles:  
+Props from `styles`:  
 ```javascript
 {
   mainContainer: {  // styles for main container
@@ -122,7 +124,7 @@ You can change these values using [APImethod](#custom_styles "description of met
 
 
 ### Languages <a name="conf_languages"></a>
-Props from languages:  
+Props from `languages`:  
 ```javascript
 {
   title: 'Is it helpfull?',  // text in title
@@ -159,7 +161,7 @@ Customization includes:
 
 
 ### UIManagment <a name="custom_managment"></a>
-To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpRate`, it's allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Rate` is based.
+To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpRate`, that allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Rate` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -245,6 +247,7 @@ ckAPIMethods.uiManagment('changeIcon', {
 })
 ```
 Options data: 
+
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `iconName`      | string     |  ??                |
@@ -273,6 +276,7 @@ ckAPIMethods.styles('changeRate', {
 ```
 
 Options data:
+
 | Key                  |   Type          |  Description                  |
 |----------------------|-----------------|-------------------------------|
 | mainContainer        | object styles   | styles for main container     |
