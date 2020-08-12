@@ -91,11 +91,26 @@ You can change these values using [APImethod](#custom_managment "description of 
 Props from `settings`:  
 ```javascript
 {
-  addFileIcon: 'fas plus'  // choice of image which will be shown as add file icon
-  addStickersIcon: 'fas sticky-note'  // choice of image which will be shown as add stickers icon
-  audioMessageIcon: 'fas microphone'  // choice of image which will be shown as audio message icon
-  sendIcon": 'fas arrow-up'  // choice of image which will be shown as send icon
-  shareIcon": 'fas share-alt'  // choice of image which will be shown as share icon
+  addFileIcon: {  // choice of image which will be shown as add file icon from https://fontawesome.com/
+    icon: ['fas', 'plus'],
+    className: '',
+    props: {},
+  addStickersIcon: {  // choice of image which will be shown as add stickers icon from https://fontawesome.com/
+    icon: ['fas', 'sticky-note'],
+    className: '',
+    props: {},
+  audioMessageIcon: {  // choice of image which will be shown as audio message icon from https://fontawesome.com/
+    icon: ['fas', 'fas microphone'],
+    className: '',
+    props: {},
+  sendIcon: {  // choice of image which will be shown as send icon from https://fontawesome.com/
+    icon: ['fas', 'fas arrow-up'],
+    className: '',
+    props: {},
+  shareIcon: {  // choice of image which will be shown as share icon from https://fontawesome.com/
+    icon: ['fas', 'fas share-alt'],
+    className: '',
+    props: {}
 }
 ```
 You can change these values using [APImethod](#custom_settings "description of method").
