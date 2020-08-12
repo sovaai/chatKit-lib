@@ -74,8 +74,14 @@ You can change these values using [APImethod](#custom_managment "description of 
 Props from `settings`:  
 ```javascript
 {
-  rateIcon: 'fas thumbs-up'  // choice of image which will be shown as rate icon
-  searchIcon: 'far search'  // choice of image which will be shown as search icon
+  rateIcon: {  // choice of image which will be shown as rate icon from https://fontawesome.com/
+    icon: ['fas', 'thumbs-up'],
+    className: '',
+    props: {},
+  searchIcon: {  // choice of image which will be shown as search icon from https://fontawesome.com/
+    icon: ['fas', 'search'],
+    className: '',
+    props: {}
 }
 ```
 You can change these values using [APImethod](#custom_settings "description of method").
