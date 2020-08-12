@@ -130,7 +130,7 @@ Customization includes:
 
 
 ### UIManagment <a name="custom_managment"></a>
-To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpDialog`, it's allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Dialog` is based.
+To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpDialog`, that allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Dialog` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
