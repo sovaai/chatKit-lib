@@ -77,11 +77,13 @@ Props from `settings`:
   rateIcon: {  // choice of image which will be shown as rate icon from https://fontawesome.com/
     icon: ['fas', 'thumbs-up'],
     className: '',
-    props: {},
+    props: {}
+  },
   searchIcon: {  // choice of image which will be shown as search icon from https://fontawesome.com/
     icon: ['fas', 'search'],
     className: '',
     props: {}
+  }
 }
 ```
 You can change these values using [APImethod](#custom_settings "description of method").
