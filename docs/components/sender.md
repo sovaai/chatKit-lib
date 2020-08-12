@@ -30,6 +30,7 @@ export default App
 
 
 ## Component props <a name="component_props"></a>
+
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
@@ -37,7 +38,8 @@ export default App
 
 
 ## Configuration <a name="configuration"></a>
-Component expects configuration info from storage. Header touch 4 global keys from STORE:  
+Component expects configuration info from storage. `Header` touch 4 global keys from STORE:  
+
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
 | [managment](#conf_managment)      | information to control UI                  |
@@ -48,7 +50,7 @@ Component expects configuration info from storage. Header touch 4 global keys fr
 
 
 ### Managment <a name="conf_managment"></a>
-Props from managment:  
+Props from `managment`:  
 ```javascript
 {
   inFocus: false,  // should component show title
@@ -86,7 +88,7 @@ You can change these values using [APImethod](#custom_managment "description of 
 
 
 ### Settings <a name="conf_settings"></a>
-Props from settings:  
+Props from `settings`:  
 ```javascript
 {
   addFileIcon: 'fas plus'  // choice of image which will be shown as add file icon
@@ -101,7 +103,7 @@ You can change these values using [APImethod](#custom_settings "description of m
 
 
 ### Styles <a name="conf_styles"></a>
-Props from styles:  
+Props from `styles`:  
 ```javascript
 {
   mainContainer: { // styles for main container
@@ -155,7 +157,7 @@ You can change these values using [APImethod](#custom_styles "description of met
 
 
 ### Languages <a name="conf_languages"></a>
-Props from languages:  
+Props from `languages:`  
 ```javascript
 {
   fileButtonTitle: 'File'  // text in file button title
@@ -353,7 +355,7 @@ Options data:
 
 
 
-### Settings <a name="custom_settings"></a> (NEED HELP)
+### Settings <a name="custom_settings"></a>
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -364,6 +366,7 @@ ckAPIMethods.uiManagment('changeIcon', {
 })
 ```
 Options data: 
+
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `iconName`      | string     |  icon name         |
@@ -392,6 +395,7 @@ ckAPIMethods.styles("changeSender", {
 ```
 
 Options data:
+
 | Key                |   Type          |  Description                    |
 |--------------------|-----------------|---------------------------------|
 | mainContainer      | object styles   | styles for main container       |
@@ -425,6 +429,7 @@ ckAPIMethods.languages('changeSender', {
 ```
 
 Options data:    
+
 | Key                  |   Type          |  Description                    |
 |----------------------|-----------------|---------------------------------|
 | fileButtonTitle      | string          | text in file button title       |
