@@ -100,15 +100,15 @@ Props from `settings`:
     className: '',
     props: {},
   audioMessageIcon: {  // choice of image which will be shown as audio message icon from https://fontawesome.com/
-    icon: ['fas', 'fas microphone'],
+    icon: ['fas', 'microphone'],
     className: '',
     props: {},
   sendIcon: {  // choice of image which will be shown as send icon from https://fontawesome.com/
-    icon: ['fas', 'fas arrow-up'],
+    icon: ['fas', 'arrow-up'],
     className: '',
     props: {},
   shareIcon: {  // choice of image which will be shown as share icon from https://fontawesome.com/
-    icon: ['fas', 'fas share-alt'],
+    icon: ['fas', 'share-alt'],
     className: '',
     props: {}
 }
