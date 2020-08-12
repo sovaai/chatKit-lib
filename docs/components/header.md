@@ -79,15 +79,18 @@ Props from `settings`:
   resetIcon: {  // choice of image which will be shown as reset icon from https://fontawesome.com/
     icon: ['fas', 'redo-alt'],
     className: '',
-    props: {},
+    props: {}
+  },
   settingsIcon: {  // choice of image which will be shown as settings icon from https://fontawesome.com/
     icon: ['fas', 'ellipsis-v'],
     className: '',
-    props: {},
+    props: {}
+  },
   closeSettingsIcon: {  // choice of image which will be shown as close settings icon from https://fontawesome.com/
     icon: ['fas', 'arrow-down'],
     className: '',
     props: {}
+  }
 }
 ```
 You can change these values using [APImethod](#custom_settings "description of method").
