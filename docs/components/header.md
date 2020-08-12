@@ -30,6 +30,7 @@ export default App
 
 
 ## Component props <a name="component_props"></a>
+
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
@@ -38,6 +39,7 @@ export default App
 
 ## Configuration <a name="configuration"></a>
 Component expects configuration info from storage. Header touch 4 global keys from STORE:  
+
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
 | [managment](#conf_managment)      | information to control UI                  |
@@ -48,7 +50,7 @@ Component expects configuration info from storage. Header touch 4 global keys fr
 
 
 ### Managment <a name="conf_managment"></a>
-Props from managment:  
+Props from `managment`:  
 ```javascript
 {
   showTitle: true,  // should component show title
@@ -70,7 +72,7 @@ You can change these values using [APImethod](#custom_managment "description of 
 
 
 ### Settings <a name="conf_settings"></a>
-Props from settings:  
+Props from `settings`:  
 ```javascript
 {
   avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4'  // path to the image which will be shown as avatar
@@ -84,7 +86,7 @@ You can change these values using [APImethod](#custom_settings "description of m
 
 
 ### Styles <a name="conf_styles"></a>
-Props from styles:  
+Props from `styles`:  
 ```javascript
 {
   mainContainer: { // styles for main container
@@ -111,7 +113,7 @@ You can change these values using [APImethod](#custom_styles "description of met
 
 
 ### Languages <a name="conf_languages"></a>
-Props from languages:  
+Props from `languages`:  
 ```javascript
 {
   title: 'SOVA Chat Kit'  // text in Title 
@@ -134,7 +136,7 @@ Customization includes:
 
 
 ### UIManagment <a name="custom_managment"></a>
-To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpHeader`, it's allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Header` is based.
+To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpHeader`, that allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Header` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -236,6 +238,7 @@ ckAPIMethods.uiManagment('changeIcon', {
 })
 ```
 Options data: 
+
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `path`          | string     | path to picture    |
@@ -265,6 +268,7 @@ ckAPIMethods.styles("changeHeader", {
 ```
 
 Options data:
+
 | Key                |   Type          |  Description                  |
 |--------------------|-----------------|-------------------------------|
 | mainContainer      | object styles   | styles for main container     |
@@ -294,6 +298,7 @@ ckAPIMethods.languages('changeHeader', {
 ```
 
 Options data:    
+
 | Key                  |   Type          |  Description                    |
 |----------------------|-----------------|---------------------------------|
 | title                | string          | text in title                   |
