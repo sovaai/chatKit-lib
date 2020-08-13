@@ -378,7 +378,7 @@ List of event names:
 * `changeAvatar`  
 * `changeIcon`  
 
-For avatar:
+For `changeAvatar`:  
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`, that allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
 
 ```javascript
@@ -394,7 +394,7 @@ Options data:
 | `path`          | string     | path to picture    |
 
 
-For icons:  
+For `changeIcons`:  
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen icons in [Settings](#conf_settings). 
 
 
@@ -402,16 +402,16 @@ To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.settings('changeIcon', {
-  iconName: ??,
-  iconData: ??
+  iconName: name,
+  iconData: {}
 })
 ```
 Options data: 
 
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
-| `iconName`      | string     |  ??                |
- 
+| `iconName`      | string     |  icon name         |
+| `iconData`      | string     |  icon data         |
  
 
 
