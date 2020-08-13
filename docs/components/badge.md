@@ -42,7 +42,7 @@ Component expects configuration info from storage. Badge touch 4 global keys fro
 | [managment](#conf_managment)      | information to control UI                  |
 | [settings](#conf_settings)        | information to control media info          |
 | [styles](#conf_styles)            | information to control styles packets      |
-| [languages](#conf_languages)      | information to control Languages packets   |
+| [languages](#conf_languages)      | information to control languages packets   |
 
 
 
@@ -52,7 +52,7 @@ Props from `managment`:
 {
   showTitle: false,  // is responsible for displaying title or not
   showAvatar: false,  // is responsible for displaying avatar or not
-  showSVG: true,  // is responsible for displaying SVF file or not
+  showSVG: true,  // is responsible for displaying SVG file or not
 }
 ```
 You can change these values using relevant [APImethod](#custom_managment "description of method").
