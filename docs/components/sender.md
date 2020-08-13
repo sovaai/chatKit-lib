@@ -381,8 +381,8 @@ To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.uiManagment('changeIcon', {
-  iconName: ??,
-  iconData: ??
+  iconName: name,
+  iconData: {}
 })
 ```
 Options data: 
@@ -390,7 +390,7 @@ Options data:
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `iconName`      | string     |  icon name         |
-| `iconData`      |  ??        |  ??                |
+| `iconData`      | string     |  icon data         |
 
 
 
