@@ -235,7 +235,7 @@ Options data:
 
 
 
-### Settings <a name="custom_settings"></a> (NEED HELP)
+### Settings <a name="custom_settings"></a>
 On call [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") you must enter event name. Depending on the event name something will be changed.
 
 List of event names:  
