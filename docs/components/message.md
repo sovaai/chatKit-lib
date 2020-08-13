@@ -416,10 +416,13 @@ Options data:
 
 
 ### Styles <a name="custom_styles"></a>
-To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeUserMessage`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Message` is based. 
+On call [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") you must enter event name.  
 
-For user message:
+List of event names:  
+* changeUserMessage  
+* changeResponseMessage  
 
+For `changeUserMessage`
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -454,9 +457,7 @@ Options data:
 | bubbleContainer              | object styles   | styles for bubble container               | 
 | buttonsContainer             | object styles   | styles for buttons container              |
 
-
-To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeResponseMessage`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Message` is based. 
-
+For `changeResponseMessage`:
  ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
