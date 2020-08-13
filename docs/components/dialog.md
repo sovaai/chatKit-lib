@@ -173,7 +173,7 @@ Options data:
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
-    <td>is responsible for displaying reset button or not </td>
+    <td>is responsible for displaying rate button or not </td>
   </tr>
   <tr>
     <td></td>
@@ -196,7 +196,7 @@ Options data:
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
-    <td>is responsible for displaying settings button or not</td>
+    <td>is responsible for displaying search button or not</td>
   </tr>
   <tr>
     <td></td>
