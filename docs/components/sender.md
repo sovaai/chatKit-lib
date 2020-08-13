@@ -376,7 +376,7 @@ Options data:
 
 
 ### Settings <a name="custom_settings"></a>
-To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen icons in [Settings](#conf_settings). 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
