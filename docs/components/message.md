@@ -419,10 +419,10 @@ Options data:
 On call [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") you must enter event name.  
 
 List of event names:  
-* changeUserMessage  
-* changeResponseMessage  
+* `changeUserMessage`  
+* `changeResponseMessage`  
 
-For `changeUserMessage`
+For `changeUserMessage`:
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
