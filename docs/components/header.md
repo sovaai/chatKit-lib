@@ -236,26 +236,46 @@ Options data:
 
 
 ### Settings <a name="custom_settings"></a> (NEED HELP)
-To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`/ `changeIcon`, it's allows you to overwrite path to chosen avatar / ?? in [Settings](#conf_settings). 
+On call [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") you must enter event name. Depending on the event name something will be changed.
+
+List of event names:  
+* `changeAvatar`  
+* `changeIcon`  
+
+For `changeAvatar`:  
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`, that allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
-ckAPIMethods.uiManagment('changeAvatar', {
+ckAPIMethods.settings('changeAvatar', {
   path: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4',
-
-ckAPIMethods.uiManagment('changeIcon', {
-  iconName: ??,
-  iconData: ??
-})
 ```
 Options data: 
 
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
 | `path`          | string     | path to picture    |
-| `iconName`      | string     |  ??                |
-| `iconData`      |  ??        |  ??                |
+
+
+For `changeIcons`:  
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen icons in [Settings](#conf_settings). 
+
+
+```javascript
+import { ckAPIMethods } from "sova-chatkit"
+
+ckAPIMethods.settings('changeIcon', {
+  iconName: name,
+  iconData: {}
+})
+```
+Options data: 
+
+| Key             |   Type     |  Description       |
+|-----------------|------------|--------------------|
+| `iconName`      | string     |  icon name         |
+| `iconData`      | string     |  icon data         |
 
 
 
