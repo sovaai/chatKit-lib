@@ -288,7 +288,7 @@ Options data:
     <td align=center><b>Description</b></td>
   </tr>
   <tr>
-    <td colspan="2">audioMessageButtonn</td>
+    <td colspan="2">audioMessageButton</td>
     <td>object</td>
     <td></td>
   </tr>
@@ -296,7 +296,7 @@ Options data:
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
-    <td>is responsible for displaying reset button or not </td>
+    <td>is responsible for displaying audio message or not </td>
   </tr>
   <tr>
     <td></td>
@@ -319,7 +319,7 @@ Options data:
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
-    <td>is responsible for displaying settings button or not</td>
+    <td>is responsible for displaying positive rate message button or not</td>
   </tr>
   <tr>
     <td></td>
@@ -334,7 +334,7 @@ Options data:
     <td>is responsible for displaying button with icon or not</td>
   </tr>
   <tr>
-    <td colspan="2">negativeRateRateMessage</td>
+    <td colspan="2">negativeRateMessage</td>
     <td>object</td>
     <td></td>
   </tr>
@@ -342,7 +342,7 @@ Options data:
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
-    <td>is responsible for displaying reset button or not </td>
+    <td>is responsible for displaying negative rate message button or not </td>
   </tr>
   <tr>
     <td></td>
