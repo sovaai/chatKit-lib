@@ -285,14 +285,14 @@ ckAPIMethods.styles('changeRate', {
 
 Options data:
 
-| Key                  |   Type          |  Description                  |
-|----------------------|-----------------|-------------------------------|
-| mainContainer        | object styles   | styles for main container     |
-|  titleContainer      | object styles   | styles for panel              |
-|  negativeRateButton  | object styles   | styles for rate button        |
-|  positiveRateButton  | object styles   | styles for search button      |
-|  ratingElement       | object styles   | styles for messages container |
-|  ratingListContainer | object styles   | styles for messages container |
+| Key                  |   Type          |  Description                     |
+|----------------------|-----------------|----------------------------------|
+|  mainContainer       | object styles   | styles for main container        |
+|  titleContainer      | object styles   | styles for title container       |
+|  negativeRateButton  | object styles   | styles for negative rate button  |
+|  positiveRateButton  | object styles   | styles for positive rate button  |
+|  ratingElement       | object styles   | styles for rating element        |
+|  ratingListContainer | object styles   | styles for rating list container |
 
 
 
