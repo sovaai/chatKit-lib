@@ -250,16 +250,16 @@ To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.uiManagment('changeIcon', {
-  iconName: ??,
-  iconData: ??
+  iconName: name,
+  iconData: {}
 })
 ```
 Options data: 
 
 | Key             |   Type     |  Description       |
 |-----------------|------------|--------------------|
-| `iconName`      | string     |  ??                |
-| `iconData`      |  ??        |  ??                |
+| `iconName`      | string     |  icon name         |
+| `iconData`      | string     |  icon data         |
 
 
 
