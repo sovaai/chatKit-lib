@@ -270,7 +270,7 @@ Options data:
   </tr>
   <tr>
       <td></td>
-      <td>show withIcon</td>
+      <td>withIcon</td>
       <td>boolean</td>
       <td>should component show search button icon</td>
   </tr>
@@ -293,7 +293,7 @@ Options data:
   </tr>
   <tr>
       <td></td>
-      <td>show withIcon</td>
+      <td>withIcon</td>
       <td>boolean</td>
       <td>should component show icon</td>
   </tr>
