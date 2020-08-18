@@ -54,14 +54,14 @@ Props from `managment`:
 ```javascript
 {
   rate: {
-      enabled: true,  // should component display on widget
-      withTitle: false,  // should component show title
-      withIcon: true,  // should component show icon
+    enabled: true,  // should component display on widget
+    withTitle: false,  // should component show title
+    withIcon: true,  // should component show icon
   },
   search: { 
-      enabled: true,  // should component display on widget
-      withTitle: false,  // should component show title
-      withIcon: true,  // should component show icon
+    enabled: true,  // should component display on widget
+    withTitle: false,  // should component show title
+    withIcon: true,  // should component show icon
   },
   loader: {  
     enabled: true,  // should component show messageLoader 
