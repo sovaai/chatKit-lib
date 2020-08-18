@@ -395,23 +395,59 @@ Options data:
 
 
 For `changeIcons`:  
-To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, it's allows you to overwrite path to chosen icons in [Settings](#conf_settings). 
-
-
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, that allows you to overwrite path to chosen icons in [Settings](#conf_settings). 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
-ckAPIMethods.settings('changeIcon', {
-  iconName: name,
-  iconData: {}
-})
+ckAPIMethods.uiManagment('changeIcon', {
+  iconName: 'searchIcon',
+  iconData: { 
+    props: { 
+      size: 2 
+    }, 
+    icon: ['fas', 'play'], 
+  } 
+}) 
 ```
 Options data: 
 
-| Key             |   Type     |  Description       |
-|-----------------|------------|--------------------|
-| `iconName`      | string     |  icon name         |
-| `iconData`      | string     |  icon data         |
+<table>
+  <tr>
+    <td colspan="2" align=center><b>Key</b></td>
+    <td align=center><b>Type</b></td>
+    <td align=center><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">iconName</td>
+    <td>string</td>
+    <td>name of icon, you want to change</td>
+  </tr>
+  <tr>
+    <td colspan="2">iconData</td>
+    <td>object</td>
+    <td>settings of changes</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>props</td>
+    <td>object</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>icon</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>className</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+</table>
+
+To see info about `iconData`, visit https://github.com/FortAwesome/react-fontawesome
  
 
 
