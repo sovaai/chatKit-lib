@@ -57,12 +57,17 @@ Props from `managment`:
       enabled: true,  // should component display on widget
       withTitle: false,  // should component show title
       withIcon: true,  // should component show icon
-      },
+  },
   search: { 
       enabled: true,  // should component display on widget
       withTitle: false,  // should component show title
       withIcon: true,  // should component show icon
-      },
+  },
+  loader: {  
+    enabled: true,  // should component show messageLoader 
+    withTitle: false,  // should component show messageLoader title 
+    withIcon: true,  // should component show messageLoader icon 
+  }, 
   dividerEnabled: true,  // should component show divider
 }
 ```
@@ -153,6 +158,11 @@ ckAPIMethods.uiManagment('setUpDialog', {
     withTitle: false,
     withIcon: true
   },
+  loader: {  
+    enabled: true,
+    withTitle: false, 
+    withIcon: true,
+  }, 
 showMsgLoad: true
 })
 ```
@@ -210,6 +220,29 @@ Options data:
     <td>boolean</td>
     <td>is responsible for displaying button with icon or not</td>
   </tr>
+ <tr>
+  <td colspan="2">loader</td>
+  <td>object</td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td>enabled</td>
+  <td>boolean</td>
+  <td>is responsible for displaying loader or not </td>
+</tr>
+<tr>
+  <td></td>
+  <td>show withTitle</td>
+  <td>boolean</td>
+  <td>is responsible for displaying loader with title or not </td>
+</tr>
+<tr>
+  <td></td>
+  <td>show withIcon</td>
+  <td>boolean</td>
+  <td>is responsible for displaying loader with icon or not</td>
+</tr>
   <tr>
     <td colspan="2">showMsgLoad</td>
     <td>boolean</td>
