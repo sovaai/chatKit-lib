@@ -271,6 +271,7 @@ Options data:
     <td></td>
   </tr>
 </table>
+
 To see info about `iconData`, visit https://github.com/FortAwesome/react-fontawesome
 
 
