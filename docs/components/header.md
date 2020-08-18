@@ -55,16 +55,26 @@ Props from `managment`:
 {
   showTitle: true,  // should component show title
   showAvatar: true,  // should component show avatar
-  settings: {  // should component show settings
+  settings: {
     enabled: true,  // should component display on widget
     withTitle: false,  // should component show title
     withIcon: true,  // should component show icon
   },
-  reset: {  // should component show reset
+  close: { 
+    enabled: true, // should component show close button 
+    withTitle: false,  // should component show close button title 
+    withIcon: true,  // should component show close button icon 
+  }, 
+  search: {     
+    enabled: true,  // should component show search button 
+    withTitle: false,  // should component show search button title 
+    withIcon: true,  // should component show search button icon 
+  }, 
+  reset: { 
     enabled: true,  // should component display on widget
     withTitle: false,  // should component show title
     withIcon: true,  // should component show icon
-  },
+  }
 }
 ```
 You can change these values using [APImethod](#custom_managment "description of method").
@@ -153,18 +163,28 @@ To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/d
 import { ckAPIMethods } from "sova-chatkit"
 
 ckAPIMethods.uiManagment('setUpHeader', {
-  resetButton: {
+  showTitle: true,
+  showAvatar: true,
+  settings: {
     enabled: true,
     withTitle: false,
-    withIcon: true
+    withIcon: true,
   },
-  settingsButton: {
+  close: { 
     enabled: true,
-    withTitle: true,
-    withIcon: true
-  },
-  showAvatar: false,
-  showTitle: true,
+    withTitle: false,
+    withIcon: true,
+  }, 
+  search: {
+    enabled: true,   
+    withTitle: false,  
+    withIcon: true,
+  }, 
+  reset: {
+    enabled: true,
+    withTitle: false,
+    withIcon: true,
+  }
 })
 ```
 
@@ -176,60 +196,106 @@ Options data:
       <td align=center><b>Description</b></td>
   </tr>
   <tr>
-      <td colspan="2">resetButton</td>
-      <td>object</td>
-      <td></td>
-  </tr>
-  <tr>
-      <td></td>
-      <td>enabled</td>
+      <td colspan="2">showTitle</td>
       <td>boolean</td>
-      <td>is responsible for displaying reset button or not </td>
-  </tr>
-  <tr>
-      <td></td>
-      <td>show withTitle</td>
-      <td>boolean</td>
-      <td>is responsible for displaying button with title or not </td>
-  </tr>
-  <tr>
-      <td></td>
-      <td>show withIcon</td>
-      <td>boolean</td>
-      <td>is responsible for displaying button with icon or not</td>
-  </tr>
-  <tr>
-      <td colspan="2">settingsButton</td>
-      <td>object</td>
-      <td></td>
-  </tr>
-  <tr>
-      <td></td>
-      <td>enabled</td>
-      <td>boolean</td>
-      <td>is responsible for displaying settings button or not</td>
-  </tr>
-  <tr>
-      <td></td>
-      <td>show withTitle</td>
-      <td>boolean</td>
-      <td>is responsible for displaying button with title or not</td>
-  </tr>
-  <tr>
-      <td></td>
-      <td>show withIcon</td>
-      <td>boolean</td>
-      <td>is responsible for displaying button with icon or not</td>
+      <td>should component show title</td>
   </tr>
   <tr>
       <td colspan="2">showAvatar</td>
       <td>boolean</td>
-      <td>is responsible for displaying avatar or not </td>
+      <td>should component show avatar</td>
   </tr>
   <tr>
-      <td colspan="2">showTitle</td>
+      <td colspan="2">settings</td>
+      <td>object</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>enabled</td>
       <td>boolean</td>
-      <td>is responsible for displaying title or not </td>
+      <td>should component display on widget </td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>withTitle</td>
+      <td>boolean</td>
+      <td>should component show title </td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>withIcon</td>
+      <td>boolean</td>
+      <td>should component show icon</td>
+  </tr>
+  <tr>
+      <td colspan="2">close</td>
+      <td>object</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>enabled</td>
+      <td>boolean</td>
+      <td>should component show close button </td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>withTitle</td>
+      <td>boolean</td>
+      <td>should component show close button title</td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>withIcon</td>
+      <td>boolean</td>
+      <td>should component show close button icon</td>
+  </tr>
+  <tr>
+      <td colspan="2">search</td>
+      <td>object</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>enabled</td>
+      <td>boolean</td>
+      <td>should component show search button</td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>withTitle</td>
+      <td>boolean</td>
+      <td>should component show search button title</td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>show withIcon</td>
+      <td>boolean</td>
+      <td>should component show search button icon</td>
+  </tr>
+  <tr>
+      <td colspan="2">reset</td>
+      <td>object</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>enabled</td>
+      <td>boolean</td>
+      <td>should component display on widget</td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>withTitle</td>
+      <td>boolean</td>
+      <td>should component show title </td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>show withIcon</td>
+      <td>boolean</td>
+      <td>should component show icon</td>
   </tr>
 </table>
 
