@@ -14,6 +14,7 @@ import Settings from '../components/Settings'
 import ToggleSlider from '../components/ToggleSlider'
 import colors from './colors'
 import fonts from './font'
+import CKDropAndDown from '../components/CKDropAndDown'
 
 const sovaLight = {
   themeName: 'sovaLight',
@@ -32,6 +33,7 @@ const sovaLight = {
     Close: Close(colors),
     Settings: Settings(colors),
     ToggleSlider: ToggleSlider(colors),
+    CKDropAndDown: CKDropAndDown(colors),
   },
 }
 

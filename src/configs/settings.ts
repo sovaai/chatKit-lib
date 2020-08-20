@@ -1,3 +1,15 @@
+import DropZone from '../components/ckSVG/DropZone'
+import DropZoneError from '../components/ckSVG/DropZoneError'
+import FileCSS from '../components/ckSVG/FileCSS'
+import FileDefault from '../components/ckSVG/FileDefault'
+import FilePDF from '../components/ckSVG/FilePDF'
+import FilePPT from '../components/ckSVG/FilePPT'
+import FilePSD from '../components/ckSVG/FilePSD'
+import FileSVG from '../components/ckSVG/FileSVG'
+import FileXLS from '../components/ckSVG/FileXLS'
+import FileZIP from '../components/ckSVG/FileZIP'
+import FileDOC from '../components/ckSVG/FileDOCS'
+
 export const settings = {
   media: {
     avatar:
@@ -83,12 +95,34 @@ export const settings = {
         className: '',
         props: {},
       },
+      timesIcon: {
+        icon: ['fas', 'times'],
+        className: '',
+        props: {},
+      },
       closeSettingsIcon: {
         icon: ['fas', 'arrow-left'],
         className: '',
         props: {},
       },
     },
-    steakers: {},
+    svg: {
+      dropZone: DropZone,
+      dropZoneError: DropZoneError,
+      cssFile: FileCSS,
+      defaultFile: FileDefault,
+      docFile: FileDOC,
+      pdfFile: FilePDF,
+      pptFile: FilePPT,
+      psdFile: FilePSD,
+      svgFile: FileSVG,
+      xlsFile: FileXLS,
+      zipFile: FileZIP,
+    },
+    progressLoader: {
+      radius: 35,
+      strokeWidth: 6,
+      color: '#1b243252',
+    },
   },
 }

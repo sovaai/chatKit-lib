@@ -13,6 +13,15 @@ const Dialog = (colors: ThemeColors) => {
       flexDirection: 'column',
       justifyContent: 'flex-end',
       boxSizing: 'border-box',
+      animation: 'show 0.5s 1',
+      '@keyframes show': {
+        '0%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        },
+      },
       '@media screen and (max-width: 800px)': {
         height: '100vh',
         paddingTop: '60px',

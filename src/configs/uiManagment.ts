@@ -24,6 +24,7 @@ export const uiManagment = {
       inFocus: false,
       blockInput: false,
       blockSubmit: false,
+      showDropZone: false,
       audioMessage: {
         enabled: false,
         withTitle: true,
@@ -138,6 +139,13 @@ export const uiManagment = {
         enabled: true,
         withTitle: false,
         withIcon: true,
+      },
+    },
+    CKDropAndDown: {
+      chooseFile: {
+        enabled: true,
+        withTitle: true,
+        withIcon: false,
       },
     },
   },

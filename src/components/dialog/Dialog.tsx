@@ -18,17 +18,18 @@ class Dialog extends React.PureComponent<DialogProps> {
   rateClick = () => uiManagmentApi.uiManagment('showRate', true)
   searchClick = () => console.log('DialogSearch')
   render() {
-    const { messages: messagesInStore, managment, settings, languages, styles } = this.props
+    const { messages: messagesInStore, managment, settings, languages, styles, modules, height } = this.props
 
-    const messages = messagesInStore.get('history')
-    const { rate, search, loader, dividerEnabled } = managment.getIn(['components', 'Dialog'])
+    const activeModule = modules.get('active')
+    const messages = messagesInStore.getIn(['history', activeModule])
+    const { search, loader, dividerEnabled } = managment.getIn(['components', 'Dialog'])
     const { showRate, showMsgLoad } = managment.get('common')
     const { RateEnabled } = managment.getIn(['components', 'ChatIt'])
-    const { searchIcon, rateIcon } = settings.getIn(['media', 'icons'])
+    const { searchIcon } = settings.getIn(['media', 'icons'])
     const activeLanguage = languages.get('active')
-    const { searchButtonTitle, rateButtonTitle, loaderTitle } = languages.getIn(['stack', activeLanguage, 'Dialog'])
+    const { searchButtonTitle, loaderTitle } = languages.getIn(['stack', activeLanguage, 'Dialog'])
     const activeTheme = styles.get('active')
-    const { mainContainer, panel, rateButton, searchButton, messagesContainer, ckScrollBar } = styles.getIn([
+    const { mainContainer, panel, searchButton, messagesContainer, ckScrollBar } = styles.getIn([
       'stack',
       activeTheme,
       'Dialog',
@@ -36,7 +37,7 @@ class Dialog extends React.PureComponent<DialogProps> {
     const { dividerMainContainer } = styles.getIn(['stack', activeTheme, 'Divider'])
     return (
       <Fragment>
-        <div className="dialog-main-container" css={mainContainer}>
+        <div className="dialog-main-container" css={{ ...mainContainer, minHeight: height, height: height }}>
           <div className="dialog-panel" css={panel}>
             {search.enabled && (
               <Button
@@ -54,56 +55,62 @@ class Dialog extends React.PureComponent<DialogProps> {
           </div>
           <div className="dialog-messages-container" css={messagesContainer}>
             <CKScrollBar scrollbar={this.scrollbar} css={ckScrollBar}>
-              {messages.map((message: { text: string; sender: string; date: Date }, index: number) => {
-                const nextSenderType = messages.getIn([index + 1, 'sender'])
-                const prevSenderType = messages.getIn([index - 1, 'sender'])
-                const prevMessageDateString = messages.getIn([index - 1, 'date']).toDateString()
+              {messages?.map(
+                (message: { text?: string; sender: string; date: Date; file?: {name: string
+                  url: string
+                  size: string
+                  type: string
+                  id: number} }, index: number) => {
+                  const nextSenderType = messages.getIn([index + 1, 'sender'])
+                  const prevSenderType = messages.getIn([index - 1, 'sender'])
+                  const prevMessageDateString = messages.getIn([index - 1, 'date']).toDateString()
 
-                const currMessageDate = new Date(message.date)
-                const currentDateDateString = currMessageDate.toDateString()
+                  const currMessageDate = new Date(message.date)
+                  const currentDateDateString = currMessageDate.toDateString()
 
-                const displayDivider = index === 0 ? true : currentDateDateString !== prevMessageDateString
+                  const displayDivider = index === 0 ? true : currentDateDateString !== prevMessageDateString
 
-                if (!displayDivider || !dividerEnabled)
+                  if (!displayDivider || !dividerEnabled)
+                    return (
+                      <Message
+                        id={index}
+                        scrollbar={this.state.scrollbar}
+                        prevSenderType={prevSenderType}
+                        nextSenderType={nextSenderType}
+                        key={index}
+                        message={message}
+                      />
+                    )
+
+                  const todayDate = new Date()
+                  const prevDay = new Date()
+                  const prevDayDate = new Date(prevDay.setDate(prevDay.getDate() - 1)).toDateString()
+                  const showTodayAsText = todayDate.toDateString() === currentDateDateString
+                  const showPrevTodayAsText = prevDayDate === currentDateDateString
+                  const dateToBeDisplayed = showTodayAsText
+                    ? 'Сегодня'
+                    : showPrevTodayAsText
+                    ? 'Вчера'
+                    : currMessageDate.toLocaleDateString('ru-RU')
+
                   return (
-                    <Message
-                      id={index}
-                      scrollbar={this.state.scrollbar}
-                      prevSenderType={prevSenderType}
-                      nextSenderType={nextSenderType}
-                      key={index}
-                      message={message}
-                    />
+                    <Fragment key={index}>
+                      {displayDivider && (
+                        <div className="dialog-messages-divider" css={dividerMainContainer}>
+                          {dateToBeDisplayed}
+                        </div>
+                      )}
+                      <Message
+                        id={index}
+                        scrollbar={this.state.scrollbar}
+                        prevSenderType={prevSenderType}
+                        nextSenderType={nextSenderType}
+                        message={message}
+                      />
+                    </Fragment>
                   )
-
-                const todayDate = new Date()
-                const prevDay = new Date()
-                const prevDayDate = new Date(prevDay.setDate(prevDay.getDate() - 1)).toDateString()
-                const showTodayAsText = todayDate.toDateString() === currentDateDateString
-                const showPrevTodayAsText = prevDayDate === currentDateDateString
-                const dateToBeDisplayed = showTodayAsText
-                  ? 'Сегодня'
-                  : showPrevTodayAsText
-                  ? 'Вчера'
-                  : currMessageDate.toLocaleDateString('ru-RU')
-
-                return (
-                  <Fragment key={index}>
-                    {displayDivider && (
-                      <div className="dialog-messages-divider" css={dividerMainContainer}>
-                        {dateToBeDisplayed}
-                      </div>
-                    )}
-                    <Message
-                      id={index}
-                      scrollbar={this.state.scrollbar}
-                      prevSenderType={prevSenderType}
-                      nextSenderType={nextSenderType}
-                      message={message}
-                    />
-                  </Fragment>
-                )
-              })}
+                }
+              )}
               {showMsgLoad && loader.enabled && (
                 <MessageLoader
                   loaderTitle={loaderTitle}
@@ -119,4 +126,4 @@ class Dialog extends React.PureComponent<DialogProps> {
     )
   }
 }
-export default connectStoreon('messages', 'settings', 'managment', 'languages', 'styles', Dialog)
+export default connectStoreon('messages', 'settings', 'managment', 'languages', 'styles', 'modules', Dialog)

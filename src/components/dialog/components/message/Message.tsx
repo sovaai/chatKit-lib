@@ -9,12 +9,13 @@ import recieveMessageApi from '../../../../api/recieveMessage/recieveMessageApi'
 import sendMessageApi from '../../../../api/sendMessage/sendMessageApi'
 import Rate from '../../../rate/Rate'
 import uiManagmentApi from '../../../../api/uiManagment/uiManagmentApi'
+import FileMessage from '../fileMessage/FileMessage'
 
 const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id, scrollbar }) => {
   const { settings, managment, languages, styles } = useStoreon('settings', 'managment', 'languages', 'styles')
 
   /* COMPONENTS PROPS */
-  const { text, date, sender, showRate } = message
+  const { text, date, sender, showRate, file, type } = message
   const activeTheme = styles.get('active')
   const {
     mainContainer,
@@ -29,6 +30,12 @@ const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id
     groupTypeMessagesNext,
     groupTypeMessagesPrev,
     groupTypeMessagesInter,
+    imageFile,
+    fileContainer,
+    svgContainer,
+    sizeTittle,
+    fileNameTittle,
+    metaContainer,
   } = styles.getIn(['stack', activeTheme, `${sender === 'user' ? 'User' : 'Response'}Message`])
   const {
     positiveRateMessage,
@@ -44,12 +51,14 @@ const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id
   const { rateButtonTitle, audioMessageButtonTitle } = languages.getIn(['stack', activeLanguage, 'Message'])
   const { playMessageIcon, rateIcon, negativeRateIcon } = settings.getIn(['media', 'icons'])
   const componentName = `${sender === 'user' ? 'user' : 'response'}Message`
-
+  const isMediaFile = file?.type === 'jpeg' || file?.type === 'png' || file?.type === 'jpg'
   const groupSameTypeMessagesNext = nextSenderType === sender ? groupTypeMessagesNext : {}
   const groupSameTypeMessagesPrev = prevSenderType === sender ? groupTypeMessagesPrev : {}
   const intersectionMessage = prevSenderType === nextSenderType
+  const imageMessage = isMediaFile ? { padding: '0px', width: 'min-content', boxSizing: 'border-box' } : {}
+  const textUnderImage = isMediaFile ? { padding: '16px' } : {}
+  const imageRadius = isMediaFile && text ? { borderRadius: '17px 0 0px 0px' } : {}
   const groupSameTypeMessagesInter = intersectionMessage && nextSenderType === sender ? groupTypeMessagesInter : {}
-
   const foundMessages = search.found.toList()
   /* COMPONENTS PROPS END */
 
@@ -57,7 +66,7 @@ const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id
   const onClick = (ev: React.MouseEvent<HTMLElement>) => {
     const target = ev.target as HTMLElement
     if (target.className === 'request-userlink') {
-      recieveMessageApi.recieveMessage({ text: target.innerText, sender: 'user', showRate: false })
+      recieveMessageApi.recieveMessage({ text: target.innerText, type: 'text', sender: 'user', showRate: false })
       sendMessageApi.sendMessage(target.innerText)
     }
   }
@@ -127,13 +136,60 @@ const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id
       ref={messageRef}
     >
       {showAvatar && <Avatar styles={{ avatarContainer, image }} className={`${componentName}`} />}
-      <div className={`${componentName}-bubble-container`} css={bubbleContainer}>
-        <div
-          className={`${componentName}-text-container`}
-          css={textContainer}
-          onClick={onClick}
-          dangerouslySetInnerHTML={{ __html: textToBeDisplayed }}
-        ></div>
+      <div className={`${componentName}-bubble-container`} css={{ ...bubbleContainer, ...imageMessage }}>
+        {type === 'text/file' && (
+          <React.Fragment>
+            <FileMessage
+              file={file}
+              styles={{
+                imageFile: {
+                  ...imageFile,
+                  ...groupSameTypeMessagesPrev,
+                  ...groupSameTypeMessagesInter,
+                  ...imageRadius,
+                },
+                fileContainer,
+                svgContainer,
+                sizeTittle,
+                fileNameTittle,
+                metaContainer,
+              }}
+              sender={sender}
+            />
+            <div
+              className={`${componentName}-text-container`}
+              css={{ ...textContainer, width: '100%', ...textUnderImage }}
+              onClick={onClick}
+              dangerouslySetInnerHTML={{ __html: textToBeDisplayed }}
+            ></div>
+          </React.Fragment>
+        )}
+        {(type === 'text' || !type) && (
+          <div
+            className={`${componentName}-text-container`}
+            css={textContainer}
+            onClick={onClick}
+            dangerouslySetInnerHTML={{ __html: textToBeDisplayed }}
+          ></div>
+        )}
+        {type === 'file' && (
+          <FileMessage
+            file={file}
+            styles={{
+              imageFile: {
+                ...imageFile,
+                ...groupSameTypeMessagesPrev,
+                ...groupSameTypeMessagesInter,
+              },
+              fileContainer: { ...fileContainer, margin: 0 },
+              svgContainer,
+              sizeTittle,
+              fileNameTittle,
+              metaContainer,
+            }}
+            sender={sender}
+          />
+        )}
         {rateActive && RateEnabled && showRate && <Rate scrollbar={scrollbar} />}
 
         {positiveRateMessage.enabled && showRate && (

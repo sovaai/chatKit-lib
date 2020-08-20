@@ -7,4 +7,6 @@ export interface DialogProps {
   managment: Map<string, any>
   languages: Map<string, any>
   styles: Map<string, any>
+  modules: Map<string, any>
+  height: string
 }

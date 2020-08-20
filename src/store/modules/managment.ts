@@ -3,6 +3,7 @@ import { StoreonModule } from 'storeon'
 import { defaultManagmentState } from '../states/defaultStates'
 
 import { ManagmentState, Managmentevents } from '../@types/storeonModules'
+import { showDropZone } from '../../api/uiManagment/uiManagmentEvents/uiManagmentEvents'
 
 export const managment: StoreonModule<ManagmentState, Managmentevents> = (store) => {
   store.on('@init', () => ({
@@ -54,5 +55,8 @@ export const managment: StoreonModule<ManagmentState, Managmentevents> = (store)
   }))
   store.on('scrollToFoundMessage', ({ managment }, messageNumber) => ({
     managment: managment.updateIn(['components', 'Header', 'search', 'foundMessage'], () => messageNumber),
+  }))
+  store.on('showDropZone', ({ managment }, status) => ({
+    managment: managment.updateIn(['components', 'Sender', 'showDropZone'], () => status),
   }))
 }

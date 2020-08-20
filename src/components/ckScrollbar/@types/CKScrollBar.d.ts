@@ -1,5 +1,5 @@
 export interface CKScrollBarProps {
   children: React.ReactNode
-  css: any
+  css?: any
   scrollbar?: any
 }

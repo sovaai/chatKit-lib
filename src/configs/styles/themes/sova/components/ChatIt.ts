@@ -17,6 +17,15 @@ const ChatIt = ({ colors, fonts }: ComponentArguments) => {
         alignItems: 'center',
         padding: '0',
       },
+      animation: 'show 0.5s 1',
+      '@keyframes show': {
+        '0%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        },
+      },
       ...fonts,
     },
     chatContainer: {

@@ -157,6 +157,9 @@ const Header = (colors: ThemeColors) => {
       '@media screen and (max-width: 800px)': {
         fontSize: '1.5rem',
       },
+      '@media screen and (max-width: 480px)': {
+        fontSize: '0.875rem',
+      },
     },
   }
 }

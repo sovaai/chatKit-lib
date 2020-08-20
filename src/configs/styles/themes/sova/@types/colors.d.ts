@@ -18,4 +18,6 @@ export interface ThemeColors {
   primaryExample: string
   primaryBlack: string
   primaryGray: string
+  primaryDashed: string
+  primaryFileBackground: string
 }

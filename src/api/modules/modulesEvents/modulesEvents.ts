@@ -4,6 +4,7 @@ export const getModuleConfig = (moduleName: string) => store.get().modules.getIn
 export const initModule = async (module: any) => {
   const clientConfig = store.get().clientConfig.get('info')
   const moduleInfo = getModuleConfig(module.name)?.info
+  store.dispatch('initModuleHistory', module.name)
   const notificationsEnabled = store.get().notifications.get('enabled')
   await module.moduleDispatcher('chatInit', { moduleInfo: moduleInfo, clientConfig: clientConfig })
   notificationsEnabled && (await module.moduleDispatcher('notificationRequest'))

@@ -3,9 +3,11 @@ import { Map } from 'immutable'
 export interface SenderFormState {
   text: string
   textAreaCSS: any
+  height: number
 }
 export interface SenderFormProps {
   focusInf: () => void
+  filesCount: number
   sendButton: {
     enabled: boolean
     withTitle: boolean

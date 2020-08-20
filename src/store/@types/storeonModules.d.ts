@@ -3,11 +3,15 @@ import { Message } from '../../@types/common'
 import { Module, ModulesStack } from '../../@types/ckModules'
 
 export interface MessagesState {
-  messages: Map<string, List<Message> | Map<Message>>
+  messages: Map<string, any>
 }
 export interface MessagesEvents {
-  addMessage: Message
+  addMessage: {
+    message: Message
+    moduleName: string
+  }
   resetMessages: void
+  initModuleHistory: string
 }
 
 export interface ModulesState {
@@ -46,6 +50,7 @@ export interface ManagmentState {
 export interface Managmentevents {
   openChat: boolean
   showRate: boolean
+  showDropZone: boolean
   showNotification: boolean
   showMsgLoad: boolean
   blockSender: boolean

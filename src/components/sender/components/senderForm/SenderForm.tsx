@@ -12,6 +12,7 @@ class SenderForm extends React.PureComponent<SenderFormProps, SenderFormState> {
     textAreaCSS: {
       height: 'auto',
     },
+    height: 0,
   }
   private textArea: React.RefObject<HTMLTextAreaElement> = React.createRef()
   onChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -21,7 +22,8 @@ class SenderForm extends React.PureComponent<SenderFormProps, SenderFormState> {
   }
   onSubmit = () => {
     const { text } = this.state
-    if (text.length === 0 || this.props.blockSubmit) return
+    const { filesCount } = this.props
+    if ((text.length === 0 || this.props.blockSubmit ) && !filesCount) return
     this.setState(() => ({ text: '', textAreaCSS: { padding: '0', height: 'auto' } }))
     this.props.sendMessage(text)
   }
@@ -36,13 +38,16 @@ class SenderForm extends React.PureComponent<SenderFormProps, SenderFormState> {
     const height = this.textArea.current?.scrollHeight
     this.setState(() => ({ textAreaCSS: { height: `${height}px` } }))
   }
+  componentDidMount() {
+    const height = Number(this.props.style.textArea.minHeight.split('p')[0])
+    this.setState(() => ({ height: height }))
+  }
   render() {
-    const { sendButton, focusInf, blockSubmit, inputPlaceHolder } = this.props
+    const { sendButton, focusInf, blockSubmit, inputPlaceHolder, filesCount } = this.props
     const { sendMessageButton, textArea } = this.props.style
     const { text, textAreaCSS } = this.state
     const activeTheme = this.props.styles.get('active')
     const { ckScrollBar } = this.props.styles.getIn(['stack', activeTheme, 'Dialog'])
-
     return (
       <React.Fragment>
         <CKScrollBar css={ckScrollBar}>
@@ -62,7 +67,7 @@ class SenderForm extends React.PureComponent<SenderFormProps, SenderFormState> {
             />
           </div>
         </CKScrollBar>
-        {text && (
+        {(filesCount || text) && (
           <Button
             type="submit"
             withTitle={sendButton.withTitle}

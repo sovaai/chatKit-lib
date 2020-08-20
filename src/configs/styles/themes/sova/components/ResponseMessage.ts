@@ -11,7 +11,7 @@ const ResponseMessage = (colors: ThemeColors) => {
       maxWidth: '275px',
       marginLeft: '24px',
       marginRight: 'auto',
-      marginBottom: '24px',
+      marginBottom: '16px',
       color: primaryText,
       background: primaryResponse,
       borderRadius: '17px 17px 17px 0',

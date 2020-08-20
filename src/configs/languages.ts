@@ -38,6 +38,13 @@ export const en = {
         { rating: 1, text: 'Not resolve my problem' },
       ],
     },
+    CKDropAndDown: {
+      title: 'Drag and drop the file',
+      comment: 'Pdf, txt, xls, doc no more than 25Mb',
+      errorComment: 'Message that the allowed file size and format were exceeded, as well as the number of files',
+      divider: 'or',
+      chooseFileButtonTitle: 'Choose file',
+    },
     Settings: {
       headingLanguage: 'Language',
       headingTheme: 'Appearance',
@@ -59,6 +66,13 @@ export const ru = {
       stickerButtonTitle: 'Стикер',
       shareButtonTitle: 'Поделлиться',
       voiceButtonTitle: 'Голос',
+    },
+    CKDropAndDown: {
+      title: 'Перетащите файл',
+      comment: 'Pdf, txt, xls, doc не более 25Мб',
+      errorComment: 'Сообщение о том, что были превышены допустимые размер и формат файла, а так же количество файлов',
+      divider: 'или',
+      chooseFileButtonTitle: 'Выберите файл',
     },
     Message: {
       rateButtonTitle: 'Оценить',

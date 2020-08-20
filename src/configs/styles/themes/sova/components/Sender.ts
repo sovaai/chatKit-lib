@@ -1,7 +1,7 @@
 import { ComponentArguments } from '../@types/components'
 
 const Sender = ({ colors, fonts }: ComponentArguments) => {
-  const { primarySenderBG, primaryDivider, primaryAccent, primary, primaryText } = colors
+  const { primarySenderBG, primaryDivider, primaryAccent, primary, primaryText, primaryFileBackground } = colors
 
   return {
     mainContainer: {
@@ -11,12 +11,13 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
       justifyContent: 'flex-start',
       alignItems: 'center',
       width: '100%',
+      flexWrap: 'wrap',
       boxSizing: 'border-box',
       background: primarySenderBG,
       borderRadius: '0px 0px 17px 17px',
       padding: '5px 20px 5px 20px',
       borderTop: `0.5px solid ${primaryDivider}`,
-      height: '53px',
+      minHeight: '53px',
       '@media screen and (max-width: 800px)': {
         minHeight: '6%',
         borderRadius: '0',
@@ -106,6 +107,65 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
       },
     },
     voiceButton: {},
+    filesContainer: {
+      width: '100%',
+      overflowX: 'scroll',
+      display: 'flex',
+      padding: '8px 0 8px 0',
+      animation: 'show 0.5s 1',
+      '::-webkit-scrollbar': { width: '0' },
+      '@keyframes show': {
+        '0%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        },
+      },
+    },
+    fileContainer: {
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '60px',
+      minWidth: '60px',
+      maxWidth: '60px',
+      borderRadius: '5px',
+      background: primaryFileBackground,
+      marginRight: '8px',
+      '& .ckProgressLoader': {
+        position: 'absolute',
+        display: 'flex',
+      },
+      animation: 'show 0.5s 1',
+      '@keyframes show': {
+        '0%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        },
+      },
+    },
+    fileImage: {
+      height: '100%',
+      minWidth: '100%',
+      maxWidth: '100%',
+      borderRadius: '5px',
+    },
+    deleteFileButton: {
+      position: 'absolute',
+      left: '36px',
+      top: '0px',
+      cursor: 'pointer',
+      '&:hover': {
+        opacity: '0.5',
+      },
+      '&:active': {
+        opacity: '1',
+      },
+    },
   }
 }
 

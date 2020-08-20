@@ -19,6 +19,7 @@ import {
   changeFoundGroup,
   scrollToFoundMessage,
   reset,
+  showDropZone,
 } from './uiManagmentEvents/uiManagmentEvents'
 export type uiManagmentEvents =
   | 'setUpSender'
@@ -41,6 +42,7 @@ export type uiManagmentEvents =
   | 'changeFoundGroup'
   | 'scrollToFoundMessage'
   | 'reset'
+  | 'showDropZone'
 const uiManagmentEvents: { [key: string]: (data: any) => void } = {
   setUpSender: setUpSender,
   setUpChatIt: setUpChatIt,
@@ -62,6 +64,7 @@ const uiManagmentEvents: { [key: string]: (data: any) => void } = {
   changeFoundGroup: changeFoundGroup,
   scrollToFoundMessage: scrollToFoundMessage,
   reset: reset,
+  showDropZone: showDropZone,
 }
 const uiManagmentApi = {
   uiManagment: (event: uiManagmentEvents, data?: any | null) => {

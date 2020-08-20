@@ -6,11 +6,11 @@ const colors: ThemeColors = {
   primaryBlack: '#000000',
   primaryGray: '#F3F3F3',
   primaryDark: '#273142',
-
+  primaryFileBackground: '#ffffff1f',
   primaryText: '#FFFFFF',
   primaryAccent: '#FC2D81',
   primaryBackground: '#1B2431',
-
+  primaryDashed: '#575a67',
   primaryBadge: '#1B2431',
   primaryLinks: '#386FFE',
   primaryResponse: '#273142',

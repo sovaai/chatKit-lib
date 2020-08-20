@@ -62,6 +62,21 @@ const Settings = (colors: ThemeColors) => {
       padding: '24px',
       width: '100%',
       boxSizing: 'border-box',
+      animation: 'show 0.5s 1',
+      '@keyframes show': {
+        '0%': {
+          opacity: '0',
+        },
+        '30%': {
+          opacity: '0.3'
+        },
+        '60%': {
+          opacity: '0.6'
+        },
+        '100%': {
+          opacity: '1',
+        },
+      },
       '@media screen and (max-width: 800px)': {
         height: '100vh',
         paddingTop: '10vh',

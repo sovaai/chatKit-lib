@@ -15,7 +15,9 @@ export const defaultModulesState = Map({
 })
 
 export const defaultMessagesState = Map({
-  history: List([]),
+  history: {
+    default: List([])
+  },
   announcements: List([]),
   lastResponseMessage: Map({}),
   lastUserMessage: Map({}),

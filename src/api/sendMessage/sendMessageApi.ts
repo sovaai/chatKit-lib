@@ -24,7 +24,7 @@ const sendMessageApi = {
     const moduleDispatcher = modules.getIn(['stack', activeModule, 'moduleDispatcher'])
     moduleDispatcher
       ? moduleDispatcher('chatRate', data)
-      : recieveMessageApi.recieveMessage({ text: 'no active module', sender: 'request', showRate: false })
+      : recieveMessageApi.recieveMessage({ text: 'no active module', type: 'text', sender: 'request', showRate: false })
     uiManagmentApi.uiManagment('dialogLoading', true)
     uiManagmentApi.uiManagment('showRate', false)
   },

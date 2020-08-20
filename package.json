@@ -1,6 +1,6 @@
 {
-  "name": "sova-chatkit",
-  "version": "0.6.2",
+  "name": "chat-kit",
+  "version": "0.7.0",
   "description": "SOVA dialog widget open soucre React lib",
   "homepage": "https://sova.ai",
   "authors": [
@@ -31,7 +31,7 @@
     "SOVA",
     "chat-kit"
   ],
-  "license": "Apache-2.0",
+  "license": "ISC",
   "peerDependencies": {
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
@@ -58,6 +58,7 @@
     "@types/node": "^14.0.18",
     "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.7",
+    "@types/react-resize-detector": "^4.2.0",
     "@types/react-scrollbar": "^0.5.1",
     "@types/storybook__addon-info": "^5.2.1",
     "@types/styled-components": "^5.1.1",
@@ -76,16 +77,19 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.4",
+    "firebase": "^7.17.1",
     "fork-ts-checker-webpack-plugin": "^4.1.4",
     "immutable": "^4.0.0-rc.12",
-    "jest-css-modules-transform": "^4.0.1",
     "mobile-device-detect": "^0.4.3",
     "path": "^0.12.7",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
+    "react-dropzone": "^11.0.2",
+    "react-height": "^3.0.1",
     "react-perfect-scrollbar": "^1.5.8",
+    "react-resize-detector": "^5.0.7",
     "react-scripts": "^3.4.1",
     "rollup": "^2.20.0",
     "rollup-plugin-analyzer": "^3.2.3",
@@ -108,5 +112,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@types/firebase": "^3.2.1"
   }
 }

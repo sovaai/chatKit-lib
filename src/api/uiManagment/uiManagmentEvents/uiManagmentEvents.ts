@@ -20,7 +20,7 @@ export const toggleSearchActiveStatus = (status?: boolean) => store.dispatch('to
 export const changeSearchValue = (searchValue: string) => store.dispatch('changeSearchValue', searchValue)
 export const changeFoundGroup = (messageInfo: any) => store.dispatch('changeFoundGroup', messageInfo)
 export const scrollToFoundMessage = (messageNumber: number) => store.dispatch('scrollToFoundMessage', messageNumber)
-
+export const showDropZone = (status: boolean) => store.dispatch('showDropZone', status)
 changeSearchValue
 export const reset = async () => {
   store.dispatch('resetMessages')
@@ -29,6 +29,7 @@ export const reset = async () => {
   const notificationsEnabled = store.get().notifications.get('enabled')
   for (const key in modules) {
     if (key === 'default') continue
+    store.dispatch('initModuleHistory', modules[key].name)
     await modules[key].moduleDispatcher('reset', { clientConfig: clientConfig })
     notificationsEnabled && (await modules[key].moduleDispatcher('notificationRequest'))
   }
