@@ -28,6 +28,8 @@ Params:
 | iconName      | string  | +        |
 | iconData      | any     | +        |
 
+
+
 ### **changeAvatar**  <a name="2"></a>
 Description: changing the avatar   
 Params:  
