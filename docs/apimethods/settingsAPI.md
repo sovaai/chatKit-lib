@@ -19,8 +19,8 @@ import { ckAPIMethods } from "sova-chatkit"
 
 ```
 
-## Description of events
-### Event: **changeIcon**  <a name="1"></a>
+## Events
+### **changeIcon**  <a name="1"></a>
 Description: changing a specific icon   
 Params:  
 | Params        | Type    | Requires |
@@ -28,7 +28,7 @@ Params:
 | iconName      | string  | +        |
 | iconData      | any     | +        |
 
-### Event: **changeAvatar**  <a name="2"></a>
+### **changeAvatar**  <a name="2"></a>
 Description: changing the avatar   
 Params:  
 | Params        | Type    | Requires |
