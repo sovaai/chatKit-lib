@@ -12,7 +12,7 @@ To make any changes you need:
 |-----------------------------|------------------------------------------------------------------------------|
 | [switchTheme](#1)           | switching between themes                                                     |
 | [initTheme](#2)             | initialization, addition a new theme                                         |
-| [changeStylesn](#3)         | modifying a complete package of existing theme                               |
+| [changeStyles](#3)          | modifying a complete package of existing theme                               |
 | [changeChatIt](#4)          | changing the style package of component `ChatIt` in selected theme           |
 | [changeHeader](#5)          | changing the style package of component `Header` in selected theme           |
 | [changeDialog](#6)          | changing the style package of component `Dialog` in selected theme           |
