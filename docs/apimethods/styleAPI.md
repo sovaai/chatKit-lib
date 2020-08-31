@@ -230,7 +230,7 @@ ckAPIMethods.styles('initTheme', {
 
 
 
-### **changeStyles**  <a name="changeStyles"></a> ???
+### **changeStyles**  <a name="changeStyles"></a>
 modifying a complete package of an existing theme
   
 **Usage**:
