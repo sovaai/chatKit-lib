@@ -31,7 +31,7 @@ Description of events and its data read read below.
 | [changeMessage](#changeMessage)                 | changing the value in component `Message` in a specific language pack              |
 | [changeHeader](#changeHeader)                   | changing the value in component `Header` in a specific language pack               |
 | [changeRate](#changeRate)                       | changing the value in component `Rate` in a specific language pack                 |
-| [changeCKDropAndDown](#changeCKDropAndDown)     | changing the value in component `changeCKDropAndDown` in a specific language pack  |
+| [changeCKDropAndDown](#changeCKDropAndDown)     | changing the value in component `CKDropAndDown` in a specific language pack  |
 
 
 
@@ -445,7 +445,7 @@ ckAPIMethods.languages('changeRate', {
   
 
 
-### **CKDropAndDown**  <a name="CKDropAndDown"></a> 
+### **changeCKDropAndDown**  <a name="CKDropAndDown"></a> 
 changing the value in component `CKDropAndDown` in a specific language pack  
 
 **Usage**:  
