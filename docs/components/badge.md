@@ -127,16 +127,17 @@ import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.uiManagment('setUpBadge', {
   showAvatar: true,
   showSVG: false,
+  showTitle: true
 })
 ```
 
 Options data:   
 
-| Key             |   Type     |  Description                                   |
-|-----------------|------------|------------------------------------------------|
-| `showAvatar`    | boolean    | is responsible for displaying avatar or not    |
-| `showSVG`       | boolean    | is responsible for displaying SVF file or no   |
-| `showTitle`     | boleean    | is responsible for displaying title or not     |
+| Key             |   Type     | Required  |  Description                                   |
+|-----------------|------------|-----------|------------------------------------------------|
+| `showAvatar`    | boolean    |     +     | is responsible for displaying avatar or not    |
+| `showSVG`       | boolean    |     +     | is responsible for displaying SVF file or no   |
+| `showTitle`     | boleean    |     +     | is responsible for displaying title or not     |
 
 
 
@@ -152,9 +153,9 @@ ckAPIMethods.settings('changeAvatar', {
 ```
 Options data: 
 
-| Key             |   Type     |  Description       |
-|-----------------|------------|--------------------|
-| `path`          | string     | path to picture    |
+| Key             |   Type     | Required  |  Description       |
+|-----------------|------------|-----------|--------------------|
+| `path`          | string     |     +     | path to picture    |
 
 
 
@@ -175,14 +176,15 @@ ckAPIMethods.styles("changeBadge", {
 
 Options data:
 
-| Key                |   Type          |  Description                  |
-|--------------------|-----------------|-------------------------------|
-| mainContainer      | object styles   | styles for main container     |
-| avatarContainer    | object styles   | styles for avatar container   |
-| image              | object styles   | styles for tag <img/>         |
-| titleContainer     | object styles   | styles for title container    |
-| svg                | object styles   | styles for SVG file           |
+| Key                |   Type          | Required  |  Description                  |
+|--------------------|-----------------|-----------|-------------------------------|
+| mainContainer      | object styles   |     +     | styles for main container     |
+| avatarContainer    | object styles   |     +     | styles for avatar container   |
+| image              | object styles   |     +     | styles for tag <img/>         |
+| titleContainer     | object styles   |     +     | styles for title container    |
+| svg                | object styles   |     +     | styles for SVG file           |
 
+You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.
  
 
 ### Languages <a name="custom_languages"></a>
@@ -201,6 +203,6 @@ ckAPIMethods.languages('changeBadge', {
 
 Options data:    
 
-| Key                |   Type          |  Description                  |
-|--------------------|-----------------|-------------------------------|
-| title              | string          | text in title                 |
+| Key                |   Type          | Required  |  Description                  |
+|--------------------|-----------------|-----------|-------------------------------|
+| title              | string          |     +     | text in title                 |
