@@ -1,3 +1,4 @@
+
 # Message
 Bubble of text message with information about it
 
@@ -285,85 +286,100 @@ Options data:
   <tr>
     <td colspan="2" align=center><b>Key</b></td>
     <td align=center><b>Type</b></td>
+    <td align=center><b>Required</b></td>
     <td align=center><b>Description</b></td>
   </tr>
   <tr>
     <td colspan="2">audioMessageButton</td>
     <td>object</td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying audio message or not </td>
   </tr>
   <tr>
     <td></td>
-    <td>show withTitle</td>
+    <td>withTitle</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with title or not </td>
   </tr>
   <tr>
     <td></td>
-    <td>show withIcon</td>
+    <td>withIcon</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with icon or not</td>
   </tr>
   <tr>
     <td colspan="2">positiveRateMessage</td>
     <td>object</td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying positive rate message button or not</td>
   </tr>
   <tr>
     <td></td>
-    <td>show withTitle</td>
+    <td>withTitle</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with title or not</td>
   </tr>
   <tr>
     <td></td>
-    <td>show withIcon</td>
+    <td>withIcon</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with icon or not</td>
   </tr>
   <tr>
     <td colspan="2">negativeRateMessage</td>
     <td>object</td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying negative rate message button or not </td>
   </tr>
   <tr>
     <td></td>
-    <td>show withTitle</td>
+    <td>withTitle</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with title or not </td>
   </tr>
   <tr>
     <td></td>
-    <td>show withIcon</td>
+    <td>withIcon</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with icon or not</td>
   </tr>
   <tr>
     <td colspan="2">showAvatar</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying avatar or not </td>
   </tr>
   <tr>
     <td colspan="2">showTitle</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying title or not </td>
   </tr>
 </table>
@@ -375,6 +391,7 @@ Options data:
 On call [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") you must enter event name.  
 
 List of event names:  
+
 * `changeAvatar`  
 * `changeIcon`  
 
@@ -389,9 +406,9 @@ ckAPIMethods.settings('changeAvatar', {
 ```
 Options data: 
 
-| Key             |   Type     |  Description       |
-|-----------------|------------|--------------------|
-| `path`          | string     | path to picture    |
+| Key             |   Type     |  Required |  Description       |
+|-----------------|------------|-----------|--------------------|
+| `path`          | string     |     +     | path to picture    |
 
 
 For `changeIcons`:  
@@ -415,34 +432,40 @@ Options data:
   <tr>
     <td colspan="2" align=center><b>Key</b></td>
     <td align=center><b>Type</b></td>
+    <td align=center><b>Required</b></td>
     <td align=center><b>Description</b></td>
   </tr>
   <tr>
     <td colspan="2">iconName</td>
     <td>string</td>
+    <td>+</td>
     <td>name of icon, you want to change</td>
   </tr>
   <tr>
     <td colspan="2">iconData</td>
     <td>object</td>
+    <td></td>
     <td>settings of changes</td>
   </tr>
   <tr>
     <td></td>
     <td>props</td>
     <td>object</td>
+    <td>+</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
     <td>icon</td>
     <td>string</td>
+    <td>+</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
     <td>className</td>
     <td>string</td>
+    <td>+</td>
     <td></td>
   </tr>
 </table>
@@ -455,6 +478,7 @@ To see info about `iconData`, visit https://github.com/FortAwesome/react-fontawe
 On call [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") you must enter event name.  
 
 List of event names:  
+
 * `changeUserMessage`  
 * `changeResponseMessage`  
 
@@ -465,33 +489,142 @@ import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.styles('changeUserMessage', {
   themeName: "sovaDark",  // theme name, in which styles you want to change anything,
   data: {
-    mainContainer {},
-    positiveRateMessageButton {},
-    negativeRateMessageButton {},
-    avatarContainer {},
-    audioMessageButton {},
-    image styles] {},
-    dataContainer {},
-    textContainer {},
-    bubbleContainer {},
-    buttonsContainer {}
-  }
+    mainContainer: {
+      display: 'flex',
+      flexDirection: 'colomn',
+      width: 'fit-content',
+      maxWidth: '275px',
+      marginLeft: 'auto',
+      marginRight: '24px',
+      marginBottom: '16px',
+      color: primaryWhite,
+      background: primary,
+      borderRadius: '17px 17px 0 17px',
+    },
+    groupTypeMessagesNext: {
+      marginBottom: '4px',
+    },
+    groupTypeMessagesPrev: {
+      borderRadius: '17px 0 17px 17px',
+    },
+    groupTypeMessagesInter: {
+      borderRadius: '17px 0 0 17px',
+    },
+    textContainer: {
+      textAlign: 'left',
+      maxWidth: '100%',
+      minWidth: '5%',
+      wordBreak: 'break-all',
+      '& mark': {
+        background: '#FFDF00',
+        color: primaryDark,
+      },
+      '@media screen and (max-width: 800px)': {
+        fontSize: '1rem',
+      },
+    },
+    avatarContainer: {},
+    image: {},
+    positiveRateMessageButton: {
+      display: 'none',
+    },
+    negativeRateMessageButton: {
+      display: 'none',
+    },
+    audioMessageButton: {},
+    dataContainer: {
+      width: '100%',
+      textAlign: 'left',
+      fontSize: '0.75rem',
+      marginTop: '8px',
+      color: primaryWhite,
+      opacity: '0.4',
+    },
+    bubbleContainer: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      padding: '16px',
+    },
+    buttonsContainer: {},
+    imageFile: {
+      maxWidth: '190px',
+      maxHeight: '222px',
+      display: 'flex',
+      borderRadius: '17px 17px 0 17px',
+    },
+    fileContainer: {
+      display: 'flex',
+      width: '100%',
+      marginBottom: '10px',
+    },
+    svgContainer: {
+      marginRight: '16px',
+      display: 'flex',
+    },
+    sizeTittle: {
+      fontFamily: 'Helvetica',
+      fontStyle: 'normal',
+      fontWeight: 'normal',
+      fontSize: '14px',
+      lineHeight: '20px',
+      color: primaryWhite,
+      opacity: '0.5',
+    },
+    fileNameTittle: {
+      textAlign: 'left',
+      width: '100%',
+      fontFamily: 'Helvetica',
+      fontStyle: 'normal',
+      fontWeight: 'normal',
+      fontSize: '14px',
+      lineHeight: '20px',
+      color: primaryWhite,
+      marginBottom: '4px',
+      cursor: 'pointer',
+      transition: 'color ease-in-out 0.3s',
+      textDecoration: 'none',
+      '&:hover': {
+        opacity: '0.5',
+      },
+      '&:active': {
+        opacity: '1',
+      },
+    },
+    metaContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      justifyContent: 'center',
+    }
 })
 ```
+
 Options data:
 
-| Key                          |   Type          |  Description                              |
-|------------------------------|-----------------|-------------------------------------------|
-| mainContainer                | object styles   | styles for main container                 |
-| positiveRateMessageButton    | object styles   | styles for positive rate message button   |
-| negativeRateMessageButton    | object styles   | styles for negative rate message button   |
-| avatarContainer              | object styles   | styles for avatar container               |
-| audioMessageButton           | object styles   | styles for audio message button           |
-| image styles                 | object styles   | styles for tag `img`                      |
-| dataContainer                | object styles   | styles for data container                 |
-| textContainer                | object styles   | styles for text container                 |
-| bubbleContainer              | object styles   | styles for bubble container               | 
-| buttonsContainer             | object styles   | styles for buttons container              |
+| Key                          |   Type          |  Required |  Description                              |
+|------------------------------|-----------------|-----------|-------------------------------------------|
+| mainContainer                | object styles   |     +     | styles for main container                 |
+| groupTypeMessagesNext        | object styles   |     +     | styles for group type messages next       |
+| groupTypeMessagesPrev        | object styles   |     +     | styles for group type messages prev       |
+| groupTypeMessagesInter       | object styles   |     +     | styles for group type messages inter      |
+| textContainer                | object styles   |     +     | styles for text container                 |
+| avatarContainer              | object styles   |     +     | styles for avatar container               |
+| image                        | object styles   |     +     | styles for tag `img`                      |
+| positiveRateMessageButton    | object styles   |     +     | styles for positive rate message button   |
+| negativeRateMessageButton    | object styles   |     +     | styles for negative rate message button   |
+| audioMessageButton           | object styles   |     +     | styles for audio message button           |
+| dataContainer                | object styles   |     +     | styles for data container                 |
+| bubbleContainer              | object styles   |     +     | styles for bubble container               | 
+| buttonsContainer             | object styles   |     +     | styles for buttons container              |
+| imageFile                    | object styles   |     +     | styles for image file                     |
+| fileContainer                | object styles   |     +     | styles for file container                 |
+| svgContainer                 | object styles   |     +     | styles for svg container                  |
+| sizeTittle                   | object styles   |     +     | styles for tittle                         |
+| fileNameTittle               | object styles   |     +     | styles for file name tittle               |
+| metaContainer                | object styles   |     +     | styles for meta container                 |
+
+You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.
+
 
 For `changeResponseMessage`:
  ```javascript
@@ -500,35 +633,141 @@ import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.styles('changeResponseMessage', {
   themeName: "sovaDark",  // theme name, in which styles you want to change anything,
   data: {
-    mainContainer {},
-    positiveRateMessageButton {},
-    negativeRateMessageButton {},
-    avatarContainer {},
-    audioMessageButton {},
-    image styles] {},
-    dataContainer {},
-    textContainer {},
-    bubbleContainer {},
-    buttonsContainer {}
-  }
-})
+    mainContainer: {
+      display: 'flex',
+      flexDirection: 'colomn',
+      width: 'fit-content',
+      maxWidth: '275px',
+      marginLeft: '24px',
+      marginRight: 'auto',
+      marginBottom: '16px',
+      color: primaryText,
+      background: primaryResponse,
+      borderRadius: '17px 17px 17px 0',
+    },
+    groupTypeMessagesNext: {
+      marginBottom: '4px',
+    },
+    groupTypeMessagesPrev: {
+      borderRadius: '0 17px 17px 17px',
+    },
+    groupTypeMessagesInter: {
+      borderRadius: '0 17px 17px 0',
+    },
+    textContainer: {
+      color: primaryText,
+      boxSizing: 'border-box',
+      background: primaryResponse,
+      maxWidth: '100%',
+      minWidth: '5%',
+      textAlign: 'left',
+      '@media screen and (max-width: 800px)': {
+        fontSize: '1rem',
+      },
+      '& mark': {
+        background: '#FFDF00',
+        color: primaryDark,
+      },
+      '& a': {
+        color: primaryLinks,
+        textDecoration: 'none',
+        transition: 'color ease-in-out 0.3s',
+      },
+      '& ul': {
+        margin: '0',
+        display: 'flex',
+        padding: '0',
+        paddingLeft: '8px',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        width: '100%',
+      },
+      '& li': {
+        marginTop: '10px',
+        width: '100%',
+        listStyleType: 'none',
+      },
+      '& a:hover': {
+        color: primaryAccent,
+      },
+      '& a:active': {
+        color: primaryAccent,
+      },
+    },
+    avatarContainer: {},
+    image: {},
+    positiveRateMessageButton: {
+      padding: 0,
+      alignSelf: 'flex-end',
+      marginLeft: '4%',
+      display: 'flex',
+      alignItems: 'flex-end',
+      border: 'none',
+      outline: 'none',
+      color: primaryText,
+      background: 'none',
+      cursor: 'pointer',
+      '& :hover': {
+        opacity: '0.75',
+      },
+      '& :active': {
+        opacity: '1',
+      },
+    },
+    negativeRateMessageButton: {
+      padding: 0,
+      alignSelf: 'flex-end',
+      marginLeft: '4%',
+      display: 'flex',
+      border: 'none',
+      outline: 'none',
+      color: primaryText,
+      background: 'none',
+      cursor: 'pointer',
+      '& :hover': {
+        opacity: '0.75',
+      },
+      '& :active': {
+        opacity: '1',
+      },
+    },
+    audioMessageButton: {},
+    dataContainer: {
+      width: '100%',
+      textAlign: 'right',
+      fontSize: '0.75rem',
+      marginTop: '8px',
+      color: primaryText,
+      opacity: '0.4',
+    },
+    bubbleContainer: {
+      display: 'flex',
+      padding: '16px',
+      flexDirection: 'column',
+      width: '100%',
+    },
+    buttonsContainer: {},
+  })
 ```
 
 Options data:
 
-| Key                          |   Type          |  Description                              |
-|------------------------------|-----------------|-------------------------------------------|
-| mainContainer                | object styles   | styles for main container                 |
-| positiveRateMessageButton    | object styles   | styles for positive rate message button   |
-| negativeRateMessageButton    | object styles   | styles for negative rate message button   |
-| avatarContainer              | object styles   | styles for avatar container               |
-| audioMessageButton           | object styles   | styles for audio message button           |
-| image styles                 | object styles   | styles for tag `img`                      |
-| dataContainer                | object styles   | styles for data container                 |
-| textContainer                | object styles   | styles for text container                 |
-| bubbleContainer              | object styles   | styles for bubble container               | 
-| buttonsContainer             | object styles   | styles for buttons container              |
-
+| Key                          |   Type          |  Required |  Description                                              |
+|------------------------------|-----------------|-----------|-----------------------------------------------------------|
+| mainContainer                | object styles   |     +     | styles for main container                                 |
+| groupTypeMessagesNext        | object styles   |     +     | styles for group type messages next                       |
+| groupTypeMessagesPrev        | object styles   |     +     | styles for group type messages prev                       |
+| groupTypeMessagesInter       | object styles   |     +     | styles for group type messages inter                      |
+| textContainer                | object styles   |     +     | styles for text container                                 |
+| avatarContainer              | object styles   |     +     | styles for avatar container                               |
+| image                        | object styles   |     +     | styles for tag `img`                                      |
+| positiveRateMessageButton    | object styles   |     +     | styles for positive rate message button                   |
+| negativeRateMessageButton    | object styles   |     +     | styles for negative rate message button                   |
+| audioMessageButton           | object styles   |     +     | styles for audio message button                           |
+| dataContainer                | object styles   |     +     | styles for data container                                 |
+| bubbleContainer              | object styles   |     +     | styles for bubble container                               | 
+| buttonsContainer             | object styles   |     +     | styles for buttons container                              |
+You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.
 
 
 
@@ -548,7 +787,12 @@ ckAPIMethods.languages('changeMessage', {
 ```
 
 Options data:    
-| Key                        |   Type          |  Description                        |
-|----------------------------|-----------------|-------------------------------------|
-| rateButtonTitle            | string          | text in rate button title           |
-| audioMessageButtonTitle    | string          | text in audio message button title  |
+
+| Key                        |   Type          |  Required |  Description                        |
+|----------------------------|-----------------|-----------|-------------------------------------|
+| rateButtonTitle            | string          |     +     | text in rate button title           |
+| audioMessageButtonTitle    | string          |     +     | text in audio message button title  |
+
+
+
+
