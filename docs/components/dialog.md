@@ -135,6 +135,7 @@ You can change these values using [APImethod](#custom_languages "description of 
 ## Customization <a name="customization"></a>
 To custom component `Dialog`, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
+
 * [UIManagment](#custom_managment)
 * [Settings](#custom_settings)
 * [Styles](#custom_styles)
@@ -167,86 +168,101 @@ showMsgLoad: true
 })
 ```
 
-Options data:   
+Options data:  
+ 
 <table>
   <tr>
     <td colspan="2" align=center><b>Key</b></td>
     <td align=center><b>Type</b></td>
+    <td align=center><b>Required</b></td>
     <td align=center><b>Description</b></td>
   </tr>
   <tr>
     <td colspan="2">rateButton</td>
     <td>object</td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying rate button or not </td>
   </tr>
   <tr>
     <td></td>
-    <td>show withTitle</td>
+    <td>withTitle</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with title or not </td>
   </tr>
   <tr>
     <td></td>
-    <td>show withIcon</td>
+    <td>withIcon</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with icon or not</td>
   </tr>
   <tr>
     <td colspan="2">searchButton</td>
     <td>object</td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td></td>
     <td>enabled</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying search button or not</td>
   </tr>
   <tr>
     <td></td>
-    <td>show withTitle</td>
+    <td>withTitle</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with title or not</td>
   </tr>
   <tr>
     <td></td>
-    <td>show withIcon</td>
+    <td>withIcon</td>
     <td>boolean</td>
+    <td>+</td>
     <td>is responsible for displaying button with icon or not</td>
   </tr>
  <tr>
   <td colspan="2">loader</td>
   <td>object</td>
   <td></td>
+  <td></td>
 </tr>
 <tr>
   <td></td>
   <td>enabled</td>
   <td>boolean</td>
+  <td>+</td>
   <td>is responsible for displaying loader or not </td>
 </tr>
 <tr>
   <td></td>
-  <td>show withTitle</td>
+  <td>withTitle</td>
   <td>boolean</td>
+  <td>+</td>
   <td>is responsible for displaying loader with title or not </td>
 </tr>
 <tr>
   <td></td>
-  <td>show withIcon</td>
+  <td>withIcon</td>
   <td>boolean</td>
+  <td>+</td>
   <td>is responsible for displaying loader with icon or not</td>
 </tr>
   <tr>
     <td colspan="2">showMsgLoad</td>
     <td>boolean</td>
-      <td>is responsible for displaying message loading </td>
+    <td>+</td>
+    <td>is responsible for displaying message loading </td>
   </tr>
 </table>
 
@@ -273,34 +289,40 @@ Options data:
   <tr>
     <td colspan="2" align=center><b>Key</b></td>
     <td align=center><b>Type</b></td>
+    <td align=center><b>Required</b></td>
     <td align=center><b>Description</b></td>
   </tr>
   <tr>
     <td colspan="2">iconName</td>
     <td>string</td>
+    <td>+</td>
     <td>name of icon, you want to change</td>
   </tr>
   <tr>
     <td colspan="2">iconData</td>
     <td>object</td>
+    <td>+</td>
     <td>settings of changes</td>
   </tr>
   <tr>
     <td></td>
     <td>props</td>
     <td>object</td>
+    <td>+</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
     <td>icon</td>
     <td>string</td>
+    <td>+</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
     <td>className</td>
     <td>string</td>
+    <td>+</td>
     <td></td>
   </tr>
 </table>
@@ -316,25 +338,54 @@ import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.styles("changeDialog", {
   themeName: "sovaDark",  // theme name, in which styles you want to change anything 
   data: {
-    mainContainer: {},
+    mainContainer: {
+      height: '496px',
+      minHeight: '496px',
+      background: primaryBackground,
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-end',
+      boxSizing: 'border-box',
+      animation: 'show 0.3s 1',
+      '@keyframes show': {
+        '0%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        },
+      },
+      '@media screen and (max-width: 800px)': {
+        height: '100vh',
+        paddingTop: '60px',
+      },
+    },
     panel: {},
     rateButton: {},
     searchButton: {},
-    messagesContainer: {}
-  },
-})
+    messagesContainer: {
+      maxHeight: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      '@media screen and (max-width: 800px)': {
+        // paddingBottom: '50px',
+      },
+    },
+  }
 ```
 
 Options data:
 
-| Key                |   Type          |  Description                  |
-|--------------------|-----------------|-------------------------------|
-| mainContainer      | object styles   | styles for main container     |
-| panel              | object styles   | styles for panel              |
-| rateButton         | object styles   | styles for rate button        |
-| search button      | object styles   | styles for search button      |
-| messagesContainer  | object styles   | styles for messages container |
+| Key                |   Type          |  Required |  Description                  |
+|--------------------|-----------------|-----------|-------------------------------|
+| mainContainer      | object styles   |     +     | styles for main container     |
+| panel              | object styles   |     +     | styles for panel              |
+| rateButton         | object styles   |     +     | styles for rate button        |
+| search button      | object styles   |     +     | styles for search button      |
+| messagesContainer  | object styles   |     +     | styles for messages container |
 
+You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.
  
 
 ### Languages <a name="custom_languages"></a>
@@ -355,8 +406,8 @@ ckAPIMethods.languages('changeDialog', {
 
 Options data:    
 
-| Key                |   Type          |  Description                  |
-|--------------------|-----------------|-------------------------------|
-| searchButtonTitle  | string          | text in search button title   |
-| rateButtonTitle    | string          | text in rate button title     |
-| loading            | string          | text in loading               |
+| Key                |   Type          |  Required |  Description                  |
+|--------------------|-----------------|-----------|-------------------------------|
+| searchButtonTitle  | string          |     +     | text in search button title   |
+| rateButtonTitle    | string          |     +     | text in rate button title     |
+| loading            | string          |     +     | text in loading               |
