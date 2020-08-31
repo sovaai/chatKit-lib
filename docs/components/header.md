@@ -150,6 +150,7 @@ You can change these values using [APImethod](#custom_languages "description of 
 ## Customization <a name="customization"></a>
 To custom `Header` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
+
 * [UIManagment](#custom_managment)
 * [Settings](#custom_settings)
 * [Styles](#custom_styles)
@@ -188,113 +189,133 @@ ckAPIMethods.uiManagment('setUpHeader', {
 })
 ```
 
-Options data:   
+Options data:
+   
 <table>
   <tr>
       <td colspan="2" align=center><b>Key</b></td>
       <td align=center><b>Type</b></td>
+      <td align=center><b>Required</b></td>
       <td align=center><b>Description</b></td>
   </tr>
   <tr>
       <td colspan="2">showTitle</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show title</td>
   </tr>
   <tr>
       <td colspan="2">showAvatar</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show avatar</td>
   </tr>
   <tr>
       <td colspan="2">settings</td>
       <td>object</td>
       <td></td>
+      <td></td>
   </tr>
   <tr>
       <td></td>
       <td>enabled</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component display on widget </td>
   </tr>
   <tr>
       <td></td>
       <td>withTitle</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show title </td>
   </tr>
   <tr>
       <td></td>
       <td>withIcon</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show icon</td>
   </tr>
   <tr>
       <td colspan="2">close</td>
       <td>object</td>
       <td></td>
+      <td></td>
   </tr>
   <tr>
       <td></td>
       <td>enabled</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show close button </td>
   </tr>
   <tr>
       <td></td>
       <td>withTitle</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show close button title</td>
   </tr>
   <tr>
       <td></td>
       <td>withIcon</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show close button icon</td>
   </tr>
   <tr>
       <td colspan="2">search</td>
       <td>object</td>
       <td></td>
+      <td></td>
   </tr>
   <tr>
       <td></td>
       <td>enabled</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show search button</td>
   </tr>
   <tr>
       <td></td>
       <td>withTitle</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show search button title</td>
   </tr>
   <tr>
       <td></td>
       <td>withIcon</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show search button icon</td>
   </tr>
   <tr>
       <td colspan="2">reset</td>
       <td>object</td>
       <td></td>
+      <td></td>
   </tr>
   <tr>
       <td></td>
       <td>enabled</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component display on widget</td>
   </tr>
   <tr>
       <td></td>
       <td>withTitle</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show title </td>
   </tr>
   <tr>
       <td></td>
       <td>withIcon</td>
       <td>boolean</td>
+      <td>+</td>
       <td>should component show icon</td>
   </tr>
 </table>
@@ -304,7 +325,8 @@ Options data:
 ### Settings <a name="custom_settings"></a>
 On call [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") you must enter event name. Depending on the event name something will be changed.
 
-List of event names:  
+List of event names:
+  
 * `changeAvatar`  
 * `changeIcon`  
 
@@ -319,9 +341,9 @@ ckAPIMethods.settings('changeAvatar', {
 ```
 Options data: 
 
-| Key             |   Type     |  Description       |
-|-----------------|------------|--------------------|
-| `path`          | string     | path to picture    |
+| Key             |   Type     |  Required |  Description       |
+|-----------------|------------|-----------|--------------------|
+| `path`          | string     |     +     | path to picture    |
 
 
 For `changeIcons`:  
@@ -345,34 +367,40 @@ Options data:
   <tr>
     <td colspan="2" align=center><b>Key</b></td>
     <td align=center><b>Type</b></td>
+    <td align=center><b>Required</b></td>
     <td align=center><b>Description</b></td>
   </tr>
   <tr>
     <td colspan="2">iconName</td>
     <td>string</td>
+    <td>+</td>
     <td>name of icon, you want to change</td>
   </tr>
   <tr>
     <td colspan="2">iconData</td>
     <td>object</td>
+    <td></td>
     <td>settings of changes</td>
   </tr>
   <tr>
     <td></td>
     <td>props</td>
     <td>object</td>
+    <td>+</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
     <td>icon</td>
     <td>string</td>
+    <td>+</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
     <td>className</td>
     <td>string</td>
+    <td>+</td>
     <td></td>
   </tr>
 </table>
@@ -389,30 +417,220 @@ import { ckAPIMethods } from "sova-chatkit"
 ckAPIMethods.styles("changeHeader", {
   themeName: "sovaDark",  // theme name, in which styles you want to change anything
   data: {
-    mainContainer: {},
-    avatarContainer: {},
-    titleContainer: {},
-    buttonsContainer: {  
-      resetButton: {},
-      settingsButton: {}
-   },
-    image: {},
-  },
+    mainContainer: {
+      display: 'flex',
+      alignItems: 'center',
+      width: '100%',
+      boxSizing: 'border-box',
+      borderBottom: `0.5px solid ${primaryDivider}`,
+      justifyContent: 'space-between',
+      height: '50px',
+      minHeight: '50px',
+      background: primaryDark,
+      borderRadius: '17px 17px 0px 0px',
+      padding: '13px 17px',
+      color: primaryWhite,
+      zIndex: 50,
+      '@media screen and (max-width: 800px)': {
+        borderRadius: '0',
+        height: '60px',
+        position: 'absolute',
+        top: '0',
+      },
+    },
+    avatarContainer: {
+      borderRadius: '50px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-end',
+      '@media screen and (max-width: 800px)': {
+        width: '6%',
+      },
+      '@media screen and (max-width: 480px)': {
+        width: '10%',
+      },
+    },
+    image: {
+      maxWidth: '24px',
+      maxHeight: '24px',
+      '@media screen and (max-width: 800px)': {
+        maxWidth: '35px',
+        maxHeight: '35px',
+      },
+      '@media screen and (max-width: 480px)': {
+        maxWidth: '25px',
+        maxHeight: '25px',
+      },
+    },
+    titleContainer: {
+      textAlign: 'left',
+      width: '50%',
+      fontSize: '1.125rem',
+      marginLeft: '15px',
+      '@media screen and (max-width: 800px)': {
+        width: '60%',
+        fontSize: '1.5rem',
+      },
+      '@media screen and (max-width: 480px)': {
+        width: '50%',
+        fontSize: '1.125rem',
+      },
+    },
+    resetButton: {
+      background: primaryDark,
+      fontSize: '1.125rem',
+      color: primaryWhite,
+      border: 'none',
+      outline: 'none',
+      width: '30px',
+      height: '30px',
+      display: 'flex',
+      alignItems: 'center',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      transition: 'background ease-in-out 0.3s',
+      '&:hover': {
+        background: primaryHeaderButtonHover,
+      },
+      '&:active': {
+        background: primaryHeaderButtonActive,
+      },
+      '@media screen and (max-width: 800px)': {
+        fontSize: '1.5rem',
+      },
+      '@media screen and (max-width: 480px)': {
+        fontSize: '0.875rem',
+      },
+    },
+    closeButton: {
+      background: primaryDark,
+      fontSize: '1.125rem',
+      color: primaryWhite,
+      border: 'none',
+      outline: 'none',
+      width: '30px',
+      height: '30px',
+      display: 'flex',
+      alignItems: 'center',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      transition: 'background ease-in-out 0.3s',
+      '&:hover': {
+        background: primaryHeaderButtonHover,
+      },
+      '&:active': {
+        background: primaryHeaderButtonActive,
+      },
+      '@media screen and (max-width: 800px)': {
+        fontSize: '1.5rem',
+      },
+      '@media screen and (max-width: 480px)': {
+        fontSize: '0.875rem',
+      },
+    },
+    settingsButton: {
+      background: primaryDark,
+      fontSize: '1.125rem',
+      color: primaryWhite,
+      border: 'none',
+      outline: 'none',
+      width: '30px',
+      height: '30px',
+      display: 'flex',
+      alignItems: 'center',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      transition: 'background ease-in-out 0.3s',
+      '&:hover': {
+        background: primaryHeaderButtonHover,
+      },
+      '&:active': {
+        background: primaryHeaderButtonActive,
+      },
+      '@media screen and (max-width: 800px)': {
+        fontSize: '1.5rem',
+      },
+      '@media screen and (max-width: 480px)': {
+        fontSize: '0.875rem',
+      },
+    },
+    headerSearchContainer: {
+      display: 'flex',
+      alignItems: 'center',
+    },
+    headerSearchInput: {
+      display: 'flex',
+      alignItems: 'center',
+      marginLeft: '1rem',
+      border: 'none',
+      background: 'none',
+      color: primaryWhite,
+      outline: 'none',
+      padding: '0',
+      fontFamily: 'Helvetica',
+      fontStyle: 'normal',
+      fontWeight: '200',
+      lineHeight: '20px',
+      fontSize: '1.125rem',
+      '::-webkit-input-placeholder': {
+        color: primaryWhite,
+        opacity: '0.2',
+      },
+      '::-moz-placeholder': {
+        color: primaryWhite,
+        opacity: '0.2',
+      },
+      '-ms-input-placeholder': {
+        color: primaryWhite,
+        opacity: '0.2',
+      },
+    },
+    searchButton: {
+      background: primaryDark,
+      fontSize: '1.125rem',
+      color: primaryWhite,
+      border: 'none',
+      outline: 'none',
+      width: '30px',
+      height: '30px',
+      display: 'flex',
+      alignItems: 'center',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      transition: 'background ease-in-out 0.3s',
+      '&:hover': {
+        background: primaryHeaderButtonHover,
+      },
+      '&:active': {
+        background: primaryHeaderButtonActive,
+      },
+      '@media screen and (max-width: 800px)': {
+        fontSize: '1.5rem',
+      },
+      '@media screen and (max-width: 480px)': {
+        fontSize: '0.875rem',
+      },
+    },
+  }
 })
 ```
 
 Options data:
 
-| Key                |   Type          |  Description                  |
-|--------------------|-----------------|-------------------------------|
-| mainContainer      | object styles   | styles for main container     |
-| avatarContainer    | object styles   | styles for avatar container   |
-| titleContainer     | object styles   | styles for title container    |
-| buttonsContainer   | object styles   | list of styles for buttons    |
-| resetButton        | object styles   | styles for reset button       |
-| settingsButton     | object styles   | styles for settings button    |
-| image              | object styles   | styles for tag `img`         |
+| Key                    |   Type          |  Required |  Description                                  |
+|------------------------|-----------------|-----------|-----------------------------------------------|
+| mainContainer          | object styles   |     +     | styles for main container                     |
+| avatarContainer        | object styles   |     +     | styles for avatar container                   |
+| image                  | object styles   |     +     | styles for tag `img`                          |
+| titleContainer         | object styles   |     +     | styles for title container                    |
+| resetButton            | object styles   |     +     | styles for reset button                       |
+| closeButton            | object styles   |     +     | styles for close button                       |
+| settingsButton         | object styles   |     +     | styles for settings button                    |
+| headerSearchContainer  | object styles   |     +     | list of styles for header search container    |
+| headerSearchInput      | object styles   |     +     | list of styles for header search input        |
+| searchButton           | object styles   |     +     | list of styles for search button              |
 
+You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.
  
 
 ### Languages <a name="custom_languages"></a>
@@ -433,9 +651,8 @@ ckAPIMethods.languages('changeHeader', {
 
 Options data:    
 
-| Key                  |   Type          |  Description                    |
-|----------------------|-----------------|---------------------------------|
-| title                | string          | text in title                   |
-| settingsButtonTitle  | string          | text in settings button title   |
-| resetButtonTitle     | string          | text in reset button title      |
-
+| Key                  |   Type          |  Required |  Description                    |
+|----------------------|-----------------|-----------|---------------------------------|
+| title                | string          |     +     | text in title                   |
+| settingsButtonTitle  | string          |     +     | text in settings button title   |
+| resetButtonTitle     | string          |     +     | text in reset button title      |
