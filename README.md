@@ -26,9 +26,9 @@ export default App
 
 # :crown: Table of contents
 The library consists of the next components:  
-:unicorn:   **[CkComponents](#2)** - UI components of widget (react-components);  
-:wrench:   **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
-:blue_book:   **[ckStore](#3)** - management of content.  
+:unicorn:   **[CkComponents](#ckcomponents)** - UI components of widget (react-components);  
+:wrench:   **[ckAPIMethods](#ckAPIMethods)** - methods that affect behavior of UI or interaction with UI;  
+:blue_book:   **[ckStore](#ckStore)** - management of content.  
 
 Detailed description of the library is given below.
  
