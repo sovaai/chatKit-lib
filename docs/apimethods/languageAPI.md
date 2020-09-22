@@ -35,7 +35,7 @@ Description of events and its data read read below.
 
 
 
-### **initLanguage**<a name="initLanguage"></a>
+### initLanguage
 adding a new language pack  
 
 **Usage**:  
@@ -124,7 +124,7 @@ ckAPIMethods.languages('initLanguage', {
 
 
 
-### **changeLanguage**  <a name="changeLanguage"></a>
+### changeLanguage
 change language  
 
 **Usage**:  
@@ -142,7 +142,7 @@ ckAPIMethods.languages('changeLanguage', id)
 
  
 
-### **changeLanguagePacket**  <a name="changeLanguagePacket"></a>
+### changeLanguagePacket
 changing values in a specific language pack  
 
 **Usage**:  
@@ -231,7 +231,7 @@ ckAPIMethods.languages('changeLanguagePacket', {
 
 
 
-### **changeBadge**  <a name="changeBadge"></a> 
+### changeBadge
 changing the value in component `Badge` in a specific language pack   
 
 **Usage**:
@@ -254,7 +254,7 @@ ckAPIMethods.languages('changeBadge', {
 
 
 
-### **changeSender**  <a name="changeSender"></a> 
+### changeSender
 changing the value in component `Sender` in a specific language pack   
 
 **Usage**:  
@@ -287,7 +287,7 @@ ckAPIMethods.languages('changeSender', {
 
 
 
-### **changeDialog**  <a name="changeDialog"></a> 
+### changeDialog
 changing the value in component `Dialog` in a specific language pack   
 
 **Usage**:  
@@ -314,7 +314,7 @@ ckAPIMethods.languages('changeDialog', {
 
 
 
-### **changeMessage**  <a name="changeMessage"></a> 
+### changeMessage
 changing the value in component `Message` in a specific language pack   
 
 **Usage**:  
@@ -339,7 +339,7 @@ ckAPIMethods.languages('changeMessage', {
 
 
 
-### **changeHeader**  <a name="changeHeader"></a> 
+### changeHeader
 changing the value in component `Header` in a specific language pack  
 
 **Usage**:  
@@ -366,7 +366,7 @@ ckAPIMethods.languages('changeHeader', {
 
 
 
-### **changeRate**  <a name="changeRate"></a> 
+### changeRate 
 changing the value in component `Rate` in a specific language pack   
 
 **Usage**:  
@@ -445,7 +445,7 @@ ckAPIMethods.languages('changeRate', {
   
 
 
-### **changeCKDropAndDown**  <a name="CKDropAndDown"></a> 
+### changeCKDropAndDown
 changing the value in component `CKDropAndDown` in a specific language pack  
 
 **Usage**:  
