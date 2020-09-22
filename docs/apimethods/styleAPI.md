@@ -40,7 +40,7 @@ Description of events and its data read read below.
 
 
 
-### **switchTheme**  <a name="switchTheme"></a>  
+### switchTheme
 switching between themes
   
 **Usage**:
@@ -58,7 +58,7 @@ ckAPIMethods.styles('switchTheme', 'sovaDark')
 
 
 
-### **initTheme**  <a name="initTheme"></a>
+### initTheme
 addition a new theme
  
 **Usage**:
@@ -230,7 +230,7 @@ ckAPIMethods.styles('initTheme', {
 
 
 
-### **changeStyles**  <a name="changeStyles"></a>
+### changeStyles
 modifying a complete package of an existing theme
   
 **Usage**:
@@ -403,7 +403,7 @@ ckAPIMethods.styles('changeStyles', {
 
 
 
-### **changeChatIt** <a name="changeChatIt"></a>
+### changeChatIt
 changing the style package of component `ChatIt` in selected theme
 
 **Usage**:
@@ -465,7 +465,7 @@ ckAPIMethods.styles("changeChatIt", {
 
 
 
-### **changeHeader**  <a name="changeHeader"></a>
+### changeHeader
 changing the style package of component `Header` in selected theme
 
 **Usage**:
@@ -688,7 +688,7 @@ ckAPIMethods.styles("changeHeader", {
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.
 
 
-### **changeDialog** <a name="changeDialog"></a>
+### changeDialog
 changing the style package of component `Dialog` in selected theme
 
 **Usage**:
@@ -749,7 +749,7 @@ You must write css properties in camelCase, using [objects style](https://emotio
 
 
 
-### **changeRate**  <a name="changeRate"></a>
+### changeRate
 changing the style package of component `Rate` in selected theme
 
 **Usage**:
@@ -859,7 +859,7 @@ You must write css properties in camelCase, using [objects style](https://emotio
 
 
 
-### **changeUserMessage**  <a name="changeUserMessage"></a>
+### changeUserMessage
 changing the style package of component user `Message` in selected theme
 
 **Usage**:
@@ -1007,7 +1007,7 @@ You must write css properties in camelCase, using [objects style](https://emotio
 
 
 
-### **changeResponseMessage** <a name="changeResponseMessage"></a>
+### changeResponseMessage
 changing the style package of component response `Message` in selected theme
 
 **Usage**:
@@ -1156,7 +1156,7 @@ You must write css properties in camelCase, using [objects style](https://emotio
 
 
 
-### **changeSender**  <a name="changeSender"></a>
+### changeSender
 changing the style package of component `Sender` in selected theme
 
 **Usage**:
@@ -1397,7 +1397,7 @@ You must write css properties in camelCase, using [objects style](https://emotio
 
 
 
-### **changeBadge**  <a name="changeBadge"></a>
+### changeBadge
 changing the style package of component `Badge` in selected theme
 
 **Usage**:
@@ -1465,7 +1465,7 @@ You must write css properties in camelCase, using [objects style](https://emotio
 
 
 
-### **changeCKDropAndDown**  <a name="changeCKDropAndDown"></a>
+### changeCKDropAndDown
 changing the style package of component `CKDropAndDown` in selected theme
 
 **Usage**:
