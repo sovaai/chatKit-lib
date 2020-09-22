@@ -21,13 +21,13 @@ Description of events and its data read read below.
 ## List of events
 | Event name                     |                          |
 |--------------------------------|--------------------------|
-| [changeIcon](#changeIcon)      | changing a specific icon |
-| [changeAvatar](#changeAvatar)  | changing the avatar      |
-| [changeSVG](#changeSVG)        | changing SVG image       |
+| [changeIcon](#changeicon--)      | changing a specific icon |
+| [changeAvatar](#changeavatar--)  | changing the avatar      |
+| [changeSVG](#changesvg--)        | changing SVG image       |
 
 
 
-### **changeIcon**  <a name="changeIcon"></a>
+### changeIcon
 Changing a specific icon 
 
 **Usage**:
@@ -94,7 +94,7 @@ To see info about `iconData`, visit https://github.com/FortAwesome/react-fontawe
 
 
 
-### **changeAvatar**  <a name="changeAvatar"></a>
+### changeAvatar
 Changing the avatar 
   
 **Usage**:
@@ -113,7 +113,7 @@ ckAPIMethods.settings('changeAvatar', {
 
 
 
-### **changeSVG**  <a name="changeSVG"></a>
+### changeSVG
 changing SVG image
 
 **Usage**:
