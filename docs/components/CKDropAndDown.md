@@ -60,7 +60,7 @@ Props from `managment`:
     withIcon: false,  // is responsible for displaying choose file with icon or not
 }
 ```
-You can change these values using relevant [APImethod](#custom_managment "description of method").
+You can change these values using relevant [APImethod](#managment "description of method").
 
 
 
@@ -74,7 +74,7 @@ Props from `settings`:
   }
 }
 ```
-You can change these values using relevant [APImethod](#custom_settings "description of method").
+You can change these values using relevant [APImethod](#settings "description of method").
 
 
 
@@ -104,7 +104,7 @@ Props from `styles`:
 
 ```
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
-You can change these values using relevant [APImethod](#custom_styles "description of method").
+You can change these values using relevant [APImethod](#styles "description of method").
 
 
 
@@ -127,15 +127,15 @@ You can change these values using relevant [APImethod](#custom_languages "descri
 To custom `CKDropAndDown` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
 
-* [UIManagment](#custom_managment)
-* [Settings](#custom_settings)
-* [Styles](#custom_styles)
-* [Languages](#custom_languages)
+* [UIManagment](#managment)
+* [Settings](#]settings)
+* [Styles](#styles)
+* [Languages](#languages)
 
 
 
 ### UIManagment
-To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpCKDropAndDown`, that allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `CKDropAndDown` is based.
+To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpCKDropAndDown`, that allows you to choose and overwrite the values related to [Managment](#managment), on which component `CKDropAndDown` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -160,7 +160,7 @@ Options data:
 
 
 ### Settings
-To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeSVG`, it's allows you to overwrite chosen SVG in [Settings](#conf_settings). 
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeSVG`, it's allows you to overwrite chosen SVG in [Settings](#settings). 
 
 ```
 ckAPIMethods.uiManagment('changeSVG', {
@@ -179,7 +179,7 @@ Options data:
 
 
 ### Styles
-To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeCKDropAndDown`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `CKDropAndDown` is based. 
+To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeCKDropAndDown`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#styles), on which component `CKDropAndDown` is based. 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -303,7 +303,7 @@ You must write css properties in camelCase, using [objects style](https://emotio
 
 
 ### Languages
-To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeCKDropAndDown` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `CKDropAndDown` is based. 
+To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeCKDropAndDown` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#languages), on which component `CKDropAndDown` is based. 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
