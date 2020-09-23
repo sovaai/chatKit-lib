@@ -74,7 +74,7 @@ Props from `settings`:
   }
 }
 ```
-You can change these values using relevant [APImethod](#settings "description of method").
+You can change these values using relevant [APImethod](#settings-1 "description of method").
 
 
 
