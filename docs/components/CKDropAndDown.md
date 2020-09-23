@@ -9,7 +9,7 @@ This component allows user to drag and drop files for future use in [sender](htt
 
 ## Table of content
 * [Usage](#usage) 
-* [Component props](#component_props)   
+* [Component props](#component-props)   
 * [Configuration](#configuration)   
 * [Customization](#customization)   
 
