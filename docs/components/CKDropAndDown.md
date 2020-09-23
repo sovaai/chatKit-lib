@@ -119,7 +119,7 @@ Props from `languages`:
   chooseFileButtonTitle: 'Choose file',  // text in choose file button title
 }
 ```
-You can change these values using relevant [APImethod](#custom_languages "description of method").
+You can change these values using relevant [APImethod](#languages-1 "description of method").
 
 
 
