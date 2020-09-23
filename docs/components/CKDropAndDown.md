@@ -14,7 +14,7 @@ This component allows user to drag and drop files for future use in [sender](htt
 * [Customization](#customization)   
 
 
-## Usage <a name="usage"></a>
+## Usage
 ```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
@@ -31,14 +31,14 @@ export default App
 ```
 
 
-## Component props <a name="component_props"></a>
+## Component props
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
 
-## Configuration <a name="configuration"></a>
+## Configuration
 Component expects configuration info from storage. `CKDropAndDown` touch 4 global keys from STORE:  
 
 | Key                               |                                            |
@@ -50,7 +50,7 @@ Component expects configuration info from storage. `CKDropAndDown` touch 4 globa
 
 
 
-### Managment <a name="conf_managment"></a>
+### Managment
 Props from `managment`:  
 ```javascript
 {  
@@ -64,7 +64,7 @@ You can change these values using relevant [APImethod](#custom_managment "descri
 
 
 
-### Settings <a name="conf_settings"></a>
+### Settings
 Props from `settings`:  
 ```javascript
 {
@@ -78,7 +78,7 @@ You can change these values using relevant [APImethod](#custom_settings "descrip
 
 
 
-### Styles <a name="conf_styles"></a>
+### Styles
 Props from `styles`:  
 ```javascript
 {
@@ -108,7 +108,7 @@ You can change these values using relevant [APImethod](#custom_styles "descripti
 
 
 
-### Languages <a name="conf_languages"></a>
+### Languages
 Props from `languages`:  
 ```javascript
 {
@@ -123,7 +123,7 @@ You can change these values using relevant [APImethod](#custom_languages "descri
 
 
 
-## Customization <a name="customization"></a>
+## Customization
 To custom `CKDropAndDown` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
 
@@ -134,7 +134,7 @@ Customization includes:
 
 
 
-### UIManagment <a name="custom_managment"></a>
+### UIManagment
 To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpCKDropAndDown`, that allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `CKDropAndDown` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -159,7 +159,7 @@ Options data:
 
 
 
-### Settings <a name="custom_settings"></a> 
+### Settings
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeSVG`, it's allows you to overwrite chosen SVG in [Settings](#conf_settings). 
 
 ```
@@ -178,7 +178,7 @@ Options data:
 
 
 
-### Styles <a name="custom_styles"></a>
+### Styles
 To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeCKDropAndDown`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `CKDropAndDown` is based. 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -302,7 +302,7 @@ You must write css properties in camelCase, using [objects style](https://emotio
 
 
 
-### Languages <a name="custom_languages"></a>
+### Languages
 To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeCKDropAndDown` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `CKDropAndDown` is based. 
 
 ```javascript
