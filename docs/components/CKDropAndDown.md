@@ -127,10 +127,10 @@ You can change these values using relevant [APImethod](#custom_languages "descri
 To custom `CKDropAndDown` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
 
-* [UIManagment](#managment)
-* [Settings](#]settings)
-* [Styles](#styles)
-* [Languages](#languages)
+* [UIManagment](#uimanagment)
+* [Settings](#settings-1)
+* [Styles](#styles-1)
+* [Languages](#languages-1)
 
 
 
