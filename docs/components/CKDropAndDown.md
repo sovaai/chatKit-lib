@@ -60,7 +60,7 @@ Props from `managment`:
     withIcon: false,  // is responsible for displaying choose file with icon or not
 }
 ```
-You can change these values using relevant [APImethod](#managment "description of method").
+You can change these values using relevant [APImethod](#uimanagment "description of method").
 
 
 
