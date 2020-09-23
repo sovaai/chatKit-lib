@@ -4,12 +4,12 @@ Widget expand button
 
 ## Table of content
 * [Usage](#usage) 
-* [Component props](#component_props)   
+* [Component props](#component-props)   
 * [Configuration](#configuration)   
 * [Customization](#customization)   
 
 
-## Usage <a name="usage"></a>
+## Usage
 ```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
@@ -27,26 +27,26 @@ export default App
 
 
 
-## Component props <a name="component_props"></a>
+## Component props
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
 | `ckStore`  | boolean | should cling information from the base [ckStore](https://github.com/sovaai/chatKit-lib#3) or not  |
 
 
 
-## Configuration <a name="configuration"></a>
+## Configuration
 Component expects configuration info from storage. Badge touch 4 global keys from STORE:  
 
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
-| [managment](#conf_managment)      | information to control UI                  |
-| [settings](#conf_settings)        | information to control media info          |
-| [styles](#conf_styles)            | information to control styles packets      |
-| [languages](#conf_languages)      | information to control languages packets   |
+| [managment](#managment)      | information to control UI                  |
+| [settings](#settings)        | information to control media info          |
+| [styles](#styles)            | information to control styles packets      |
+| [languages](#languages)      | information to control languages packets   |
 
 
 
-### Managment <a name="conf_managment"></a>
+### Managment
 Props from `managment`:  
 ```javascript
 {
@@ -55,22 +55,22 @@ Props from `managment`:
   showSVG: true,  // is responsible for displaying SVG file or not
 }
 ```
-You can change these values using relevant [APImethod](#custom_managment "description of method").
+You can change these values using relevant [APImethod](#uimanagment "description of method").
 
 
 
-### Settings <a name="conf_settings"></a>
+### Settings
 Props from `settings`:  
 ```javascript
 {
   avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' // path to the image which will be shown as avatar 
 }
 ```
-You can change these values using relevant [APImethod](#custom_settings "description of method").
+You can change these values using relevant [APImethod](#settings--1 "description of method").
 
 
 
-### Styles <a name="conf_styles"></a>
+### Styles
 Props from `styles`:  
 ```javascript
 {
@@ -97,7 +97,7 @@ You can change these values using relevant [APImethod](#custom_styles "descripti
 
 
 
-### Languages <a name="conf_languages"></a>
+### Languages
 Props from `languages`:  
 ```javascript
 {
