@@ -43,10 +43,10 @@ Component expects configuration info from storage. `CKDropAndDown` touch 4 globa
 
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
-| [managment](#conf_managment)      | information to control UI                  |
-| [settings](#conf_settings)        | information to control media info          |
-| [styles](#conf_styles)            | information to control styles packets      |
-| [languages](#conf_languages)      | information to control languages packets   |
+| [managment](#managment)      | information to control UI                  |
+| [settings](#settings)        | information to control media info          |
+| [styles](#styles)            | information to control styles packets      |
+| [languages](#languages)      | information to control languages packets   |
 
 
 
