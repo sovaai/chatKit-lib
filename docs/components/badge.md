@@ -104,11 +104,11 @@ Props from `languages`:
   title: 'Chat Kit'  // text in Title 
 }
 ```
-You can change these values using relevant [APImethod](#custom_languages "description of method").
+You can change these values using relevant [APImethod](#languages--1 "description of method").
 
 
 
-## Customization <a name="customization"></a>
+## Customization
 To custom `Badge` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
 
