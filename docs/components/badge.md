@@ -55,7 +55,7 @@ Props from `managment`:
   showSVG: true,  // is responsible for displaying SVG file or not
 }
 ```
-You can change these values using relevant [APImethod](#uimanagment "description of method").
+You can change these values using relevant [APImethod](#uimanagment- "description of method").
 
 
 
