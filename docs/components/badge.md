@@ -42,11 +42,11 @@ Component expects configuration info from storage. Badge touch 4 global keys fro
 | [managment](#managment-)      | information to control UI                  |
 | [settings](#settings-)        | information to control media info          |
 | [styles](#styles-)            | information to control styles packets      |
-| [languages](#conf_languages)      | information to control languages packets   |
+| [languages](#languages-)      | information to control languages packets   |
 
 
 
-### Managment <a name="conf_managment"></a>
+### Managment
 Props from `managment`:  
 ```javascript
 {
@@ -59,7 +59,7 @@ You can change these values using relevant [APImethod](#uimanagment- "descriptio
 
 
 
-### Settings <a name="conf_settings"></a>
+### Settings
 Props from `settings`:  
 ```javascript
 {
@@ -70,7 +70,7 @@ You can change these values using relevant [APImethod](#settings--1 "description
 
 
 
-### Styles <a name="conf_styles"></a>
+### Styles
 Props from `styles`:  
 ```javascript
 {
@@ -97,7 +97,7 @@ You can change these values using relevant [APImethod](#styles--1 "description o
 
 
 
-### Languages <a name="conf_languages"></a>
+### Languages 
 Props from `languages`:  
 ```javascript
 {
@@ -119,7 +119,7 @@ Customization includes:
 
 
 
-### UIManagment <a name="custom_managment"></a>
+### UIManagment
 To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpBadge`, that allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Badge` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -141,7 +141,7 @@ Options data:
 
 
 
-### Settings <a name="custom_settings"></a> 
+### Settings
 To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`, it's allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
 
 ```javascript
@@ -159,7 +159,7 @@ Options data:
 
 
 
-### Styles <a name="custom_styles"></a>
+### Styles
 To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeBadge`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Badge` is based. 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -187,7 +187,7 @@ Options data:
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.
  
 
-### Languages <a name="custom_languages"></a>
+### Languages
 To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeBadge` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Badge` is based. 
 
 ```javascript
