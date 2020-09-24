@@ -4,12 +4,12 @@ Widget expand button
 
 ## Table of content
 * [Usage](#usage) 
-* [Component props](#component_props)   
+* [Component props](#component-props)   
 * [Configuration](#configuration)   
 * [Customization](#customization)   
 
 
-## Usage <a name="usage"></a>
+## Usage
 ```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
