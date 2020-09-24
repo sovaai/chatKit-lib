@@ -40,8 +40,8 @@ Component expects configuration info from storage. Badge touch 4 global keys fro
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
 | [managment](#managment-)      | information to control UI                  |
-| [settings](#settings)        | information to control media info          |
-| [styles](#conf_styles)            | information to control styles packets      |
+| [settings](#settings-)        | information to control media info          |
+| [styles](#styles-)            | information to control styles packets      |
 | [languages](#conf_languages)      | information to control languages packets   |
 
 
