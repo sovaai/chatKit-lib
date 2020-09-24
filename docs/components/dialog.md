@@ -5,7 +5,7 @@ Displaying a set of text messages
 
 ## Table of content
 * [Usage](#usage) 
-* [Component props](#component_props)   
+* [Component props](#component-props)   
 * [Configuration](#configuration)   
 * [Customization](#customization)   
 
