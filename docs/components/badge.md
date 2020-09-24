@@ -93,7 +93,7 @@ Props from `styles`:
 
 ```
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
-You can change these values using relevant [APImethod](#custom_styles "description of method").
+You can change these values using relevant [APImethod](#styles--1 "description of method").
 
 
 
