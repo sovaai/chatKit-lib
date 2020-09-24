@@ -112,7 +112,7 @@ You can change these values using relevant [APImethod](#languages--1 "descriptio
 To custom `Badge` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
 
-* [UIManagment](#custom_managment)
+* [UIManagment](#uimanagment-)
 * [Settings](#custom_settings)
 * [Styles](#custom_styles)
 * [Languages](#custom_languages)
