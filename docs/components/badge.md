@@ -66,7 +66,7 @@ Props from `settings`:
   avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' // path to the image which will be shown as avatar 
 }
 ```
-You can change these values using relevant [APImethod](#custom_settings "description of method").
+You can change these values using relevant [APImethod](#settings--1 "description of method").
 
 
 
