@@ -113,9 +113,9 @@ To custom `Badge` component, you should use `ckAPIMethods`, which will allow you
 Customization includes:  
 
 * [UIManagment](#uimanagment-)
-* [Settings](#custom_settings)
-* [Styles](#custom_styles)
-* [Languages](#custom_languages)
+* [Settings](#settings--1)
+* [Styles](#styles--1)
+* [Languages](#languages--1)
 
 
 
