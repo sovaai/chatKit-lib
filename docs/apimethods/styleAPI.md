@@ -20,7 +20,6 @@ To make any changes you need:
 Description of events and its data read read below.
 
 
-
 ## List of events
 | Event name                                       |                                                                              |
 |--------------------------------------------------|------------------------------------------------------------------------------|
@@ -36,8 +35,6 @@ Description of events and its data read read below.
 | [changeSender](#changesender)                    | changing the style package of component `Sender` in selected theme           |
 | [changeBadge](#changebadge)                      | changing the style package of component `Badge` in selected theme            |
 | [changeCKDropAndDown](#changeckdropanddown)      | changing the style package of component `CKDropAndDown` in selected theme    |
-
-
 
 
 ### switchTheme
