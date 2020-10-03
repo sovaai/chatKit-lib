@@ -35,7 +35,8 @@ Description of events and its data read read below.
 
 
 
-### **initLanguage**
+
+### initLanguage
 adding a new language pack  
 
 **Usage**:  
@@ -124,7 +125,7 @@ ckAPIMethods.languages('initLanguage', {
 
 
 
-### **changeLanguage**
+### changeLanguage
 change language  
 
 **Usage**:  
@@ -142,7 +143,7 @@ ckAPIMethods.languages('changeLanguage', id)
 
  
 
-### **changeLanguagePacket**
+### changeLanguagePacket
 changing values in a specific language pack  
 
 **Usage**:  
@@ -231,7 +232,9 @@ ckAPIMethods.languages('changeLanguagePacket', {
 
 
 
-### **changeBadge**
+
+### changeBadge
+
 changing the value in component `Badge` in a specific language pack   
 
 **Usage**:
@@ -254,7 +257,8 @@ ckAPIMethods.languages('changeBadge', {
 
 
 
-### **changeSender** 
+### changeSender
+
 changing the value in component `Sender` in a specific language pack   
 
 **Usage**:  
@@ -287,7 +291,8 @@ ckAPIMethods.languages('changeSender', {
 
 
 
-### **changeDialog**
+### changeDialog
+
 changing the value in component `Dialog` in a specific language pack   
 
 **Usage**:  
@@ -314,7 +319,8 @@ ckAPIMethods.languages('changeDialog', {
 
 
 
-### **changeMessage**
+### changeMessage
+
 changing the value in component `Message` in a specific language pack   
 
 **Usage**:  
@@ -339,7 +345,8 @@ ckAPIMethods.languages('changeMessage', {
 
 
 
-### **changeHeader**
+### changeHeader
+
 changing the value in component `Header` in a specific language pack  
 
 **Usage**:  
@@ -366,7 +373,8 @@ ckAPIMethods.languages('changeHeader', {
 
 
 
-### **changeRate**
+### changeRate 
+
 changing the value in component `Rate` in a specific language pack   
 
 **Usage**:  
@@ -445,7 +453,8 @@ ckAPIMethods.languages('changeRate', {
   
 
 
-### **changeCKDropAndDown**
+### changeCKDropAndDown
+
 changing the value in component `CKDropAndDown` in a specific language pack  
 
 **Usage**:  

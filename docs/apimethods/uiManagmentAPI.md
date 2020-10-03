@@ -45,7 +45,7 @@ Description of events and its data read read below.
 
 
 
-### **setUpSender**<a name="setUpSender"></a>   
+### setUpSender
 Setting the component `Sender`  
 
 **Usage**:
@@ -243,7 +243,7 @@ ckAPIMethods.uiManagment('setUpSender', {
 
 
 
-### **setUpHeader**<a name="setUpHeader"></a>   
+### setUpHeader  
 Setting the component `Header`   
 
 **Usage**:
@@ -409,7 +409,7 @@ ckAPIMethods.uiManagment('setUpHeader', {
 
 
 
-### **setUpBadge**<a name="setUpBadge"></a>   
+### setUpBadge 
 Setting the component `Badge`  
  
 **Usage**:
@@ -434,7 +434,7 @@ ckAPIMethods.uiManagment('setUpBadge', {
 
 
 
-### **setUpMessage**<a name="setUpMessage"></a>   
+### setUpMessage  
 Setting the component `Message` 
   
 **Usage**:
@@ -567,7 +567,7 @@ showTitle: true
 </table>
 
 
-### **setUpDialog**<a name="setUpDialog"></a>   
+### setUpDialog   
 Setting the component `Dialog`   
 
 **Usage**:
@@ -694,7 +694,7 @@ showMsgLoad: true
 
 
 
-### **blockSender**<a name="blockSender"></a>   
+### blockSender 
 Block sending messages   
 
 **Usage**:
@@ -730,7 +730,7 @@ ckAPIMethods.uiManagment('dialogLoading', false)
 
 
 
-### **setUpChatIt**<a name="setUpChatIt"></a>   
+### setUpChatIt 
 Setting the component `ChatIt`
 	  
 **Usage**:
@@ -763,7 +763,7 @@ ckAPIMethods.uiManagment('setUpChatIt', {
 | settingsEnabled       | boolean     | +        | settings enabled or not        |
 
 
-### **setUpRate**<a name="setUpRate"></a>   
+### setUpRate  
 Setting the component `Rate`   
 
 **Usage**:
@@ -851,7 +851,7 @@ ckAPIMethods.uiManagment('setUpRate', {
 
 
 
-### **setUpCommon**<a name="setUpCommon"></a>   
+### setUpCommon  
 General settings  
 
 **Usage**:
@@ -880,7 +880,7 @@ ckAPIMethods.uiManagment('setUpCommon', {
 
 
 
-### **showRate**<a name="showRate"></a>   
+### showRate  
 Show the component `Rate`   
 
 **Usage**:
@@ -898,7 +898,7 @@ ckAPIMethods.uiManagment('showRate', false)
 
 
 
-### **showNotification**<a name="showNotification"></a>   
+### showNotification   
 Show the component `Notification` 
   
 **Usage**:
@@ -917,7 +917,7 @@ ckAPIMethods.uiManagment('showNotification', false)
 
 
 
-### **openChat**<a name="openChat"></a>   
+### openChat  
 Open the chat   
 
 **Usage**:
@@ -935,7 +935,7 @@ ckAPIMethods.uiManagment('openChat', false)
 
 
 
-### **showSettings**<a name="showSettings"></a>   
+### showSettings 
 Show the component `Settings`   
 
 **Usage**:
@@ -953,7 +953,7 @@ ckAPIMethods.uiManagment('showSettings', null)
 
 
 
-### **reset**<a name="reset"></a>   
+### reset  
 Reset session   
 
 **Usage**:
@@ -971,7 +971,7 @@ ckAPIMethods.uiManagment('reset', null)
 
 
 
-### **toggleDisplayMessageTime**<a name="toggleDisplayMessageTime"></a>
+### toggleDisplayMessageTime
 toggle display message time
 
 **Usage**:
@@ -982,7 +982,7 @@ ckAPIMethods.uiManagment('toggleDisplayMessageTime')
 ```
 
 
-### **toggleSearchActiveStatus**<a name="toggleSearchActiveStatus"></a>
+### toggleSearchActiveStatus
 toggle search active status
 
 **Usage**:
@@ -1001,7 +1001,7 @@ ckAPIMethods.uiManagment('toggleSearchActiveStatus', false)
 
 
 
-### **changeSearchValue**<a name="changeSearchValue"></a>
+### changeSearchValue
 change search value
 
 **Usage**:
@@ -1019,7 +1019,7 @@ ckAPIMethods.uiManagment('changeSearchValue', searchValue)
 
 
 
-### **changeFoundGroup**<a name="changeFoundGroup"></a>
+### changeFoundGroup
 change found group
 
 **Usage**:
@@ -1041,7 +1041,7 @@ ckAPIMethods.uiManagment('changeFoundGroup', {
 
 
 
-### **scrollToFoundMessage**<a name="scrollToFoundMessage"></a>
+### scrollToFoundMessage
 scroll to found message
 
 **Usage**:
@@ -1059,7 +1059,7 @@ ckAPIMethods.uiManagment('scrollToFoundMessage', messageNumber)
 
 
 
-### **showDropZone**<a name="showDropZone"></a>
+### showDropZone
 show drop zone in chat
 
 **Usage**:
