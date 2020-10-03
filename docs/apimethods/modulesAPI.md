@@ -29,7 +29,7 @@ Description of events and its data read read below.
 
 
 
-### **initModule**  
+### initModule 
 module initialization
 
 **Usage**:
@@ -48,7 +48,7 @@ import { ckAPIMethods } from "sova-chatkit"
 
 
 
-### **initModuleHistory**
+### initModuleHistory
 module history initialization
 
 **Usage**:
@@ -66,7 +66,7 @@ import { ckAPIMethods } from "sova-chatkit"
 
 
 
-### **switchModule**  
+### switchModule 
 switch module
 
 **Usage**:
@@ -84,7 +84,7 @@ import { ckAPIMethods } from "sova-chatkit"
 
 
 
-### **updateModuleConfig**  
+### updateModuleConfig  
 update module configuration
 
 **Usage**:

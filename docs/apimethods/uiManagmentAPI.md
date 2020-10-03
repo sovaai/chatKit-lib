@@ -46,6 +46,7 @@ Description of events and its data read read below.
 
 
 ### setUpSender  
+
 Setting the component `Sender`  
 
 **Usage**:
@@ -243,7 +244,9 @@ ckAPIMethods.uiManagment('setUpSender', {
 
 
 
-### setUpHeader 
+
+### setUpHeader  
+
 Setting the component `Header`   
 
 **Usage**:
@@ -410,6 +413,7 @@ ckAPIMethods.uiManagment('setUpHeader', {
 
 
 ### setUpBadge
+
 Setting the component `Badge`  
  
 **Usage**:
@@ -568,6 +572,7 @@ showTitle: true
 
 
 ### setUpDialog 
+
 Setting the component `Dialog`   
 
 **Usage**:
@@ -694,7 +699,9 @@ showMsgLoad: true
 
 
 
-### blockSender
+
+### blockSender 
+
 Block sending messages   
 
 **Usage**:
@@ -731,6 +738,7 @@ ckAPIMethods.uiManagment('dialogLoading', false)
 
 
 ### setUpChatIt   
+
 Setting the component `ChatIt`
 	  
 **Usage**:
@@ -764,6 +772,7 @@ ckAPIMethods.uiManagment('setUpChatIt', {
 
 
 ### setUpRate 
+
 Setting the component `Rate`   
 
 **Usage**:
@@ -881,6 +890,7 @@ ckAPIMethods.uiManagment('setUpCommon', {
 
 
 ### showRate
+
 Show the component `Rate`   
 
 **Usage**:
@@ -899,6 +909,7 @@ ckAPIMethods.uiManagment('showRate', false)
 
 
 ### showNotification  
+
 Show the component `Notification` 
   
 **Usage**:
@@ -918,6 +929,7 @@ ckAPIMethods.uiManagment('showNotification', false)
 
 
 ### openChat
+
 Open the chat   
 
 **Usage**:
@@ -936,6 +948,7 @@ ckAPIMethods.uiManagment('openChat', false)
 
 
 ### showSettings   
+
 Show the component `Settings`   
 
 **Usage**:
@@ -954,6 +967,7 @@ ckAPIMethods.uiManagment('showSettings', null)
 
 
 ### reset
+
 Reset session   
 
 **Usage**:

@@ -98,6 +98,7 @@ You can change these values using relevant [APImethod](#styles-1 "description of
 
 
 ### Languages 
+
 Props from `languages`:  
 ```javascript
 {
