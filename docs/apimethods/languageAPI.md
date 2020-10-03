@@ -35,6 +35,7 @@ Description of events and its data read read below.
 
 
 
+
 ### initLanguage
 adding a new language pack  
 
@@ -231,7 +232,9 @@ ckAPIMethods.languages('changeLanguagePacket', {
 
 
 
+
 ### changeBadge
+
 changing the value in component `Badge` in a specific language pack   
 
 **Usage**:
@@ -255,6 +258,7 @@ ckAPIMethods.languages('changeBadge', {
 
 
 ### changeSender
+
 changing the value in component `Sender` in a specific language pack   
 
 **Usage**:  
@@ -288,6 +292,7 @@ ckAPIMethods.languages('changeSender', {
 
 
 ### changeDialog
+
 changing the value in component `Dialog` in a specific language pack   
 
 **Usage**:  
@@ -315,6 +320,7 @@ ckAPIMethods.languages('changeDialog', {
 
 
 ### changeMessage
+
 changing the value in component `Message` in a specific language pack   
 
 **Usage**:  
@@ -340,6 +346,7 @@ ckAPIMethods.languages('changeMessage', {
 
 
 ### changeHeader
+
 changing the value in component `Header` in a specific language pack  
 
 **Usage**:  
@@ -367,6 +374,7 @@ ckAPIMethods.languages('changeHeader', {
 
 
 ### changeRate 
+
 changing the value in component `Rate` in a specific language pack   
 
 **Usage**:  
@@ -446,6 +454,7 @@ ckAPIMethods.languages('changeRate', {
 
 
 ### changeCKDropAndDown
+
 changing the value in component `CKDropAndDown` in a specific language pack  
 
 **Usage**:  
