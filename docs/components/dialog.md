@@ -5,13 +5,13 @@ Displaying a set of text messages
 
 ## Table of content
 * [Usage](#usage) 
-* [Component props](#component_props)   
+* [Component props](#component-props)   
 * [Configuration](#configuration)   
 * [Customization](#customization)   
 
 
 
-## Usage <a name="usage"></a>
+## Usage
 ```javascript
 import React from "react"
 import { CkComponents } from "sova-chatkit"
@@ -29,7 +29,7 @@ export default App
 
 
 
-## Component props <a name="component_props"></a>
+## Component props
 
 | Prop       | Type    |  Description                                                                                      |
 |------------|---------|---------------------------------------------------------------------------------------------------|
@@ -37,19 +37,19 @@ export default App
 
 
 
-## Configuration <a name="configuration"></a>
+## Configuration
 Component expects configuration info from storage. Dialog touch 4 global keys from STORE: 
 
 | Key                               |                                            |
 |-----------------------------------|--------------------------------------------|
-| [managment](#conf_managment)      | information to control UI                  |
-| [settings](#conf_settings)        | information to control media info          |
-| [styles](#conf_styles)            | information to control styles packets      |
-| [languages](#conf_languages)      | information to control languages packets   |
+| [managment](#managment)      | information to control UI                  |
+| [settings](#settings)        | information to control media info          |
+| [styles](#styles)            | information to control styles packets      |
+| [languages](#languages)      | information to control languages packets   |
 
 
 
-### Managment <a name="conf_managment"></a>
+### Managment
 Props from `managment`:  
 ```javascript
 {
@@ -71,11 +71,11 @@ Props from `managment`:
   dividerEnabled: true,  // should component show divider
 }
 ```
-You can change these values using [APImethod](#custom_managment "description of method").
+You can change these values using [APImethod](#uimanagment "description of method").
 
 
 
-### Settings <a name="conf_settings"></a>
+### Settings
 Props from `settings`:  
 ```javascript
 {
@@ -91,11 +91,11 @@ Props from `settings`:
   }
 }
 ```
-You can change these values using [APImethod](#custom_settings "description of method").
+You can change these values using [APImethod](#settings-1 "description of method").
 
 
 
-### Styles <a name="conf_styles"></a>
+### Styles
 Props from `styles`:  
 ```javascript
 {
@@ -115,11 +115,11 @@ Props from `styles`:
 }
 ```
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
-You can change these values using [APImethod](#custom_styles "description of method").
+You can change these values using [APImethod](#styles-1 "description of method").
 
 
 
-### Languages <a name="conf_languages"></a>
+### Languages
 Props from `languages`:  
 ```javascript
 {
@@ -128,23 +128,23 @@ Props from `languages`:
   loading: 'typing...'  // text in loading
 }
 ```
-You can change these values using [APImethod](#custom_languages "description of method").
+You can change these values using [APImethod](#languages-1 "description of method").
 
 
 
-## Customization <a name="customization"></a>
+## Customization
 To custom component `Dialog`, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
 
-* [UIManagment](#custom_managment)
-* [Settings](#custom_settings)
-* [Styles](#custom_styles)
-* [Languages](#custom_languages)
+* [UIManagment](#uimanagment)
+* [Settings](#settings-1)
+* [Styles](#styles-1)
+* [Languages](#languages-1)
 
 
 
-### UIManagment <a name="custom_managment"></a>
-To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpDialog`, that allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Dialog` is based.
+### UIManagment
+To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpDialog`, that allows you to choose and overwrite the values related to [Managment](#managment), on which component `Dialog` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -268,8 +268,8 @@ Options data:
 
 
 
-### Settings <a name="custom_settings"></a>
-To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, that allows you to overwrite path to chosen icons in [Settings](#conf_settings). 
+### Settings
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeIcon`, that allows you to overwrite path to chosen icons in [Settings](#settings). 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -330,8 +330,8 @@ Options data:
 To see info about `iconData`, visit https://github.com/FortAwesome/react-fontawesome
 
 
-### Styles <a name="custom_styles"></a>
-To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeDialog`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Dialog` is based. 
+### Styles
+To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeDialog`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#styles), on which component `Dialog` is based. 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -388,8 +388,8 @@ Options data:
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.
  
 
-### Languages <a name="custom_languages"></a>
-To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeDialog` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Dialog` is based. 
+### Languages
+To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeDialog` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#languages), on which component `Dialog` is based. 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"

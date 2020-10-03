@@ -35,7 +35,6 @@ Description of events and its data read read below.
 
 
 
-
 ### initLanguage
 adding a new language pack  
 
@@ -373,7 +372,7 @@ ckAPIMethods.languages('changeHeader', {
 
 
 
-### changeRate 
+### changeRate
 
 changing the value in component `Rate` in a specific language pack   
 

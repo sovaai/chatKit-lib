@@ -66,7 +66,7 @@ Props from `settings`:
   avatar: 'https://avatars2.githubusercontent.com/u/59205514?s=200&v=4' // path to the image which will be shown as avatar 
 }
 ```
-You can change these values using relevant [APImethod](#settings--1 "description of method").
+You can change these values using relevant [APImethod](#settings-1 "description of method").
 
 
 
@@ -93,34 +93,35 @@ Props from `styles`:
 
 ```
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.  
-You can change these values using relevant [APImethod](#custom_styles "description of method").
+You can change these values using relevant [APImethod](#styles-1 "description of method").
 
 
 
-### Languages
+### Languages 
+
 Props from `languages`:  
 ```javascript
 {
   title: 'Chat Kit'  // text in Title 
 }
 ```
-You can change these values using relevant [APImethod](#custom_languages "description of method").
+You can change these values using relevant [APImethod](#languages-1 "description of method").
 
 
 
-## Customization <a name="customization"></a>
+## Customization
 To custom `Badge` component, you should use `ckAPIMethods`, which will allow you to change values in `ckStore`.  
 Customization includes:  
 
-* [UIManagment](#custom_managment)
-* [Settings](#custom_settings)
-* [Styles](#custom_styles)
-* [Languages](#custom_languages)
+* [UIManagment](#uimanagment)
+* [Settings](#settings-1)
+* [Styles](#styles-1)
+* [Languages](#languages-1)
 
 
 
-### UIManagment <a name="custom_managment"></a>
-To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpBadge`, that allows you to choose and overwrite the values related to [Managment](#conf_managment), on which component `Badge` is based.
+### UIManagment
+To call the [uiManagmentAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/uiManagmentAPI.md "description of method") with event `setUpBadge`, that allows you to choose and overwrite the values related to [Managment](#managment), on which component `Badge` is based.
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -141,8 +142,8 @@ Options data:
 
 
 
-### Settings <a name="custom_settings"></a> 
-To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`, it's allows you to overwrite path to chosen avatar in [Settings](#conf_settings). 
+### Settings
+To call the [settingsAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/settingsAPI.md "description of method") with event `changeAvatar`, it's allows you to overwrite path to chosen avatar in [Settings](#settings). 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
@@ -159,8 +160,8 @@ Options data:
 
 
 
-### Styles <a name="custom_styles"></a>
-To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeBadge`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#conf_styles), on which component `Badge` is based. 
+### Styles
+To call the [styleAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/styleAPI.md "description of method") with event `changeBadge`, it's allows you to choose and overwrite style values in chosen theme and chosen container in [Styles](#styles), on which component `Badge` is based. 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 
@@ -187,8 +188,8 @@ Options data:
 You must write css properties in camelCase, using [objects style](https://emotion.sh/docs/object-styles "read more about objects style") syntax.
  
 
-### Languages <a name="custom_languages"></a>
-To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeBadge` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#conf_languages), on which component `Badge` is based. 
+### Languages
+To call the [langugeAPI](https://github.com/sovaai/chatKit-lib/blob/master/docs/apimethods/languageAPI.md "description of method") with event `changeBadge` it's allows you to choose and overwrite values in chosen language packet and chosen key in [Languages](#languages), on which component `Badge` is based. 
 
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
