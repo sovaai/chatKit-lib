@@ -21,9 +21,9 @@ Description of events and its data read read below.
 ## List of events
 | Event name                     |                          |
 |--------------------------------|--------------------------|
-| [changeIcon](#changeicon--)      | changing a specific icon |
-| [changeAvatar](#changeavatar--)  | changing the avatar      |
-| [changeSVG](#changesvg--)        | changing SVG image       |
+| [changeIcon](#changeIcon)      | changing a specific icon |
+| [changeAvatar](#changeAvatar)  | changing the avatar      |
+| [changeSVG](#changeSVG)        | changing SVG image       |
 
 
 
