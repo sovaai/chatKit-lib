@@ -26,9 +26,9 @@ export default App
 
 # :crown: Table of contents
 The library consists of the next components:  
-:unicorn:   **[CkComponents](#2)** - UI components of widget (react-components);  
-:wrench:   **[ckAPIMethods](#1)** - methods that affect behavior of UI or interaction with UI;  
-:blue_book:   **[ckStore](#3)** - management of content.  
+:unicorn:   **[CkComponents](#CkComponents)** - UI components of widget (react-components);  
+:wrench:   **[ckAPIMethods](#ckAPIMethods)** - methods that affect behavior of UI or interaction with UI;  
+:blue_book:   **[ckStore](#ckStore)** - management of content.  
 
 Detailed description of the library is given below.
  
@@ -36,7 +36,7 @@ Detailed description of the library is given below.
  
 # :memo: Library Description
 
-## CkComponents <a name="2"></a>
+## CkComponents
 ```javascript
 import { CkComponents } from "sova-chatkit"
 ```  
@@ -55,7 +55,7 @@ Each component accepts props from `ckStore` with value `true` or `false` denotin
 
 
 
-## ckAPIMethods <a name="1"></a>
+## ckAPIMethods
 ```javascript
 import { ckAPIMethods } from "sova-chatkit"
 ```
@@ -74,7 +74,7 @@ All methods affect information stored `ckStore` and can change widget behavior a
 
  
 
-## ckStore<a name="3"></a>
+## ckStore
 ```javascript
 import { ckStore } from "sova-chatkit"
 ```

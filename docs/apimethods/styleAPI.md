@@ -23,20 +23,18 @@ Description of events and its data read read below.
 ## List of events
 | Event name                                       |                                                                              |
 |--------------------------------------------------|------------------------------------------------------------------------------|
-| [switchTheme](#switchTheme)                      | switching between themes                                                     |
-| [initTheme](#initTheme)                          | addition a new theme                                                         |
-| [changeStyles](#changeStyles)                    | modifying a complete package of an existing theme                            |
-| [changeChatIt](#changeChatIt)                    | changing the style package of component `ChatIt` in selected theme           |
-| [changeHeader](#changeHeader)                    | changing the style package of component `Header` in selected theme           |
-| [changeDialog](#changeDialog)                    | changing the style package of component `Dialog` in selected theme           |
-| [changeRate](#changeRate)                        | changing the style package of component `Rate` in selected theme             |
-| [changeUserMessage](#changeUserMessage)          | changing the style package of component `UserMessage` in selected theme      |
-| [changeResponseMessage](#changeResponseMessage)  | changing the style package of component `ResponseMessage` in selected theme  |
-| [changeSender](#changeSender)                    | changing the style package of component `Sender` in selected theme           |
-| [changeBadge](#changeBadge)                      | changing the style package of component `Badge` in selected theme            |
-| [changeCKDropAndDown](#changeCKDropAndDown)      | changing the style package of component `CKDropAndDown` in selected theme    |
-
-
+| [switchTheme](#switchtheme)                      | switching between themes                                                     |
+| [initTheme](#inittheme)                          | addition a new theme                                                         |
+| [changeStyles](#changestyles)                    | modifying a complete package of an existing theme                            |
+| [changeChatIt](#changechatit)                    | changing the style package of component `ChatIt` in selected theme           |
+| [changeHeader](#changeheader)                    | changing the style package of component `Header` in selected theme           |
+| [changeDialog](#changedialog)                    | changing the style package of component `Dialog` in selected theme           |
+| [changeRate](#changerate)                        | changing the style package of component `Rate` in selected theme             |
+| [changeUserMessage](#changeusermessage)          | changing the style package of component `UserMessage` in selected theme      |
+| [changeResponseMessage](#changeresponsemessage)  | changing the style package of component `ResponseMessage` in selected theme  |
+| [changeSender](#changesender)                    | changing the style package of component `Sender` in selected theme           |
+| [changeBadge](#changebadge)                      | changing the style package of component `Badge` in selected theme            |
+| [changeCKDropAndDown](#changeckdropanddown)      | changing the style package of component `CKDropAndDown` in selected theme    |
 
 
 ### switchTheme
