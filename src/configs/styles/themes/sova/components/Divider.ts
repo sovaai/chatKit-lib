@@ -1,7 +1,7 @@
 import { ThemeColors } from '../@types/colors'
 
 const Divider = (colors: ThemeColors) => {
-  const { primaryText } = colors
+  const { primaryDateDivider } = colors
 
   return {
     dividerMainContainer: {
@@ -10,7 +10,8 @@ const Divider = (colors: ThemeColors) => {
       justifyContent: 'center',
       padding: '22px 0',
       userSelect: 'none',
-      color: primaryText,
+      color: primaryDateDivider,
+      opacity: '0.3',
     },
   }
 }

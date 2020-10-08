@@ -3,6 +3,7 @@ import { Set } from 'immutable'
 export const uiManagment = {
   common: {
     chatIsOpen: false,
+    sendInitOnOpen: true,
     showNotification: false,
     showMsgLoad: false,
     showRate: false,

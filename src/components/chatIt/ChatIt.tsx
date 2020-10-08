@@ -9,12 +9,14 @@ import { useStoreon } from 'storeon/react'
 import Close from '../close/Close'
 import Settings from '../settings/Settings'
 import SenderSearch from '../sender/SenderSearch'
-import CKDropzone from '../ckDropAndDown/CKDropAndDown'
 import { getDialogHeight } from '../../utils/getDialogHeight'
-const ChatIt = memo(() => {
+import CKDragDetect from '../ckDragDetect/CKDragDetect'
+import { ChatItProps } from './@types/ChatIt'
+const ChatIt: React.FC<ChatItProps> = memo((props) => {
   const { managment, styles } = useStoreon('managment', 'styles')
   /* COMPONENTS PROPS */
   const activeTheme = styles.get('active')
+  const store = props.store
   const { mainContainer, chatContainer } = styles.getIn(['stack', activeTheme, 'ChatIt'])
   const { chatIsOpen, showSettings } = managment.get('common')
   const { showDropZone } = managment.getIn(['components', 'Sender'])
@@ -23,6 +25,7 @@ const ChatIt = memo(() => {
     'ChatIt',
   ])
 
+  
   const headerHeight = styles.getIn(['stack', activeTheme, 'Header', 'mainContainer', 'height'])
   const senderInitialHeight = styles.getIn(['stack', activeTheme, 'Sender', 'mainContainer', 'minHeight'])
   const [senderHeigth, changeSenderHeight] = useState(Number(senderInitialHeight.split('px')[0]))
@@ -32,21 +35,23 @@ const ChatIt = memo(() => {
 
   return (
     <div className="chatIt-main-container" css={mainContainer}>
-      {CloseEnabled && chatIsOpen && <Close />}
+      {CloseEnabled && chatIsOpen && <Close store={store} />}
       {chatIsOpen ? (
         <div className="chatIt-chat-container" css={chatContainer}>
           {!showSettings ? (
             <React.Fragment>
-              {HeaderEnabled && <Header />}
-              {DialogEnabled && !showDropZone && <Dialog height={dialogHeight} />}
-              {SenderEnabled && search.active ? <SenderSearch /> : <Sender changeSenderHeight={changeSenderHeight} />}
+              {HeaderEnabled && <Header store={store} />}
+              <CKDragDetect store={store}>
+                {DialogEnabled && !showDropZone && <Dialog store={store} height={dialogHeight} />}
+                {SenderEnabled && search.active ? <SenderSearch store={store} /> : <Sender store={store} changeSenderHeight={changeSenderHeight} />}
+              </CKDragDetect>
             </React.Fragment>
           ) : (
-            SettingsEnabled && <Settings />
+            SettingsEnabled && <Settings store={store} />
           )}
         </div>
       ) : (
-        BadgeEnabled && <Badge />
+        BadgeEnabled && <Badge store={store} />
       )}
     </div>
   )

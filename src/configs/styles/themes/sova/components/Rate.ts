@@ -3,17 +3,16 @@ import { ThemeColors } from '../@types/colors'
 const Rate = (colors: ThemeColors) => {
   const {
     primaryWhite,
-    primaryDivider,
     primaryButton,
     primaryButtonHover,
     secondaryRate,
-    primaryAccent,
     primaryText,
+    primaryRatingElement,
   } = colors
 
   return {
     mainContainer: {
-      borderTop: `0.5px solid ${primaryDivider}`,
+      borderTop: `1px solid #dddee2`,
       marginTop: '1rem',
       display: 'flex',
       flexWrap: 'wrap',
@@ -26,7 +25,7 @@ const Rate = (colors: ThemeColors) => {
       marginBottom: '1rem',
     },
     negativeRateButton: {
-      width: '47%',
+      width: '48%',
       border: 'none',
       outline: 'none',
       display: 'flex',
@@ -47,7 +46,7 @@ const Rate = (colors: ThemeColors) => {
       },
     },
     positiveRateButton: {
-      width: '47%',
+      width: '48%',
       border: 'none',
       outline: 'none',
       display: 'flex',
@@ -68,14 +67,22 @@ const Rate = (colors: ThemeColors) => {
       },
     },
     ratingElement: {
-      marginTop: '5px',
       width: '100%',
+      height: '32px',
+      background: 'none',
+      borderRadius: '4px',
+      padding: '8px 6px',
+      lineHeight: '17px',
+      boxSizing: 'border-box',
       color: secondaryRate,
       listStyleType: 'none',
       cursor: 'pointer',
-      transition: 'color ease-in-out 0.3s',
+      transition: 'background ease-in-out 0.3s',
       '&:hover': {
-        color: primaryAccent,
+        background: primaryRatingElement,
+      },
+      '&:active': {
+        opacity: '0.5',
       },
     },
     ratingListContainer: {

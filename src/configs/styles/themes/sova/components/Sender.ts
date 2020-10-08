@@ -1,7 +1,16 @@
 import { ComponentArguments } from '../@types/components'
 
 const Sender = ({ colors, fonts }: ComponentArguments) => {
-  const { primarySenderBG, primaryDivider, primaryAccent, primary, primaryText, primaryFileBackground } = colors
+  const {
+    primarySenderBG,
+    primaryDivider,
+    secondaryButton,
+    primaryAccent,
+    primary,
+    primaryText,
+    primaryFileBackground,
+    primaryPlaceholder,
+  } = colors
 
   return {
     mainContainer: {
@@ -25,6 +34,7 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
     },
     mainContainerSearch: {
       justifyContent: 'space-between',
+      color: primaryText,
     },
     searchCountContainer: {
       display: 'flex',
@@ -33,6 +43,34 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
     searchButtonContainer: {
       display: 'flex',
       alignItems: 'center',
+      width: '59.6px',
+      justifyContent: 'space-between',
+    },
+    switchingActiveButton: {
+      border: 'none',
+      fontSize: '1.125rem',
+      background: primarySenderBG,
+      height: '34px',
+      outline: 'none',
+      padding: '0',
+      color: secondaryButton,
+      transition: 'color ease-in-out 0.1s',
+      cursor: 'pointer',
+      '&:hover': {
+        color: '#878fa3',
+      },
+      '&:active': {
+        color: primary,
+      },
+      '@media screen and (max-width: 800px)': {
+        fontSize: '1.25rem',
+      },
+    },
+    switchingDisableButton: {
+      opacity: '0.2',
+      cursor: 'auto',
+      '&:hover': {},
+      '&:active': {},
     },
     addFileButton: {
       border: 'none',
@@ -45,11 +83,10 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
       transition: 'transform ease-in-out 0.3s, color ease-in-out 0.3s',
       cursor: 'pointer',
       '&:hover': {
-        color: primary,
+        color: '#F2297B',
       },
       '&:active': {
-        opacity: '0.75',
-        color: primary,
+        opacity: '0.5',
       },
       '@media screen and (max-width: 800px)': {
         fontSize: '1.25rem',
@@ -67,11 +104,10 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
       transition: 'transform ease-in-out 0.3s, color ease-in-out 0.3s',
       '&:hover': {
         transform: 'translateY(-5px)',
-        color: primaryAccent,
+        color: '#2F66F1',
       },
       '&:active': {
-        opacity: '0.75',
-        color: primaryAccent,
+        opacity: '0.5',
       },
       '@media screen and (max-width: 800px)': {
         fontSize: '1.25rem',
@@ -84,7 +120,6 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
       resize: 'none',
       border: 'none',
       outline: 'none',
-      /* maxHeight: '80px', */
       minHeight: '27px',
       color: primaryText,
       background: 'none',
@@ -105,6 +140,18 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
       '@media screen and (max-width: 480px)': {
         minWidth: '74%',
       },
+      '::-webkit-input-placeholder': {
+        color: primaryPlaceholder,
+        opacity: '0.2',
+      },
+      '::-moz-placeholder': {
+        color: primaryPlaceholder,
+        opacity: '0.2',
+      },
+      '-ms-input-placeholder': {
+        color: primaryPlaceholder,
+        opacity: '0.2',
+      },
     },
     voiceButton: {},
     filesContainer: {
@@ -112,7 +159,7 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
       overflowX: 'scroll',
       display: 'flex',
       padding: '8px 0 8px 0',
-      animation: 'show 0.5s 1',
+      animation: 'show 0.3s 1',
       '::-webkit-scrollbar': { width: '0' },
       '@keyframes show': {
         '0%': {
@@ -138,7 +185,7 @@ const Sender = ({ colors, fonts }: ComponentArguments) => {
         position: 'absolute',
         display: 'flex',
       },
-      animation: 'show 0.5s 1',
+      animation: 'show 0.3s 1',
       '@keyframes show': {
         '0%': {
           opacity: '0',

@@ -4,6 +4,7 @@ export interface HeaderProps {
   managment: Map<string, any>
   languages: Map<string, any>
   styles: Map<string, any>
+  store?: any
 }
 export interface HeaderState {
   showSettings: boolean

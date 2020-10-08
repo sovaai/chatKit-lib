@@ -24,7 +24,7 @@ export type StylesEvents =
   | 'changeResponseMessage'
   | 'changeSender'
   | 'changeBadge'
-const stylesEvents: { [key: string]: (data: any) => void } = {
+const stylesEvents: { [key: string]: (data: any, store?: any) => void } = {
   switchTheme: switchTheme,
   initTheme: initTheme,
   changeStyles: changeStyles,
@@ -38,7 +38,7 @@ const stylesEvents: { [key: string]: (data: any) => void } = {
   changeBadge: changeBadge,
 }
 const stylesApi = {
-  styles: (event: StylesEvents, data: any) => stylesEvents[event](data),
+  styles: (event: StylesEvents, data: any, store?: any) => stylesEvents[event](data, store),
 }
 
 export default stylesApi

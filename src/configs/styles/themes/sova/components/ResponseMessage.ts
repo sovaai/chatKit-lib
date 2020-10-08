@@ -1,7 +1,7 @@
 import { ThemeColors } from '../@types/colors'
 
 const ResponseMessage = (colors: ThemeColors) => {
-  const { primaryLinks, primaryResponse, primaryText, primaryAccent } = colors
+  const { primaryLinks, primaryDark, primaryRatingElement, primaryResponse, primaryText, primaryAccent } = colors
 
   return {
     mainContainer: {
@@ -35,13 +35,44 @@ const ResponseMessage = (colors: ThemeColors) => {
       '@media screen and (max-width: 800px)': {
         fontSize: '1rem',
       },
-
+      '& mark': {
+        background: '#FFDF00',
+        color: primaryDark,
+      },
       '& a': {
         color: primaryLinks,
+        textDecoration: 'none',
         transition: 'color ease-in-out 0.3s',
       },
+      '& ul': {
+        margin: '0',
+        display: 'flex',
+        padding: '0',
+        flexDirection: 'column',
+        marginLeft: '-6px',
+        alignItems: 'flex-start',
+        width: '100%',
+      },
+      '& li': {
+        width: '100%',
+        height: '32px',
+        background: 'none',
+        borderRadius: '4px',
+        padding: '8px 6px',
+        lineHeight: '17px',
+        boxSizing: 'border-box',
+        listStyleType: 'none',
+        cursor: 'pointer',
+        transition: 'background ease-in-out 0.3s',
+      },
+      '& li:hover': {
+        background: primaryRatingElement,
+      },
+      '& li:active': {
+        opacity: '0.5',
+      },
       '& a:hover': {
-        color: primaryAccent,
+        color: '#2F66F1',
       },
       '& a:active': {
         color: primaryAccent,

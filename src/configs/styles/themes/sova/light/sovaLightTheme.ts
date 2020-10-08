@@ -15,6 +15,7 @@ import ToggleSlider from '../components/ToggleSlider'
 import colors from './colors'
 import fonts from './font'
 import CKDropAndDown from '../components/CKDropAndDown'
+import CKContents from '../components/CKContents'
 
 const sovaLight = {
   themeName: 'sovaLight',
@@ -23,6 +24,7 @@ const sovaLight = {
     Sender: Sender({ colors, fonts }),
     ChatIt: ChatIt({ colors, fonts }),
     Dialog: Dialog(colors),
+    CKContents: CKContents(colors),
     UserMessage: UserMesssage(colors),
     ResponseMessage: ResponseMessage(colors),
     MessageLoader: MessageLoader(colors),

@@ -43,7 +43,7 @@ export type uiManagmentEvents =
   | 'scrollToFoundMessage'
   | 'reset'
   | 'showDropZone'
-const uiManagmentEvents: { [key: string]: (data: any) => void } = {
+const uiManagmentEvents: { [key: string]: (data: any, store?: any) => void } = {
   setUpSender: setUpSender,
   setUpChatIt: setUpChatIt,
   setUpRate: setUpRate,
@@ -67,8 +67,8 @@ const uiManagmentEvents: { [key: string]: (data: any) => void } = {
   showDropZone: showDropZone,
 }
 const uiManagmentApi = {
-  uiManagment: (event: uiManagmentEvents, data?: any | null) => {
-    uiManagmentEvents[event](data)
+  uiManagment: (event: uiManagmentEvents, data?: any | null, store?: any) => {
+    uiManagmentEvents[event](data, store)
   },
 }
 

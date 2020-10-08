@@ -1,7 +1,7 @@
 import { ThemeColors } from '../@types/colors'
 
 const CKDropAndDown = (colors: ThemeColors) => {
-  const { primaryBackground, primaryDashed, primaryText, primary, primaryAccent, primaryWhite } = colors
+  const { primaryBackground, primaryDashed, primaryText, primary, primaryWhite, primaryChooseFileButtonHover,  } = colors
 
   return {
     mainContainer: {
@@ -15,7 +15,7 @@ const CKDropAndDown = (colors: ThemeColors) => {
       boxSizing: 'border-box',
       outline: 'none',
       border: `2px dashed ${primaryDashed}`,
-      animation: 'show 0.5s 1',
+      animation: 'show 0.3s 1',
       '@keyframes show': {
         '0%': {
           opacity: '0',
@@ -28,6 +28,7 @@ const CKDropAndDown = (colors: ThemeColors) => {
     svgContainer: {},
     dropAndDownContainer: {
       marginBottom: '21.92px',
+      outline: 'none',
     },
     chooseFileButton: {
       padding: '4px 20px',
@@ -37,7 +38,6 @@ const CKDropAndDown = (colors: ThemeColors) => {
       fontStyle: 'normal',
       fontWeight: 'normal',
       fontSize: '14px',
-      lineHeight: '40px',
       textAlign: 'center',
       color: primaryWhite,
       background: primary,
@@ -48,7 +48,7 @@ const CKDropAndDown = (colors: ThemeColors) => {
       cursor: 'pointer',
       transition: 'background ease-in-out 0.3s',
       '&:hover': {
-        background: primaryAccent,
+        background: primaryChooseFileButtonHover,
       },
       '&:active': {
         opacity: '0.6',

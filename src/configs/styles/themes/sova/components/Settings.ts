@@ -1,7 +1,16 @@
 import { ThemeColors } from '../@types/colors'
 
 const Settings = (colors: ThemeColors) => {
-  const { primaryWhite, primaryDivider, primaryDark, primaryBackground, primaryText, primary } = colors
+  const {
+    primaryWhite,
+    primaryDivider,
+    primaryDark,
+    primaryBackground,
+    primaryText,
+    primary,
+    primaryHeaderButtonHover,
+    primaryHeaderButtonActive,
+  } = colors
 
   return {
     mainContainer: {
@@ -48,12 +57,18 @@ const Settings = (colors: ThemeColors) => {
       color: primaryWhite,
       border: 'none',
       outline: 'none',
+      width: '30px',
+      height: '30px',
+      display: 'flex',
+      alignItems: 'center',
+      borderRadius: '4px',
       cursor: 'pointer',
-      '& :hover': {
-        opacity: '0.75',
+      transition: 'background ease-in-out 0.3s',
+      '&:hover': {
+        background: primaryHeaderButtonHover,
       },
-      '& :active': {
-        opacity: '1',
+      '&:active': {
+        background: primaryHeaderButtonActive,
       },
     },
     fieldcontainer: {
@@ -62,16 +77,16 @@ const Settings = (colors: ThemeColors) => {
       padding: '24px',
       width: '100%',
       boxSizing: 'border-box',
-      animation: 'show 0.5s 1',
+      animation: 'show 0.3s 1',
       '@keyframes show': {
         '0%': {
           opacity: '0',
         },
         '30%': {
-          opacity: '0.3'
+          opacity: '0.3',
         },
         '60%': {
-          opacity: '0.6'
+          opacity: '0.6',
         },
         '100%': {
           opacity: '1',

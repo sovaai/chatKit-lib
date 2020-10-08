@@ -23,7 +23,7 @@ export type LanguagesEvents =
   | 'changeSender'
   | 'changeBadge'
 
-const languagesEvents: { [key: string]: (data: any) => void } = {
+const languagesEvents: { [key: string]: (data: any, store?: any) => void } = {
   initLanguage: initLanguage,
   changeLanguage: changeLanguage,
   changeLanguagePacket: changeLanguagePacket,
@@ -36,8 +36,8 @@ const languagesEvents: { [key: string]: (data: any) => void } = {
   changeBadge: changeBadge,
 }
 const languagesApi = {
-  languages: (event: LanguagesEvents, data: any) => {
-    languagesEvents[event](data)
+  languages: (event: LanguagesEvents, data: any, store?: any) => {
+    languagesEvents[event](data, store)
   },
 }
 

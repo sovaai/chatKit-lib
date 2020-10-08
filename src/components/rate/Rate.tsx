@@ -32,8 +32,8 @@ class Rate extends React.PureComponent<RateProps, RateState> {
   hideRate = () => this.setState(() => ({ transform: 'translateY(100%)' }))
   removeRate = () =>
     this.state.transform === 'translateY(100%)' &&
-    sendMessageApi.sendRate(4) &&
-    uiManagmentApi.uiManagment('showRate', false)
+    sendMessageApi.sendRate(4, this.props.store) &&
+    uiManagmentApi.uiManagment('showRate', false, this.props.store)
 
   render() {
     const { showRatingList } = this.state
@@ -69,7 +69,7 @@ class Rate extends React.PureComponent<RateProps, RateState> {
               withTitle={positiveRate.withTitle}
               title={positive}
               icon={positiveRateIcon}
-              onClick={() => sendMessageApi.sendRate(5)}
+              onClick={() => sendMessageApi.sendRate(5, this.props.store)}
               style={positiveRateButton}
               className="rate-positiveRateButton"
             />
@@ -98,7 +98,7 @@ class Rate extends React.PureComponent<RateProps, RateState> {
                   className="rate-ratingElement"
                   css={ratingElement}
                   key={index}
-                  onClick={() => sendMessageApi.sendRate(el.rating)}
+                  onClick={() => sendMessageApi.sendRate(el.rating, this.props.store)}
                 >
                   {el.text}
                 </li>

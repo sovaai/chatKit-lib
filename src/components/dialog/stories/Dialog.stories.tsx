@@ -4,10 +4,15 @@ import { StoreContext } from 'storeon/react'
 import { object, withKnobs, select, boolean, text } from '@storybook/addon-knobs'
 import uiManagmentApi from '../../../api/uiManagment/uiManagmentApi'
 import stylesApi from '../../../api/styles/stylesApi'
+// import { darkTheme, lightTheme } from '../../../configs/styles'
+// import { ru, en } from '../../../configs/languages'
 import languagesApi from '../../../api/languages/languagesApi'
+// import { settings } from '../../../configs/settings'
+// import settingsApi from '../../../api/settings/settingsApi'
 import Dialog from '../Dialog'
 import { withInfo } from '@storybook/addon-info'
 import info from './DialogInfo.md'
+// import { settings } from '../../../configs/settings'
 import settingsApi from '../../../api/settings/settingsApi'
 import { iconsList } from '../../../configs/icons'
 import '../../../styles/storyBookContainer.css'
@@ -26,7 +31,102 @@ const groupUIManagment = 'UIManagment'
 const groupStyles = 'Styles'
 const groupLanguages = 'Languages'
 const groupSettings = 'Settings'
-
+// const storyDark = {
+//   mainContainer: {
+//     width: '100%',
+//     height: '70%',
+//     padding: '10px',
+//     paddingBottom: '0',
+//     background: '#373737',
+//     borderRadius: '20px',
+//   },
+//   panel: {
+//     display: 'flex',
+//     flexDirection: 'row-reverse',
+//     padding: '5px',
+//   },
+//   rateButton: {
+//     border: 'none',
+//     backgroundColor: '#373737',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   searchButton: {
+//     border: 'none',
+//     backgroundColor: '#373737',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   messagesContainer: {
+//     width: '100%',
+//     height: '90%',
+//   },
+// }
+// const storyLight = {
+//   mainContainer: {
+//     width: '100%',
+//     height: '70%',
+//     padding: '10px',
+//     paddingBottom: '0',
+//     background: 'white',
+//     borderRadius: '20px',
+//   },
+//   panel: {
+//     display: 'flex',
+//     flexDirection: 'row-reverse',
+//     padding: '5px',
+//   },
+//   rateButton: {
+//     border: 'none',
+//     backgroundColor: 'white',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   searchButton: {
+//     border: 'none',
+//     backgroundColor: 'white',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   messagesContainer: {
+//     width: '100%',
+//     height: '90%',
+//   },
+// }
+// stylesApi.styles('changeDialog', { themeName: 'darkTheme', data: storyDark })
+// stylesApi.styles('changeDialog', { themeName: 'lightTheme', data: storyLight })
+// export const DialogComponent = () => {
+//   const rateIcon = object('rateIcon', settings.media.icons.rateIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'rateIcon', iconData: rateIcon })
+//   const searchIcon = object('searchIcon', settings.media.icons.searchIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'searchIcon', iconData: searchIcon })
+//   const rateButton = object('rateButton',uiManagmentDialog.rate, groupUIManagment)
+//   const searchButton = object('searchButton',uiManagmentDialog.search, groupUIManagment)
+//   uiManagmentApi.uiManagment('setUpDialog', { rate: rateButton, search: searchButton })
+//   const showMsgLoad = boolean('showMsgLoad', false, groupUIManagment)
+//   uiManagmentApi.uiManagment('dialogLoading', showMsgLoad)
+//   const activeLanguage = select('active', { en: 'en', ru: 'ru' }, 'en', groupLanguages)
+//   languagesApi.languages('changeLanguage', activeLanguage)
+//   const russian = object('Russian', ru.packet.Dialog, groupLanguages)
+//   languagesApi.languages('changeDialog', { language: 'ru', data: russian })
+//   const english = object('English', en.packet.Dialog, groupLanguages)
+//   languagesApi.languages('changeDialog', { language: 'en', data: english })
+//   const activeTheme = select('active', { darkTheme: 'darkTheme', lightTheme: 'lightTheme' }, 'darkTheme', groupStyles)
+//   stylesApi.styles('switchTheme', activeTheme)
+//   const stylesDarkTheme = object('darkTheme', darkTheme.data.Dialog, groupStyles)
+//   stylesApi.styles('changeDialog', { themeName: 'darkTheme', data: stylesDarkTheme })
+//   const stylesLightTheme = object('lightTheme', lightTheme.data.Dialog, groupStyles)
+//   stylesApi.styles('changeDialog', { themeName: 'lightTheme', data: stylesLightTheme })
+//   return (
+//     <StoreContext.Provider value={store}>
+//       <Dialog />
+//     </StoreContext.Provider>
+//   )
+// }
 const languagePacket = {
   loading: (language: string, title: string) => text(`${language}/loading`, title, groupLanguages),
   rateButtonTitle: (language: string, title: string) => text(`${language}/rateButtonTitle`, title, groupLanguages),

@@ -10,12 +10,13 @@ import SettingsHeader from './components/settingsHeader/SettingsHeader'
 import uiManagmentApi from '../../api/uiManagment/uiManagmentApi'
 
 const Settings = memo<SettingsProps>((props) => {
+  const store = props.store
   const changeLanguage = ({ currentTarget: { id } }: React.ChangeEvent<HTMLInputElement>) =>
-    languagesApi.languages('changeLanguage', id)
+    languagesApi.languages('changeLanguage', id, store)
   const changeTheme = ({ currentTarget: { id } }: React.ChangeEvent<HTMLInputElement>) =>
-    stylesApi.styles('switchTheme', id)
+    stylesApi.styles('switchTheme', id, store)
 
-  const changeTime = () => uiManagmentApi.uiManagment('toggleDisplayMessageTime')
+  const changeTime = () => uiManagmentApi.uiManagment('toggleDisplayMessageTime', store)
 
   const activeLanguage = props.languages.get('active')
   const languagesStack = props.languages.get('stack')
@@ -44,7 +45,7 @@ const Settings = memo<SettingsProps>((props) => {
 
   return (
     <div className="settings-main-container" css={mainContainer}>
-      <SettingsHeader />
+      <SettingsHeader store={store} />
       <div className="settings-fieldcontainer" css={fieldcontainer}>
         <span className="sova-settings_group-heading" css={heading}>
           {headingLanguage || 'Languages'}

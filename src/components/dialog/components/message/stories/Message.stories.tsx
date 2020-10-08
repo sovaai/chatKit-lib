@@ -4,13 +4,16 @@ import { StoreContext } from 'storeon/react'
 import { object, withKnobs, select, boolean, files, text } from '@storybook/addon-knobs'
 import uiManagmentApi from '../../../../../api/uiManagment/uiManagmentApi'
 import stylesApi from '../../../../../api/styles/stylesApi'
-
+// import { darkTheme, lightTheme } from '../../../../../configs/styles'
+// import { ru, en } from '../../../../../configs/languages'
 import languagesApi from '../../../../../api/languages/languagesApi'
+// import { settings } from '../../../../../configs/settings'
 import settingsApi from '../../../../../api/settings/settingsApi'
 import Message from '../Message'
 import { iconsList } from '../../../../../configs/icons'
 import '../../../../../styles/storyBookContainer.css'
 import { withInfo } from '@storybook/addon-info'
+// import info from '../stories/MessageInfo.md'
 import info from './MessageInfo.md'
 export default {
   title: 'Message',
@@ -38,7 +41,318 @@ const responseMessage = {
   date: new Date(),
   showRate: true,
 }
-
+// const userDark = {
+//   mainContainer: {
+//     width: '50%',
+//     padding: '10px',
+//     marginLeft: '40%',
+//     marginTop: '5%',
+//     marginBottom: '5%',
+//   },
+//   rateMessageButton: {
+//     border: 'none',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     width: '30%',
+//     borderRadius: '10px',
+//     backgroundColor: '#575757',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   avatarContainer: {},
+//   audioMessageButton: {
+//     border: 'none',
+//     display: 'flex',
+//     borderRadius: '10px',
+//     width: '60%',
+//     justifyContent: 'space-around',
+//     backgroundColor: '#575757',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   image: {
+//     display: 'none',
+//   },
+//   dataContainer: {
+//     fontSize: '12px',
+//     color: '#9b9b9b',
+//     textAlign: 'right',
+//   },
+//   textContainer: {
+//     minHeight: '40px',
+//     padding: '5px',
+//     '& a': {
+//       color: '#5271fe',
+//     },
+//   },
+//   bubbleContainer: {
+//     width: '100%',
+//     backgroundColor: '#575757',
+//     borderRadius: '10px',
+//     color: 'white',
+//     padding: '10px',
+//     textAlign: 'left',
+//   },
+//   buttonsContainer: {
+//     display: 'flex',
+//     borderRadius: '10px',
+//     width: '100%',
+//     marginBottom: '10px',
+//   },
+// }
+// const responseDark = {
+//   mainContainer: {
+//     width: '70%',
+//     padding: '10px',
+//     marginRight: '40%',
+//     marginTop: '5%',
+//     marginBottom: '5%',
+//     display: 'flex',
+//   },
+//   rateMessageButton: {
+//     border: 'none',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     width: '30%',
+//     borderRadius: '10px',
+//     backgroundColor: '#575757',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   avatarContainer: {
+//     width: '50px',
+//     height: '50px',
+//     borderRadius: '50px',
+//     backgroundColor: '#575757',
+//     border: '3px solid #575757',
+//     marginRight: '4px',
+//   },
+//   audioMessageButton: {
+//     border: 'none',
+//     display: 'flex',
+//     borderRadius: '10px',
+//     width: '60%',
+//     justifyContent: 'space-around',
+//     backgroundColor: '#575757',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   image: {
+//     width: '50px',
+//     height: '50px',
+//   },
+//   dataContainer: {
+//     fontSize: '12px',
+//     color: '#9b9b9b',
+//     textAlign: 'right',
+//   },
+//   textContainer: {
+//     minHeight: '40px',
+//     padding: '5px',
+//     '& a': {
+//       color: '#5271fe',
+//     },
+//   },
+//   bubbleContainer: {
+//     width: '100%',
+//     backgroundColor: '#575757',
+//     borderRadius: '10px',
+//     color: 'white',
+//     padding: '10px',
+//     textAlign: 'left',
+//   },
+//   buttonsContainer: {
+//     display: 'flex',
+//     borderRadius: '10px',
+//     width: '100%',
+//     marginBottom: '10px',
+//   },
+// }
+// const userLight = {
+//   mainContainer: {
+//     width: '50%',
+//     padding: '10px',
+//     marginLeft: '40%',
+//     marginTop: '5%',
+//     marginBottom: '5%',
+//   },
+//   rateMessageButton: {
+//     border: 'none',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     width: '30%',
+//     borderRadius: '10px',
+//     backgroundColor: '#edf0f5',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   avatarContainer: {},
+//   audioMessageButton: {
+//     border: 'none',
+//     display: 'flex',
+//     borderRadius: '10px',
+//     width: '60%',
+//     justifyContent: 'space-around',
+//     backgroundColor: '#edf0f5',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   image: {
+//     display: 'none',
+//   },
+//   dataContainer: {
+//     fontSize: '12px',
+//     color: '#9b9b9b',
+//     textAlign: 'right',
+//   },
+//   textContainer: {
+//     minHeight: '40px',
+//     padding: '5px',
+//     '& a': {
+//       color: '#5271fe',
+//     },
+//   },
+//   bubbleContainer: {
+//     width: '100%',
+//     backgroundColor: '#edf0f5',
+//     borderRadius: '10px',
+//     color: '#373737',
+//     padding: '10px',
+//     textAlign: 'left',
+//   },
+//   buttonsContainer: {
+//     display: 'flex',
+//     borderRadius: '10px',
+//     width: '100%',
+//     marginBottom: '10px',
+//   },
+// }
+// const responseLight = {
+//   mainContainer: {
+//     width: '70%',
+//     padding: '10px',
+//     marginRight: '40%',
+//     marginTop: '5%',
+//     marginBottom: '5%',
+//     display: 'flex',
+//   },
+//   rateMessageButton: {
+//     border: 'none',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     width: '30%',
+//     borderRadius: '10px',
+//     backgroundColor: '#edf0f5',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   avatarContainer: {
+//     width: '50px',
+//     height: '50px',
+//     borderRadius: '50px',
+//     backgroundColor: '#edf0f5',
+//     border: '3px solid #edf0f5',
+//     marginRight: '4px',
+//   },
+//   audioMessageButton: {
+//     border: 'none',
+//     display: 'flex',
+//     borderRadius: '10px',
+//     width: '60%',
+//     justifyContent: 'space-around',
+//     backgroundColor: '#edf0f5',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   image: {
+//     width: '50px',
+//     height: '50px',
+//   },
+//   dataContainer: {
+//     fontSize: '12px',
+//     color: '#9b9b9b',
+//     textAlign: 'right',
+//   },
+//   textContainer: {
+//     minHeight: '40px',
+//     padding: '5px',
+//     '& a': {
+//       color: '#5271fe',
+//     },
+//   },
+//   bubbleContainer: {
+//     width: '100%',
+//     backgroundColor: '#edf0f5',
+//     borderRadius: '10px',
+//     color: '#373737',
+//     padding: '10px',
+//     textAlign: 'left',
+//   },
+//   buttonsContainer: {
+//     display: 'flex',
+//     borderRadius: '10px',
+//     width: '100%',
+//     marginBottom: '10px',
+//   },
+// }
+// stylesApi.styles('changeUserMessage', { themeName: 'lightTheme', data: userLight })
+// stylesApi.styles('changeUserMessage', { themeName: 'darkTheme', data: userDark })
+// stylesApi.styles('changeResponseMessage', { themeName: 'lightTheme', data: responseLight })
+// stylesApi.styles('changeResponseMessage', { themeName: 'darkTheme', data: responseDark })
+// export const MessageComponent = () => {
+//   const avatar = files('avatar', '.png', [], groupSettings)
+//   settingsApi.settings('changeAvatar', avatar[0])
+//   const audioMessageButton = object('audioMessageButton', uiManagmentMessage.audioMessage, groupUIManagment)
+//   const rateMessageButton = object('rateMessageButton', uiManagmentMessage.rateMessage, groupUIManagment)
+//   const rateMessageIcon = object('rateMessageIcon', settings.media.icons.rateIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'rateIcon', iconData: rateMessageIcon })
+//   const audioMessageIcon = object('audioMessageIcon', settings.media.icons.playMessageIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'playMessageIcon', iconData: audioMessageIcon })
+//   const showAvatar = boolean('showAvatar', uiManagmentMessage.showAvatar, groupUIManagment)
+//   const showDate = boolean('showDate', uiManagmentMessage.showDate, groupUIManagment)
+//   uiManagmentApi.uiManagment('setUpMessage', {
+//     showAvatar: showAvatar,
+//     showDate: showDate,
+//     audioMessage: audioMessageButton,
+//     rateMessage: rateMessageButton,
+//   })
+//   const activeLanguage = select('active', { en: 'en', ru: 'ru' }, 'en', groupLanguages)
+//   languagesApi.languages('changeLanguage', activeLanguage)
+//   const russian = object('Russian', ru.packet.Message, groupLanguages)
+//   languagesApi.languages('changeMessage', { language: 'ru', data: russian })
+//   const english = object('English', en.packet.Message, groupLanguages)
+//   languagesApi.languages('changeMessage', { language: 'en', data: english })
+//   const activeTheme = select('active', { darkTheme: 'darkTheme', lightTheme: 'lightTheme' }, 'darkTheme', groupStyles)
+//   stylesApi.styles('switchTheme', activeTheme)
+//   const stylesDarkTheme = object(
+//     'darkTheme',
+//     { ResponseMessage: darkTheme.data.ResponseMessage, UserMessage: darkTheme.data.UserMessage },
+//     groupStyles
+//   )
+//   stylesApi.styles('changeResponseMessage', { themeName: 'darkTheme', data: stylesDarkTheme.ResponseMessage })
+//   stylesApi.styles('changeUserMessage', { themeName: 'darkTheme', data: stylesDarkTheme.UserMessage })
+//   const stylesLightTheme = object(
+//     'lightTheme',
+//     { ResponseMessage: lightTheme.data.ResponseMessage, UserMessage: lightTheme.data.UserMessage },
+//     groupStyles
+//   )
+//   stylesApi.styles('changeUserMessage', { themeName: 'lightTheme', data: stylesLightTheme.UserMessage })
+//   stylesApi.styles('changeResponseMessage', { themeName: 'lightTheme', data: stylesLightTheme.ResponseMessage })
+//   return (
+//     <StoreContext.Provider value={store}>
+//       <Message message={userMessage} />
+//       <Message message={responseMessage} />
+//     </StoreContext.Provider>
+//   )
+// }
 const languagePacket = {
   rateButtonTitle: (language: string, title: string) => text(`${language}/rateButtonTitle`, title, groupLanguages),
   audioMessageButtonTitle: (language: string, title: string) =>

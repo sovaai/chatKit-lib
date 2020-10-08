@@ -64,8 +64,6 @@ const MessageLoader = (colors: ThemeColors) => {
         },
         '50%, 60%': {
           opacity: '1',
-          fontSize: '75px',
-          paddingBottom: '38px',
         },
       },
     },

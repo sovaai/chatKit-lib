@@ -10,7 +10,7 @@ export interface MessagesEvents {
     message: Message
     moduleName: string
   }
-  resetMessages: void
+  resetMessages: string
   initModuleHistory: string
 }
 

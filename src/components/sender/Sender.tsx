@@ -11,7 +11,7 @@ import CKDropAndDown from '../ckDropAndDown/CKDropAndDown'
 import SenderFiles from './components/senderFiles/SenderFiles'
 import { withResizeDetector } from 'react-resize-detector'
 import { SenderProps } from './@types/Sender'
-const Sender: FC<SenderProps> = ({ height, changeSenderHeight }) => {
+const Sender: FC<SenderProps> = ({ height, changeSenderHeight, store }) => {
   const [listOfFiles, updateList] = useState([])
   const loserDropZone = listOfFiles.length !== 0 ? {padding: '47px 0px 56px 0px'} : {} 
   const [uploadedFiles, addFileMeta] = useState([])
@@ -59,10 +59,10 @@ const Sender: FC<SenderProps> = ({ height, changeSenderHeight }) => {
 
   const sendMessage = (text: string) => {
     const { showRate } = managment.get('common')
-    showRate && sendMessageApi.sendRate(4)
+    showRate && sendMessageApi.sendRate(4, store)
     uploadedFiles.length === 0 &&
       text.length !== 0 &&
-      recieveMessageApi.recieveMessage({ text: text, type: 'text', sender: 'user', showRate: false })
+      recieveMessageApi.recieveMessage({ text: text, type: 'text', sender: 'user', showRate: false }, store)
     uploadedFiles.length === 1 &&
       text.length !== 0 &&
       recieveMessageApi.recieveMessage({
@@ -71,7 +71,7 @@ const Sender: FC<SenderProps> = ({ height, changeSenderHeight }) => {
         file: uploadedFiles[0],
         sender: 'user',
         showRate: false,
-      })
+      }, store)
     uploadedFiles.length === 1 &&
       text.length === 0 &&
       recieveMessageApi.recieveMessage({
@@ -79,19 +79,19 @@ const Sender: FC<SenderProps> = ({ height, changeSenderHeight }) => {
         file: uploadedFiles[0],
         sender: 'user',
         showRate: false,
-      })
+      }, store)
     uploadedFiles.length > 1 &&
-    text.length !== 0 && recieveMessageApi.recieveMessage({ text: text, type: 'text', sender: 'user', showRate: false })
+    text.length !== 0 && recieveMessageApi.recieveMessage({ text: text, type: 'text', sender: 'user', showRate: false }, store)
     uploadedFiles.length > 1 &&
       uploadedFiles.map((file) =>
-        recieveMessageApi.recieveMessage({ file: file, type: 'file', sender: 'user', showRate: false })
+        recieveMessageApi.recieveMessage({ file: file, type: 'file', sender: 'user', showRate: false }, store)
       )
     updateList(() => [])
     addFileMeta(() => [])
-    text.length !== 0 && sendMessageApi.sendMessage(text)
+    text.length !== 0 && sendMessageApi.sendMessage(text, store)
   }
-  const focusInf = () => dispatch('changeSenderFocusInf')
-  const addFileClick = () => uiManagmentApi.uiManagment('showDropZone', !showDropZone)
+  const focusInf = () => store ? store.dispatch('changeSenderFocusInf') :  dispatch('changeSenderFocusInf')
+  const addFileClick = () => uiManagmentApi.uiManagment('showDropZone', !showDropZone, store)
   const audioMessageClick = () => console.log('audioMessage')
   const stickersClick = () => console.log('stickers')
   const shareClick = () => console.log('share')

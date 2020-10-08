@@ -7,7 +7,7 @@ import Button from '../../../common/button/Button'
 import uiManagmentApi from '../../../../api/uiManagment/uiManagmentApi'
 
 class SettingsHeader extends React.PureComponent<SettingsHeaderProps> {
-  closeSettings = () => uiManagmentApi.uiManagment('showSettings', null)
+  closeSettings = () => uiManagmentApi.uiManagment('showSettings', null, this.props.store)
   render() {
     const { closeSettings } = this.props.managment.getIn(['components', 'Settings'])
     const activeLanguage = this.props.languages.get('active')

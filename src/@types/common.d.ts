@@ -12,4 +12,5 @@ export interface Message {
     type: string
     id: number
   }
+  elements?: any
 }

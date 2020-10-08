@@ -12,8 +12,8 @@ export const messages: StoreonModule<MessagesState, MessagesEvents> = (store) =>
       .updateIn(['history', moduleName], (history) => List.isList(history) && history.push(message))
       .update(message.sender === 'user' ? 'lastUserMessage' : 'lastResponseMessage', () => Map({ ...message })),
   }))
-  store.on('resetMessages', () => ({
-    messages: defaultMessagesState,
+  store.on('resetMessages', ({ messages }, moduleName) => ({
+    messages: messages.updateIn(['history', moduleName], () => List([])),
   }))
   store.on('initModuleHistory', ({ messages }, moduleName) => ({
     messages: messages.update('history', (history) => ({ ...history, [moduleName]: List([]) })),

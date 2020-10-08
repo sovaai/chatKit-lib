@@ -26,7 +26,7 @@ import {
   ClientConfigState,
   ClientConfigEvents,
 } from './@types/storeonModules'
-export const store = createStoreon<
+ const store = createStoreon<
   ModulesState &
     MessagesState &
     SettingsState &
@@ -54,3 +54,4 @@ export const store = createStoreon<
   clientConfig,
   process.env.NODE_ENV !== 'production' && storeonDevtools,
 ])
+export default store

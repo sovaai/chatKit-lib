@@ -16,13 +16,19 @@ const colors: ThemeColors = {
   primaryResponse: '#273142',
   primarySenderBG: '#273142',
   secondaryRate: '#386FFE',
-  primaryDivider: '#3d4460',
+  primaryDivider: '#49505A',
   primaryButton: '#686F7B',
   primaryButtonHover: '#8D95A1',
-
+  primaryPlaceholder: '#FFFFFF',
+  secondaryButton: '#F3F3F3',
   primaryExample: '#E7E7E7',
   primaryExampleBackground: '#000000',
   primaryBrightResponse: '#273142',
+  primaryDateDivider: '#FFFFFF',
+  primaryRatingElement: '#686f7b3b',
+  primaryHeaderButtonHover: 'rgba(231, 231, 231, 0.07)',
+  primaryHeaderButtonActive: 'rgba(231, 231, 231, 0.15)',
+  primaryChooseFileButtonHover: '#2F66F1',
 }
 
 export default colors

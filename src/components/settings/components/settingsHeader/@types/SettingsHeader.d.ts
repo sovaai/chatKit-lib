@@ -5,4 +5,5 @@ export interface SettingsHeaderProps {
   languages: Map<string, any>
   managment: Map<string, any>
   settings: Map<string, any>
+  store?: any 
 }

@@ -4,7 +4,6 @@ import React, { FC } from 'react'
 import ImageFile from '../../../common/imageFile/ImageFile'
 import { useStoreon } from 'storeon/react'
 import { fileNameParser } from '../../../../utils/fileSizeParser'
-import { faTruckMonster } from '@fortawesome/free-solid-svg-icons'
 export interface Props {
   file: {
     name: string

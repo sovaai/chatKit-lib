@@ -1,53 +1,54 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React, { FC } from 'react'
+import React from 'react'
 import Avatar from '../common/avatar/Avatar'
-import { connectStoreon, useStoreon } from 'storeon/react'
+import { connectStoreon } from 'storeon/react'
 import Button from '../common/button/Button'
 import { HeaderProps, HeaderState } from './@types/Header'
 import uiManagmentApi from '../../api/uiManagment/uiManagmentApi'
+import Search from '../search/Search'
 
-const Search = () => {
-  const toggleSearch = () => uiManagmentApi.uiManagment('toggleSearchActiveStatus')
-  const changeSearchValue = (searchValue: string) => uiManagmentApi.uiManagment('changeSearchValue', searchValue)
-  const { styles, settings, managment, languages } = useStoreon('styles', 'settings', 'managment', 'languages')
+// const Search = () => {
+//   const toggleSearch = () => uiManagmentApi.uiManagment('toggleSearchActiveStatus')
+//   const changeSearchValue = (searchValue: string) => uiManagmentApi.uiManagment('changeSearchValue', searchValue)
+//   const { styles, settings, managment, languages } = useStoreon('styles', 'settings', 'managment', 'languages')
 
-  const activeLanguage = languages.get('active')
-  const { placeholder } = languages.getIn(['stack', activeLanguage, 'Settings', 'search'])
+//   const activeLanguage = languages.get('active')
+//   const { placeholder } = languages.getIn(['stack', activeLanguage, 'Settings', 'search'])
 
-  const activeTheme = styles.get('active')
-  const { searchIcon, searchDeactivateIcon } = settings.getIn(['media', 'icons'])
-  const { searchButton, headerSearchContainer, headerSearchInput } = styles.getIn(['stack', activeTheme, 'Header'])
-  const { search } = managment.getIn(['components', 'Header'])
-  return (
-    <div className="sova-header-search-container" css={headerSearchContainer}>
-      <Button
-        type="button"
-        block={false}
-        withIcon={search.withIcon}
-        withTitle={search.withTitle}
-        icon={search.active ? searchDeactivateIcon : searchIcon}
-        style={searchButton}
-        onClick={toggleSearch}
-        className="sova-header-search-icon"
-      />
-      {search.active && (
-        <input
-          value={search.searchValue}
-          className="sova-header-search-input"
-          css={headerSearchInput}
-          placeholder={placeholder}
-          onChange={(e) => changeSearchValue(e.target.value)}
-        />
-      )}
-    </div>
-  )
-}
+//   const activeTheme = styles.get('active')
+//   const { searchIcon, searchDeactivateIcon } = settings.getIn(['media', 'icons'])
+//   const { searchButton, headerSearchContainer, headerSearchInput } = styles.getIn(['stack', activeTheme, 'Header'])
+//   const { search } = managment.getIn(['components', 'Header'])
+//   return (
+//     <div className="sova-header-search-container" css={headerSearchContainer}>
+//       <Button
+//         type="button"
+//         block={false}
+//         withIcon={search.withIcon}
+//         withTitle={search.withTitle}
+//         icon={search.active ? searchDeactivateIcon : searchIcon}
+//         style={searchButton}
+//         onClick={toggleSearch}
+//         className="sova-header-search-icon"
+//       />
+//       {search.active && (
+//         <input
+//           value={search.searchValue}
+//           className="sova-header-search-input"
+//           css={headerSearchInput}
+//           placeholder={placeholder}
+//           onChange={(e) => changeSearchValue(e.target.value)}
+//         />
+//       )}
+//     </div>
+//   )
+// }
 
 class Header extends React.PureComponent<HeaderProps, HeaderState> {
-  resetClick = () => uiManagmentApi.uiManagment('reset', null)
-  closeWidget = () => uiManagmentApi.uiManagment('openChat', false)
-  settingsClick = () => uiManagmentApi.uiManagment('showSettings', true)
+  resetClick = () => uiManagmentApi.uiManagment('reset', this.props.store)
+  closeWidget = () => uiManagmentApi.uiManagment('openChat', false, this.props.store)
+  settingsClick = () => uiManagmentApi.uiManagment('showSettings', true, this.props.store)
 
   render() {
     const { showTitle, showAvatar, reset, settings, search, close } = this.props.managment.getIn([
@@ -80,7 +81,7 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
           </div>
         )}
 
-        {search.enabled && <Search />}
+        {search.enabled && <Search store={this.props.store} />}
         {reset.enabled && !search.active && (
           <Button
             type="button"

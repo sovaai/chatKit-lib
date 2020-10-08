@@ -5,4 +5,5 @@ export interface SenderState {
 export interface SenderProps {
   height: number
   changeSenderHeight: any
+  store?: any 
 }

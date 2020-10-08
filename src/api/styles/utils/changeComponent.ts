@@ -1,4 +1,6 @@
-import { store } from '../../../store'
+import ckStore from '../../../store'
 
-export const changeComponent = (componentName: string, data: { themeName: string; data: any }) =>
-  store.dispatch('changeComponentsStyles', { componentName, ...data })
+export const changeComponent = (componentName: string, data: { themeName: string; data: any }, store?: any) =>
+  store
+    ? store.dispatch('changeComponentsStyles', { componentName, ...data })
+    : ckStore.dispatch('changeComponentsStyles', { componentName, ...data })

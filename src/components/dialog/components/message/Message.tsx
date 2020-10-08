@@ -11,9 +11,8 @@ import Rate from '../../../rate/Rate'
 import uiManagmentApi from '../../../../api/uiManagment/uiManagmentApi'
 import FileMessage from '../fileMessage/FileMessage'
 
-const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id, scrollbar }) => {
+const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id, scrollbar, store }) => {
   const { settings, managment, languages, styles } = useStoreon('settings', 'managment', 'languages', 'styles')
-
   /* COMPONENTS PROPS */
   const { text, date, sender, showRate, file, type } = message
   const activeTheme = styles.get('active')
@@ -66,8 +65,8 @@ const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id
   const onClick = (ev: React.MouseEvent<HTMLElement>) => {
     const target = ev.target as HTMLElement
     if (target.className === 'request-userlink') {
-      recieveMessageApi.recieveMessage({ text: target.innerText, type: 'text', sender: 'user', showRate: false })
-      sendMessageApi.sendMessage(target.innerText)
+      recieveMessageApi.recieveMessage({ text: target.innerText, type: 'text', sender: 'user', showRate: false }, store)
+      sendMessageApi.sendMessage(target.innerText, store)
     }
   }
   const rateMessageClick = () => console.log('RateMessage')
@@ -77,19 +76,19 @@ const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id
     const { searchValue } = search
     if (!search.active) return text
     if (searchValue.length < 3) {
-      uiManagmentApi.uiManagment('changeFoundGroup', { messageId: id, action: 'clear' })
+      uiManagmentApi.uiManagment('changeFoundGroup', { messageId: id, action: 'clear' }, store)
       return text
     }
 
     const re = new RegExp(search.searchValue, 'gi')
 
     if (!re.test(text)) {
-      uiManagmentApi.uiManagment('changeFoundGroup', { messageId: id, action: 'delete' })
+      uiManagmentApi.uiManagment('changeFoundGroup', { messageId: id, action: 'delete' }, store)
       return text
     }
 
     const highlightedText = text.replace(re, (foundText: string) => {
-      uiManagmentApi.uiManagment('changeFoundGroup', { messageId: id, action: 'add' })
+      uiManagmentApi.uiManagment('changeFoundGroup', { messageId: id, action: 'add' }, store)
       if (id === foundMessages.get(search.foundMessage)) return `<mark>${foundText}</mark>`
       return foundText
     })
@@ -115,7 +114,7 @@ const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id
   }, [text, search])
 
   useEffect(() => {
-    id === foundMessages.get(search.foundMessage) && messageRef.current?.scrollIntoView(true)
+    id === foundMessages.get(search.foundMessage) && messageRef.current?.scrollIntoView({ block: 'nearest' })
   }, [search, messageRef])
 
   useEffect(() => {
@@ -190,7 +189,7 @@ const Message: FC<MessageProps> = ({ prevSenderType, nextSenderType, message, id
             sender={sender}
           />
         )}
-        {rateActive && RateEnabled && showRate && <Rate scrollbar={scrollbar} />}
+        {rateActive && RateEnabled && showRate && <Rate store={store} scrollbar={scrollbar} />}
 
         {positiveRateMessage.enabled && showRate && (
           <Button

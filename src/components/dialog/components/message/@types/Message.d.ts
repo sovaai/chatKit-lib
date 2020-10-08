@@ -6,4 +6,5 @@ export interface MessageProps {
   scrollbar: any
   nextSenderType: string
   prevSenderType: string
+  store?: any
 }

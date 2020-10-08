@@ -5,6 +5,9 @@ import { object, withKnobs, select, boolean, files, text } from '@storybook/addo
 import { withInfo } from '@storybook/addon-info'
 import uiManagmentApi from '../../../api/uiManagment/uiManagmentApi'
 import stylesApi from '../../../api/styles/stylesApi'
+// import { uiManagment } from '../../../configs/uiManagment'
+// import { darkTheme, lightTheme } from '../../../configs/styles'
+// import { ru, en } from '../../../configs/languages'
 import languagesApi from '../../../api/languages/languagesApi'
 import settingsApi from '../../../api/settings/settingsApi'
 import '../../../styles/storyBookContainer.css'
@@ -25,6 +28,92 @@ const groupUIManagment = 'UIManagment'
 const groupStyles = 'Styles'
 const groupLanguages = 'Languages'
 const groupSettings = 'Settings'
+// const storyDarkStyles = {
+//   mainContainer: {
+//     width: '200px',
+//     height: '150px',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//   },
+//   avatarContainer: {
+//     width: '90px',
+//     height: '90px',
+//     borderRadius: '50px',
+//     backgroundColor: '#373737',
+//     border: '3px solid #373737',
+//   },
+//   image: {
+//     width: '90px',
+//     height: '90px',
+//   },
+//   titleContainer: {
+//     padding: '5px',
+//     width: '90px',
+//     borderRadius: '10px',
+//     fontSize: '24px',
+//     backgroundColor: '#373737',
+//     color: 'white',
+//     textAlign: 'center',
+//   },
+// }
+// const storyLightStyles = {
+//   mainContainer: {
+//     width: '200px',
+//     height: '150px',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//   },
+//   avatarContainer: {
+//     width: '90px',
+//     height: '90px',
+//     borderRadius: '50px',
+//     backgroundColor: '#4a76a8',
+//     border: '3px solid #4a76a8',
+//   },
+//   image: {
+//     width: '90px',
+//     height: '90px',
+//   },
+//   titleContainer: {
+//     padding: '5px',
+//     width: '90px',
+//     borderRadius: '10px',
+//     fontSize: '24px',
+//     backgroundColor: '#4a76a8',
+//     color: 'white',
+//     textAlign: 'center',
+//   },
+// }
+// stylesApi.styles('changeBadge', { themeName: 'darkTheme', data: storyDarkStyles })
+// stylesApi.styles('changeBadge', { themeName: 'lightTheme', data: storyLightStyles })
+// export const BadgeComponent = () => {
+//   const avatar = files('avatar', '.png', [], groupSettings)
+//   settingsApi.settings('changeAvatar', avatar[0])
+//   const showAvatar = boolean('showAvatar', uiManagment.components.Badge.showAvatar, groupUIManagment)
+//   const showTitle = boolean('showTitle', uiManagment.components.Badge.showTitle, groupUIManagment)
+//   uiManagmentApi.uiManagment('setUpBadge', { showAvatar: showAvatar, showTitle: showTitle })
+//   const activeLanguage = select('active', { en: 'en', ru: 'ru' }, 'en', groupLanguages)
+//   languagesApi.languages('changeLanguage', activeLanguage)
+//   const russian = object('Russian', ru.packet.Badge, groupLanguages)
+//   languagesApi.languages('changeBadge', { language: 'ru', data: russian })
+//   const english = object('English', en.packet.Badge, groupLanguages)
+//   languagesApi.languages('changeBadge', { language: 'en', data: english })
+//   const activeTheme = select('active', { darkTheme: 'darkTheme', lightTheme: 'lightTheme' }, 'darkTheme', groupStyles)
+//   stylesApi.styles('switchTheme', activeTheme)
+//   const stylesDarkTheme = object('darkTheme', darkTheme.data.Badge, groupStyles)
+//   stylesApi.styles('changeBadge', { themeName: 'darkTheme', data: stylesDarkTheme })
+//   const stylesLightTheme = object('lightTheme', lightTheme.data.Badge, groupStyles)
+//   stylesApi.styles('changeBadge', { themeName: 'lightTheme', data: stylesLightTheme })
+//   return (
+//     <StoreContext.Provider value={store}>
+//       <Badge />
+//     </StoreContext.Provider>
+//   )
+// }
 const languagePacket = {
   title: (language: string, title: string) => text(`${language}/title`, title, groupLanguages),
 }

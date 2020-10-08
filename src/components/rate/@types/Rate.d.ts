@@ -9,4 +9,5 @@ export interface RateProps {
   languages: Map<string, any>
   styles: Map<string, any>
   scrollbar?: any
+  store?: any
 }

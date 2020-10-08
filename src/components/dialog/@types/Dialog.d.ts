@@ -9,4 +9,5 @@ export interface DialogProps {
   styles: Map<string, any>
   modules: Map<string, any>
   height: string
+  store?: any
 }

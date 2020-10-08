@@ -4,14 +4,11 @@ import React, { FC, useEffect } from 'react'
 import { useStoreon } from 'storeon/react'
 import Button from '../common/button/Button'
 import uiManagmentApi from '../../api/uiManagment/uiManagmentApi'
-
-const SenderSearch: FC = () => {
-  const { dispatch, settings, managment, languages, styles } = useStoreon(
-    'settings',
-    'managment',
-    'languages',
-    'styles'
-  )
+export interface SenderSearchProps {
+  store?: any
+}
+const SenderSearch: FC<SenderSearchProps> = ({store}) => {
+  const { settings, managment, languages, styles } = useStoreon('settings', 'managment', 'languages', 'styles')
 
   /* COMPONENT PROPS */
 
@@ -24,10 +21,12 @@ const SenderSearch: FC = () => {
     mainContainerSearch,
     searchButtonContainer,
     searchCountContainer,
-    addFileButton,
+    switchingActiveButton,
+    switchingDisableButton,
   } = styles.getIn(['stack', activeTheme, 'Sender'])
   const activeLanguage = languages.get('active')
   const { fileButtonTitle } = languages.getIn(['stack', activeLanguage, 'Sender'])
+  const { divider, status } = languages.getIn(['stack', activeLanguage, 'Search'])
   const { chevronUpIcon, chevronDownIcon } = settings.getIn(['media', 'icons'])
 
   /* COMPONENT PROPS END */
@@ -36,11 +35,11 @@ const SenderSearch: FC = () => {
 
   const showNextFoundMessage = () => {
     if (search.foundMessage === 0) return
-    uiManagmentApi.uiManagment('scrollToFoundMessage', search.foundMessage - 1)
+    uiManagmentApi.uiManagment('scrollToFoundMessage', search.foundMessage - 1, store)
   }
   const showPrevFoundMessage = () => {
     if (search.foundMessage === search.found.size - 1) return
-    uiManagmentApi.uiManagment('scrollToFoundMessage', search.foundMessage + 1)
+    uiManagmentApi.uiManagment('scrollToFoundMessage', search.foundMessage + 1, store)
   }
 
   /* COMPONENT METHODS */
@@ -48,15 +47,20 @@ const SenderSearch: FC = () => {
   /* COMPONENT LIFECICLES */
 
   useEffect(() => {
-    uiManagmentApi.uiManagment('scrollToFoundMessage', search.found.size - 1)
+    uiManagmentApi.uiManagment('scrollToFoundMessage', search.found.size - 1, store)
   }, [search.found.size])
 
   /* COMPONENT LIFECICLES END */
-
+  const positionContainer =
+    search.found.size === 0 ? status : `${search.found.size - search.foundMessage} ${divider} ${search.found.size}`
+  const buttonUpEnabled = search.found.size - search.foundMessage < search.found.size
+  const buttonDownEnabled = search.found.size - search.foundMessage > 1
+  const buttonUpStyle = buttonUpEnabled ? {} : switchingDisableButton
+  const buttonDownStyle = buttonDownEnabled ? {} : switchingDisableButton
   return (
     <div className="sender-search-container" css={{ ...mainContainer, ...mainContainerSearch }}>
       <div className="sender-search-position-container" css={searchCountContainer}>
-        {`${search.found.size === 0 ? 0 : search.found.size - search.foundMessage} из ${search.found.size}`}
+        {search.searchValue && positionContainer}
       </div>
       <div className="sender-search-button-container" css={searchButtonContainer}>
         <Button
@@ -67,7 +71,7 @@ const SenderSearch: FC = () => {
           block={false}
           onClick={showNextFoundMessage}
           icon={chevronUpIcon}
-          style={addFileButton}
+          style={{ ...switchingActiveButton, ...buttonUpStyle }}
           className="sender-search-button-up"
         />
         <Button
@@ -78,7 +82,7 @@ const SenderSearch: FC = () => {
           block={false}
           onClick={showPrevFoundMessage}
           icon={chevronDownIcon}
-          style={addFileButton}
+          style={{ ...switchingActiveButton, ...buttonDownStyle }}
           className="sender-search-button-down"
         />
       </div>

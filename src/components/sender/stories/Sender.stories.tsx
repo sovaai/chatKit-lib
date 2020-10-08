@@ -5,7 +5,10 @@ import { object, withKnobs, select, boolean, text } from '@storybook/addon-knobs
 import { withInfo } from '@storybook/addon-info'
 import uiManagmentApi from '../../../api/uiManagment/uiManagmentApi'
 import stylesApi from '../../../api/styles/stylesApi'
+// import { darkTheme, lightTheme } from '../../../configs/styles'
+// import { ru, en } from '../../../configs/languages'
 import languagesApi from '../../../api/languages/languagesApi'
+// import { settings } from '../../../configs/settings'
 import settingsApi from '../../../api/settings/settingsApi'
 import Sender from '../Sender'
 import info from './SenderInfo.md'
@@ -26,6 +29,213 @@ const groupUIManagment = 'UIManagment'
 const groupStyles = 'Styles'
 const groupLanguages = 'Languages'
 const groupSettings = 'Settings'
+// const storyDarkStyles = {
+//   mainContainer: {
+//     display: 'flex',
+//     backgroundColor: '#373737',
+//     padding: '8px',
+//     borderRadius: '10px',
+//     justifyContent: 'space-between',
+//     width: '100%',
+//     height: '10%',
+//     alignItems: 'center',
+//   },
+//   addFileButton: {
+//     border: 'none',
+//     display: 'flex',
+//     width: '13%',
+//     backgroundColor: '#373737',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   form: {
+//     backgroundColor: '#575757',
+//     display: 'flex',
+//     justifyContent: 'space-around',
+//     width: '50%',
+//     height: '70%',
+//     borderRadius: '10px',
+//   },
+//   sendMessageButton: {
+//     backgroundColor: '#575757',
+//     border: 'none',
+//     display: 'flex',
+//     flexDirection: 'row-reverse',
+//     width: '13%',
+//     justifyContent: 'space-around',
+//     outline: 'none',
+//     color: '#9b9b9b',
+//     fontSize: '12px',
+//   },
+//   shareButton: {
+//     border: 'none',
+//     display: 'flex',
+//     width: '15%',
+//     justifyContent: 'space-between',
+//     backgroundColor: '#373737',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   stickersButton: {
+//     border: 'none',
+//     width: '13%',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     backgroundColor: '#373737',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   textArea: {
+//     resize: 'none',
+//     border: 'none',
+//     outline: 'none',
+//     paddingTop: '5px',
+//     fontSize: '12px',
+//     width: '40%',
+//     backgroundColor: '#575757',
+//     color: 'white',
+//   },
+//   voiceButton: {
+//     border: 'none',
+//     width: '13%',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     backgroundColor: '#373737',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+// }
+// const storyLightStyles = {
+//   mainContainer: {
+//     display: 'flex',
+//     backgroundColor: '#4a76a8',
+//     padding: '8px',
+//     borderRadius: '10px',
+//     justifyContent: 'space-between',
+//     width: '100%',
+//     height: '10%',
+//     alignItems: 'center',
+//   },
+//   addFileButton: {
+//     border: 'none',
+//     display: 'flex',
+//     width: '13%',
+//     backgroundColor: '#4a76a8',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   form: {
+//     backgroundColor: 'white',
+//     display: 'flex',
+//     justifyContent: 'space-around',
+//     width: '50%',
+//     height: '70%',
+//     borderRadius: '10px',
+//   },
+//   sendMessageButton: {
+//     backgroundColor: 'white',
+//     border: 'none',
+//     display: 'flex',
+//     flexDirection: 'row-reverse',
+//     width: '13%',
+//     justifyContent: 'space-around',
+//     outline: 'none',
+//     color: '#4a76a8',
+//     fontSize: '12px',
+//   },
+//   shareButton: {
+//     border: 'none',
+//     display: 'flex',
+//     width: '15%',
+//     justifyContent: 'space-between',
+//     backgroundColor: '#4a76a8',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   stickersButton: {
+//     border: 'none',
+//     width: '13%',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     backgroundColor: '#4a76a8',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   textArea: {
+//     resize: 'none',
+//     border: 'none',
+//     outline: 'none',
+//     paddingTop: '5px',
+//     fontSize: '12px',
+//     width: '40%',
+//     backgroundColor: 'white',
+//     color: '#373737',
+//   },
+//   voiceButton: {
+//     border: 'none',
+//     width: '13%',
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     backgroundColor: '#4a76a8',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+// }
+// stylesApi.styles('changeSender', { themeName: 'darkTheme', data: storyDarkStyles })
+// stylesApi.styles('changeSender', { themeName: 'lightTheme', data: storyLightStyles })
+// export const SenderComponent = () => {
+//   const addFileIcon = object('addFileIcon', settings.media.icons.addFileIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'addFileIcon', iconData: addFileIcon })
+//   const addStickersIcon = object('addStickersIcon', settings.media.icons.addStickersIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'addStickersIcon', iconData: addStickersIcon })
+//   const audioMessageIcon = object('audioMessageIcon', settings.media.icons.voiceIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'voiceIcon', iconData: audioMessageIcon })
+//   const sendIcon = object('sendIcon', settings.media.icons.sendMessageIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'sendMessageIcon', iconData: sendIcon })
+//   const shareIcon = object('shareIcon', settings.media.icons.shareIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'shareIcon', iconData: shareIcon })
+//   const addFileButton = object('addFilerButton', uiManagmentSender.addFile, groupUIManagment)
+//   const addStickersButton = object('addStickersButton', uiManagmentSender.addStickers, groupUIManagment)
+//   const audioMessageButton = object('audioMessageButton', uiManagmentSender.audioMessage, groupUIManagment)
+//   const sendButton = object('sendButton', uiManagmentSender.send, groupUIManagment)
+//   const shareButton = object('shareButton', uiManagmentSender.share, groupUIManagment)
+//   const blockInput = boolean('blockInput', uiManagmentSender.blockInput, groupUIManagment)
+//   const blockSubmit = boolean('blockSubmit', uiManagmentSender.blockSubmit, groupUIManagment)
+//   uiManagmentApi.uiManagment('setUpSender', {
+//     addFile: addFileButton,
+//     addStickers: addStickersButton,
+//     audioMessage: audioMessageButton,
+//     send: sendButton,
+//     share: shareButton,
+//     blockInput: blockInput,
+//     blockSubmit: blockSubmit,
+//   })
+//   const activeLanguage = select('active', { en: 'en', ru: 'ru' }, 'en', groupLanguages)
+//   languagesApi.languages('changeLanguage', activeLanguage)
+//   const russian = object('Russian', ru.packet.Sender, groupLanguages)
+//   languagesApi.languages('changeDialog', { language: 'ru', data: russian })
+//   const english = object('English', en.packet.Sender, groupLanguages)
+//   languagesApi.languages('changeSender', { language: 'en', data: english })
+//   const activeTheme = select('active', { darkTheme: 'darkTheme', lightTheme: 'lightTheme' }, 'darkTheme', groupStyles)
+//   stylesApi.styles('switchTheme', activeTheme)
+//   const stylesDarkTheme = object('darkTheme', darkTheme.data.Sender, groupStyles)
+//   stylesApi.styles('changeSender', { themeName: 'darkTheme', data: stylesDarkTheme })
+//   const stylesLightTheme = object('lightTheme', lightTheme.data.Sender, groupStyles)
+//   stylesApi.styles('changeSender', { themeName: 'lightTheme', data: stylesLightTheme })
+//   return (
+//     <StoreContext.Provider value={store}>
+//       <Sender />
+//     </StoreContext.Provider>
+//   )
+// }
 
 const languagePacket = {
   placeholder: (language: string, title: string) => text(`${language}/placeholder`, title, groupLanguages),

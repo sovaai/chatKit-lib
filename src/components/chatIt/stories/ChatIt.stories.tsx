@@ -5,7 +5,11 @@ import { StoreContext } from 'storeon/react'
 import { object, withKnobs, select, boolean, files, text } from '@storybook/addon-knobs'
 import uiManagmentApi from '../../../api/uiManagment/uiManagmentApi'
 import stylesApi from '../../../api/styles/stylesApi'
+// import { uiManagment } from '../../../configs/uiManagment'
+// import { darkTheme, lightTheme } from '../../../configs/styles'
+// import { ru, en } from '../../../configs/languages'
 import languagesApi from '../../../api/languages/languagesApi'
+// import { settings } from '../../../configs/settings'
 import settingsApi from '../../../api/settings/settingsApi'
 import '../../../styles/storyBookContainer.css'
 import { withInfo } from '@storybook/addon-info'
@@ -27,6 +31,87 @@ const groupStyles = 'Styles'
 const groupLanguages = 'Languages'
 const groupSettings = 'Settings'
 const groupJSON = 'JSON'
+// const ChatItUIManagmentValue = uiManagment.components.ChatIt
+
+// const SenderUIManagmentValue = UIManagmentSender
+
+// const DialogUIManagmentValue = UIManagmentDialog
+
+// const BadgeUIManagmentValue = uiManagment.components.Badge
+
+// const HeaderUIManagmentValue = UIManagmentHeader
+
+// const RateUIManagmentValue = UIManagmentRate
+// const { darkTheme, lightTheme } = store.get().styles.get('stack')
+// export const ChatItComponent = () => {
+//   const activeLanguage = select('active', { en: 'en', ru: 'ru' }, 'en', groupLanguages)
+//   const chatIsOpen = boolean('chatIsOpen', false, groupUIManagment)
+//   uiManagmentApi.uiManagment('openChat', chatIsOpen)
+//   const avatar = files('avatar', '.png', [], groupSettings)
+//   settingsApi.settings('changeAvatar', avatar[0])
+//   const blockSender = boolean('blockSender', false, groupUIManagment)
+//   uiManagmentApi.uiManagment('blockSender', blockSender)
+//   const showMsgLoad = boolean('showMsgLoad', false, groupUIManagment)
+//   uiManagmentApi.uiManagment('dialogLoading', showMsgLoad)
+//   const showRate = boolean('showRate', false, groupUIManagment)
+//   uiManagmentApi.uiManagment('showRate', showRate)
+//   languagesApi.languages('changeLanguage', activeLanguage)
+//   const russianLanguage = object('Russian', ru, groupLanguages)
+//   const englishLanguage = object('English', en, groupLanguages)
+//   languagesApi.languages('changeLanguagePacket', russianLanguage)
+//   languagesApi.languages('changeLanguagePacket', englishLanguage)
+//   const playMessageIcon = object('playMessageIcon', settings.media.icons.playMessageIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'playMessageIcon', iconData: playMessageIcon })
+//   const settingsIcon = object('settingsIcon', settings.media.icons.settingsIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'settingsIcon', iconData: settingsIcon })
+//   const sendMessageIcon = object('sendMessageIcon', settings.media.icons.sendMessageIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'sendMessageIcon', iconData: sendMessageIcon })
+//   const rateIcon = object('rateIcon', settings.media.icons.rateIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'rateIcon', iconData: rateIcon })
+//   const positiveRateIcon = object('positiveRateIcon', settings.media.icons.positiveRateIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'positiveRateIcon', iconData: positiveRateIcon })
+//   const negativeRateIcon = object('negativeRateIcon', settings.media.icons.negativeRateIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'negativeRateIcon', iconData: negativeRateIcon })
+//   const resetIcon = object('resetIcon', settings.media.icons.resetIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'resetIcon', iconData: resetIcon })
+//   const addFileIcon = object('addFileIcon', settings.media.icons.addFileIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'addFileIcon', iconData: addFileIcon })
+//   const shareIcon = object('shareIcon', settings.media.icons.shareIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'shareIcon', iconData: shareIcon })
+//   const searchIcon = object('searchIcon', settings.media.icons.searchIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'searchIcon', iconData: searchIcon })
+//   const addStickersIcon = object('addStickersIcon', settings.media.icons.addStickersIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'addStickersIcon', iconData: addStickersIcon })
+//   const voiceIcon = object('voiceIcon', settings.media.icons.voiceIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'voiceIcon', iconData: voiceIcon })
+//   const closeIcon = object('closeIcon', settings.media.icons.closeIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'closeIcon', iconData: closeIcon })
+//   const ChatItUIManagment = object('ChatIt', ChatItUIManagmentValue, groupUIManagment)
+//   const SenderUIManagment = object('Sender', SenderUIManagmentValue, groupUIManagment)
+//   const DialogUIManagment = object('Dialog', DialogUIManagmentValue, groupUIManagment)
+//   const BadgeUIManagment = object('Badge', BadgeUIManagmentValue, groupUIManagment)
+//   const HeaderUIManagment = object('Header', HeaderUIManagmentValue, groupUIManagment)
+//   const RateUIManagment = object('Rate', RateUIManagmentValue, groupUIManagment)
+//   uiManagmentApi.uiManagment('setUpChatIt', ChatItUIManagment)
+//   uiManagmentApi.uiManagment('setUpSender', SenderUIManagment)
+//   uiManagmentApi.uiManagment('setUpDialog', DialogUIManagment)
+//   uiManagmentApi.uiManagment('setUpBadge', BadgeUIManagment)
+//   uiManagmentApi.uiManagment('setUpHeader', HeaderUIManagment)
+//   uiManagmentApi.uiManagment('setUpRate', RateUIManagment)
+//   const activeTheme = select('active', { darkTheme: 'darkTheme', lightTheme: 'lightTheme' }, 'darkTheme', groupStyles)
+//   const stylesDarkTheme = object('darkTheme', store.get().styles.get('stack').darkTheme, groupStyles)
+//   const stylesLightTheme = object('lightTheme', store.get().styles.get('stack').lightTheme, groupStyles)
+//   stylesApi.styles('switchTheme', activeTheme)
+//   stylesApi.styles('changeStyles', stylesDarkTheme)
+//   stylesApi.styles('changeStyles', stylesLightTheme)
+//   return (
+//     <StoreContext.Provider value={store}>
+//       <div className="container">
+//         <ChatIt />
+//       </div>
+//     </StoreContext.Provider>
+//   )
+// }
 const components = {
   ChatIt: 'ChatIt',
   Rate: 'Rate',

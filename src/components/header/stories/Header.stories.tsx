@@ -4,13 +4,17 @@ import { StoreContext } from 'storeon/react'
 import { object, withKnobs, select, boolean, text, files } from '@storybook/addon-knobs'
 import uiManagmentApi from '../../../api/uiManagment/uiManagmentApi'
 import stylesApi from '../../../api/styles/stylesApi'
+// import { darkTheme, lightTheme } from '../../../configs/styles'
+// import { ru, en } from '../../../configs/languages'
 import languagesApi from '../../../api/languages/languagesApi'
+// import { settings } from '../../../configs/settings'
 import settingsApi from '../../../api/settings/settingsApi'
 import Header from '../Header'
 import { withInfo } from '@storybook/addon-info'
 import info from './HeaderInfo.md'
 import { iconsList } from '../../../configs/icons'
 import '../../../styles/storyBookContainer.css'
+// import Logo from '../../../assets/Logo.png'
 export default {
   title: 'Header',
   decorators: [withKnobs, withInfo],
@@ -26,6 +30,146 @@ const groupUIManagment = 'UIManagment'
 const groupStyles = 'Styles'
 const groupLanguages = 'Languages'
 const groupSettings = 'Settings'
+// const storyDarkStyles = {
+//   mainContainer: {
+//     display: 'flex',
+//     width: '100%',
+//     alignItems: 'center',
+//     color: 'white',
+//     justifyContent: 'space-between',
+//     fontSize: '30px',
+//     backgroundColor: '#373737',
+//     padding: '8px',
+//     borderRadius: '15px',
+//   },
+//   avatarContainer: {},
+//   titleContainer: {},
+//   buttonsContainer: {
+//     display: 'flex',
+//     flexDirection: 'row-reverse',
+//     alignItems: 'center',
+//     width: '30%',
+//     marginRight: '8%',
+//     marginLeft: '16%',
+//   },
+//   resetButton: {
+//     backgroundColor: '#373737',
+//     border: 'none',
+//     display: 'flex',
+//     justifyContent: 'space-around',
+//     width: '50%',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   settingsButton: {
+//     backgroundColor: '#373737',
+//     border: 'none',
+//     display: 'flex',
+//     justifyContent: 'space-around',
+//     outline: 'none',
+//     width: '50%',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   image: {
+//     width: '50px',
+//     height: '50px',
+//   },
+// }
+
+// const storyLightStyles = {
+//   mainContainer: {
+//     display: 'flex',
+//     width: '100%',
+//     alignItems: 'center',
+//     color: 'white',
+//     justifyContent: 'space-between',
+//     fontSize: '30px',
+//     backgroundColor: '#4a76a8',
+//     padding: '8px',
+//     borderRadius: '15px',
+//   },
+//   avatarContainer: {},
+//   titleContainer: {},
+//   buttonsContainer: {
+//     display: 'flex',
+//     flexDirection: 'row-reverse',
+//     alignItems: 'center',
+//     width: '30%',
+//     marginRight: '8%',
+//     marginLeft: '16%',
+//   },
+//   resetButton: {
+//     backgroundColor: '#4a76a8',
+//     border: 'none',
+//     display: 'flex',
+//     justifyContent: 'space-around',
+//     width: '50%',
+//     outline: 'none',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   settingsButton: {
+//     backgroundColor: '#4a76a8',
+//     border: 'none',
+//     display: 'flex',
+//     justifyContent: 'space-around',
+//     outline: 'none',
+//     width: '50%',
+//     color: 'white',
+//     fontSize: '12px',
+//   },
+//   image: {
+//     width: '50px',
+//     height: '50px',
+//   },
+// }
+// stylesApi.styles('changeHeader', { themeName: 'darkTheme', data: storyDarkStyles })
+// stylesApi.styles('changeHeader', { themeName: 'lightTheme', data: storyLightStyles })
+// export const HeaderComponent = () => {
+//   const r = optionsKnob(
+//     label,
+//     valuesObj,
+//     defaultValue,
+//     {
+//       display: 'select',
+//     },
+//     groupId
+//   )
+//   console.log(r)
+//   const resetIcon = object('resetIcon', settings.media.icons.resetIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'resetIcon', iconData: resetIcon })
+//   const settingsIcon = object('settingsIcon', settings.media.icons.settingsIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'settingsIcon', iconData: settingsIcon })
+//   const resetButton = object('resetButton',uiManagmentHeader.reset, groupUIManagment)
+//   const settingsButton = object('settingsButton',uiManagmentHeader.settings, groupUIManagment)
+//   const showAvatar = boolean('showAvatar',uiManagmentHeader.showAvatar, groupUIManagment)
+//   const showTitle = boolean('showTitle',uiManagmentHeader.showTitle, groupUIManagment)
+//   uiManagmentApi.uiManagment('setUpHeader', {
+//     reset: resetButton,
+//     settings: settingsButton,
+//     showTitle: showTitle,
+//     showAvatar: showAvatar,
+//   })
+//   const activeLanguage = select('active', { en: 'en', ru: 'ru' }, 'en', groupLanguages)
+//   languagesApi.languages('changeLanguage', activeLanguage)
+//   const russian = object('Russian', ru.packet.Header, groupLanguages)
+//   languagesApi.languages('changeHeader', { language: 'ru', data: russian })
+//   const english = object('English', en.packet.Header, groupLanguages)
+//   languagesApi.languages('changeHeader', { language: 'en', data: english })
+//   const activeTheme = select('active', { darkTheme: 'darkTheme', lightTheme: 'lightTheme' }, 'darkTheme', groupStyles)
+//   stylesApi.styles('switchTheme', activeTheme)
+//   const stylesDarkTheme = object('darkTheme', darkTheme.data.Header, groupStyles)
+//   stylesApi.styles('changeHeader', { themeName: 'darkTheme', data: stylesDarkTheme })
+//   const stylesLightTheme = object('lightTheme', lightTheme.data.Header, groupStyles)
+//   stylesApi.styles('changeHeader', { themeName: 'lightTheme', data: stylesLightTheme })
+//   return (
+//     <StoreContext.Provider value={store}>
+//       <Header />
+//     </StoreContext.Provider>
+//   )
+// }
 const languagePacket = {
   title: (language: string, title: string) => text(`${language}/title`, title, groupLanguages),
   settingsButtonTitle: (language: string, title: string) =>

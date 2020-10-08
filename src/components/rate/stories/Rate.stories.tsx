@@ -4,7 +4,10 @@ import { StoreContext } from 'storeon/react'
 import { object, withKnobs, select, boolean, text } from '@storybook/addon-knobs'
 import uiManagmentApi from '../../../api/uiManagment/uiManagmentApi'
 import stylesApi from '../../../api/styles/stylesApi'
+// import { darkTheme, lightTheme } from '../../../configs/styles'
+// import { ru, en } from '../../../configs/languages'
 import languagesApi from '../../../api/languages/languagesApi'
+// import { settings } from '../../../configs/settings'
 import settingsApi from '../../../api/settings/settingsApi'
 import Rate from '../Rate'
 import { withInfo } from '@storybook/addon-info'
@@ -26,6 +29,142 @@ const groupUIManagment = 'UIManagment'
 const groupStyles = 'Styles'
 const groupLanguages = 'Languages'
 const groupSettings = 'Settings'
+// const storyDarkStyles = {
+//   mainContainer: {
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//     backgroundColor: '#373737',
+//     padding: '8px',
+//     borderRadius: '10px',
+//   },
+//   titleContainer: {
+//     width: '100%',
+//     textAlign: 'center',
+//     color: 'white',
+//   },
+//   negativeRateButton: {
+//     fontSize: '16px',
+//     width: '50%',
+//     marginTop: '10px',
+//     marginBottom: '10px',
+//     border: 'none',
+//     backgroundColor: 'transparent',
+//     outline: 'none',
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     color: '#fa4caa',
+//   },
+//   positiveRateButton: {
+//     fontSize: '16px',
+//     width: '50%',
+//     marginTop: '10px',
+//     marginBottom: '10px',
+//     border: 'none',
+//     backgroundColor: 'transparent',
+//     outline: 'none',
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     color: '#fa4caa',
+//   },
+//   ratingElement: {
+//     marginTop: '5px',
+//     width: '60%',
+//     color: '#5271fe',
+//     listStyleType: 'none',
+//   },
+//   ratingListContainer: {
+//     display: 'flex',
+//     marginTop: '20px',
+//     marginBottom: '20px',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     width: '100%',
+//   },
+// }
+// const storyLightStyles = {
+//   mainContainer: {
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//     backgroundColor: '#edf0f5',
+//     padding: '8px',
+//     borderRadius: '10px',
+//   },
+//   titleContainer: {
+//     width: '100%',
+//     textAlign: 'center',
+//     color: '#575757',
+//   },
+//   negativeRateButton: {
+//     fontSize: '16px',
+//     width: '50%',
+//     marginTop: '10px',
+//     marginBottom: '10px',
+//     border: 'none',
+//     backgroundColor: 'transparent',
+//     outline: 'none',
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     color: '#fa4caa',
+//   },
+//   positiveRateButton: {
+//     fontSize: '16px',
+//     width: '50%',
+//     marginTop: '10px',
+//     marginBottom: '10px',
+//     border: 'none',
+//     backgroundColor: 'transparent',
+//     outline: 'none',
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     color: '#fa4caa',
+//   },
+//   ratingElement: {
+//     marginTop: '5px',
+//     width: '60%',
+//     color: '#5271fe',
+//     listStyleType: 'none',
+//   },
+//   ratingListContainer: {
+//     display: 'flex',
+//     marginTop: '20px',
+//     marginBottom: '20px',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     width: '100%',
+//   },
+// }
+// stylesApi.styles('changeRate', { themeName: 'darkTheme', data: storyDarkStyles })
+// stylesApi.styles('changeRate', { themeName: 'lightTheme', data: storyLightStyles })
+// export const RateComponent = () => {
+//   const negativeRateIcon = object('negativeRateIcon', settings.media.icons.negativeRateIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'negativeRateIcon', iconData: negativeRateIcon })
+//   const positiveRateIcon = object('positiveRateIcon', settings.media.icons.positiveRateIcon, groupSettings)
+//   settingsApi.settings('changeIcon', { iconName: 'positiveRateIcon', iconData: positiveRateIcon })
+//   const negativeRateButton = object('negativeRateButton', uiManagmentRate.negativeRate, groupUIManagment)
+//   const positiveRateButton = object('settingsButton', uiManagmentRate.positiveRate, groupUIManagment)
+//   uiManagmentApi.uiManagment('setUpRate', { negativeRate: negativeRateButton, positiveRate: positiveRateButton })
+//   const activeLanguage = select('active', { en: 'en', ru: 'ru' }, 'en', groupLanguages)
+//   languagesApi.languages('changeLanguage', activeLanguage)
+//   const russian = object('Russian', ru.packet.Rate, groupLanguages)
+//   languagesApi.languages('changeRate', { language: 'ru', data: russian })
+//   const english = object('English', en.packet.Rate, groupLanguages)
+//   languagesApi.languages('changeRate', { language: 'en', data: english })
+//   const activeTheme = select('active', { darkTheme: 'darkTheme', lightTheme: 'lightTheme' }, 'darkTheme', groupStyles)
+//   stylesApi.styles('switchTheme', activeTheme)
+//   const stylesDarkTheme = object('darkTheme', darkTheme.data.Rate, groupStyles)
+//   stylesApi.styles('changeRate', { themeName: 'darkTheme', data: stylesDarkTheme })
+//   const stylesLightTheme = object('lightTheme', lightTheme.data.Rate, groupStyles)
+//   stylesApi.styles('changeRate', { themeName: 'lightTheme', data: stylesLightTheme })
+//   return (
+//     <StoreContext.Provider value={store}>
+//       <Rate />
+//     </StoreContext.Provider>
+//   )
+// }
 const languagePacket = {
   title: (language: string, title: string) => text(`${language}/title`, title, groupLanguages),
   positive: (language: string, title: string) => text(`${language}/positive`, title, groupLanguages),

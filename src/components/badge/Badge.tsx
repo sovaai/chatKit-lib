@@ -4,11 +4,11 @@ import React from 'react'
 import { connectStoreon } from 'storeon/react'
 import Avatar from '../common/avatar/Avatar'
 import { BadgeProps } from './@types/Badge'
-import { store } from '../../store'
 import AnimatedBadge from '../animatedBadge/AnimatedBadge'
+import uiManagmentApi from '../../api/uiManagment/uiManagmentApi'
 
 class Badge extends React.PureComponent<BadgeProps> {
-  openChat = () => store.dispatch('openChat', true)
+  openChat = () => uiManagmentApi.uiManagment('openChat', true, this.props.store)
   render() {
     const { showAvatar, showTitle, showSVG } = this.props.managment.getIn(['components', 'Badge'])
     const activeLanguage = this.props.languages.get('active')

@@ -1,7 +1,6 @@
 import { fileSizeParser } from './fileSizeParser'
 import firebase from '../configs/firebase'
-export const uploadFile =  (acceptedFiles: any) => {
-  const file = acceptedFiles[0]
+export const uploadFile =  (file: any) => {
   const size = fileSizeParser(file?.size)
   if(!size) return false
   const fileType = file.type.split('/')[1]

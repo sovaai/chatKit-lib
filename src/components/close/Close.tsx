@@ -4,10 +4,11 @@ import React from 'react'
 import { CloseProps } from './@types/Close'
 import { connectStoreon } from 'storeon/react'
 import Icon from '../common/icon/Icon'
-import { store } from '../../store'
+import ckStore from '../../store'
 
 class Close extends React.PureComponent<CloseProps> {
-  closeChat = () => store.dispatch('openChat', false)
+  closeChat = () =>
+    this.props.store ? this.props.store.dispatch('openChat', false) : ckStore.dispatch('openChat', false)
   render() {
     const { closeIcon } = this.props.settings.getIn(['media', 'icons'])
     const activeTheme = this.props.styles.get('active')

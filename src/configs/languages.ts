@@ -45,6 +45,11 @@ export const en = {
       divider: 'or',
       chooseFileButtonTitle: 'Choose file',
     },
+    Search: {
+      placeholder: 'Search',
+      divider: 'of',
+      status: 'No results',
+    },
     Settings: {
       headingLanguage: 'Language',
       headingTheme: 'Appearance',
@@ -103,14 +108,16 @@ export const ru = {
         { rating: 1, text: 'Ответ не решил проблему' },
       ],
     },
+    Search: {
+      placeholder: 'Найти',
+      divider: 'из',
+      status: 'Нет результатов',
+    },
     Settings: {
       headingLanguage: 'Язык',
       headingTheme: 'Оформление',
       headingTime: 'Время',
       title: 'Настройки',
-      search: {
-        placeholder: 'Найти',
-      },
     },
   },
 }

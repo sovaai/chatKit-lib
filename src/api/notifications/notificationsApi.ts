@@ -1,7 +1,7 @@
 import { addMessages, addSettings, enabled, clicked, shown } from './notificationsEvents/notofocationsEvents'
 
 export type NotificationsEvents = 'addMessages' | 'addSettings' | 'shown' | 'clicked' | 'enabled'
-const notificationsEvents: { [key: string]: (data: any) => void } = {
+const notificationsEvents: { [key: string]: (data: any, store?: any) => void } = {
   addMessages: addMessages,
   addSettings: addSettings,
   enabled: enabled,
@@ -9,8 +9,8 @@ const notificationsEvents: { [key: string]: (data: any) => void } = {
   shown: shown,
 }
 const notificationsApi = {
-  notifications: (event: NotificationsEvents, data?: any) => {
-    notificationsEvents[event](data)
+  notifications: (event: NotificationsEvents, data?: any, store?: any) => {
+    notificationsEvents[event](data, store)
   },
 }
 export default notificationsApi

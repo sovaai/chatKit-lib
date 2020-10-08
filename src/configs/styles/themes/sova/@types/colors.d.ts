@@ -14,10 +14,17 @@ export interface ThemeColors {
   primaryDivider: string
   primaryExampleBackground: string
   primaryButton: string
+  secondaryButton: string
+  primaryPlaceholder: string
   primaryButtonHover: string
+  primaryDateDivider: string
+  primaryRatingElement: string
   primaryExample: string
   primaryBlack: string
   primaryGray: string
   primaryDashed: string
   primaryFileBackground: string
+  primaryHeaderButtonHover: string
+  primaryHeaderButtonActive: string
+  primaryChooseFileButtonHover: string
 }

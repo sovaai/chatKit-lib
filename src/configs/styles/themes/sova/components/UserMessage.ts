@@ -1,7 +1,7 @@
 import { ThemeColors } from '../@types/colors'
 
 const UserMesssage = (colors: ThemeColors) => {
-  const { primaryWhite, primary, primaryText, primaryAccent } = colors
+  const { primaryWhite, primary, primaryDark } = colors
 
   return {
     mainContainer: {
@@ -30,6 +30,11 @@ const UserMesssage = (colors: ThemeColors) => {
       maxWidth: '100%',
       minWidth: '5%',
       wordBreak: 'break-all',
+      '& mark': {
+        background: '#FFDF00',
+        padding: '3px 0 3px 0',
+        color: primaryDark,
+      },
       '@media screen and (max-width: 800px)': {
         fontSize: '1rem',
       },
